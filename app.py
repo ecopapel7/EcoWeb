@@ -455,10 +455,10 @@ en cuatro divisiones especializadas que trabajan de forma integrada.
     c1, c2, c3 = st.columns(3)
     c1.metric("Fichas Técnicas", "24")
     c2.metric("Divisiones", "4")
-    c3.metric("Objetivo", "Demostrar que los residuos no son basura, sino materia prima mal clasificada, y construir un sistema autosuficiente donde cada desecho encuentre un nuevo propósito dentro del propio ecosistema Eco.")
+    c3.metric("Resumen en 1 palabra", "Simbiosis")
 
     st.write("---")
-    st.subheader("Secciones Del Proyecto Eco")
+    st.subheader("La Economia Circular")
     with st.container():
         st.write("""
     En **Proyecto Eco**, hemos diseñado un modelo de economía circular donde las cuatro divisiones se retroalimentan, 
@@ -470,8 +470,6 @@ en cuatro divisiones especializadas que trabajan de forma integrada.
     Cada producto y servicio del stand forma parte de un modelo interno de intercambio 
     que demuestra cómo el reciclaje puede transformarse en economía real.
     """)
-
-    st.divider() # Línea divisoria visual
 
 # --- PUNTO 1 ---
     st.markdown("### 1. Extracción y Recuperación (El Inicio)")
@@ -503,13 +501,24 @@ Recolectamos papel, cartón, botellas PET, envases Tetra Pak y latas de conserva
 # --- PUNTO 4 ---
     st.markdown("### 4. Regeneración y Tecnología")
     st.write("El ciclo se expande hacia el futuro y la naturaleza:")
-    st.success("""
+    st.write("""
 **Nendo Dango:** Bombas de semillas que reforestan el paisaje.  
 **Monitoreo Inteligente:** Nuestra **Eco-IA** y el **TerrarIA** analizan este flujo en tiempo real.
 """)
 
     st.divider()
+    st.markdown("### Contacto y Redes Sociales")
+    
+    col1, col2, col3, col4 = st.columns(3)
 
+    with col1:
+        st.markdown("[📸 Instagram](https://www.instagram.com/eco.papel.7)")
+    with col2:
+        st.markdown("[🎥 Youtube](https://www.youtube.com/channel/UCp3J81kztAoSYtEtCJzVx9A)")
+    with col3:
+        st.markdown("[🎵 Tiktok](https://www.tiktok.com/@ecopapel.7)")
+    
+    st.caption("Síguenos para conocer novedades de ciencia, innovación y reciclaje creativo.")
 # --------------------------------------------------
 # FICHAS
 # --------------------------------------------------
