@@ -455,7 +455,7 @@ en cuatro divisiones especializadas que trabajan de forma integrada.
     c1, c2, c3 = st.columns(3)
     c1.metric("Fichas Técnicas", "24")
     c2.metric("Divisiones", "4")
-    c3.metric("Resumen en 1 palabra", "Simbiosis")
+    c3.metric("Eco en 1 palabra", "Simbiosis")
 
     st.write("---")
     st.subheader("La Economia Circular")
@@ -505,6 +505,55 @@ Recolectamos papel, cartón, botellas PET, envases Tetra Pak y latas de conserva
 **Nendo Dango:** Bombas de semillas que reforestan el paisaje.  
 **Monitoreo Inteligente:** Nuestra **Eco-IA** y el **TerrarIA** analizan este flujo en tiempo real.
 """)
+    st.write("---")
+    st.subheader("Quiénes hacemos Proyecto Eco 2026")
+
+    col1, col2, col3, col4, col5, col6, col7, col8 = st.columns(8)
+
+    with col1:
+        st.markdown("**Damian Medina**")
+        st.caption("EcoPapel y EcoIndustria | Colaborador de las Secciones")
+        st.markdown("> '-'")
+
+    with col2:
+        st.markdown("**Dante Rodriguez**")
+        st.caption("EcoTech | Desarrollo EcoIA y TerrarIA")
+        st.markdown("> '-'")
+
+    with col3:
+        st.markdown("**Enzo Cuevas**")
+        st.caption("EcoPapel | Colaborador de la Seccion")
+        st.markdown("> '-'")
+
+    with col4:
+        st.markdown("**Franco Titirico**")
+        st.caption("EcoIndustria | Representante de la Seccion")
+        st.markdown("> '-'")
+
+    with col5:
+        st.markdown("**Jonathan Orellana**")
+        st.caption("EcoPapel | Representante de la Seccion")
+        st.markdown("> '-'")
+
+    with col5:
+        st.markdown("**Julian Tejerina**")
+        st.caption("EcoTech | Representante de la Seccion")
+        st.markdown("> '-'")
+
+    with col6:
+        st.markdown("**Mauro De La Fuente**")
+        st.caption("EcoIndustria | Colaborador de la Seccion")
+        st.markdown("> '-'")
+
+    with col7:
+        st.markdown("**Tobias Ponce Castaño**")
+        st.caption("EcoLab | Representante de la Seccion")
+        st.markdown("> '-'")
+
+    with col8:
+        st.markdown("**Valentino Correa**")
+        st.caption("EcoLab | Colaborador de la Seccion")
+        st.markdown("> '-'")
 
     st.divider()
     st.markdown("### Contacto y Redes Sociales")
@@ -519,6 +568,7 @@ Recolectamos papel, cartón, botellas PET, envases Tetra Pak y latas de conserva
         st.markdown("[🎵 Tiktok](https://www.tiktok.com/@ecopapel.7)")
     
     st.caption("Síguenos para conocer novedades de ciencia, innovación y reciclaje creativo.")
+    
 # --------------------------------------------------
 # FICHAS
 # --------------------------------------------------
