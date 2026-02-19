@@ -421,45 +421,94 @@ if selected == "Inicio":
 Proyecto Eco es una plataforma educativa de ciencia aplicada que transforma residuos en recursos 
 mediante ingeniería, química, biotecnología y desarrollo tecnológico.
 
+Proyecto Eco es un sistema integral de innovación sustentable desarrollado en el ámbito escolar, cuyo objetivo es transformar residuos en recursos mediante la integración de ciencia, tecnología, diseño e ingeniería.
+
+A diferencia de un proyecto tradicional de reciclaje, Eco funciona como un ecosistema organizado en divisiones especializadas que operan de manera interconectada. Cada módulo aporta conocimiento técnico y producción material, formando un modelo de economía circular aplicada a escala educativa.
+
+El proyecto no solo busca reducir residuos, sino demostrar que la recuperación de materiales puede generar valor científico, tecnológico y económico real. Eco representa una evolución del reciclaje artesanal hacia un modelo estructurado, profesional y escalable, preparado para competir en instancias regionales.
+
 Lo que comenzó en 2025 como EcoPapel hoy evolucionó hacia un sistema estructurado 
 en cuatro divisiones especializadas que trabajan de forma integrada.
 """)
-
     st.write("---")
 
-    st.subheader("Divisiones Operativas")
+    st.subheader("Secciones Del Proyecto Eco")
 
     col1, col2 = st.columns(2)
 
     with col1:
-        st.markdown("**EcoPapel · Biomateriales**")
-        st.caption("Desarrollo de papel reciclado avanzado, Papel Seed y FibroPapel.")
+        st.markdown("**EcoPapel · Arte y Celulosa**")
+        st.caption("EcoPapel es la división fundacional del proyecto y el núcleo de la transformación material. Se especializa en la recuperación y revalorización del papel y cartón mediante procesos artesanales y técnicas de innovación sustentable. Su enfoque combina economía circular, diseño funcional y educación ambiental, demostrando que un residuo cotidiano puede convertirse en un material resistente, estético y útil. EcoPapel representa la base física del sistema Eco: donde el desecho vuelve a tener valor. - Desarrollo de papel reciclado avanzado, Papel Seed y FibroPapel.")
 
-        st.markdown("**EcoLab · Ciencia Aplicada**")
-        st.caption("Cristalización, pigmentos naturales, Carbon Ink y síntesis experimental.")
+        st.markdown("**EcoLab · Ciencia Y Quimica**")
+        st.caption("EcoLab es el laboratorio experimental del proyecto. Aquí se aplican principios de química, biología y física para desarrollar procesos sustentables que transforman residuos en recursos. Desde la extracción de pigmentos naturales hasta la síntesis de cristales y la generación teórica de biogás, EcoLab demuestra que la ciencia puede integrarse a la vida escolar como herramienta de innovación real. Esta división valida técnicamente los procesos del proyecto y aporta fundamento científico a cada desarrollo. - Cristalización, pigmentos naturales, Carbon Ink y síntesis experimental.")
 
     with col2:
-        st.markdown("**EcoTech · Tecnología e IA**")
-        st.caption("EcoIA, TerrarIA y sistemas de monitoreo inteligente.")
+        st.markdown("**EcoTech · Tecnología e Innovacion**")
+        st.caption("EcoTech es la unidad de innovación digital y tecnológica. Su objetivo es integrar hardware, software e inteligencia artificial al ecosistema Eco. A través de sistemas como EcoIA y TerrarIA, esta división convierte datos en conocimiento accesible, monitorea procesos en tiempo real y demuestra cómo la tecnología puede potenciar la sustentabilidad. EcoTech conecta todas las áreas del proyecto, funcionando como el cerebro digital que analiza, predice y comunica. - EcoIA, TerrarIA y sistemas de monitoreo inteligente.")
 
-        st.markdown("**EcoIndustria · Ingeniería Sustentable**")
-        st.caption("Productos funcionales de alto impacto como EcoTrash, EcoLámparas y Eco-Voz.")
+        st.markdown("**EcoIndustria · Ingeniería y Utilidad**")
+        st.caption("EcoIndustria se enfoca en el desarrollo de productos funcionales de alto impacto, aplicando principios de ingeniería, física y diseño estructural. Esta división transforma residuos en herramientas, dispositivos y objetos de uso cotidiano con valor técnico comprobable. Su propósito es demostrar que el reciclaje no solo es artesanal, sino también industrial y estructural, capaz de generar soluciones duraderas y eficientes. - Productos funcionales de alto impacto como EcoTrash, EcoLámparas y Eco-Voz.")
 
     st.write("---")
 
     c1, c2, c3 = st.columns(3)
     c1.metric("Fichas Técnicas", "24")
     c2.metric("Divisiones", "4")
-    c3.metric("Objetivo", "Feria Regional 2026")
+    c3.metric("Objetivo", "Demostrar que los residuos no son basura, sino materia prima mal clasificada, y construir un sistema autosuficiente donde cada desecho encuentre un nuevo propósito dentro del propio ecosistema Eco.")
 
     st.write("---")
+    st.subheader("Secciones Del Proyecto Eco")
+    with st.container():
+        st.write("""
+    En **Proyecto Eco**, hemos diseñado un modelo de economía circular donde las cuatro divisiones se retroalimentan, 
+    eliminando el concepto de **"basura"** y transformándolo en recursos de alto valor.
+    """)
+    
+    st.info("""
+    **El Sistema EcoDollars:** Convierte residuos recuperados en valor económico educativo. 
+    Cada producto y servicio del stand forma parte de un modelo interno de intercambio 
+    que demuestra cómo el reciclaje puede transformarse en economía real.
+    """)
 
-    st.subheader("Economía Circular Aplicada")
+    st.divider() # Línea divisoria visual
+
+# --- PUNTO 1 ---
+    st.markdown("### 1. Extracción y Recuperación (El Inicio)")
     st.write("""
-El sistema EcoDollars convierte residuos recuperados en valor económico educativo.
-Cada producto y servicio del stand forma parte de un modelo interno de intercambio 
-que demuestra cómo el reciclaje puede transformarse en economía real.
+Todo comienza con la captura de materiales que el sistema tradicional descarta. 
+Recolectamos papel, cartón, botellas PET, envases Tetra Pak y latas de conservas.
 """)
+    st.caption("💡 **Incentivo Circular:** A través de nuestro Banco de Intercambio, transformamos estos residuos en **EcoDollars**.")
+
+# --- PUNTO 2 ---
+    st.markdown("### 2. Transformación Técnica (El Procesamiento)")
+    st.write("Aquí es donde la ciencia y la industria intervienen para elevar la calidad del material:")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown("**🔹 División Celulosa (EcoPapel)**")
+        st.write("El papel viejo se convierte en *FibroPapel* o en *Papel Seed*.")
+    with col2:
+        st.markdown("**🔹 División Científica (EcoLab)**")
+        st.write("Procesamos restos orgánicos para extraer tintes naturales sin químicos tóxicos.")
+
+    # --- PUNTO 3 ---
+    st.markdown("### 3. Cierre del Ciclo: El Residuo Cero")
+    st.write("Nuestra innovación máxima ocurre cuando el residuo del reciclaje se vuelve insumo:")
+    st.markdown("""
+- **Carbon Ink:** Los restos de papel no reciclables pasan por pirólisis para convertirse en tinta negra. ¡El papel sobrante escribe sobre el papel nuevo!
+- **Biomasa y Energía:** Los desechos orgánicos sobrantes se destinan a la creación de biogás.
+""")
+
+# --- PUNTO 4 ---
+    st.markdown("### 4. Regeneración y Tecnología")
+    st.write("El ciclo se expande hacia el futuro y la naturaleza:")
+    st.success("""
+**Nendo Dango:** Bombas de semillas que reforestan el paisaje.  
+**Monitoreo Inteligente:** Nuestra **Eco-IA** y el **TerrarIA** analizan este flujo en tiempo real.
+""")
+
+    st.divider()
 
 # --------------------------------------------------
 # FICHAS
