@@ -535,14 +535,9 @@ Recolectamos papel, cartón, botellas PET, envases Tetra Pak y latas de conserva
         st.caption("EcoPapel | Representante de la Seccion")
         st.markdown("> '-'")
 
-    with col5:
+    with col6:
         st.markdown("**Julian Tejerina**")
         st.caption("EcoTech | Representante de la Seccion")
-        st.markdown("> '-'")
-
-    with col6:
-        st.markdown("**Mauro De La Fuente**")
-        st.caption("EcoIndustria | Colaborador de la Seccion")
         st.markdown("> '-'")
 
     with col7:
@@ -568,7 +563,7 @@ Recolectamos papel, cartón, botellas PET, envases Tetra Pak y latas de conserva
         st.markdown("[🎵 Tiktok](https://www.tiktok.com/@ecopapel.7)")
     
     st.caption("Síguenos para conocer novedades de ciencia, innovación y reciclaje creativo.")
-    
+
 # --------------------------------------------------
 # FICHAS
 # --------------------------------------------------
@@ -680,5 +675,4 @@ Relaciona la respuesta con sustentabilidad o ciencia.
             except Exception as e:
                 st.error("Error real:")
                 st.code(str(e))
-
 
