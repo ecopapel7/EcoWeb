@@ -509,7 +509,7 @@ Recolectamos papel, cartón, botellas PET, envases Tetra Pak y latas de conserva
     st.divider()
     st.markdown("### Contacto y Redes Sociales")
     
-    col1, col2, col3, col4 = st.columns(3)
+    col1, col2, col3 = st.columns(3)
 
     with col1:
         st.markdown("[📸 Instagram](https://www.instagram.com/eco.papel.7)")
@@ -630,4 +630,5 @@ Relaciona la respuesta con sustentabilidad o ciencia.
             except Exception as e:
                 st.error("Error real:")
                 st.code(str(e))
+
 
