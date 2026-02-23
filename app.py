@@ -4,6 +4,8 @@ from groq import Groq
 import os
 import re
 
+# -*- coding: utf-8 -*-
+
 # --------------------------------------------------
 # CONFIGURACIÓN GENERAL
 # --------------------------------------------------
@@ -785,22 +787,24 @@ elif selected == "Fichas Técnicas":
 # --------------------------------------------------
 
 elif selected == "EcoIA":
-    
-    st.markdown("<hr style='border: 1px solid rgba(255,255,255,0.1);'>", unsafe_allow_html=True)
 
     st.markdown("""
-<div class="ecoia-header">
-<h2>🤖 EcoIA · Núcleo de Conocimiento</h2>
-<p>División EcoTech · Sistema de Documentación Inteligente</p>
-</div>
-""", unsafe_allow_html=True)
+    <div class="ecoia-header">
+    <h2>EcoIA · Núcleo de Conocimiento</h2>
+    <p>División EcoTech · Sistema de Documentación Inteligente</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("Estado del núcleo: Operativo")
 
     st.info(
         "EcoIA permite consultar en tiempo real cualquier ficha técnica "
         "del Proyecto Eco mediante un modelo de lenguaje optimizado "
         "para documentación científica educativa."
     )
+
     st.markdown('<div class="ecoia-glow">', unsafe_allow_html=True)
+
     if "messages" not in st.session_state:
         st.session_state.messages = [{
             "role": "assistant",
@@ -811,7 +815,9 @@ elif selected == "EcoIA":
         with st.chat_message(msg["role"]):
             st.markdown(msg["content"])
 
-    if prompt := st.chat_input("Escribí tu consulta técnica..."):
+    prompt = st.chat_input("Consultar base de datos técnica...")
+
+    if prompt:
 
         st.session_state.messages.append({"role": "user", "content": prompt})
 
@@ -835,10 +841,8 @@ Reglas obligatorias:
 6. Mantén tono técnico y conciso.
 """
 
-
             try:
                 client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
-
 
                 messages = [{"role": "system", "content": system}]
 
@@ -877,12 +881,7 @@ Relaciona la respuesta con sustentabilidad o ciencia.
             except Exception as e:
                 st.error("Error real:")
                 st.code(str(e))
+
     st.markdown('</div>', unsafe_allow_html=True)
-
-
-
-
-
-
 
 
