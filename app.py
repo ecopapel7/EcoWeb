@@ -133,6 +133,30 @@ div[data-testid="stExpander"] {
     border: 1px solid rgba(74,222,128,0.6);
     box-shadow: 0 0 25px rgba(74,222,128,0.3);
 }
+.ecoia-header {
+    padding: 25px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    box-shadow: 0 0 25px rgba(46,139,87,0.4);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.ecoia-glow {
+    border: 1px solid rgba(46,139,87,0.4);
+    border-radius: 18px;
+    padding: 20px;
+    background-color: #0e1f2f;
+    box-shadow: 0 0 18px rgba(46,139,87,0.2);
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(15px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+</style>
+""", unsafe_allow_html=True)
 </style>
 """, unsafe_allow_html=True)
 
@@ -524,7 +548,6 @@ if selected == "Inicio":
     <p>Sistema Integral de Innovación Sustentable</p>
 </div>
 """, unsafe_allow_html=True)
-
     st.markdown("""
 <div class="card">
 <h3>🌍 Visión General</h3>
@@ -633,8 +656,8 @@ y proyecta el impacto económico y ambiental del sistema Eco.
     eliminando el concepto de **"basura"** y transformándolo en recursos de alto valor.
     """)
     
-    st.info("""
-    **El Sistema EcoDollars:** Convierte residuos recuperados en valor económico educativo. 
+    st.write("""
+    **El Sistema EcoDollars** convierte residuos recuperados en valor económico educativo. 
     Cada producto y servicio del stand forma parte de un modelo interno de intercambio 
     que demuestra cómo el reciclaje puede transformarse en economía real.
     """)
@@ -762,16 +785,22 @@ elif selected == "Fichas Técnicas":
 # --------------------------------------------------
 
 elif selected == "EcoIA":
+    
     st.markdown("<hr style='border: 1px solid rgba(255,255,255,0.1);'>", unsafe_allow_html=True)
-    st.title("EcoIA · Núcleo de Conocimiento")
-    st.caption("División EcoTech | Sistema de Documentación Inteligente")
+
+    st.markdown("""
+<div class="ecoia-header">
+<h2>🤖 EcoIA · Núcleo de Conocimiento</h2>
+<p>División EcoTech · Sistema de Documentación Inteligente</p>
+</div>
+""", unsafe_allow_html=True)
 
     st.info(
         "EcoIA permite consultar en tiempo real cualquier ficha técnica "
         "del Proyecto Eco mediante un modelo de lenguaje optimizado "
         "para documentación científica educativa."
     )
-
+    st.markdown('<div class="ecoia-glow">', unsafe_allow_html=True)
     if "messages" not in st.session_state:
         st.session_state.messages = [{
             "role": "assistant",
@@ -848,6 +877,7 @@ Relaciona la respuesta con sustentabilidad o ciencia.
             except Exception as e:
                 st.error("Error real:")
                 st.code(str(e))
+    st.markdown('</div>', unsafe_allow_html=True)
 
 
 
