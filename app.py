@@ -582,55 +582,55 @@ en cuatro divisiones especializadas que trabajan de forma integrada.
     with col1:
         st.markdown("""
 <div class="card division">
-<h3>📄 EcoPapel</h3>
+<h3>EcoPapel</h3>
 <p class="mini">División fundacional · Recuperación y revalorización del papel</p>
 <p>
 Transformación de residuos de papel en nuevos productos sustentables.
 Incluye papel reciclado artesanal, papel plantable y líneas experimentales.
 </p>
 <ul>
-<li>♻️ Reciclaje creativo</li>
-<li>🌸 Papel con semillas</li>
-<li>📚 Educación ambiental práctica</li>
+<li>Reciclaje creativo</li>
+<li>Papel con semillas</li>
+<li>Educación ambiental práctica</li>
 </ul>
 </div>
 """, unsafe_allow_html=True)
     with col2:
         st.markdown("""
 <div class="card division">
-<h3>🧪 EcoLab</h3>
+<h3>EcoLab</h3>
 <p class="mini">Investigación experimental y bioprocesos</p>
 <p>
 Desarrollo de tintes naturales, bioplásticos, fijadores orgánicos 
 y experimentos sustentables aplicados a la producción ecológica.
 </p>
 <ul>
-<li>🌿 Colorantes naturales</li>
-<li>🧫 Procesos biológicos</li>
-<li>🔬 Innovación experimental</li>
+<li>Colorantes naturales</li>
+<li>Procesos biológicos</li>
+<li>Innovación experimental</li>
 </ul>
 </div>
 """, unsafe_allow_html=True)
     with col3:
         st.markdown("""
 <div class="card division">
-<h3>⚡ EcoTech</h3>
+<h3>EcoTech</h3>
 <p class="mini">Unidad tecnológica y digital del proyecto</p>
 <p>
 Integración de hardware, software y análisis de datos al ecosistema Eco.
 Desarrollo de dashboards, monitoreo ambiental e inteligencia aplicada.
 </p>
 <ul>
-<li>📊 Paneles interactivos</li>
-<li>🌡️ Sensores ambientales</li>
-<li>🤖 Automatización sustentable</li>
+<li>Paneles interactivos</li>
+<li>Sensores ambientales</li>
+<li>Automatización sustentable</li>
 </ul>
 </div>
 """, unsafe_allow_html=True)
     with col4:
         st.markdown("""
 <div class="card division">
-<h3>🏭 EcoIndustria</h3>
+<h3>EcoIndustria</h3>
 <p class="mini">Escalado productivo y aplicación industrial sustentable</p>
 <p>
 División orientada a la transformación de prototipos ecológicos 
@@ -638,9 +638,9 @@ en modelos productivos viables. Evalúa procesos, optimiza recursos
 y proyecta el impacto económico y ambiental del sistema Eco.
 </p>
 <ul>
-<li>⚙️ Optimización de procesos</li>
-<li>📦 Producción sustentable</li>
-<li>📈 Proyección y viabilidad</li>
+<li>Optimización de procesos</li>
+<li>Producción sustentable</li>
+<li>Proyección y viabilidad</li>
 </ul>
 </div>
 """, unsafe_allow_html=True)
@@ -670,17 +670,17 @@ y proyecta el impacto económico y ambiental del sistema Eco.
 Todo comienza con la captura de materiales que el sistema tradicional descarta. 
 Recolectamos papel, cartón, botellas PET, envases Tetra Pak y latas de conservas.
 """)
-    st.caption("💡 **Incentivo Circular:** A través de nuestro Banco de Intercambio, transformamos estos residuos en **EcoDollars**.")
+    st.caption("**Incentivo Circular** a través de nuestro Banco de Intercambio, transformamos estos residuos en **EcoDollars**.")
 
 # --- PUNTO 2 ---
     st.markdown("### 2. Transformación Técnica (El Procesamiento)")
     st.write("Aquí es donde la ciencia y la industria intervienen para elevar la calidad del material:")
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown("**🔹 División Celulosa (EcoPapel)**")
+        st.markdown("**División Celulosa (EcoPapel)**")
         st.write("El papel viejo se convierte en *FibroPapel* o en *Papel Seed*.")
     with col2:
-        st.markdown("**🔹 División Científica (EcoLab)**")
+        st.markdown("**División Científica (EcoLab)**")
         st.write("Procesamos restos orgánicos para extraer tintes naturales sin químicos tóxicos.")
 
     # --- PUNTO 3 ---
@@ -744,18 +744,79 @@ Recolectamos papel, cartón, botellas PET, envases Tetra Pak y latas de conserva
         st.markdown("> '-'")
 
     st.divider()
-    st.markdown("### Contacto y Redes Sociales")
-    
+
+    st.markdown("## Contacto y Redes")
+
+    st.markdown("""
+<style>
+.social-card {
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.social-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255,255,255,0.08);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+.social-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.social-link a {
+    text-decoration: none;
+    color: #4ADE80;
+    font-weight: 500;
+}
+</style>
+""", unsafe_allow_html=True)
+
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.markdown("[📸 Instagram](https://www.instagram.com/eco.papel.7)")
+        st.markdown("""
+    <div class="social-card">
+        <div class="social-title">Instagram</div>
+        <div class="social-link">
+            <a href="https://www.instagram.com/eco.papel.7" target="_blank">
+                @eco.papel.7
+            </a>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
     with col2:
-        st.markdown("[🎥 Youtube](https://www.youtube.com/channel/UCp3J81kztAoSYtEtCJzVx9A)")
+        st.markdown("""
+    <div class="social-card">
+        <div class="social-title">YouTube</div>
+        <div class="social-link">
+            <a href="https://www.youtube.com/channel/UCp3J81kztAoSYtEtCJzVx9A" target="_blank">
+                Canal Oficial
+            </a>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
     with col3:
-        st.markdown("[🎵 Tiktok](https://www.tiktok.com/@ecopapel.7)")
-    
-    st.caption("Síguenos para conocer novedades de ciencia, innovación y reciclaje creativo.")
+        st.markdown("""
+    <div class="social-card">
+        <div class="social-title">TikTok</div>
+        <div class="social-link">
+            <a href="https://www.tiktok.com/@ecopapel.7" target="_blank">
+                @ecopapel.7
+            </a>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+st.caption("Proyecto Eco 2026 · Ciencia aplicada · Innovación sustentable")
 
 # --------------------------------------------------
 # FICHAS
@@ -774,7 +835,7 @@ elif selected == "Fichas Técnicas":
 
         if filtro == "Todas" or filtro == datos["division"]:
 
-            with st.expander(f"📄 Ficha {num} · {datos['titulo']}"):
+            with st.expander(f"Ficha {num} · {datos['titulo']}"):
                 st.markdown(f"""
                 <div class="card">
                 <b>División:</b> {datos['division']}<br><br>
@@ -883,6 +944,7 @@ Relaciona la respuesta con sustentabilidad o ciencia.
                 st.code(str(e))
 
     st.markdown('</div>', unsafe_allow_html=True)
+
 
 
 
