@@ -544,7 +544,7 @@ if selected == "Inicio":
     st.markdown("<hr style='border: 1px solid rgba(255,255,255,0.1);'>", unsafe_allow_html=True)
     st.markdown("""
 <div class="hero">
-    <h1>🌱 Proyecto Eco 2026</h1>
+    <h1>Proyecto Eco 2026</h1>
     <p>Sistema Integral de Innovación Sustentable</p>
 </div>
 """, unsafe_allow_html=True)
@@ -878,6 +878,7 @@ Relaciona la respuesta con sustentabilidad o ciencia.
                 st.error("Error real:")
                 st.code(str(e))
     st.markdown('</div>', unsafe_allow_html=True)
+
 
 
 
