@@ -517,7 +517,7 @@ with st.sidebar:
 # --------------------------------------------------
 
 if selected == "Inicio":
-st.markdown("<hr style='border: 1px solid rgba(255,255,255,0.1);'>", unsafe_allow_html=True)
+    st.markdown("<hr style='border: 1px solid rgba(255,255,255,0.1);'>", unsafe_allow_html=True)
     st.markdown("""
 <div class="hero">
     <h1>🌱 Proyecto Eco 2026</h1>
@@ -737,7 +737,7 @@ Recolectamos papel, cartón, botellas PET, envases Tetra Pak y latas de conserva
 # --------------------------------------------------
 
 elif selected == "Fichas Técnicas":
-st.markdown("<hr style='border: 1px solid rgba(255,255,255,0.1);'>", unsafe_allow_html=True)
+    st.markdown("<hr style='border: 1px solid rgba(255,255,255,0.1);'>", unsafe_allow_html=True)
     st.title("Biblioteca Técnica Eco")
 
     filtro = st.selectbox(
@@ -762,7 +762,7 @@ st.markdown("<hr style='border: 1px solid rgba(255,255,255,0.1);'>", unsafe_allo
 # --------------------------------------------------
 
 elif selected == "EcoIA":
-st.markdown("<hr style='border: 1px solid rgba(255,255,255,0.1);'>", unsafe_allow_html=True)
+    st.markdown("<hr style='border: 1px solid rgba(255,255,255,0.1);'>", unsafe_allow_html=True)
     st.title("EcoIA · Núcleo de Conocimiento")
     st.caption("División EcoTech | Sistema de Documentación Inteligente")
 
@@ -848,6 +848,7 @@ Relaciona la respuesta con sustentabilidad o ciencia.
             except Exception as e:
                 st.error("Error real:")
                 st.code(str(e))
+
 
 
 
