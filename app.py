@@ -516,7 +516,7 @@ en cuatro divisiones especializadas que trabajan de forma integrada.
         <p>EcoLab es el laboratorio experimental del proyecto. Aquí se aplican principios de química, biología y física para desarrollar procesos sustentables que transforman residuos en recursos. Desde la extracción de pigmentos naturales hasta la síntesis de cristales y la generación teórica de biogás, EcoLab demuestra que la ciencia puede integrarse a la vida escolar como herramienta de innovación real. Esta división valida técnicamente los procesos del proyecto y aporta fundamento científico a cada desarrollo. - Cristalización, pigmentos naturales, Carbon Ink y síntesis experimental.</p>
         </div>
         """, unsafe_allow_html=True)
-    with co3:
+    with col3:
         st.markdown("""
         <div class="card">
         <h3>⚡ EcoTech</h3>
@@ -760,6 +760,7 @@ Relaciona la respuesta con sustentabilidad o ciencia.
             except Exception as e:
                 st.error("Error real:")
                 st.code(str(e))
+
 
 
 
