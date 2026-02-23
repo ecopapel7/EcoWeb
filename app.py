@@ -662,12 +662,12 @@ elif selected == "Fichas Técnicas":
         if filtro == "Todas" or filtro == datos["division"]:
 
             with st.expander(f"📄 Ficha {num} · {datos['titulo']}"):
-            st.markdown(f"""
-            <div class="card">
-            <b>División:</b> {datos['division']}<br><br>
-            {datos['descripcion']}
-            </div>
-            """, unsafe_allow_html=True)
+                st.markdown(f"""
+                <div class="card">
+                <b>División:</b> {datos['division']}<br><br>
+                {datos['descripcion']}
+                </div>
+                """, unsafe_allow_html=True)
 
 # --------------------------------------------------
 # ECOIA (VERSIÓN NUBE ESTABLE)
@@ -760,6 +760,7 @@ Relaciona la respuesta con sustentabilidad o ciencia.
             except Exception as e:
                 st.error("Error real:")
                 st.code(str(e))
+
 
 
 
