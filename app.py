@@ -17,45 +17,78 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
 
-/* Fondo general */
+/* Fondo animado */
 .stApp {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1e3c72);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     color: #ffffff;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background: #0f172a;
+    border-right: 1px solid rgba(255,255,255,0.1);
 }
 
 /* Títulos */
 h1, h2, h3 {
     color: #4ADE80;
+    letter-spacing: 1px;
 }
 
-/* Cards tipo vidrio */
+/* Cards modernas */
 .card {
-    background: rgba(255,255,255,0.05);
-    padding: 20px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    background: rgba(255,255,255,0.06);
+    padding: 25px;
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
     margin-bottom: 20px;
 }
 
-/* Expansores más lindos */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+}
+
+/* Expander */
 div[data-testid="stExpander"] {
     background: rgba(255,255,255,0.05);
-    border-radius: 12px;
-    padding: 10px;
+    border-radius: 15px;
     border: 1px solid rgba(255,255,255,0.1);
 }
 
 /* Métricas */
 [data-testid="stMetric"] {
     background: rgba(255,255,255,0.05);
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
+
+/* Botones */
+.stButton>button {
+    background: #22c55e;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    transition: 0.3s;
+}
+
+.stButton>button:hover {
+    background: #16a34a;
+    transform: scale(1.05);
+}
+
 </style>
 """, unsafe_allow_html=True)
 
@@ -444,7 +477,7 @@ if selected == "Inicio":
     st.markdown("""
         <div class="card">
         <h1 style='text-align:center;'>🌱 Proyecto Eco 2026</h1>
-        <p style='text-align:center; font-size:18px;'>
+        <p style='text-align:center; font-size:20px; opacity:0.8;'>
         Sistema Integral de Innovación Sustentable
         </p>
         </div>
@@ -470,34 +503,34 @@ en cuatro divisiones especializadas que trabajan de forma integrada.
     col1, col2, col3, col4 = st.columns(4)
 
     with col1:
-    st.markdown("""
-    <div class="card">
-    <h3>🌱 EcoPapel</h3>
-    <p>EcoPapel es la división fundacional del proyecto y el núcleo de la transformación material. Se especializa en la recuperación y revalorización del papel y cartón mediante procesos artesanales y técnicas de innovación sustentable. Su enfoque combina economía circular, diseño funcional y educación ambiental, demostrando que un residuo cotidiano puede convertirse en un material resistente, estético y útil. EcoPapel representa la base física del sistema Eco: donde el desecho vuelve a tener valor. - Desarrollo de papel reciclado avanzado, Papel Seed y FibroPapel.</p>
-    </div>
-    """, unsafe_allow_html=True)
+        st.markdown("""
+        <div class="card">
+        <h3>🌱 EcoPapel</h3>
+        <p>EcoPapel es la división fundacional del proyecto y el núcleo de la transformación material. Se especializa en la recuperación y revalorización del papel y cartón mediante procesos artesanales y técnicas de innovación sustentable. Su enfoque combina economía circular, diseño funcional y educación ambiental, demostrando que un residuo cotidiano puede convertirse en un material resistente, estético y útil. EcoPapel representa la base física del sistema Eco: donde el desecho vuelve a tener valor. - Desarrollo de papel reciclado avanzado, Papel Seed y FibroPapel.</p>
+        </div>
+        """, unsafe_allow_html=True)
     with col2:
-    st.markdown("""
-    <div class="card">
-    <h3>🧪 EcoLab</h3>
-    <p>EcoLab es el laboratorio experimental del proyecto. Aquí se aplican principios de química, biología y física para desarrollar procesos sustentables que transforman residuos en recursos. Desde la extracción de pigmentos naturales hasta la síntesis de cristales y la generación teórica de biogás, EcoLab demuestra que la ciencia puede integrarse a la vida escolar como herramienta de innovación real. Esta división valida técnicamente los procesos del proyecto y aporta fundamento científico a cada desarrollo. - Cristalización, pigmentos naturales, Carbon Ink y síntesis experimental.</p>
-    </div>
-    """, unsafe_allow_html=True)
+        st.markdown("""
+        <div class="card">
+        <h3>🧪 EcoLab</h3>
+        <p>EcoLab es el laboratorio experimental del proyecto. Aquí se aplican principios de química, biología y física para desarrollar procesos sustentables que transforman residuos en recursos. Desde la extracción de pigmentos naturales hasta la síntesis de cristales y la generación teórica de biogás, EcoLab demuestra que la ciencia puede integrarse a la vida escolar como herramienta de innovación real. Esta división valida técnicamente los procesos del proyecto y aporta fundamento científico a cada desarrollo. - Cristalización, pigmentos naturales, Carbon Ink y síntesis experimental.</p>
+        </div>
+        """, unsafe_allow_html=True)
     with co3:
-    st.markdown("""
-    <div class="card">
-    <h3>⚡ EcoTech</h3>
-    <p>EcoTech es la unidad de innovación digital y tecnológica. Su objetivo es integrar hardware, software e inteligencia artificial al ecosistema Eco. A través de sistemas como EcoIA y TerrarIA, esta división convierte datos en conocimiento accesible, monitorea procesos en tiempo real y demuestra cómo la tecnología puede potenciar la sustentabilidad. EcoTech conecta todas las áreas del proyecto, funcionando como el cerebro digital que analiza, predice y comunica. - EcoIA, TerrarIA y sistemas de monitoreo inteligente</p>
-    </div>
-    """, unsafe_allow_html=True)
+        st.markdown("""
+        <div class="card">
+        <h3>⚡ EcoTech</h3>
+        <p>EcoTech es la unidad de innovación digital y tecnológica. Su objetivo es integrar hardware, software e inteligencia artificial al ecosistema Eco. A través de sistemas como EcoIA y TerrarIA, esta división convierte datos en conocimiento accesible, monitorea procesos en tiempo real y demuestra cómo la tecnología puede potenciar la sustentabilidad. EcoTech conecta todas las áreas del proyecto, funcionando como el cerebro digital que analiza, predice y comunica. - EcoIA, TerrarIA y sistemas de monitoreo inteligente</p>
+        </div>
+        """, unsafe_allow_html=True)
     with col4:
-    st.markdown("""
-    <div class="card">
-    <h3>💲 EcoIndustria</h3>
-    <p>EcoIndustria se enfoca en el desarrollo de productos funcionales de alto impacto, aplicando principios de ingeniería, física y diseño estructural. Esta división transforma residuos en herramientas, dispositivos y objetos de uso cotidiano con valor técnico comprobable. Su propósito es demostrar que el reciclaje no solo es artesanal, sino también industrial y estructural, capaz de generar soluciones duraderas y eficientes. - Productos funcionales de alto impacto como EcoTrash, EcoLámparas y Eco-Voz.</p>
-    </div>
-    """, unsafe_allow_html=True)
-    st.write("---")
+        st.markdown("""
+        <div class="card">
+        <h3>💲 EcoIndustria</h3>
+        <p>EcoIndustria se enfoca en el desarrollo de productos funcionales de alto impacto, aplicando principios de ingeniería, física y diseño estructural. Esta división transforma residuos en herramientas, dispositivos y objetos de uso cotidiano con valor técnico comprobable. Su propósito es demostrar que el reciclaje no solo es artesanal, sino también industrial y estructural, capaz de generar soluciones duraderas y eficientes. - Productos funcionales de alto impacto como EcoTrash, EcoLámparas y Eco-Voz.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        st.write("---")
 
     c1, c2, c3 = st.columns(3)
     c1.metric("Fichas Técnicas", "24")
@@ -727,5 +760,6 @@ Relaciona la respuesta con sustentabilidad o ciencia.
             except Exception as e:
                 st.error("Error real:")
                 st.code(str(e))
+
 
 
