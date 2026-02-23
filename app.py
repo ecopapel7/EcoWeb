@@ -19,13 +19,42 @@ st.markdown("""
 <style>
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
-h1, h2, h3 {
-    color: #2E8B57;
+
+/* Fondo general */
+.stApp {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
 }
+
+/* Títulos */
+h1, h2, h3 {
+    color: #4ADE80;
+}
+
+/* Cards tipo vidrio */
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+}
+
+/* Expansores más lindos */
 div[data-testid="stExpander"] {
-    background-color: #0e1f2f;
-    border-radius: 10px;
-    padding: 5px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Métricas */
+[data-testid="stMetric"] {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 </style>
 """, unsafe_allow_html=True)
@@ -390,7 +419,6 @@ def obtener_division(info):
 # --------------------------------------------------
 # SIDEBAR
 # --------------------------------------------------
-
 with st.sidebar:
     st.markdown("## Proyecto Eco")
 
@@ -413,9 +441,14 @@ with st.sidebar:
 
 if selected == "Inicio":
 
-    st.title("Proyecto Eco 2026")
-    st.markdown("### Sistema Integral de Innovación Sustentable")
-    st.write("")
+    st.markdown("""
+        <div class="card">
+        <h1 style='text-align:center;'>🌱 Proyecto Eco 2026</h1>
+        <p style='text-align:center; font-size:18px;'>
+        Sistema Integral de Innovación Sustentable
+        </p>
+        </div>
+        """, unsafe_allow_html=True)
 
     st.write("""
 Proyecto Eco es una plataforma educativa de ciencia aplicada que transforma residuos en recursos 
@@ -434,22 +467,36 @@ en cuatro divisiones especializadas que trabajan de forma integrada.
 
     st.subheader("Secciones Del Proyecto Eco")
 
-    col1, col2 = st.columns(2)
+    col1, col2, col3, col4 = st.columns(4)
 
     with col1:
-        st.markdown("**EcoPapel · Arte y Celulosa**")
-        st.caption("EcoPapel es la división fundacional del proyecto y el núcleo de la transformación material. Se especializa en la recuperación y revalorización del papel y cartón mediante procesos artesanales y técnicas de innovación sustentable. Su enfoque combina economía circular, diseño funcional y educación ambiental, demostrando que un residuo cotidiano puede convertirse en un material resistente, estético y útil. EcoPapel representa la base física del sistema Eco: donde el desecho vuelve a tener valor. - Desarrollo de papel reciclado avanzado, Papel Seed y FibroPapel.")
-
-        st.markdown("**EcoLab · Ciencia Y Quimica**")
-        st.caption("EcoLab es el laboratorio experimental del proyecto. Aquí se aplican principios de química, biología y física para desarrollar procesos sustentables que transforman residuos en recursos. Desde la extracción de pigmentos naturales hasta la síntesis de cristales y la generación teórica de biogás, EcoLab demuestra que la ciencia puede integrarse a la vida escolar como herramienta de innovación real. Esta división valida técnicamente los procesos del proyecto y aporta fundamento científico a cada desarrollo. - Cristalización, pigmentos naturales, Carbon Ink y síntesis experimental.")
-
+    st.markdown("""
+    <div class="card">
+    <h3>🌱 EcoPapel</h3>
+    <p>EcoPapel es la división fundacional del proyecto y el núcleo de la transformación material. Se especializa en la recuperación y revalorización del papel y cartón mediante procesos artesanales y técnicas de innovación sustentable. Su enfoque combina economía circular, diseño funcional y educación ambiental, demostrando que un residuo cotidiano puede convertirse en un material resistente, estético y útil. EcoPapel representa la base física del sistema Eco: donde el desecho vuelve a tener valor. - Desarrollo de papel reciclado avanzado, Papel Seed y FibroPapel.</p>
+    </div>
+    """, unsafe_allow_html=True)
     with col2:
-        st.markdown("**EcoTech · Tecnología e Innovacion**")
-        st.caption("EcoTech es la unidad de innovación digital y tecnológica. Su objetivo es integrar hardware, software e inteligencia artificial al ecosistema Eco. A través de sistemas como EcoIA y TerrarIA, esta división convierte datos en conocimiento accesible, monitorea procesos en tiempo real y demuestra cómo la tecnología puede potenciar la sustentabilidad. EcoTech conecta todas las áreas del proyecto, funcionando como el cerebro digital que analiza, predice y comunica. - EcoIA, TerrarIA y sistemas de monitoreo inteligente.")
-
-        st.markdown("**EcoIndustria · Ingeniería y Utilidad**")
-        st.caption("EcoIndustria se enfoca en el desarrollo de productos funcionales de alto impacto, aplicando principios de ingeniería, física y diseño estructural. Esta división transforma residuos en herramientas, dispositivos y objetos de uso cotidiano con valor técnico comprobable. Su propósito es demostrar que el reciclaje no solo es artesanal, sino también industrial y estructural, capaz de generar soluciones duraderas y eficientes. - Productos funcionales de alto impacto como EcoTrash, EcoLámparas y Eco-Voz.")
-
+    st.markdown("""
+    <div class="card">
+    <h3>🧪 EcoLab</h3>
+    <p>EcoLab es el laboratorio experimental del proyecto. Aquí se aplican principios de química, biología y física para desarrollar procesos sustentables que transforman residuos en recursos. Desde la extracción de pigmentos naturales hasta la síntesis de cristales y la generación teórica de biogás, EcoLab demuestra que la ciencia puede integrarse a la vida escolar como herramienta de innovación real. Esta división valida técnicamente los procesos del proyecto y aporta fundamento científico a cada desarrollo. - Cristalización, pigmentos naturales, Carbon Ink y síntesis experimental.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    with co3:
+    st.markdown("""
+    <div class="card">
+    <h3>⚡ EcoTech</h3>
+    <p>EcoTech es la unidad de innovación digital y tecnológica. Su objetivo es integrar hardware, software e inteligencia artificial al ecosistema Eco. A través de sistemas como EcoIA y TerrarIA, esta división convierte datos en conocimiento accesible, monitorea procesos en tiempo real y demuestra cómo la tecnología puede potenciar la sustentabilidad. EcoTech conecta todas las áreas del proyecto, funcionando como el cerebro digital que analiza, predice y comunica. - EcoIA, TerrarIA y sistemas de monitoreo inteligente</p>
+    </div>
+    """, unsafe_allow_html=True)
+    with col4:
+    st.markdown("""
+    <div class="card">
+    <h3>💲 EcoIndustria</h3>
+    <p>EcoIndustria se enfoca en el desarrollo de productos funcionales de alto impacto, aplicando principios de ingeniería, física y diseño estructural. Esta división transforma residuos en herramientas, dispositivos y objetos de uso cotidiano con valor técnico comprobable. Su propósito es demostrar que el reciclaje no solo es artesanal, sino también industrial y estructural, capaz de generar soluciones duraderas y eficientes. - Productos funcionales de alto impacto como EcoTrash, EcoLámparas y Eco-Voz.</p>
+    </div>
+    """, unsafe_allow_html=True)
     st.write("---")
 
     c1, c2, c3 = st.columns(3)
@@ -581,8 +628,13 @@ elif selected == "Fichas Técnicas":
 
         if filtro == "Todas" or filtro == datos["division"]:
 
-            with st.expander(f"Ficha {num} · {datos['titulo']} ({datos['division']})"):
-                st.write(datos["descripcion"])
+            with st.expander(f"📄 Ficha {num} · {datos['titulo']}"):
+            st.markdown(f"""
+            <div class="card">
+            <b>División:</b> {datos['division']}<br><br>
+            {datos['descripcion']}
+            </div>
+            """, unsafe_allow_html=True)
 
 # --------------------------------------------------
 # ECOIA (VERSIÓN NUBE ESTABLE)
@@ -675,4 +727,5 @@ Relaciona la respuesta con sustentabilidad o ciencia.
             except Exception as e:
                 st.error("Error real:")
                 st.code(str(e))
+
 
