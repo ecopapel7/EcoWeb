@@ -88,7 +88,51 @@ div[data-testid="stExpander"] {
     background: #16a34a;
     transform: scale(1.05);
 }
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, rgba(34,197,94,0.15), rgba(16,185,129,0.1));
+    backdrop-filter: blur(20px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    animation: fadeIn 1.2s ease-in-out;
+}
 
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #4ADE80;
+}
+
+.hero p {
+    font-size: 20px;
+    opacity: 0.85;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+.card {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: cardAppear 0.8s ease forwards;
+}
+
+@keyframes cardAppear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.card {
+    border: 1px solid rgba(74,222,128,0.2);
+}
+
+.card:hover {
+    border: 1px solid rgba(74,222,128,0.6);
+    box-shadow: 0 0 25px rgba(74,222,128,0.3);
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -473,16 +517,24 @@ with st.sidebar:
 # --------------------------------------------------
 
 if selected == "Inicio":
+st.markdown("<hr style='border: 1px solid rgba(255,255,255,0.1);'>", unsafe_allow_html=True)
+    st.markdown("""
+<div class="hero">
+    <h1>🌱 Proyecto Eco 2026</h1>
+    <p>Sistema Integral de Innovación Sustentable</p>
+</div>
+""", unsafe_allow_html=True)
 
     st.markdown("""
-        <div class="card">
-        <h1 style='text-align:center;'>🌱 Proyecto Eco 2026</h1>
-        <p style='text-align:center; font-size:20px; opacity:0.8;'>
-        Sistema Integral de Innovación Sustentable
-        </p>
-        </div>
-        """, unsafe_allow_html=True)
-
+<div class="card">
+<h3>🌍 Visión General</h3>
+<p>
+Proyecto interdisciplinario orientado a la innovación ecológica, 
+la educación ambiental y el desarrollo tecnológico sustentable.
+Integra reciclaje, biotecnología, tecnología digital e inteligencia artificial.
+</p>
+</div>
+""", unsafe_allow_html=True)
     st.write("""
 Proyecto Eco es una plataforma educativa de ciencia aplicada que transforma residuos en recursos 
 mediante ingeniería, química, biotecnología y desarrollo tecnológico.
@@ -504,33 +556,69 @@ en cuatro divisiones especializadas que trabajan de forma integrada.
 
     with col1:
         st.markdown("""
-        <div class="card">
-        <h3>🌱 EcoPapel</h3>
-        <p>EcoPapel es la división fundacional del proyecto y el núcleo de la transformación material. Se especializa en la recuperación y revalorización del papel y cartón mediante procesos artesanales y técnicas de innovación sustentable. Su enfoque combina economía circular, diseño funcional y educación ambiental, demostrando que un residuo cotidiano puede convertirse en un material resistente, estético y útil. EcoPapel representa la base física del sistema Eco: donde el desecho vuelve a tener valor. - Desarrollo de papel reciclado avanzado, Papel Seed y FibroPapel.</p>
-        </div>
-        """, unsafe_allow_html=True)
+<div class="card division">
+<h3>📄 EcoPapel</h3>
+<p class="mini">División fundacional · Recuperación y revalorización del papel</p>
+<p>
+Transformación de residuos de papel en nuevos productos sustentables.
+Incluye papel reciclado artesanal, papel plantable y líneas experimentales.
+</p>
+<ul>
+<li>♻️ Reciclaje creativo</li>
+<li>🌸 Papel con semillas</li>
+<li>📚 Educación ambiental práctica</li>
+</ul>
+</div>
+""", unsafe_allow_html=True)
     with col2:
         st.markdown("""
-        <div class="card">
-        <h3>🧪 EcoLab</h3>
-        <p>EcoLab es el laboratorio experimental del proyecto. Aquí se aplican principios de química, biología y física para desarrollar procesos sustentables que transforman residuos en recursos. Desde la extracción de pigmentos naturales hasta la síntesis de cristales y la generación teórica de biogás, EcoLab demuestra que la ciencia puede integrarse a la vida escolar como herramienta de innovación real. Esta división valida técnicamente los procesos del proyecto y aporta fundamento científico a cada desarrollo. - Cristalización, pigmentos naturales, Carbon Ink y síntesis experimental.</p>
-        </div>
-        """, unsafe_allow_html=True)
+<div class="card division">
+<h3>🧪 EcoLab</h3>
+<p class="mini">Investigación experimental y bioprocesos</p>
+<p>
+Desarrollo de tintes naturales, bioplásticos, fijadores orgánicos 
+y experimentos sustentables aplicados a la producción ecológica.
+</p>
+<ul>
+<li>🌿 Colorantes naturales</li>
+<li>🧫 Procesos biológicos</li>
+<li>🔬 Innovación experimental</li>
+</ul>
+</div>
+""", unsafe_allow_html=True)
     with col3:
         st.markdown("""
-        <div class="card">
-        <h3>⚡ EcoTech</h3>
-        <p>EcoTech es la unidad de innovación digital y tecnológica. Su objetivo es integrar hardware, software e inteligencia artificial al ecosistema Eco. A través de sistemas como EcoIA y TerrarIA, esta división convierte datos en conocimiento accesible, monitorea procesos en tiempo real y demuestra cómo la tecnología puede potenciar la sustentabilidad. EcoTech conecta todas las áreas del proyecto, funcionando como el cerebro digital que analiza, predice y comunica. - EcoIA, TerrarIA y sistemas de monitoreo inteligente</p>
-        </div>
-        """, unsafe_allow_html=True)
+<div class="card division">
+<h3>⚡ EcoTech</h3>
+<p class="mini">Unidad tecnológica y digital del proyecto</p>
+<p>
+Integración de hardware, software y análisis de datos al ecosistema Eco.
+Desarrollo de dashboards, monitoreo ambiental e inteligencia aplicada.
+</p>
+<ul>
+<li>📊 Paneles interactivos</li>
+<li>🌡️ Sensores ambientales</li>
+<li>🤖 Automatización sustentable</li>
+</ul>
+</div>
+""", unsafe_allow_html=True)
     with col4:
         st.markdown("""
-        <div class="card">
-        <h3>💲 EcoIndustria</h3>
-        <p>EcoIndustria se enfoca en el desarrollo de productos funcionales de alto impacto, aplicando principios de ingeniería, física y diseño estructural. Esta división transforma residuos en herramientas, dispositivos y objetos de uso cotidiano con valor técnico comprobable. Su propósito es demostrar que el reciclaje no solo es artesanal, sino también industrial y estructural, capaz de generar soluciones duraderas y eficientes. - Productos funcionales de alto impacto como EcoTrash, EcoLámparas y Eco-Voz.</p>
-        </div>
-        """, unsafe_allow_html=True)
-        st.write("---")
+<div class="card division">
+<h3>🏭 EcoIndustria</h3>
+<p class="mini">Escalado productivo y aplicación industrial sustentable</p>
+<p>
+División orientada a la transformación de prototipos ecológicos 
+en modelos productivos viables. Evalúa procesos, optimiza recursos 
+y proyecta el impacto económico y ambiental del sistema Eco.
+</p>
+<ul>
+<li>⚙️ Optimización de procesos</li>
+<li>📦 Producción sustentable</li>
+<li>📈 Proyección y viabilidad</li>
+</ul>
+</div>
+""", unsafe_allow_html=True)
 
     c1, c2, c3 = st.columns(3)
     c1.metric("Fichas Técnicas", "24")
@@ -649,7 +737,7 @@ Recolectamos papel, cartón, botellas PET, envases Tetra Pak y latas de conserva
 # --------------------------------------------------
 
 elif selected == "Fichas Técnicas":
-
+st.markdown("<hr style='border: 1px solid rgba(255,255,255,0.1);'>", unsafe_allow_html=True)
     st.title("Biblioteca Técnica Eco")
 
     filtro = st.selectbox(
@@ -674,7 +762,7 @@ elif selected == "Fichas Técnicas":
 # --------------------------------------------------
 
 elif selected == "EcoIA":
-
+st.markdown("<hr style='border: 1px solid rgba(255,255,255,0.1);'>", unsafe_allow_html=True)
     st.title("EcoIA · Núcleo de Conocimiento")
     st.caption("División EcoTech | Sistema de Documentación Inteligente")
 
@@ -760,6 +848,7 @@ Relaciona la respuesta con sustentabilidad o ciencia.
             except Exception as e:
                 st.error("Error real:")
                 st.code(str(e))
+
 
 
 
