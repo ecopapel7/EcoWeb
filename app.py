@@ -552,7 +552,7 @@ if selected == "Inicio":
 """, unsafe_allow_html=True)
     st.markdown("""
 <div class="card">
-<h3>🌍 Visión General</h3>
+<h3>Visión General</h3>
 <p>
 Proyecto interdisciplinario orientado a la innovación ecológica, 
 la educación ambiental y el desarrollo tecnológico sustentable.
@@ -883,5 +883,6 @@ Relaciona la respuesta con sustentabilidad o ciencia.
                 st.code(str(e))
 
     st.markdown('</div>', unsafe_allow_html=True)
+
 
 
