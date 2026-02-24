@@ -583,7 +583,7 @@ en cuatro divisiones especializadas que trabajan de forma integrada.
         st.markdown("""
 <div class="card division">
 <h3>EcoPapel</h3>
-<p class="mini">División fundacional · Recuperación y revalorización del papel</p>
+<p class="mini">División fundacional - Recuperación y revalorización del papel</p>
 <p>
 Transformación de residuos de papel en nuevos productos sustentables.
 Incluye papel reciclado artesanal, papel plantable y líneas experimentales.
@@ -944,6 +944,7 @@ Relaciona la respuesta con sustentabilidad o ciencia.
                 st.code(str(e))
 
     st.markdown('</div>', unsafe_allow_html=True)
+
 
 
 
