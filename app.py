@@ -170,202 +170,201 @@ FICHAS_DETALLADAS = {
     "1": {
         "titulo": "Papel Seed",
         "division": "EcoPapel",
-        "descripcion": """
-Papel artesanal biodegradable con semillas incorporadas en su estructura fibrosa. 
-Una vez utilizado, puede plantarse directamente en tierra húmeda, donde la celulosa se degrada 
-y permite la germinación de las semillas integradas.
-
-Integra principios de reciclaje, biología vegetal y economía circular.
-        """
+        "descripcion": (
+            "Papel artesanal biodegradable con semillas incorporadas en su estructura fibrosa. "
+            "Una vez utilizado, puede plantarse directamente en tierra húmeda, donde la celulosa se degrada "
+            "y permite la germinacion de las semillas integradas. "
+            "Integra principios de reciclaje, biologia vegetal y economia circular."
+        ),
     },
     "2": {
         "titulo": "FibroPapel",
         "division": "EcoPapel",
-        "descripcion": """
-Material compuesto desarrollado a partir de pulpa de papel reciclado y fibras textiles de algodón.
-La incorporación de refuerzos aumenta la resistencia mecánica, flexibilidad y durabilidad, 
-permitiendo su uso estructural en tapas, carpetas y empaques.
-        """
+        "descripcion": (
+            "Material compuesto desarrollado a partir de pulpa de papel reciclado y fibras textiles de algodon. "
+            "La incorporacion de refuerzos aumenta la resistencia mecanica, flexibilidad y durabilidad, "
+            "permitiendo su uso estructural en tapas, carpetas y empaques."
+        ),
     },
     "3": {
         "titulo": "Manual del Reciclador",
         "division": "EcoPapel",
-        "descripcion": """
-Documento técnico educativo fabricado íntegramente con materiales reciclados.
-Compila procesos, fundamentos científicos y protocolos desarrollados por el proyecto.
-Su construcción utiliza encuadernación sin metales ni plásticos.
-        """
+        "descripcion": (
+            "Documento tecnico educativo fabricado integramente con materiales reciclados. "
+            "Compila procesos, fundamentos cientificos y protocolos desarrollados por el proyecto. "
+            "Su construccion utiliza encuadernacion sin metales ni plasticos."
+        ),
     },
     "4": {
-        "titulo": "Marca-Páginas",
+        "titulo": "Marca-Paginas",
         "division": "EcoPapel",
-        "descripcion": """
-Producto funcional elaborado con cartón recuperado y técnicas de diseño artesanal.
-Incorpora sellos, grabados y barniz ecológico. Funciona como herramienta de difusión del proyecto.
-        """
+        "descripcion": (
+            "Producto funcional elaborado con carton recuperado y tecnicas de diseno artesanal. "
+            "Incorpora sellos, grabados y barniz ecologico. "
+            "Funciona como herramienta de difusion del proyecto."
+        ),
     },
     "5": {
         "titulo": "Eco-Carrier",
         "division": "EcoPapel",
-        "descripcion": """
-Bolsa estructural fabricada con papel reciclado de gran formato y refuerzos internos.
-Demuestra sustitución viable del plástico de un solo uso mediante ingeniería de pliegues y refuerzo.
-        """
+        "descripcion": (
+            "Bolsa estructural fabricada con papel reciclado de gran formato y refuerzos internos. "
+            "Demuestra sustitucion viable del plastico de un solo uso mediante ingenieria de pliegues y refuerzo."
+        ),
     },
     "6": {
         "titulo": "Colorantes Naturales",
         "division": "EcoLab",
-        "descripcion": """
-Sistema de extracción de pigmentos orgánicos a partir de residuos vegetales.
-Utiliza procesos de decocción y fijación mediante mordientes naturales para estabilizar el color.
-        """
+        "descripcion": (
+            "Sistema de extraccion de pigmentos organicos a partir de residuos vegetales. "
+            "Utiliza procesos de decoccion y fijacion mediante mordientes naturales para estabilizar el color."
+        ),
     },
     "7": {
         "titulo": "EcoIA",
         "division": "EcoTech",
-        "descripcion": """
-Sistema de documentación inteligente basado en modelo de lenguaje.
-Permite consultar fichas técnicas, clasificar residuos y centralizar el conocimiento del proyecto.
-        """
+        "descripcion": (
+            "Sistema de documentacion inteligente basado en modelo de lenguaje. "
+            "Permite consultar fichas tecnicas, clasificar residuos y centralizar el conocimiento del proyecto."
+        ),
     },
     "8": {
         "titulo": "Organizadores Eco-Modulares",
         "division": "EcoIndustria",
-        "descripcion": """
-Sistema de almacenamiento modular construido con latas y tubos reciclados.
-Integra principios de diseño intercambiable mediante imanes o encastres estructurales.
-        """
+        "descripcion": (
+            "Sistema de almacenamiento modular construido con latas y tubos reciclados. "
+            "Integra principios de diseno intercambiable mediante imanes o encastres estructurales."
+        ),
     },
     "9": {
         "titulo": "EcoReflector",
         "division": "EcoIndustria",
-        "descripcion": """
-Dispositivo óptico que amplifica luz utilizando reflexión metálica y refracción en agua.
-Optimiza el rendimiento lumínico con consumo mínimo de combustible.
-        """
+        "descripcion": (
+            "Dispositivo optico que amplifica luz utilizando reflexion metalica y refraccion en agua. "
+            "Optimiza el rendimiento luminico con consumo minimo de combustible."
+        ),
     },
     "10": {
-        "titulo": "Eco-Lámparas",
+        "titulo": "Eco-Lamparas",
         "division": "EcoIndustria",
-        "descripcion": """
-Faroles decorativos fabricados con latas perforadas mediante técnica de soporte congelado.
-Proyectan patrones lumínicos mediante perforado artístico controlado.
-        """
+        "descripcion": (
+            "Faroles decorativos fabricados con latas perforadas mediante tecnica de soporte congelado. "
+            "Proyectan patrones luminicos mediante perforado artistico controlado."
+        ),
     },
     "11": {
         "titulo": "Eco-Hidro",
         "division": "EcoIndustria",
-        "descripcion": """
-Sistema de riego autónomo por capilaridad desarrollado con botellas PET.
-Permite mantener humedad constante sin intervención manual prolongada.
-        """
+        "descripcion": (
+            "Sistema de riego autonomo por capilaridad desarrollado con botellas PET. "
+            "Permite mantener humedad constante sin intervencion manual prolongada."
+        ),
     },
     "12": {
         "titulo": "EcoTrash",
         "division": "EcoIndustria",
-        "descripcion": """
-Escoba de alta resistencia construida mediante apilamiento de cerdas PET.
-Transforma un residuo flexible en herramienta estructural robusta.
-        """
+        "descripcion": (
+            "Escoba de alta resistencia construida mediante apilamiento de cerdas PET. "
+            "Transforma un residuo flexible en herramienta estructural robusta."
+        ),
     },
     "13": {
         "titulo": "Tetra-Wallet",
         "division": "EcoIndustria",
-        "descripcion": """
-Billetera impermeable creada a partir de envases multicapa Tetra Pak.
-Demuestra upcycling funcional de materiales de difícil reciclaje.
-        """
+        "descripcion": (
+            "Billetera impermeable creada a partir de envases multicapa Tetra Pak. "
+            "Demuestra upcycling funcional de materiales de dificil reciclaje."
+        ),
     },
     "14": {
         "titulo": "Carbon Ink",
         "division": "EcoLab",
-        "descripcion": """
-Tinta negra obtenida por pirólisis controlada de papel descartado.
-El carbón molido se mezcla con aglutinantes para generar pigmento estable.
-        """
+        "descripcion": (
+            "Tinta negra obtenida por pirolisis controlada de papel descartado. "
+            "El carbon molido se mezcla con aglutinantes para generar pigmento estable."
+        ),
     },
     "15": {
         "titulo": "Nendo Dango",
         "division": "EcoLab",
-        "descripcion": """
-Método de siembra sin labranza basado en cápsulas de arcilla, tierra y semillas.
-Protege la semilla hasta condiciones óptimas de germinación.
-        """
+        "descripcion": (
+            "Metodo de siembra sin labranza basado en capsulas de arcilla, tierra y semillas. "
+            "Protege la semilla hasta condiciones optimas de germinacion."
+        ),
     },
     "16": {
         "titulo": "Paper Beads",
         "division": "EcoPapel",
-        "descripcion": """
-Cuentas estructurales fabricadas mediante enrollado a presión de tiras de papel.
-Una vez selladas adquieren rigidez comparable a materiales sintéticos.
-        """
+        "descripcion": (
+            "Cuentas estructurales fabricadas mediante enrollado a presion de tiras de papel. "
+            "Una vez selladas adquieren rigidez comparable a materiales sinteticos."
+        ),
     },
     "17": {
         "titulo": "Eco-Voz",
         "division": "EcoIndustria",
-        "descripcion": """
-Amplificador acústico pasivo basado en resonancia y concentración de ondas sonoras.
-Incrementa volumen sin consumo eléctrico.
-        """
+        "descripcion": (
+            "Amplificador acustico pasivo basado en resonancia y concentracion de ondas sonoras. "
+            "Incrementa volumen sin consumo electrico."
+        ),
     },
     "18": {
-        "titulo": "Cañón Vortex",
+        "titulo": "Canon Vortex",
         "division": "EcoIndustria",
-        "descripcion": """
-Dispositivo neumático que genera anillos de aire mediante compresión súbita.
-Demuestra principios de dinámica de fluidos y conservación del momento.
-        """
+        "descripcion": (
+            "Dispositivo neumatico que genera anillos de aire mediante compresion subita. "
+            "Demuestra principios de dinamica de fluidos y conservacion del momento."
+        ),
     },
     "19": {
         "titulo": "Eco-Dollars",
         "division": "EcoPapel",
-        "descripcion": """
-Sistema monetario interno basado en papel reciclado y tinta Carbon Ink.
-Representa economía circular aplicada dentro del stand.
-        """
+        "descripcion": (
+            "Sistema monetario interno basado en papel reciclado y tinta Carbon Ink. "
+            "Representa economia circular aplicada dentro del stand."
+        ),
     },
     "20": {
         "titulo": "Eco-Candy",
         "division": "EcoLab",
-        "descripcion": """
-Cristales comestibles obtenidos por sobresaturación de sacarosa.
-Permiten visualizar crecimiento cristalino en entorno controlado.
-        """
+        "descripcion": (
+            "Cristales comestibles obtenidos por sobresaturacion de sacarosa. "
+            "Permiten visualizar crecimiento cristalino en entorno controlado."
+        ),
     },
     "21": {
         "titulo": "EcoCristales",
         "division": "EcoLab",
-        "descripcion": """
-Cristales de alumbre cultivados por enfriamiento de solución sobresaturada.
-Forman estructuras geométricas translúcidas de alto valor estético.
-        """
+        "descripcion": (
+            "Cristales de alumbre cultivados por enfriamiento de solucion sobresaturada. "
+            "Forman estructuras geometricas translucidas de alto valor estetico."
+        ),
     },
     "22": {
         "titulo": "EcoGenerador Metano",
         "division": "EcoLab",
-        "descripcion": """
-Modelo teórico de digestión anaeróbica para producción de biogás.
-Representa conversión energética de residuos orgánicos.
-        """
+        "descripcion": (
+            "Modelo teorico de digestion anaerobica para produccion de biogas. "
+            "Representa conversion energetica de residuos organicos."
+        ),
     },
     "23": {
         "titulo": "Reactor Joule-Carbon",
         "division": "EcoTech",
-        "descripcion": """
-Sistema experimental que produce incandescencia mediante efecto Joule en grafito.
-Demuestra transformación de energía eléctrica en térmica y lumínica.
-        """
+        "descripcion": (
+            "Sistema experimental que produce incandescencia mediante efecto Joule en grafito. "
+            "Demuestra transformacion de energia electrica en termica y luminica."
+        ),
     },
     "24": {
         "titulo": "TerrarIA",
         "division": "EcoTech",
-        "descripcion": """
-Ecosistema cerrado monitoreado por sensores ambientales.
-Integra biología, electrónica y análisis de datos en tiempo real.
-        """
+        "descripcion": (
+            "Ecosistema cerrado monitoreado por sensores ambientales. "
+            "Integra biologia, electronica y analisis de datos en tiempo real."
+        ),
     }
 }
-
 BASE_DE_DATOS = {
     "1": {
         "titulo": "Papel Seed",
@@ -574,7 +573,7 @@ Lo que comenzó en 2025 como EcoPapel hoy evolucionó hacia un sistema estructur
 en cuatro divisiones especializadas que trabajan de forma integrada.
 """)
     st.write("---")
-
+S
     st.subheader("Secciones Del Proyecto Eco")
 
     col1, col2, col3, col4 = st.columns(4)
@@ -944,8 +943,5 @@ Relaciona la respuesta con sustentabilidad o ciencia.
                 st.code(str(e))
 
     st.markdown('</div>', unsafe_allow_html=True)
-
-
-
 
 
