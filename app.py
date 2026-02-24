@@ -156,7 +156,13 @@ div[data-testid="stExpander"] {
     from {opacity: 0; transform: translateY(15px);}
     to {opacity: 1; transform: translateY(0);}
 }
+.hero {
+    padding-bottom: 2.5rem;
+}
 
+.card {
+    margin-top: 2rem;
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -547,6 +553,7 @@ if selected == "Inicio":
     <p>Sistema Integral de Innovación Sustentable</p>
 </div>
 """, unsafe_allow_html=True)
+    st.markdown("<div style='height: 40px;'></div>", unsafe_allow_html=True)
     st.markdown("""
 <div class="card">
 <h3>Visión General</h3>
@@ -939,3 +946,4 @@ Relaciona la respuesta con sustentabilidad o ciencia.
                 st.code(str(e))
 
     st.markdown('</div>', unsafe_allow_html=True)
+
