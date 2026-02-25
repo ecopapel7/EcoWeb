@@ -855,16 +855,9 @@ elif selected == "EcoIA":
     <div class="ecoia-header">
     <h2>EcoIA · Núcleo de Conocimiento</h2>
     <p>División EcoTech · Sistema de Documentación Inteligente</p>
+    <p>EcoIA permite consultar en tiempo real cualquier ficha técnica del Proyecto Eco mediante un modelo de lenguaje optimizado para documentación científica educativa.</p>
     </div>
     """, unsafe_allow_html=True)
-
-    st.markdown("Estado del núcleo: Operativo")
-
-    st.info(
-        "EcoIA permite consultar en tiempo real cualquier ficha técnica "
-        "del Proyecto Eco mediante un modelo de lenguaje optimizado "
-        "para documentación científica educativa."
-    )
 
     st.markdown('<div class="ecoia-glow">', unsafe_allow_html=True)
 
@@ -946,4 +939,5 @@ Relaciona la respuesta con sustentabilidad o ciencia.
                 st.code(str(e))
 
     st.markdown('</div>', unsafe_allow_html=True)
+
 
