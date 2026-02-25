@@ -859,8 +859,6 @@ elif selected == "EcoIA":
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown('<div class="ecoia-glow">', unsafe_allow_html=True)
-
     if "messages" not in st.session_state:
         st.session_state.messages = [{
             "role": "assistant",
@@ -939,5 +937,6 @@ Relaciona la respuesta con sustentabilidad o ciencia.
                 st.code(str(e))
 
     st.markdown('</div>', unsafe_allow_html=True)
+
 
 
