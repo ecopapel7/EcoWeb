@@ -248,24 +248,22 @@ if selected == "Inicio":
     
     with col_e:
         st.markdown("<div style='height: 5px;'></div>", unsafe_allow_html=True)
-        st.metric("Fichas Homologadas", "24", help="Módulos técnicos desarrollados") # [cite: 81]
+        st.metric("Fichas Eco", "24", help="Módulos técnicos desarrollados") # [cite: 81]
         st.markdown("<div style='height: 10px;'></div>", unsafe_allow_html=True)
-        st.metric("Divisiones Operativas", "4", help="Unidades de especialización") # [cite: 81]
-        st.markdown("<div style='height: 10px;'></div>", unsafe_allow_html=True)
-        st.metric("Filosofía del Stand", "Simbiosis", help="Concepto base de interconexión") # [cite: 81]
+        st.metric("Secciones", "4", help="Unidades de especialización") # [cite: 81]
 
     st.write("---")
     st.subheader("Estructura de Divisiones Estratégicas")
     
     d1, d2, d3, d4 = st.columns(4)
     with d1:
-        st.markdown(f'<div class="card"><div class="icon-container">{SILUETA_PAPEL}</div><h3>EcoPapel</h3><p class="mini">División Fundacional</p><p>Transformación de residuos celulósicos en líneas biodegradables estructurales y plantables de alto impacto foliar.</p></div>', unsafe_allow_html=True) # [cite: 79]
+        st.markdown(f'<div class="card"><div class="icon-container">{SILUETA_PAPEL}</div><h3>EcoPapel</h3><p class="mini">Seccion Artistica</p><p>Transformación de residuos celulósicos en distintas lineas artisticas, utiles y educativas.</p></div>', unsafe_allow_html=True) # [cite: 79]
     with d2:
-        st.markdown(f'<div class="card"><div class="icon-container">{SILUETA_LAB}</div><h3>EcoLab</h3><p class="mini">Bioprocesos Experimentales</p><p>Investigación aplicada a la obtención de pigmentos orgánicos, reactores moleculares y cristalizaciones controladas.</p></div>', unsafe_allow_html=True) # [cite: 79, 80]
+        st.markdown(f'<div class="card"><div class="icon-container">{SILUETA_LAB}</div><h3>EcoLab</h3><p class="mini">Seccion Cientifica</p><p>Investigación aplicada a la obtención de pigmentos orgánicos, reactores moleculares, cristalizaciones controladas, etc.</p></div>', unsafe_allow_html=True) # [cite: 79, 80]
     with d3:
-        st.markdown(f'<div class="card"><div class="icon-container">{SILUETA_TECH}</div><h3>EcoTech</h3><p class="mini">Ingeniería Digital</p><p>Unidad de automatización basada en microcontroladores, sensado ambiental interactivo e interfaces de Inteligencia Artificial.</p></div>', unsafe_allow_html=True) # [cite: 80, 81]
+        st.markdown(f'<div class="card"><div class="icon-container">{SILUETA_TECH}</div><h3>EcoTech</h3><p class="mini">Seccion Tecnologica</p><p>Unidad de automatización basada en microcontroladores, sensado ambiental interactivo e interfaces de Inteligencia Artificial. Además del control de Marketing y redes sociales.</p></div>', unsafe_allow_html=True) # [cite: 80, 81]
     with d4:
-        st.markdown(f'<div class="card"><div class="icon-container">{SILUETA_IND}</div><h3>EcoIndustria</h3><p class="mini">Escalado Productivo</p><p>Diseño y optimización mecánica que transforma residuos urbanos complejos en herramientas de uso estructural autónomo.</p></div>', unsafe_allow_html=True) # [cite: 81]
+        st.markdown(f'<div class="card"><div class="icon-container">{SILUETA_IND}</div><h3>EcoIndustria</h3><p class="mini">Seccion Industrial</p><p>Diseño y optimización mecánica que transforma residuos urbanos complejos en herramientas de uso estructural autónomo.</p></div>', unsafe_allow_html=True) # [cite: 81]
 
     st.write("---")
     st.subheader("Dinámica Interna: Economía Circular Real") # [cite: 81, 82]
@@ -276,9 +274,6 @@ if selected == "Inicio":
         <div class="card">
             <h4>1. Captura de Residuos e Incentivo</h4>
             <p>Se interceptan materiales descartados (PET, Tetra Pak, aluminio, cartón). A través de nuestro Banco de Intercambio, se fomenta el uso de los <b>EcoDollars</b> como dinamizadores de valor sustentable dentro del ecosistema escolar.</p>
-            <h4>2. Upcycling Avanzado</h4>
-            <p><b>Celulosa:</b> Generación de FibroPapel ultraresistente y Papel Seed con semillas nativas integradas sin alteración térmica.</p>
-            <p><b>BioExtracción:</b> El material orgánico remanente se destina a la obtención de tintes sin catalizadores químicos nocivos.</p>
         </div>
         """, unsafe_allow_html=True) # [cite: 83, 84, 85]
     with c2:
