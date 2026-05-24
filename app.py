@@ -116,7 +116,7 @@ FICHAS = {
     "7": {"titulo": "EcoIA", "division": "EcoTech", "drive_url": "#", "desc": "Asistente inteligente de documentación técnica."},
     "8": {"titulo": "Organizadores Modulares", "division": "EcoIndustria", "drive_url": "#", "desc": "Sistemas de escritorio de latas y tubos."},
     "9": {"titulo": "Eco-Estelar", "division": "EcoIndustria", "drive_url": "#", "desc": "Lámparas perforadas mediante técnica de congelado."},
-    "10": {"titulo": "EcoChallenge", "division": "Estrategia", "drive_url": "#", "desc": "Sistema de desafíos interactivos para ganar EcoDollars."},
+    "10": {"titulo": "EcoChallenge", "division": "Transversal", "drive_url": "#", "desc": "Sistema de desafíos interactivos aplicable a todas las divisiones del stand para ganar EcoDollars."},
     "11": {"titulo": "Eco-Hidro", "division": "EcoIndustria", "drive_url": "#", "desc": "Riego autónomo por capilaridad en botellas PET."},
     "12": {"titulo": "EcoTrash", "division": "EcoIndustria", "drive_url": "#", "desc": "Escoba de alta resistencia construida con cerdas PET."},
     "13": {"titulo": "EcoWallet", "division": "EcoIndustria", "drive_url": "#", "desc": "Billetera impermeable upcycling de Tetra Pak."},
@@ -125,7 +125,7 @@ FICHAS = {
     "16": {"titulo": "Paper Beads", "division": "EcoPapel", "drive_url": "#", "desc": "Cuentas estructurales decorativas de papel enrollado."},
     "17": {"titulo": "Eco-Voz", "division": "EcoIndustria", "drive_url": "#", "desc": "Amplificador acústico pasivo de cartón."},
     "18": {"titulo": "Cañón Vortex", "division": "EcoIndustria", "drive_url": "#", "desc": "Generador de anillos de aire (Dinámica de fluidos)."},
-    "19": {"titulo": "Eco-Dollars", "division": "Estrategia", "drive_url": "#", "desc": "Sistema monetario de economía circular interna."},
+    "19": {"titulo": "Eco-Dollars", "division": "EcoPapel", "drive_url": "#", "desc": "Sistema monetario de economía circular interna."},
     "20": {"titulo": "EcoVolt", "division": "EcoLab", "drive_url": "#", "desc": "Investigación de generacion de energía eléctrica por medio de la diferencia de concentración entre agua salada y dulce."},
     "21": {"titulo": "EcoCristales", "division": "EcoLab", "drive_url": "#", "desc": "Cristalización de alumbre (Geometría química)."},
     "22": {"titulo": "EcoGenerador de Metano", "division": "EcoLab", "drive_url": "#", "desc": "Investigación en digestión anaeróbica."},
@@ -265,7 +265,7 @@ elif selected == "Fichas Técnicas":
     st.write("---")
     
     # Filtro modular
-    f_cat = st.selectbox("Filtrar por División:", ["Todas", "EcoPapel", "EcoLab", "EcoTech", "EcoIndustria", "Estrategia"])
+    f_cat = st.selectbox("Filtrar por División:", ["Todas", "EcoPapel", "EcoLab", "EcoTech", "EcoIndustria", "Transversal"])
     
     st.markdown("<br>", unsafe_allow_html=True)
     
