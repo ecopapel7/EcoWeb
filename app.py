@@ -8,7 +8,7 @@ import re
 # CONFIGURACIÓN DE PÁGINA
 # --------------------------------------------------
 st.set_page_config(
-    page_title="Proyecto Eco 2026 | Sistema Integral",
+    page_title="EcoWeb | Proyecto Eco 2026",
     page_icon="🌱",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -126,9 +126,9 @@ FICHAS = {
     "17": {"titulo": "Eco-Voz", "division": "EcoIndustria", "drive_url": "#", "desc": "Amplificador acústico pasivo de cartón."},
     "18": {"titulo": "Cañón Vortex", "division": "EcoIndustria", "drive_url": "#", "desc": "Generador de anillos de aire (Dinámica de fluidos)."},
     "19": {"titulo": "Eco-Dollars", "division": "Estrategia", "drive_url": "#", "desc": "Sistema monetario de economía circular interna."},
-    "20": {"titulo": "Eco-Candy", "division": "EcoLab", "drive_url": "#", "desc": "Cristalización de sacarosa saborizada (Ciencia dulce)."},
+    "20": {"titulo": "EcoVolt", "division": "EcoLab", "drive_url": "#", "desc": "Investigación de generacion de energía eléctrica por medio de la diferencia de concentración entre agua salada y dulce."},
     "21": {"titulo": "EcoCristales", "division": "EcoLab", "drive_url": "#", "desc": "Cristalización de alumbre (Geometría química)."},
-    "22": {"titulo": "Biogás (Teórico)", "division": "EcoLab", "drive_url": "#", "desc": "Investigación en digestión anaeróbica."},
+    "22": {"titulo": "EcoGenerador de Metano", "division": "EcoLab", "drive_url": "#", "desc": "Investigación en digestión anaeróbica."},
     "23": {"titulo": "Reactor Joule", "division": "EcoTech", "drive_url": "#", "desc": "Generación de luz mediante grafito (Efecto Joule)."},
     "24": {"titulo": "TerrarIA", "division": "EcoTech", "drive_url": "#", "desc": "Ecosistema cerrado monitoreado por sensores."},
 }
@@ -138,12 +138,12 @@ FICHAS = {
 # --------------------------------------------------
 with st.sidebar:
     st.image("https://cdn-icons-png.flaticon.com/512/2913/2913520.png", width=80)
-    st.markdown("### Ecosistema Eco")
-    st.markdown("Feria Regional 2026")
+    st.markdown("### Proyecto Eco")
+    st.markdown("Eco 2025-2026")
     
     selected = option_menu(
         menu_title=None,
-        options=["Inicio", "Estrategia", "Fichas Técnicas", "EcoIA", "Equipo"],
+        options=["Inicio", "Los 7 Pilares", "Fichas Técnicas", "EcoIA", "Equipo"],
         icons=["house", "diagram-3", "file-earmark-text", "cpu", "people"],
         menu_icon="cast",
         default_index=0,
@@ -156,7 +156,7 @@ with st.sidebar:
     )
     
     st.write("---")
-    st.caption("⚡ E.E.S.T N°7 | 4°4°")
+    st.caption("E.E.S.T N°7 | 4°4°")
 
 # --------------------------------------------------
 # SECCIÓN: INICIO
@@ -189,9 +189,9 @@ if selected == "Inicio":
     c1, c2, c3, c4 = st.columns(4)
     
     divs = [
-        ("EcoPapel", "División Celulosa", "🌱", "Recuperación de fibras y economía de soporte."),
+        ("EcoPapel", "División Artística", "🌱", "Recuperación de fibras y economía de soporte."),
         ("EcoLab", "División Científica", "🧪", "Investigación química y biológica aplicada."),
-        ("EcoTech", "División Tecnológica", "💻", "IA, sensado IoT y automatización digital."),
+        ("EcoTech", "División Tecnológica", "💻", "IA, diseño, programación, marketing y redes sociales."),
         ("EcoIndustria", "División de Ingeniería", "🏗️", "Física aplicada y diseño estructural.")
     ]
     
@@ -209,15 +209,15 @@ if selected == "Inicio":
 # --------------------------------------------------
 # SECCIÓN: ESTRATEGIA (NUEVO)
 # --------------------------------------------------
-elif selected == "Estrategia":
-    st.markdown("## 🎯 Estrategia y Características Nucleares")
-    st.write("¿Por qué el Proyecto Eco es un sistema de alto impacto?")
+elif selected == "Los 7 Pilares":
+    st.markdown("## Los 7 Pilares")
+    st.write("¿Por qué el Proyecto Eco es un sistema de alto impacto? Los 7 pilares son las 7 caracteristicas principales diseñadas por nosotros")
     
     char_list = [
         ("Replicable", "Diseñado para ser recreado en cualquier escuela con materiales accesibles."),
         ("Sustentable", "Equilibrio real entre uso de recursos y regeneración ambiental."),
         ("Interdisciplinario", "Integración de Química, Física, Tecnología y Arte en un solo flujo."),
-        ("Circular", "El residuo no desaparece, cambia de función (Economía Circular)."),
+        ("Circular", "El residuo no desaparece, cambia de función."),
         ("Continuo", "Protocolos documentados que permiten la trascendencia del equipo."),
         ("Experimental", "Metodología basada en prueba, error y optimización técnica."),
         ("Medible", "Evitamos el greenwashing mediante métricas de impacto real.")
@@ -238,23 +238,49 @@ elif selected == "Estrategia":
 # --------------------------------------------------
 # SECCIÓN: FICHAS TÉCNICAS
 # --------------------------------------------------
+
 elif selected == "Fichas Técnicas":
-    st.markdown("## 📄 Biblioteca Técnica 2026")
+    st.markdown("## 📄 Biblioteca de Fichas 2026")
     
+    st.write("Las 24 Fichas constituyen el núcleo técnico y organizativo de Proyecto Eco. Cada ficha funciona como un protocolo documentado que explica, estructura y estandariza un proceso, experimento, sistema o actividad dentro del proyecto. Su función principal es transformar ideas aisladas en conocimiento organizado, permitiendo que los procesos puedan repetirse, mejorarse, enseñarse y mantenerse en el tiempo. Gracias a esta sistematización, Proyecto Eco deja de depender únicamente de la memoria o experiencia de sus integrantes y se convierte en una infraestructura educativa continua.")
+    
+    # Usamos un expander para mantener la interfaz limpia pero accesible
+    with st.expander("📋 Ver Estructura Oficial de las Fichas (11 Puntos)"):
+        st.markdown("""
+        <div style='background: rgba(16, 185, 129, 0.05); padding: 20px; border-radius: 10px; border-left: 3px solid #10b981;'>
+            <p><b>1. Concepto:</b> Define qué es el sistema, producto o proceso desarrollado. Explica su función principal dentro de Proyecto Eco y establece el marco general de la ficha.</p>
+            <p><b>2. Objetivo:</b> Describe los propósitos concretos del desarrollo. Aquí se establecen las metas educativas, técnicas, ambientales, organizativas o experimentales que busca cumplir la ficha.</p>
+            <p><b>3. Materiales:</b> Detalla todos los recursos necesarios para realizar el proceso o construir el sistema. Incluye herramientas, materiales reciclados, insumos técnicos y conexiones con otras fichas del proyecto.</p>
+            <p><b>4. Procedimiento:</b> Explica paso a paso cómo desarrollar el proceso de manera ordenada y replicable. Esta sección transforma ideas generales en protocolos prácticos capaces de repetirse y enseñarse.</p>
+            <p><b>5. Actividad para el Equipo:</b> Establece tareas específicas para los integrantes del proyecto. Permite distribuir responsabilidades, organizar el trabajo grupal y asegurar participación activa dentro del sistema.</p>
+            <p><b>6. Criterio de Calidad:</b> Define las condiciones mínimas necesarias para considerar que el proceso o producto fue realizado correctamente. Funciona como sistema interno de control y mejora continua.</p>
+            <p><b>7. Impacto Ambiental:</b> Analiza cómo el desarrollo contribuye a la sustentabilidad, reutilización de recursos, reducción de residuos o concientización ecológica dentro del proyecto.</p>
+            <p><b>8. Datos Técnicos / Experimentales:</b> Registra mediciones, resultados, estadísticas o variables obtenidas durante el proceso. Esta sección permite evaluar resultados reales y desarrollar una metodología basada en evidencia y experimentación.</p>
+            <p><b>9. Costo y Viabilidad:</b> Evalúa el costo de producción, accesibilidad de materiales y posibilidad de mantener el sistema funcionando a largo plazo. Busca garantizar que los desarrollos sean sostenibles y aplicables en contextos reales.</p>
+            <p><b>10. Proyección Futura:</b> Explora posibles mejoras, expansiones o evoluciones del sistema. Esta sección permite que cada ficha permanezca abierta a nuevas ideas, tecnologías y adaptaciones futuras.</p>
+            <p><b>11. Marco Ampliado:</b> Es la sección más extensa y flexible de la ficha. Aquí se desarrolla el contexto completo del sistema mediante tablas, reglamentos, conversiones, estrategias, estructuras complementarias, aplicaciones avanzadas y documentación ampliada. El Marco Ampliado permite transformar una ficha básica en un sistema complejo, integrando información técnica, organizativa y conceptual dentro de una misma estructura documental.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+    st.write("---")
+    
+    # Filtro modular
     f_cat = st.selectbox("Filtrar por División:", ["Todas", "EcoPapel", "EcoLab", "EcoTech", "EcoIndustria", "Estrategia"])
+    
+    st.markdown("<br>", unsafe_allow_html=True)
     
     items = {k: v for k, v in FICHAS.items() if f_cat == "Todas" or v["division"] == f_cat}
     
-    # Grid de 3 columnas
+    # Grid de 3 columnas para mostrar las fichas
     cols = st.columns(3)
     for i, (idx, data) in enumerate(items.items()):
         with cols[i % 3]:
             st.markdown(f"""
             <div class="card">
-                <small style='color: #10b981;'>FICHA #{idx} | {data['division']}</small>
-                <h4>{data['titulo']}</h4>
+                <small style='color: #10b981; font-weight: bold;'>FICHA #{idx} | {data['division']}</small>
+                <h4 style='margin-top: 5px;'>{data['titulo']}</h4>
                 <p style='font-size: 0.85rem; opacity: 0.8;'>{data['desc']}</p>
-                <a href='{data['drive_url']}' class='drive-link'>📄 Ver Ficha Drive</a>
+                <a href='{data['drive_url']}' target='_blank' class='drive-link'>📄 Ver Ficha</a>
             </div>
             """, unsafe_allow_html=True)
 
@@ -273,7 +299,7 @@ elif selected == "EcoIA":
     api_key = os.environ.get("GROQ_API_KEY") or st.secrets.get("GROQ_API_KEY", "")
     
     if not api_key:
-        st.warning("Configura la API Key de Groq para chatear.")
+        st.warning("Configura la API Key para chatear.")
     else:
         client = Groq(api_key=api_key)
         
