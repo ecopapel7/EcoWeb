@@ -145,7 +145,7 @@ with st.sidebar:
     
     selected = option_menu(
         menu_title=None,
-        options=["Inicio", "Fichas Técnicas", "EcoIA", "Equipo"],
+        options=["Inicio", "Los 7 Pilares", "Fichas Técnicas", "EcoIA", "Equipo"],
         icons=["house", "file-earmark-text", "cpu", "people"],
         menu_icon="cast",
         default_index=0,
