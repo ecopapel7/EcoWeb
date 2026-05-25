@@ -7,7 +7,7 @@ import os
 # CONFIGURACIÓN DE PÁGINA
 # --------------------------------------------------
 st.set_page_config(
-    page_title="Proyecto Eco 2026 | Carpeta de Campo Digital",
+    page_title="EcoWeb",
     page_icon="🌱",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -127,7 +127,7 @@ FICHAS = {
     "17": {"titulo": "Eco-Voz", "division": "EcoIndustria", "drive_url": "#", "desc": "Amplificador acústico pasivo diseñado en cartón corrugado."},
     "18": {"titulo": "Cañón Vortex", "division": "EcoIndustria", "drive_url": "#", "desc": "Generador físico de anillos de aire para demostración de dinámica de fluidos."},
     "19": {"titulo": "Eco-Dollars", "division": "EcoPapel", "drive_url": "#", "desc": "Sistema monetario de economía circular impreso sobre papel reciclado propio."},
-    "20": {"titulo": "Eco-Candy", "division": "EcoLab", "drive_url": "#", "desc": "Cristalización de sacarosa saborizada orientada a la ciencia dulce aplicada."},
+    "20": {"titulo": "EcoVolt", "division": "EcoLab", "drive_url": "#", "desc": "Generación teórica de energía limpia aprovechando el gradiente salino (agua dulce y salada)."},
     "21": {"titulo": "EcoCristales", "division": "EcoLab", "drive_url": "#", "desc": "Cristalización de alumbre orientada al estudio de la geometría química."},
     "22": {"titulo": "Biogás (Teórico)", "division": "EcoLab", "drive_url": "#", "desc": "Investigación avanzada sobre digestión anaeróbica y captura de metano."},
     "23": {"titulo": "Reactor Joule", "division": "EcoTech", "drive_url": "#", "desc": "Generación de luz incandescente mediante grafito escolar (Efecto Joule)."},
@@ -190,10 +190,10 @@ if selected == "Inicio":
         
         c1, c2, c3, c4 = st.columns(4)
         divs_data = [
-            ("EcoPapel", "Eje Celulosa y Soporte", "🌱", "Recuperación de fibras, soportes orgánicos y el circuito de acuñación de los Eco-Dollars."),
-            ("EcoLab", "Eje Científico Aplicado", "🧪", "Investigación analítica, procesos químicos moleculares, extracciones y cristalización."),
-            ("EcoTech", "Eje Tecnológico Digital", "💻", "Sistemas de automatización de datos, sensado IoT físico e inteligencia artificial integrada."),
-            ("EcoIndustria", "Eje Ingeniería Física", "🏗️", "Diseño estructural avanzado, leyes de física de fluidos, upcycling a escala y ergonomía.")
+            ("EcoPapel", "Sección Artística", "🌱", "Recuperación de fibras, soportes orgánicos y el circuito de acuñación de los Eco-Dollars."),
+            ("EcoLab", "Sección Científica", "🧪", "Investigación analítica, procesos químicos moleculares, extracciones y cristalización."),
+            ("EcoTech", "Sección Tecnológica", "💻", "Inteligencia Artificial, Marketing, Diseño Gráfico y Desarrollo."),
+            ("EcoIndustria", "Sección de Ingeniería", "🏗️", "Diseño estructural avanzado, leyes de física de fluidos, upcycling a escala y ergonomía.")
         ]
         for idx, (name, sub, icon, text) in enumerate(divs_data):
             with [c1, c2, c3, c4][idx]:
@@ -485,12 +485,12 @@ elif selected == "Equipo":
     
     equipo = [
         {"nombre": "Damian Medina", "rol": "EcoPapel / EcoIndustria"},
-        {"nombre": "Dante Rodriguez", "rol": "EcoTech (Desarrollo Central EcoIA)"},
+        {"nombre": "Dante Rodriguez", "rol": "EcoTech"},
         {"nombre": "Enzo Cuevas", "rol": "EcoPapel"},
-        {"nombre": "Franco Titirico", "rol": "EcoIndustria (Representante de Eje)"},
-        {"nombre": "Jonathan Orellana", "rol": "EcoPapel (Representante de Eje)"},
-        {"nombre": "Julian Tejerina", "rol": "EcoTech (Representante de Eje)"},
-        {"nombre": "Tobias Ponce Castaño", "rol": "EcoLab (Representante de Eje)"},
+        {"nombre": "Franco Titirico", "rol": "EcoIndustria (Representante)"},
+        {"nombre": "Jonathan Orellana", "rol": "EcoPapel (Representante)"},
+        {"nombre": "Julian Tejerina", "rol": "EcoTech (Representante)"},
+        {"nombre": "Tobias Ponce Castaño", "rol": "EcoLab (Representante)"},
         {"nombre": "Valentino Correa", "rol": "EcoLab"},
     ]
     
@@ -511,4 +511,4 @@ elif selected == "Equipo":
 # --------------------------------------------------
 # FOOTER UNIVERSAL INSTITUCIONAL
 # --------------------------------------------------
-st.markdown("<br><br><p style='text-align: center; opacity: 0.45; font-size:0.8rem;'>Proyecto Eco 2026 · Infraestructura Tecnológica Continua · E.E.S.T N°7 · República Argentina</p>", unsafe_allow_html=True)
+st.markdown("<br><br><p style='text-align: center; opacity: 0.45; font-size:0.8rem;'>Proyecto Eco 2026 · E.E.S.T N°7 · República Argentina</p>", unsafe_allow_html=True)
