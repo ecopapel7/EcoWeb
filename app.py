@@ -108,7 +108,7 @@ st.markdown("""
 # --------------------------------------------------
 # Espacio 'drive_url' listo para colocar los enlaces de descarga de Google Drive.
 FICHAS = {
-    "1": {"titulo": "Papel Seed", "division": "EcoPapel", "drive_url": "#", "desc": "Papel artesanal biodegradable con semillas incorporadas."},
+    "1": {"titulo": "Papel Seed", "division": "EcoPapel", "https://drive.google.com/file/d/1S5sREmBrapKftJM5z8iZjtj46rLXer0t/view?usp=sharing": "#", "desc": "Papel artesanal biodegradable con semillas incorporadas."},
     "2": {"titulo": "FibroPapel", "division": "EcoPapel", "drive_url": "#", "desc": "Papel compuesto reforzado con fibras textiles de algodón."},
     "3": {"titulo": "Manual del Reciclador", "division": "EcoPapel", "drive_url": "#", "desc": "Documento técnico educativo 100% sustentable."},
     "4": {"titulo": "Marca-Páginas", "division": "EcoPapel", "drive_url": "#", "desc": "Souvenir funcional de cartón recuperado."},
@@ -169,14 +169,13 @@ if selected == "Inicio":
     """, unsafe_allow_html=True)
     
     # Navegación por pestañas internas para balancear el contenido
-    tab_resumen, tab_carpeta = st.tabs(["📊 Resumen del Ecosistema", "📖 Carpeta de Campo: Historia y Evolución"])
+    tab_resumen, tab_carpeta = st.tabs(["Introducción", "Historia y Evolución"])
     
     with tab_carpeta:
-        st.markdown("### 📝 Registro Documental Completo de la Carpeta de Campo")
-        st.caption("Lectura oficial y cronológica del proceso de investigación práctica del equipo.")
+        st.markdown("### Registro Documental de 2025")
         
         # 1. Introducción
-        with st.expander("📄 1. Introducción", expanded=True):
+        with st.expander("1. Introducción", expanded=True):
             st.write("""
             El presente documento describe el desarrollo y evolución de nuestro Proyecto Eco, desde nuestros inicios en el año 2025 bajo el nombre de EcoPapel, hasta su transformación en un systema integral en 2026.
             
@@ -186,7 +185,7 @@ if selected == "Inicio":
             """)
         
         # 2. Origen
-        with st.expander("🌱 2. Origen del Proyecto (2025)"):
+        with st.expander("2. Origen del Proyecto (2025)"):
             st.write("""
             Nuestro proyecto comenzó en el año 2025 a partir de una propuesta de trabajo anual planteada por el docente. Frente a esta consigna, iniciamos una etapa de ideas iniciales, donde planteamos múltiples posibles proyectos que abarcaban distintas áreas.
             
@@ -198,7 +197,7 @@ if selected == "Inicio":
             """)
         
         # 3. Problema
-        with st.expander("⚠️ 3. Problema Detectado"):
+        with st.expander("3. Problema Detectado en 2025"):
             st.write("""
             Durante la etapa inicial del proyecto, identificamos una situación particular dentro del entorno escolar: si bien la mayoría de las personas reconoce la importancia del reciclaje, en la práctica no sabe cómo llevarlo a cabo.
             
@@ -210,7 +209,7 @@ if selected == "Inicio":
             """)
         
         # 4. Desarrollo EcoPapel 2025
-        with st.expander("🛠️ 4. Desarrollo de EcoPapel 2025"):
+        with st.expander("4. Desarrollo de EcoPapel 2025"):
             st.write("""
             Una vez definido el enfoque del proyecto, comenzamos el desarrollo práctico de EcoPapel, centrado en la producción de papel reciclado y la demostración de nuestro proceso.
             
@@ -237,7 +236,7 @@ if selected == "Inicio":
             """)
         
         # 5. Resultados
-        with st.expander("📈 5. Resultados y Aprendizajes"):
+        with st.expander("5. Resultados y Aprendizajes"):
             st.write("""
             A lo largo del desarrollo de EcoPapel 2025, logramos obtener resultados concretos tanto a nivel técnico como en nuestro proceso de aprendizaje. En primer lugar, consolidamos la producción de papel reciclado como eje principal del proyecto. A través de la práctica constante, logramos mejorar la calidad de las hojas, corrigiendo problemas iniciales como el espesor irregular y los bordes poco definidos. Este avance nos permitió obtener un material más resistente y estéticamente más prolijo.
             
@@ -249,7 +248,7 @@ if selected == "Inicio":
             """)
         
         # 6. Limitaciones
-        with st.expander("🛑 6. Limitaciones del Proyecto"):
+        with st.expander("6. Limitaciones del Proyecto"):
             st.write("""
             A pesar de los resultados que obtuvimos durante el desarrollo de EcoPapel 2025, nuestro proyecto presentó diversas limitaciones, principalmente relacionadas con nuestra inexperiencia inicial y la falta de una estructura definida.
             
@@ -261,7 +260,7 @@ if selected == "Inicio":
             """)
         
         # 7. Punto de Evolución
-        with st.expander("🔄 7. Punto de Evolución"):
+        with st.expander("7. Punto de Evolución"):
             st.write("""
             A medida que avanzaba el desarrollo de EcoPapel 2025, empezamos a notar que el proyecto tenía un potencial mayor al esperado inicialmente. Lo que en un principio era una propuesta enfocada en el reciclaje de papel empezó a mostrar posibilidades de crecimiento más amplias.
             
@@ -271,7 +270,7 @@ if selected == "Inicio":
             """)
         
         # 8. Nacimiento del Proyecto Eco 2026
-        with st.expander("🚀 8. Nacimiento del Proyecto Eco 2026"):
+        with st.expander("8. Nacimiento del Proyecto Eco 2026"):
             st.write("""
             A partir del punto de evolución alcanzado en 2025, decidimos transformar el enfoque de nuestro proyecto para el nuevo ciclo lectivo. De esta manera, EcoPapel deja de ser nuestro proyecto principal y pasa a formar parte de una estructura más amplia: el Proyecto Eco 2026.
             
@@ -294,7 +293,7 @@ if selected == "Inicio":
             """)
         
         # 9. Nuevo Enfoque y Objetivos
-        with st.expander("🎯 9. Nuevo Enfoque y Objetivos"):
+        with st.expander("9. Nuevo Enfoque y Objetivos"):
             st.write("""
             A partir de la creación de nuestro Proyecto Eco 2026, adoptamos un nuevo enfoque basado en la organización, la integración de áreas y la proyección a largo plazo. El cambio principal radica en dejar atrás un modelo centrado en actividades aisladas para pasar a un sistema estructurado, donde cada parte de nuestro proyecto cumple una función específica dentro de un conjunto mayor.
             
@@ -318,7 +317,7 @@ if selected == "Inicio":
             st.markdown("</div>", unsafe_allow_html=True)
         
         # 10. Conclusión
-        with st.expander("🏁 10. Conclusión"):
+        with st.expander("10. Conclusión"):
             st.write("""
             El desarrollo de nuestro proyecto a lo largo de 2025 y su evolución en 2026 permite evidenciar un cambio significativo tanto en el enfoque como en la forma de trabajo de nuestro equipo.
             
@@ -333,11 +332,11 @@ if selected == "Inicio":
 # VISTA 2: BIBLIOTECA DE FICHAS TÉCNICAS (CON ESTRUCTURA DE 11 PUNTOS)
 # --------------------------------------------------
 elif selected == "Fichas Técnicas":
-    st.markdown("## 📄 Biblioteca de Fichas 2026")
+    st.markdown("## Biblioteca de Fichas 2026")
     st.write("Las 24 Fichas constituyen el núcleo técnico y organizativo de Proyecto Eco. Cada ficha funciona como un protocolo documentado que explica, estructura y estandariza un proceso, experimento, sistema o actividad dentro del proyecto. Su función principal es transformar ideas aisladas en conocimiento organizado, permitiendo que los procesos puedan repetirse, mejorarse, enseñarse y mantenerse en el tiempo. Gracias a esta sistematización, Proyecto Eco deja de depender únicamente de la memoria o experiencia de sus integrantes y se convierte en una infraestructura educativa continua.")
     
     # Expander con el diseño oficial de la estructura interna
-    with st.expander("📋 Ver Estructura Oficial Estándar de las Fichas (11 Puntos)"):
+    with st.expander("Ver Estructura Estándar de las Fichas (11 Puntos)"):
         st.markdown("""
         <div style='background: rgba(16, 185, 129, 0.04); padding: 20px; border-radius: 12px; border-left: 4px solid #10b981; line-height: 1.5;'>
             <p style='margin-bottom:10px;'><b>1. Concepto:</b> Define qué es el sistema, producto o proceso desarrollado. Explica su función principal dentro de Proyecto Eco y establece el marco general de la ficha.</p>
