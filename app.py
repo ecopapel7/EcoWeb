@@ -170,7 +170,52 @@ if selected == "Inicio":
     
     # Navegación por pestañas internas para balancear el contenido
     tab_resumen, tab_carpeta = st.tabs(["Introducción", "Historia y Evolución"])
+    if selected == "Inicio":
+    st.markdown("""
+        <div class="hero">
+            <h1 style='font-size: 3.2rem; margin-bottom:0;'>PROYECTO <span class='highlight'>ECO</span> 2026</h1>
+            <p style='font-size: 1.1rem; opacity: 0.85;'>Infraestructura Educativa Continua y Sistema Integral de Innovación Sustentable</p>
+        </div>
+    """, unsafe_allow_html=True)
     
+    # Navegación por pestañas internas para balancear el contenido
+    tab_resumen, tab_carpeta = st.tabs(["📊 Resumen del Ecosistema", "📖 Carpeta de Campo: Historia y Evolución"])
+    
+    with tab_resumen:
+        col1, col2 = st.columns([2, 1])
+        with col1:
+            st.markdown("""
+            <div class="card">
+                <h3>Nuestra Visión Estratégica</h3>
+                <p><b>Proyecto Eco</b> no constituye simplemente un taller aislado de reciclaje; representa una auténtica <b>infraestructura de conocimiento</b> instalada y arraigada dentro de la institución escolar.</p>
+                <p>Buscamos transformar de manera práctica los residuos convencionales en recursos de alto valor técnico y pedagógico a través de una red interconectada de cuatro áreas del saber, asegurando que el conocimiento trascienda a las personas y se preserve en protocolos institucionales continuos.</p>
+            </div>
+            """, unsafe_allow_html=True)
+        with col2:
+            st.metric("Divisiones Operativas", "4", delta="Estructuradas")
+            st.metric("Protocolos Documentados", "24 Fichas", delta="Metodología Científica")
+            
+        st.write("<br>", unsafe_allow_html=True)
+        st.subheader("Divisiones Técnicas del Sistema")
+        
+        c1, c2, c3, c4 = st.columns(4)
+        divs_data = [
+            ("EcoPapel", "Sección Artística", "🌱", "Recuperación de fibras, soportes orgánicos y el circuito de acuñación de los Eco-Dollars."),
+            ("EcoLab", "Sección Científica", "🧪", "Investigación analítica, procesos químicos moleculares, extracciones y cristalización."),
+            ("EcoTech", "Sección Tecnológica", "💻", "Inteligencia Artificial, Marketing, Diseño Gráfico y Desarrollo."),
+            ("EcoIndustria", "Sección de Ingeniería", "🏗️", "Diseño estructural avanzado, leyes de física de fluidos, upcycling a escala y ergonomía.")
+        ]
+        for idx, (name, sub, icon, text) in enumerate(divs_data):
+            with [c1, c2, c3, c4][idx]:
+                st.markdown(f"""
+                <div class="card">
+                    <span style='font-size: 1.8rem;'>{icon}</span>
+                    <h4 style='margin-top:5px; margin-bottom:2px;'>{name}</h4>
+                    <p style='font-size: 0.8rem; color: #10b981; font-weight:600;'>{sub}</p>
+                    <p style='font-size: 0.85rem; opacity: 0.8; line-height:1.4;'>{text}</p>
+                </div>
+                """, unsafe_allow_html=True)
+                
     with tab_carpeta:
         st.markdown("### Registro Documental de 2025")
         
