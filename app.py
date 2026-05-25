@@ -364,12 +364,7 @@ if selected == "Inicio":
             
 elif selected == "Los 7 Pilares":
     st.markdown("## ¿Que son los 7 Pilares?")
-    st.write("Los 7 Pilares representan los principios fundamentales sobre los que se construye Proyecto Eco. No funcionan únicamente como características aisladas, sino como la base conceptual, organizativa y operativa que le da identidad al sistema.
-Cada pilar define una forma específica de entender la sustentabilidad, la educación y el trabajo interdisciplinario dentro del proyecto. En conjunto, estos principios permiten que Proyecto Eco funcione como una estructura continua, organizada y capaz de evolucionar con el tiempo.
-Los pilares también sirven como guía para el desarrollo de nuevas fichas, divisiones, productos y procesos, asegurando que todo lo incorporado al sistema mantenga coherencia con la filosofía general del proyecto.
-Gracias a esta estructura, Proyecto Eco no se limita a realizar actividades ecológicas aisladas, sino que construye un modelo educativo basado en continuidad, experimentación, organización y transformación real de recursos.
-En otras palabras, los 7 Pilares son la base que sostiene todo el ecosistema de Proyecto Eco.")
-    
+    st.write("Los 7 Pilares representan los principios fundamentales sobre los que se construye Proyecto Eco. No funcionan únicamente como características aisladas, sino como la base conceptual, organizativa y operativa que le da identidad al sistema. Cada pilar define una forma específica de entender la sustentabilidad, la educación y el trabajo interdisciplinario dentro del proyecto. En conjunto, estos principios permiten que Proyecto Eco funcione como una estructura continua, organizada y capaz de evolucionar con el tiempo. Los pilares también sirven como guía para el desarrollo de nuevas fichas, divisiones, productos y procesos, asegurando que todo lo incorporado al sistema mantenga coherencia con la filosofía general del proyecto. Gracias a esta estructura, Proyecto Eco no se limita a realizar actividades ecológicas aisladas, sino que construye un modelo educativo basado en continuidad, experimentación, organización y transformación real de recursos. En otras palabras, los 7 Pilares son la base que sostiene todo el ecosistema de Proyecto Eco.")
     char_list = [
         ("Replicable", "Diseñado para ser recreado en cualquier escuela con materiales accesibles."),
         ("Sustentable", "Equilibrio real entre uso de recursos y regeneración ambiental."),
