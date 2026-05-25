@@ -175,7 +175,7 @@ if selected == "Inicio":
         with col1:
             st.markdown("""
             <div class="card">
-                <h3>Nuestra Visión Estratégica</h3>
+                <h3>¿Que es el Proyecto Eco?</h3>
                 <p><b>Proyecto Eco</b> no constituye simplemente un taller aislado de reciclaje; representa una auténtica <b>infraestructura de conocimiento</b> instalada y arraigada dentro de la institución escolar.</p>
                 <p>Buscamos transformar de manera práctica los residuos convencionales en recursos de alto valor técnico y pedagógico a través de una red interconectada de cuatro áreas del saber, asegurando que el conocimiento trascienda a las personas y se preserve en protocolos institucionales continuos.</p>
             </div>
