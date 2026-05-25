@@ -206,176 +206,73 @@ if selected == "Inicio":
                 </div>
                 """, unsafe_allow_html=True)
 
-    with tab_carpeta:
+with tab_carpeta:
         st.markdown("### 📝 Registro Documental Completo de la Carpeta de Campo")
         st.caption("Lectura oficial y cronológica del proceso de investigación práctica del equipo.")
         
-        # 1. Introducción
-        st.markdown("#### 1. Introducción")
-        st.write("""
-        El presente documento describe el desarrollo y evolución de nuestro Proyecto Eco, desde nuestros inicios en el año 2025 bajo el nombre de EcoPapel, hasta su transformación en un sistema integral en 2026.
-        
-        El objetivo de esta carpeta de campo es registrar el proceso real de nuestro proyecto, incluyendo su origen, desarrollo, dificultades y evolución. A diferencia de un trabajo teórico, este documento se basa en la experiencia práctica de nuestro equipo, mostrando cómo una idea inicial fue modificándose hasta convertirse en una propuesta más compleja y estructurada.
-        
-        Además, buscamos evidenciar no solo los resultados obtenidos, sino también nuestro proceso de aprendizaje, los errores y las decisiones que nos llevaron a la evolución del proyecto.
-        """)
-        
-        # 2. Origen
-        st.markdown("#### 2. Origen del Proyecto (2025)")
-        st.write("""
-        Nuestro proyecto comenzó en el año 2025 a partir de una propuesta de trabajo anual planteada por el docente. Frente a esta consigna, iniciamos una etapa de ideas iniciales, donde planteamos múltiples posibles proyectos que abarcaban distintas áreas.
-        
-        Entre las ideas que consideramos se encontraban la construcción de una guitarra hecha a mano, un tren eléctrico de madera y el desarrollo de herramientas destinadas a personas con discapacidad. Estas propuestas demostraban nuestro interés por la innovación y la creación de objetos funcionales, pero presentaban diferentes niveles de complejidad y viabilidad.
-        
-        A medida que analizamos las opciones, buscamos una idea que no solo fuera realizable, sino que también tuviera un impacto concreto dentro del entorno escolar. Fue en este proceso donde nos surgió la propuesta de trabajar con el reciclaje de papel.
-        
-        La elección de esta idea no fue aleatoria, sino que la basamos en la identificación de una problemática presente en la comunidad: el manejo de los residuos y, en particular, la falta de aprovechamiento del papel descartado. De esta manera, decidimos enfocar el proyecto en la recuperación y transformación del papel, dando origen a EcoPapel, que se convertiría en el eje central de nuestro trabajo durante todo el ciclo 2025.
-        """)
-        
-        # 3. Problema
-        st.markdown("#### 3. Problema Detectado")
-        st.write("""
-        Durante la etapa inicial del proyecto, identificamos una situación particular dentro del entorno escolar: si bien la mayoría de las personas reconoce la importancia del reciclaje, en la práctica no sabe cómo llevarlo a cabo.
-        
-        Es decir, notamos que existe una conciencia general sobre el reciclaje como concepto, pero no un conocimiento real sobre sus procesos. Los estudiantes saben que reciclar es “algo bueno”, pero desconocen cómo se transforma un residuo en un nuevo material, especialmente en el caso del papel.
-        
-        Esta falta de conocimiento práctico genera que el reciclaje sea minimizado o ignorado. Observamos que, al no comprender el proceso, las personas no se involucran activamente ni lo incorporan como un hábito.
-        
-        A partir de esta observación, definimos un enfoque claro: no centrarse únicamente en promover el reciclaje mediante mensajes teóricos, sino en mostrar el proceso de forma concreta. Nuestro objetivo dejó de ser decir “hay que reciclar” y pasó a ser demostrar “cómo se recicla”. De esta manera, orientamos el proyecto a la concientización a través de la práctica, utilizando la transformación real de materiales como herramienta principal para generar aprendizaje e interés en la comunidad.
-        """)
-        
-        # 4. Desarrollo EcoPapel 2025
-        st.markdown("#### 4. Desarrollo de EcoPapel 2025")
-        st.write("""
-        Una vez definido el enfoque del proyecto, comenzamos el desarrollo práctico de EcoPapel, centrado en la producción de papel reciclado y la demostración de nuestro proceso.
-        
-        Para llevar a cabo este trabajo, tomamos como referencia contenido educativo del canal de YouTube *Papel en Coma*, el cual nos sirvió como guía inicial para comprender las técnicas básicas de reciclaje artesanal. A partir de esta base, adaptamos los procedimientos a los recursos disponibles y fuimos mejorando los resultados mediante la práctica.
-        
-        El eje principal del desarrollo fue la fabricación de papel reciclado, proceso que implicó la recolección de papel en desuso, su tratamiento con agua para generar pulpa y el posterior formado de nuevas hojas utilizando un tamiz que construimos con madera recuperada.
-        """)
-        
-        st.markdown("<div class='history-block'><b>Líneas de Productos desarrolladas en el ciclo anterior:</b>", unsafe_allow_html=True)
-        st.markdown("""
-        * Nuestra producción de papel reciclado como material base.
-        * Fabricación de cartón reciclado y construcción de herramientas propias (tamiz).
-        * Elaboración de piezas artísticas de origami y libretas con cubiertas recuperadas.
-        * Diseño de cartelería institucional mediante papel maché e impresión directa sobre soporte reciclado.
-        * Desarrollo experimental de tintes a partir de materiales accesibles.
-        * Investigación formal sobre la historia cronológica del reciclaje de papel.
-        """, unsafe_allow_html=True)
-        st.markdown("</div>", unsafe_allow_html=True)
-        
-        st.write("""
-        Además del trabajo técnico, el proyecto incluyó una dimensión comunicacional. Utilizamos redes sociales y la creación de souvenirs como estrategias para difundir nuestro proyecto, generar interés y ampliar su alcance dentro de la comunidad.
-        
-        Durante el desarrollo, enfrentamos dificultades principalmente relacionadas con nuestra falta de experiencia. En las primeras pruebas, el papel que obteníamos presentaba problemas de calidad, como hojas demasiado finas o bordes irregulares. Sin embargo, superamos estos inconvenientes a través de la repetición del proceso y el ajuste de las técnicas utilizadas. Este proceso de prueba y error nos permitió mejorar progresivamente los resultados, logrando productos más consistentes y estéticamente más cuidados.
-        """)
-        
-        # 5. Resultados
-        st.markdown("#### 5. Resultados y Aprendizajes")
-        st.write("""
-        A lo largo del desarrollo de EcoPapel 2025, logramos obtener resultados concretos tanto a nivel técnico como en nuestro proceso de aprendizaje.
-        
-        En primer lugar, consolidamos la producción de papel reciclado como eje principal del proyecto. A través de la práctica constante, logramos mejorar la calidad de las hojas, corrigiendo problemas iniciales como el espesor irregular y los bordes poco definidos. Este avance nos permitió obtener un material más resistente y estéticamente más prolijo.
-        
-        Además, desarrollamos distintos productos a partir del papel reciclado, como libretas, carteles y figuras de origami. Entre estos, los origamis se destacaron especialmente por su calidad visual, demostrándonos el potencial del material no solo desde lo funcional, sino también desde lo estético.
-        
-        Por otro lado, adquirimos conocimientos prácticos sobre el proceso de reciclaje, comprendiendo cada una de sus etapas: desde la recolección del material hasta la obtención del producto final. Este aprendizaje nos permitió pasar de un conocimiento teórico general a una comprensión real del proceso.
-        
-        También logramos avanzar en la comunicación del proyecto, utilizando redes sociales y estrategias de difusión para generar interés en otras personas. Esto reforzó nuestro objetivo inicial de no solo reciclar, sino también enseñar cómo hacerlo.
-        
-        Sin embargo, uno de los resultados más importantes no fue un producto físico, sino el aprendizaje obtenido a partir de la experiencia. Entendimos la importancia de la práctica, la repetición y la mejora progresiva, así como la necesidad de adaptar los procesos según los errores que detectamos. En este sentido, el proyecto no solo nos permitió aprender a reciclar papel, sino también desarrollar una forma de trabajo basada en la experimentación y la resolución de problemas.
-        """)
-        
-        # 6. Limitaciones
-        st.markdown("#### 6. Limitaciones del Proyecto")
-        st.write("""
-        A pesar de los resultados que obtuvimos durante el desarrollo de EcoPapel 2025, nuestro proyecto presentó diversas limitaciones, principalmente relacionadas con nuestra inexperiencia inicial y la falta de una estructura definida.
-        
-        En el aspecto técnico, una de las principales dificultades que enfrentamos fue la calidad del papel reciclado en las primeras etapas. Las hojas tendían a ser demasiado finas y con bordes irregulares, lo que afectaba tanto su resistencia como su presentación. Estas limitaciones se debieron, en gran parte, a nuestra falta de práctica y de conocimiento previo sobre el proceso. Si bien fuimos mejorando estos problemas con el tiempo, evidenciaron nuestra necesidad de mayor precisión en las técnicas y de un control más claro sobre las variables del proceso.
-        
-        Por otro lado, el proyecto no contaba con una organización estructurada. Desarrollábamos las actividades sin una división clara de roles ni un sistema que nos permitiera ordenar el trabajo de forma eficiente. Esto generaba cierta dependencia del esfuerzo individual y nos dificultaba la continuidad del proyecto más allá del grupo que lo llevaba adelante.
-        
-        Además, nuestro enfoque estaba centrado principalmente en la producción y demostración, sin un sistema que asegurara su crecimiento o sostenibilidad en el tiempo. Es decir, el proyecto funcionaba, pero no estábamos preparados para mantenerlo o escalarlo de manera organizada.
-        
-        Estas limitaciones no impidieron el desarrollo de EcoPapel, pero sí nos marcaron un punto importante: la necesidad de evolucionar hacia un modelo más estructurado, que nos permitiera mejorar la calidad, organizar el trabajo y asegurar la continuidad del proyecto.
-        """)
-        
-        # 7. Punto de Evolución
-        st.markdown("#### 7. Punto de Evolución")
-        st.write("""
-        A medida que avanzaba el desarrollo de EcoPapel 2025, empezamos a notar que el proyecto tenía un potencial mayor al esperado inicialmente. Lo que en un principio era una propuesta enfocada en el reciclaje de papel empezó a mostrar posibilidades de crecimiento más amplias.
-        
-        Este punto de evolución no surgió de un momento único, sino de una acumulación de experiencias a lo largo de nuestro proceso. Al mejorar las técnicas, obtener resultados más consistentes y lograr productos funcionales, comprendimos que el proyecto podía ir más allá de una actividad puntual.
-        
-        Sin embargo, esta misma evolución nos permitió identificar una limitación más profunda: el proyecto funcionaba, pero no teníamos una estructura que le permitiera sostenerse en el tiempo o expandirse de manera organizada.
-        
-        A partir de esta reflexión, detectamos un problema más general: muchos proyectos ecológicos surgen con buenas ideas, pero terminan desapareciendo con el tiempo. No logran mantenerse activos ni generar un impacto duradero, ya sea por falta de organización, continuidad o integración con otros procesos.
-        
-        Este análisis nos llevó a replantear el enfoque del proyecto. Ya no se trataba únicamente de mejorar lo que estábamos haciendo, sino de cambiar la lógica del proyecto en sí. Nuestro objetivo pasó de desarrollar un proyecto funcional a diseñar un sistema capaz de mantenerse, crecer y adaptarse con el tiempo. Este cambio de perspectiva marcó el punto de evolución entre nuestro EcoPapel 2025 y lo que posteriormente se convertiría en nuestro Proyecto Eco 2026.
-        """)
-        
-        # 8. Nacimiento del Proyecto Eco 2026
-        st.markdown("#### 8. Nacimiento del Proyecto Eco 2026")
-        st.write("""
-        A partir del punto de evolución alcanzado en 2025, decidimos transformar el enfoque de nuestro proyecto para el nuevo ciclo lectivo. De esta manera, EcoPapel deja de ser nuestro proyecto principal y pasa a formar parte de una estructura más amplia: el Proyecto Eco 2026.
-        
-        Este cambio no implicó descartar lo que habíamos trabajado anteriormente, sino utilizarlo como base para construir una propuesta más completa. EcoPapel se mantiene como nuestro núcleo inicial, pero ahora integrado dentro de un sistema con mayor organización y proyección.
-        
-        El Proyecto Eco surge con el objetivo de resolver una problemática más amplia: la falta de continuidad y sostenibilidad en los proyectos ecológicos. En lugar de desarrollar una iniciativa aislada, nos propusimos la creación de un sistema capaz de mantenerse en el tiempo y generar un impacto real.
-        
-        Para lograrlo, adoptamos un enfoque diferente. Pasamos de un modelo basado en actividades a un modelo estructurado, con una lógica de funcionamiento más cercana a una organización.
-        """)
-        
-        st.markdown("<div class='history-block'><b>Esta reestructuración nos implica de manera directa:</b>", unsafe_allow_html=True)
-        st.markdown("""
-        * Mayor orden metodológico en nuestro trabajo diario.
-        * Definición explícita de roles y liderazgos dentro del equipo.
-        * Integración transversal de distintas áreas de estudio y materias.
-        * Proyección y escalabilidad a largo plazo.
-        """, unsafe_allow_html=True)
-        st.markdown("</div>", unsafe_allow_html=True)
-        
-        st.write("""
-        Además, ampliamos el alcance del proyecto, incorporando nuevas ideas y líneas de trabajo que van más allá del reciclaje de papel, lo que nos permite abordar el problema ambiental desde múltiples enfoques. De esta manera, el nacimiento de nuestro Proyecto Eco 2026 representa un cambio de escala: de un proyecto puntual a un sistema en desarrollo, con intención de continuidad, crecimiento y mejora constante.
-        """)
-        
-        # 9. Nuevo Enfoque y Objetivos
-        st.markdown("#### 9. Nuevo Enfoque y Objetivos")
-        st.write("""
-        A partir de la creación de nuestro Proyecto Eco 2026, adoptamos un nuevo enfoque basado en la organización, la integración de áreas y la proyección a largo plazo. El cambio principal radica en dejar atrás un modelo centrado en actividades aisladas para pasar a un sistema estructurado, donde cada parte de nuestro proyecto cumple una función específica dentro de un conjunto mayor.
-        
-        En este nuevo esquema, organizamos el proyecto en distintas áreas o divisiones, cada una con un rol definido:
-        * **EcoPapel:** encargada de la recuperación y transformación del papel, funcionando como base material de nuestro sistema.
-        * **EcoLab:** orientada a la experimentación, donde desarrollamos procesos relacionados con química y materiales.
-        * **EcoTech:** centrada en la tecnología, la organización de la información y el desarrollo de herramientas digitales.
-        * **EcoIndustria:** enfocada en la creación de productos funcionales a partir de materiales reciclados.
-        
-        Esta división nos permite distribuir el trabajo, mejorar la organización y abordar el proyecto desde diferentes enfoques de manera simultánea. Además, el Proyecto Eco incorpora una lógica de funcionamiento basada en la continuidad. No se trata de realizar actividades puntuales, sino de sostener un sistema en el tiempo, capaz de adaptarse, mejorar y crecer.
-        """)
-        
-        st.markdown("<div class='history-block'><b>Nuestros Principales Objetivos para 2026:</b>", unsafe_allow_html=True)
-        st.markdown("""
-        1. Consolidar un sistema organizado de trabajo.
-        2. Mejorar la calidad medible de nuestros procesos y productos finales.
-        3. Integrar distintas áreas del conocimiento práctico (tecnología, ciencia, producción).
-        4. Generar un impacto real y cuantificable dentro de nuestra comunidad escolar.
-        5. Lograr que el proyecto pueda mantenerse, transferirse y evolucionar autónomamente en el tiempo.
-        """, unsafe_allow_html=True)
-        st.markdown("</div>", unsafe_allow_html=True)
-        
-        # 10. Conclusión
-        st.markdown("#### 10. Conclusión")
-        st.write("""
-        El desarrollo de nuestro proyecto a lo largo de 2025 y su evolución en 2026 permite evidenciar un cambio significativo tanto en el enfoque como en la forma de trabajo de nuestro equipo.
-        
-        EcoPapel comenzó como una propuesta centrada en el reciclaje de papel y la concientización práctica, logrando demostrar que es posible transformar residuos en nuevos materiales mediante procesos accesibles. A través de la experiencia, no solo adquirimos conocimientos técnicos, sino que también desarrollamos una forma de trabajo basada en la prueba, el error y la mejora continua.
-        
-        Sin embargo, el aspecto más importante del proceso fue nuestra capacidad de identificar nuestras propias limitaciones y, a partir de ellas, replantear el proyecto. Este análisis dio lugar al nacimiento del Proyecto Eco 2026, que representa una evolución hacia un modelo más complejo, organizado y con proyección a largo plazo. El paso de un conjunto de actividades a un sistema estructurado marca una diferencia fundamental en términos de impacto y continuidad para nosotros.
-        
-        De esta manera, el proyecto deja de ser una experiencia aislada para convertirse en una propuesta con intención de permanencia, capaz de adaptarse, crecer y mantenerse en el tiempo. En síntesis, más allá de los productos obtenidos, el verdadero resultado de nuestro proyecto es la construcción de una base sólida sobre la cual seguiremos desarrollando soluciones sustentables en el futuro.
-        """)
+        # Usamos expanders para que no sea un bloque de texto infinito
+        with st.expander("1. Introducción & 2. Origen del Proyecto (2025)", expanded=True):
+            st.markdown("""
+            <div class="history-block">
+                El presente documento describe el desarrollo y evolución de nuestro Proyecto Eco, desde nuestros inicios en el año 2025 bajo el nombre de <b>EcoPapel</b>, hasta su transformación en un sistema integral en 2026.
+            </div>
+            """, unsafe_allow_html=True)
+            
+            st.write("""
+            Nuestro proyecto comenzó en el año 2025 a partir de una propuesta de trabajo anual. Entre las ideas consideramos construir herramientas o instrumentos, pero buscamos una idea que tuviera un impacto concreto dentro del entorno escolar: **trabajar con el reciclaje de papel**.
+            
+            De esta manera, decidimos enfocar el proyecto en la recuperación y transformación del papel, dando origen a EcoPapel.
+            """)
 
+        with st.expander("3. Problema Detectado en 2025"):
+            st.info("💡 **Dato clave:** Notamos que existe una conciencia general sobre el reciclaje como concepto, pero no un conocimiento real sobre sus procesos.")
+            st.write("""
+            Esta falta de conocimiento práctico genera que el reciclaje sea minimizado o ignorado. Nuestro objetivo dejó de ser decir “hay que reciclar” y pasó a ser demostrar **“cómo se recicla”**.
+            """)
+
+        with st.expander("4. Desarrollo de EcoPapel 2025"):
+            st.write("""
+            Comenzamos el desarrollo práctico centrado en la producción de papel reciclado. El eje principal fue la fabricación, implicando recolección, tratamiento con agua, y formado de nuevas hojas utilizando un tamiz propio.
+            """)
+            
+            st.markdown("<div class='card' style='margin-top:10px;'><b>Líneas de Productos desarrolladas en el ciclo anterior:</b><br><br>", unsafe_allow_html=True)
+            st.markdown("""
+            * Producción de papel reciclado como material base.
+            * Fabricación de cartón reciclado y herramientas propias.
+            * Elaboración de piezas artísticas de origami.
+            * Desarrollo experimental de tintes.
+            </div>
+            """, unsafe_allow_html=True)
+
+        with st.expander("5. Resultados y Aprendizajes"):
+            st.success("A lo largo del desarrollo de EcoPapel 2025, logramos consolidar la producción de papel como eje principal, corrigiendo problemas iniciales como el espesor irregular.")
+            st.write("""
+            El resultado más importante no fue un producto físico, sino el aprendizaje. Entendimos la importancia de la práctica, la repetición y la mejora progresiva.
+            """)
+
+        with st.expander("6. Limitaciones & 7. Punto de Evolución"):
+            st.warning("Las principales dificultades que enfrentamos fueron la calidad inicial del papel y la falta de una organización estructurada de roles.")
+            st.write("""
+            El proyecto funcionaba, pero no estábamos preparados para mantenerlo o escalarlo de manera organizada. Detectamos que muchos proyectos ecológicos desaparecen por falta de continuidad. 
+            
+            **Nuestro objetivo pasó de desarrollar un proyecto funcional a diseñar un sistema capaz de mantenerse, crecer y adaptarse con el tiempo.**
+            """)
+
+        with st.expander("8. Nacimiento y Objetivos de Proyecto Eco 2026"):
+            st.write("""
+            EcoPapel dejó de ser nuestro proyecto principal y pasó a formar parte de una estructura más amplia: el **Proyecto Eco 2026**. Pasamos de un modelo basado en actividades a un modelo estructurado.
+            """)
+            
+            st.markdown("<div class='history-block'><b>Nuestros Principales Objetivos para 2026:</b>", unsafe_allow_html=True)
+            st.markdown("""
+            1. Consolidar un sistema organizado de trabajo.
+            2. Mejorar la calidad medible de nuestros procesos y productos finales.
+            3. Integrar distintas áreas del conocimiento práctico (tecnología, ciencia, producción).
+            4. Generar un impacto real y cuantificable dentro de nuestra comunidad escolar.
+            5. Lograr que el proyecto pueda mantenerse y evolucionar autónomamente en el tiempo.
+            """, unsafe_allow_html=True)
+            st.markdown("</div>", unsafe_allow_html=True)
+            
 # --------------------------------------------------
 # VISTA 2: BIBLIOTECA DE FICHAS TÉCNICAS (CON ESTRUCTURA DE 11 PUNTOS)
 # --------------------------------------------------
