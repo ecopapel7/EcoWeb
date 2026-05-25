@@ -206,7 +206,7 @@ if selected == "Inicio":
                 </div>
                 """, unsafe_allow_html=True)
 
-with tab_carpeta:
+    with tab_carpeta:
         st.markdown("### 📝 Registro Documental Completo de la Carpeta de Campo")
         st.caption("Lectura oficial y cronológica del proceso de investigación práctica del equipo.")
         
