@@ -491,8 +491,8 @@ elif selected == "EcoIA":
 # VISTA 4: EQUIPO (CUADRO DE INVESTIGADORES)
 # --------------------------------------------------
 elif selected == "Equipo":
-    st.markdown("## 👥 Cuadro de Investigadores")
-    st.write("Estructura de roles y responsabilidades del grupo de investigadores de la E.E.S.T N°7 (4° 4°).")
+    st.markdown("## 👥 Equipo Eco")
+    st.write("Estructura de roles y responsabilidades del grupo/equipo.")
     
     equipo = [
         {"nombre": "Jonathan Orellana", "rol": "Líder de EcoIndustria"},
