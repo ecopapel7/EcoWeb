@@ -362,6 +362,36 @@ if selected == "Inicio":
             De esta manera, el proyecto deja de ser una experiencia aislada para convertirse en una propuesta con intención de permanencia, capaz de adaptarse, crecer y mantenerse en el tiempo. En síntesis, más allá de los productos obtenidos, el verdadero resultado de nuestro proyecto es la construcción de una base sólida sobre la cual seguiremos desarrollando soluciones sustentables en el futuro.
             """)
             
+elif selected == "Los 7 Pilares":
+    st.markdown("## ¿Que son los 7 Pilares?")
+    st.write("Los 7 Pilares representan los principios fundamentales sobre los que se construye Proyecto Eco. No funcionan únicamente como características aisladas, sino como la base conceptual, organizativa y operativa que le da identidad al sistema.
+Cada pilar define una forma específica de entender la sustentabilidad, la educación y el trabajo interdisciplinario dentro del proyecto. En conjunto, estos principios permiten que Proyecto Eco funcione como una estructura continua, organizada y capaz de evolucionar con el tiempo.
+Los pilares también sirven como guía para el desarrollo de nuevas fichas, divisiones, productos y procesos, asegurando que todo lo incorporado al sistema mantenga coherencia con la filosofía general del proyecto.
+Gracias a esta estructura, Proyecto Eco no se limita a realizar actividades ecológicas aisladas, sino que construye un modelo educativo basado en continuidad, experimentación, organización y transformación real de recursos.
+En otras palabras, los 7 Pilares son la base que sostiene todo el ecosistema de Proyecto Eco.")
+    
+    char_list = [
+        ("Replicable", "Diseñado para ser recreado en cualquier escuela con materiales accesibles."),
+        ("Sustentable", "Equilibrio real entre uso de recursos y regeneración ambiental."),
+        ("Interdisciplinario", "Integración de Química, Física, Tecnología y Arte en un solo flujo."),
+        ("Circular", "El residuo no desaparece, cambia de función (Economía Circular)."),
+        ("Continuo", "Protocolos documentados que permiten la trascendencia del equipo."),
+        ("Experimental", "Metodología basada en prueba, error y optimización técnica."),
+        ("Medible", "Evitamos el greenwashing mediante métricas de impacto real.")
+    ]
+    
+    rows = [char_list[i:i + 3] for i in range(0, len(char_list), 3)]
+    for row in rows:
+        cols = st.columns(3)
+        for j, (title, desc) in enumerate(row):
+            with cols[j]:
+                st.markdown(f"""
+                <div class="card">
+                    <h4 style='color: #10b981;'>{title}</h4>
+                    <p style='font-size: 0.9rem;'>{desc}</p>
+                </div>
+                """, unsafe_allow_html=True)
+                
 # --------------------------------------------------
 # VISTA 2: BIBLIOTECA DE FICHAS TÉCNICAS (CON ESTRUCTURA DE 11 PUNTOS)
 # --------------------------------------------------
