@@ -170,17 +170,6 @@ if selected == "Inicio":
     
     # Navegación por pestañas internas para balancear el contenido
     tab_resumen, tab_carpeta = st.tabs(["Introducción", "Historia y Evolución"])
-    if selected == "Inicio":
-    st.markdown("""
-        <div class="hero">
-            <h1 style='font-size: 3.2rem; margin-bottom:0;'>PROYECTO <span class='highlight'>ECO</span> 2026</h1>
-            <p style='font-size: 1.1rem; opacity: 0.85;'>Infraestructura Educativa Continua y Sistema Integral de Innovación Sustentable</p>
-        </div>
-    """, unsafe_allow_html=True)
-    
-    # Navegación por pestañas internas para balancear el contenido
-    tab_resumen, tab_carpeta = st.tabs(["📊 Resumen del Ecosistema", "📖 Carpeta de Campo: Historia y Evolución"])
-    
     with tab_resumen:
         col1, col2 = st.columns([2, 1])
         with col1:
