@@ -495,14 +495,10 @@ elif selected == "Equipo":
     st.write("Estructura de roles y responsabilidades del grupo de investigadores de la E.E.S.T N°7 (4° 4°).")
     
     equipo = [
-        {"nombre": "Damian Medina", "rol": "EcoPapel / EcoIndustria"},
-        {"nombre": "Dante Rodriguez", "rol": "EcoTech"},
-        {"nombre": "Enzo Cuevas", "rol": "EcoPapel"},
-        {"nombre": "Franco Titirico", "rol": "EcoIndustria (Representante)"},
-        {"nombre": "Jonathan Orellana", "rol": "EcoPapel (Representante)"},
-        {"nombre": "Julian Tejerina", "rol": "EcoTech (Representante)"},
-        {"nombre": "Tobias Ponce Castaño", "rol": "EcoLab (Representante)"},
-        {"nombre": "Valentino Correa", "rol": "EcoLab"},
+        {"nombre": "Jonathan Orellana", "rol": "Líder de EcoIndustria"},
+        {"nombre": "Facundo Rodriguez", "rol": "Participante de EcoIndustria"},
+        {"nombre": "Tobias Ponce", "rol": "Líder de EcoLab"},
+        {"nombre": "Julian Tejerina", "rol": "Líder de EcoTech"},
     ]
     
     # Cuadrícula limpia de 4 columnas para los integrantes
