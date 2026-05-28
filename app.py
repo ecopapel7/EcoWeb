@@ -439,6 +439,9 @@ elif selected == "Fichas Técnicas":
 # --------------------------------------------------
 # VISTA 3: ECOIA (SISTEMA DE INTELIGENCIA ARTIFICIAL)
 # --------------------------------------------------
+# --------------------------------------------------
+# VISTA 3: ECOIA (CON INYECCIÓN AUTOMÁTICA DE LAS 24 FICHAS)
+# --------------------------------------------------
 elif selected == "EcoIA":
     st.markdown("""
         <div class="card">
@@ -469,24 +472,38 @@ elif selected == "EcoIA":
                 st.markdown(prompt)
 
             with st.chat_message("assistant"):
-                # System prompt ultra preciso para evitar alucinaciones
+                
+                # =========================================================================
+                # 🚀 EL TRUCO ESTÁ AQUÍ: CONSTRUCCIÓN DEL CONTEXTO EN TIEMPO REAL
+                # =========================================================================
+                # Recorremos tu diccionario 'FICHAS' y creamos una base de datos de texto plano
+                contexto_fichas = ""
+                for numero, info in FICHAS.items():
+                    contexto_fichas += f"- Ficha #{numero} [{info['division']}]: {info['titulo']} -> {info['desc']}\n"
+                
+                # Creamos el System Prompt definitivo pasándole toda la información
                 sys_prompt = (
                     "Eres EcoIA, el núcleo de inteligencia computacional de Proyecto Eco 2026. "
                     "Tu escuela es la E.E.S.T N°7. Tienes 4 divisiones: EcoPapel, EcoLab, EcoTech y EcoIndustria. "
-                    "Tu rol es responder preguntas técnicas sobre sustentabilidad, reciclaje y los 24 protocolos "
-                    "institucionales de las fichas del proyecto de manera clara, rigurosa y experta."
+                    "A continuación tienes la BASE DE DATOS OFICIAL con las 24 fichas técnicas del proyecto. "
+                    "Úsala como tu única fuente de verdad. Si te preguntan por una ficha, responde estrictamente "
+                    "en base a los datos provistos abajo. Si te piden detalles del procedimiento paso a paso o de "
+                    "los 11 puntos que no figuran en este resumen, recuérdale amablemente al usuario que puede "
+                    "descargar el protocolo completo en formato PDF/Drive desde la sección 'Fichas Técnicas'.\n\n"
+                    f"CONTEXTO DE LAS 24 FICHAS TÉCNICAS:\n{contexto_fichas}"
                 )
+                # =========================================================================
+            
                 full_messages = [{"role": "system", "content": sys_prompt}] + st.session_state.messages
                 
                 completion = client.chat.completions.create(
                     model="llama-3.1-8b-instant",
                     messages=full_messages,
-                    temperature=0.25
+                    temperature=0.25  # Temperatura baja para que sea más preciso y no invente tanto
                 )
                 response = completion.choices[0].message.content
                 st.markdown(response)
                 st.session_state.messages.append({"role": "assistant", "content": response})
-
 # --------------------------------------------------
 # VISTA 4: EQUIPO (CUADRO DE INVESTIGADORES)
 # --------------------------------------------------
