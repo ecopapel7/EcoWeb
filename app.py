@@ -2,6 +2,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 from groq import Groq
 import os
+import re
 
 # --------------------------------------------------
 # CONFIGURACIÓN DE PÁGINA
@@ -1029,20 +1030,27 @@ elif selected == "EcoIA":
                 # =========================================================================
                 # 🔍 DETECTOR INTELIGENTE DE FICHAS
                 # =========================================================================
-                ficha_detectada_contenido = ""
+                ficha_detectada_contenido = None
                 numero_ficha_encontrada = None
-                
-                # Buscamos si el usuario escribió el número o el nombre de la ficha
+
+                # Pasamos el prompt a minúsculas
+                prompt_en_minusculas = prompt.lower()
+
                 for numero, info in FICHAS.items():
                     termino_busqueda_nombre = info['titulo'].lower()
-                    prompt_en_minusculas = prompt.lower()
-                    
-                    if f"ficha {numero}" in prompt_en_minusculas or numero == prompt_en_minusculas or termino_busqueda_nombre in prompt_en_minusculas:
+    
+                    # Esta línea busca "ficha X" de forma exacta como palabra completa (\b)
+                    # Evita que "ficha 1" coincida dentro de "ficha 15"
+                    patron_exacto = rf"\bficha\s+{numero}\b"
+    
+                    if (re.search(patron_exacto, prompt_en_minusculas) or 
+                        numero == prompt_en_minusculas.strip() or 
+                        termino_busqueda_nombre in prompt_en_minusculas):
+        
                         numero_ficha_encontrada = numero
-                        # Si tenemos el texto largo en nuestro diccionario, se lo damos completo
                         if numero in TEXTO_COMPLETO_FICHAS:
                             ficha_detectada_contenido = TEXTO_COMPLETO_FICHAS[numero]
-                        break
+                        break # Frenamos en la ficha correcta
                 
                 # =========================================================================
                 # 🧠 ARMADO DEL SYSTEM PROMPT PERSONALIZADO
