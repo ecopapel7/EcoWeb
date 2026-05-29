@@ -1097,32 +1097,32 @@ elif selected == "EcoIA":
 # --------------------------------------------------
 # VISTA 4: EQUIPO (CUADRO DE INVESTIGADORES)
 # --------------------------------------------------
-    elif selected == "Equipo":
-            st.markdown("## 👥 Equipo Eco")
-        st.write("Estructura de roles y responsabilidades del grupo/equipo.")
+elif selected == "Equipo":
+        st.markdown("## 👥 Equipo Eco")
+    st.write("Estructura de roles y responsabilidades del grupo/equipo.")
     
-        equipo = [
-            {"nombre": "Jonathan Orellana", "rol": "Líder de EcoIndustria"},
-            {"nombre": "Facundo Rodriguez", "rol": "Participante de EcoIndustria"},
-            {"nombre": "Tobias Ponce", "rol": "Líder de EcoLab"},
-            {"nombre": "Julian Tejerina", "rol": "Líder de EcoTech"},
+    equipo = [
+        {"nombre": "Jonathan Orellana", "rol": "Líder de EcoIndustria"},
+        {"nombre": "Facundo Rodriguez", "rol": "Participante de EcoIndustria"},
+        {"nombre": "Tobias Ponce", "rol": "Líder de EcoLab"},
+        {"nombre": "Julian Tejerina", "rol": "Líder de EcoTech"},
         ]
     
         # Cuadrícula limpia de 4 columnas para los integrantes
-        cols = st.columns(4)
-        for index, persona in enumerate(equipo):
-            with cols[index % 4]:
-                st.markdown(f"""
-                <div class="card" style='text-align: center; padding: 20px 15px;'>
-                    <div style='background: var(--primary); width: 44px; height: 44px; border-radius: 50%; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; color: #090f0c; font-weight: 700; font-size:1.1rem;'>
-                        {persona['nombre'][0]}
-                    </div>
-                    <b style='font-size: 0.95rem; display:block; margin-bottom:4px;'>{persona['nombre']}</b>
-                    <small style='opacity: 0.75; font-size:0.8rem; color:#a7f3d0;'>{persona['rol']}</small>
+    cols = st.columns(4)
+    for index, persona in enumerate(equipo):
+        with cols[index % 4]:
+            st.markdown(f"""
+            <div class="card" style='text-align: center; padding: 20px 15px;'>
+                <div style='background: var(--primary); width: 44px; height: 44px; border-radius: 50%; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; color: #090f0c; font-weight: 700; font-size:1.1rem;'>
+                    {persona['nombre'][0]}
                 </div>
-                """, unsafe_allow_html=True)
+                <b style='font-size: 0.95rem; display:block; margin-bottom:4px;'>{persona['nombre']}</b>
+                <small style='opacity: 0.75; font-size:0.8rem; color:#a7f3d0;'>{persona['rol']}</small>
+            </div>
+            """, unsafe_allow_html=True)
 
 # --------------------------------------------------
 # FOOTER UNIVERSAL INSTITUCIONAL
 # --------------------------------------------------
-    st.markdown("<br><br><p style='text-align: center; opacity: 0.45; font-size:0.8rem;'>Proyecto Eco 2026 · E.E.S.T N°7 · República Argentina</p>", unsafe_allow_html=True)
+st.markdown("<br><br><p style='text-align: center; opacity: 0.45; font-size:0.8rem;'>Proyecto Eco 2026 · E.E.S.T N°7 · República Argentina</p>", unsafe_allow_html=True)
