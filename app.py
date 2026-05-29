@@ -1092,6 +1092,36 @@ elif selected == "EcoIA":
                             ficha_detectada_contenido = TEXTO_COMPLETO_FICHAS[numero]
                         break # Frenamos en la ficha correcta
 
+                # =========================================================================
+                # 🧠 ARMADO DEL SYSTEM PROMPT PERSONALIZADO
+                # =========================================================================
+                sys_prompt = (
+                    "Eres EcoIA, el núcleo de inteligencia computacional de Proyecto Eco 2026 (E.E.S.T N°7). "
+                    "Tu rol es responder preguntas técnicas sobre sustentabilidad basados en los protocolos del colegio.\n\n"
+                )
+                
+                if f_contenido := ficha_detectada_contenido:
+                    # ¡LE INYECTAMOS LA FICHA COMPLETA!
+                    sys_prompt += (
+                        f"¡ALERTA DE CONTEXTO! El usuario está preguntando específicamente por la Ficha #{numero_ficha_encontrada}. "
+                        "A continuación tienes el DOCUMENTO COMPLETO E INTEGRAL de esa ficha (con sus 11 puntos oficiales). "
+                        "Usa esta información detallada para responder de forma extremadamente precisa, técnica y completa a lo que te pidan.\n\n"
+                        f"DOCUMENTO DE LA FICHA DETECTADA:\n{f_contenido}"
+                    )
+                else:
+                    # Si no habló de una ficha específica, le pasamos solo la lista resumida como antes
+                    contexto_resumido = ""
+                    for numero, info in FICHAS.items():
+                        contexto_resumido += f"- Ficha #{numero} [{info['division']}]: {info['titulo']} -> {info['desc']}\n"
+                    
+                    sys_prompt += (
+                        "El usuario está haciendo una pregunta general. Aquí tienes el índice resumido de las 24 fichas para guiarte. "
+                        "Si el usuario menciona una ficha que no está cargada detalladamente, responde con lo que sepas del resumen y "
+                        "sugiérele revisar el Drive.\n\n"
+                        f"ÍNDICE DE FICHAS:\n{contexto_resumido}"
+                    )
+                # =========================================================================
+            
                 # Inicializar el historial de mensajes si no existe
         if "messages" not in st.session_state:
             st.session_state.messages = []
@@ -1123,47 +1153,6 @@ elif selected == "EcoIA":
                 
         # Guardar la respuesta de la IA en el historial
         st.session_state.messages.append({"role": "assistant", "content": response})
-        
-                # =========================================================================
-                # 🧠 ARMADO DEL SYSTEM PROMPT PERSONALIZADO
-                # =========================================================================
-                sys_prompt = (
-                    "Eres EcoIA, el núcleo de inteligencia computacional de Proyecto Eco 2026 (E.E.S.T N°7). "
-                    "Tu rol es responder preguntas técnicas sobre sustentabilidad basados en los protocolos del colegio.\n\n"
-                )
-                
-                if f_contenido := ficha_detectada_contenido:
-                    # ¡LE INYECTAMOS LA FICHA COMPLETA!
-                    sys_prompt += (
-                        f"¡ALERTA DE CONTEXTO! El usuario está preguntando específicamente por la Ficha #{numero_ficha_encontrada}. "
-                        "A continuación tienes el DOCUMENTO COMPLETO E INTEGRAL de esa ficha (con sus 11 puntos oficiales). "
-                        "Usa esta información detallada para responder de forma extremadamente precisa, técnica y completa a lo que te pidan.\n\n"
-                        f"DOCUMENTO DE LA FICHA DETECTADA:\n{f_contenido}"
-                    )
-                else:
-                    # Si no habló de una ficha específica, le pasamos solo la lista resumida como antes
-                    contexto_resumido = ""
-                    for numero, info in FICHAS.items():
-                        contexto_resumido += f"- Ficha #{numero} [{info['division']}]: {info['titulo']} -> {info['desc']}\n"
-                    
-                    sys_prompt += (
-                        "El usuario está haciendo una pregunta general. Aquí tienes el índice resumido de las 24 fichas para guiarte. "
-                        "Si el usuario menciona una ficha que no está cargada detalladamente, responde con lo que sepas del resumen y "
-                        "sugiérele revisar el Drive.\n\n"
-                        f"ÍNDICE DE FICHAS:\n{contexto_resumido}"
-                    )
-                # =========================================================================
-            
-                full_messages = [{"role": "system", "content": sys_prompt}] + st.session_state.messages
-                
-                completion = client.chat.completions.create(
-                    model="llama-3.1-8b-instant",
-                    messages=full_messages,
-                    temperature=0.3
-                )
-                response = completion.choices[0].message.content
-                st.markdown(response)
-                st.session_state.messages.append({"role": "assistant", "content": response})
 # --------------------------------------------------
 # VISTA 4: EQUIPO (CUADRO DE INVESTIGADORES)
 # --------------------------------------------------
