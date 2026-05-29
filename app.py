@@ -1028,18 +1028,13 @@ elif selected == "EcoIA":
             with st.chat_message("assistant", avatar="🌱"):
                 with st.spinner("Analizando matriz de datos científico-técnicos..."):
                     
-                    # =========================================================================
                     # 🔍 DETECTOR INTELIGENTE DE FICHAS (CON REGEX)
-                    # =========================================================================
                     ficha_detectada_contenido = None
                     numero_ficha_encontrada = None
-
                     prompt_en_minusculas = prompt.lower()
 
                     for numero, info in FICHAS.items():
                         termino_busqueda_nombre = info['titulo'].lower()
-        
-                        # Busca "ficha X" de forma exacta como palabra completa (\b)
                         patron_exacto = rf"\bficha\s+{numero}\b"
       
                         if (re.search(patron_exacto, prompt_en_minusculas) or 
@@ -1049,18 +1044,15 @@ elif selected == "EcoIA":
                             numero_ficha_encontrada = numero
                             if numero in TEXTO_COMPLETO_FICHAS:
                                 ficha_detectada_contenido = TEXTO_COMPLETO_FICHAS[numero]
-                            break # Frenamos en la ficha correcta
+                            break
                     
-                    # =========================================================================
                     # 🧠 ARMADO DEL SYSTEM PROMPT PERSONALIZADO
-                    # =========================================================================
                     sys_prompt = (
                         "Eres EcoIA, el núcleo de inteligencia computacional de Proyecto Eco 2026 (E.E.S.T N°7).\n"
                         "Tu rol es responder preguntas técnicas sobre sustentabilidad basados en los protocolos del colegio.\n\n"
                     )
                     
                     if f_contenido := ficha_detectada_contenido:
-                        # ¡LE INYECTAMOS LA FICHA COMPLETA!
                         sys_prompt += (
                             f"¡ALERTA DE CONTEXTO! El usuario está preguntando específicamente por la Ficha #{numero_ficha_encontrada}. "
                             "A continuación tienes el DOCUMENTO COMPLETO E INTEGRAL de esa ficha (con sus 11 puntos oficiales). "
@@ -1068,7 +1060,6 @@ elif selected == "EcoIA":
                             f"DOCUMENTO DE LA FICHA DETECTADA:\n{f_contenido}"
                         )
                     else:
-                        # Si no habló de una ficha específica, le pasamos solo la lista resumida
                         contexto_resumido = ""
                         for numero, info in FICHAS.items():
                             contexto_resumido += f"- Ficha #{numero} [{info['division']}]: {info['titulo']} -> {info['desc']}\n"
@@ -1089,7 +1080,6 @@ elif selected == "EcoIA":
                         temperature=0.3
                     )
                     response = completion.choices[0].message.content
-        
                     st.markdown(response)
                     
             # 4. Guardar la respuesta de la IA en el historial
