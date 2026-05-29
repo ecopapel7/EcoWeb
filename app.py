@@ -801,6 +801,46 @@ elif selected == "EcoIA":
         10. MEJORAS Y PROYECCIÓN FUTURA: Incorporar colecciones temáticas. Añadir sistema de trazabilidad digital con códigos QR. Desarrollar packaging sustentable propio con EcoPapel. Expandir la línea a aros o llaveros complejos.
         """,
 
+        "17": """
+        FICHA TÉCNICA #17: ECOVOZ (Sección: EcoIndustria)
+        1. CONCEPTO: Dispositivo de amplificación acústica que utiliza resonancia y direccionamiento del sonido para aumentar el volumen de un teléfono celular sin necesidad de electricidad externa. Funciona mediante principios físicos de propagación sonora pasiva.
+        2. OBJETIVO: Demostrar amplificación pasiva basada en física acústica. Reducir la dependencia de dispositivos electrónicos alimentados por red. Construir un objeto funcional con materiales reciclados. Aplicar diseño estructural al sonido.
+        3. MATERIALES: Tubo de cartón grueso (tipo rollo industrial de descarte), dos vasos plásticos o bases de botellas PET, cartón corrugado para base estable, corcho o goma eva (amortiguación y ajuste hermético), cúter y marcador.
+        4. PROCEDIMIENTO:
+           Paso 1: Realizar una ranura precisa en el centro del tubo de cartón para que el celular encaje de forma firme.
+           Paso 2: Perforar los vasos plásticos o bases de PET con el diámetro exacto del contorno del tubo.
+           Paso 3: Insertar el tubo en los vasos asegurando una unión lo más ajustada posible.
+           Paso 4: Colocar y fijar la base de cartón corrugado para dotar al dispositivo de estabilidad horizontal.
+           Paso 5: Probar variaciones internas (cámara vacía, con relieve o cartón interno) para observar cambios de resonancia.
+           Paso 6: Pintar o forrar la estructura exterior para un acabado estético uniforme.
+        5. ACTIVIDAD PARA EL EQUIPO: Construir al menos 1 modelo funcional. Medir el nivel de volumen antes y después con una aplicación de decibeles. Probar distintos diseños de salida (boca más ancha vs más angosta) y documentar diferencias acústicas.
+        6. CRITERIO DE CALIDAD: El celular encaja de forma firme sin transmitir vibraciones parasitarias. Estructura general estable. Ausencia de fugas grandes de aire en las uniones mecánicas. Aumento perceptible y limpio del volumen frontal.
+        7. IMPACTO AMBIENTAL: Reutiliza cartón y plástico de un solo uso. Promueve el desarrollo de tecnologías pasivas sin consumo de energía eléctrica. Fomenta el diseño funcional a partir de residuos urbanos.
+        8. DATOS TÉCNICOS / EXPERIMENTALES: Volumen original sin dispositivo: __ dB. Volumen con ECO-VOZ: __ dB. Diferencia neta obtenida: __ dB.
+        9. COSTO Y VIABILIDAD: Costo estimado por unidad extremadamente bajo: $__. Materiales de fácil acceso doméstico. Tiempo promedio de armado: __ minutos.
+        10. MEJORAS Y PROYECCIÓN FUTURA: Diseño optimizado tipo bocina direccional gramofónica. Modelo plegable portátil. Integración estética con la línea EcoIndustria. Realización de un taller práctico demostrativo en la feria.
+        """,
+        
+        "18": """
+        FICHA TÉCNICA #18: CAÑÓN VORTEX (Sección: EcoIndustria)
+        1. CONCEPTO: Dispositivo experimental que genera anillos de aire (vórtices toroidales) al expulsar una masa de aire comprimido a través de un orificio circular. Permite visualizar dinámicas de fluidos y transmisión de energía mecánica de manera didáctica.
+        2. OBJETIVO: Demostrar principios básicos de dinámica de fluidos. Visualizar la formación geométrica de vórtices en el aire. Construir un dispositivo experimental duradero con materiales industriales reutilizados. Generar impacto visual de alto nivel en la feria.
+        3. MATERIALES: Tacho de pintura limpio (aproximadamente 20 litros) o tubo de gran diámetro rígido, membrana elástica (cámara de neumático vieja o PVC grueso), cuerda resistente, cinta de conductos (duct tape) o precintos plásticos de alta resistencia, herramientas de corte, humo opcional para la visualización del anillo.
+        4. PROCEDIMIENTO:
+           Paso 1: Cortar un orificio perfectamente circular en la parte frontal rígida (aproximadamente 1/3 del diámetro total del tacho).
+           Paso 2: Tensar la membrana elástica en la parte posterior abierta, fijándola firmemente como un parche de tambor.
+           Paso 3: Asegurar los bordes de la membrana con cinta de conductos o precintos para evitar que se desplace.
+           Paso 4: Sujetar la cuerda al centro interno de la membrana elástica con un nudo de anclaje para facilitar el impulso de tracción.
+           Paso 5: Tirar de la cuerda hacia atrás para estirar el parche y soltar bruscamente para expulsar la masa de aire en forma de anillo.
+           Paso 6: Inyectar humo de prueba en el interior del cañón para observar el vórtice toroidal en desplazamiento.
+        5. ACTIVIDAD PARA EL EQUIPO: Construir 1 modelo funcional a gran escala. Registrar y tabular la distancia máxima alcanzada por el anillo de aire antes de disiparse. Documentar visualmente el fenómeno para las carpetas de campo.
+        6. CRITERIO DE CALIDAD: Membrana perfectamente tensada y hermética, sin fugas periféricas de aire. Orificio circular uniforme y sin rebabas. Formación clara, estable y visible del anillo toroidal. Estructura general robusta y segura.
+        7. IMPACTO AMBIENTAL: Reutiliza recipientes industriales plásticos voluminosos de descarte. Promueve la educación científica experimental con nulo consumo energético. Fomenta el aprovechamiento estructural de residuos complejos.
+        8. DATOS TÉCNICOS / EXPERIMENTALES: Diámetro real del orificio: __ cm. Distancia promedio alcanzada por el anillo: __ metros. Tiempo de dispersión visible del toroide: __ segundos.
+        9. COSTO Y VIABILIDAD: Costo estimado total muy bajo por uso de materiales recuperados: $__. Tiempo total de armado: __ horas. Dificultad técnica media. ¿Requeres supervisión adulta?: Sí / No.
+        10. MEJORAS Y PROYECCIÓN FUTURA: Versión portátil más compacta mediante impresión 3D reciclada o tubos PVC. Integración con sensores para medición analógica de flujo. Taller demostrativo interactivo en el stand. Aplicación como recurso educativo en clases de física escolar.
+        """,
+
         "19": """
         FICHA TÉCNICA #19: ECODOLLARS (Sección: EcoPapel - Transversal)
         1. CONCEPTO: Sistema de moneda interna del stand que permite intercambiar productos y servicios mediante una economía cerrada basada en el reciclaje y la producción propia. El EcoDollar (ED) representa el valor generado a partir de los residuos y el trabajo del equipo.
