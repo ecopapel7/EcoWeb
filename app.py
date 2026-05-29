@@ -998,7 +998,7 @@ elif selected == "EcoIA":
         """,
     }
     # Autenticación automática por Secrets o Variable de entorno ambiental
-        api_key = os.environ.get("GROQ_API_KEY") or st.secrets.get("GROQ_API_KEY", "")
+    api_key = os.environ.get("GROQ_API_KEY") or st.secrets.get("GROQ_API_KEY", "")
     
         if not api_key:
             st.warning("⚠️ El sistema requiere la configuración de la clave 'GROQ_API_KEY' en los secretos de la plataforma.")
