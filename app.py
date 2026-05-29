@@ -1091,7 +1091,39 @@ elif selected == "EcoIA":
                         if numero in TEXTO_COMPLETO_FICHAS:
                             ficha_detectada_contenido = TEXTO_COMPLETO_FICHAS[numero]
                         break # Frenamos en la ficha correcta
+
+                # Inicializar el historial de mensajes si no existe
+        if "messages" not in st.session_state:
+            st.session_state.messages = []
+
+        # Agregar el mensaje del usuario al historial
+        st.session_state.messages.append({"role": "user", "content": prompt})
+
+        # DISPLAY DEL HISTORIAL COMPLETO CON AVATARES PERSONALIZADOS
+        for message in st.session_state.messages:
+            # Asignamos el avatar según corresponda
+            avatar_actual = "👤" if message["role"] == "user" else "🌱"
+            with st.chat_message(message["role"], avatar=avatar_actual):
+                st.markdown(message["content"])
+
+        # GENERACIÓN DE LA NUEVA RESPUESTA EN VIVO
+        with st.chat_message("assistant", avatar="🌱"): # 🟢 Avatar personalizado para la respuesta en vivo
+            with st.spinner("Analizando matriz de datos científico-técnicos..."):
+                # ... (Dejas intacto tu bloque de armado del sys_prompt tal cual lo tienes) ...
                 
+                full_messages = [{"role": "system", "content": sys_prompt}] + st.session_state.messages[:-1]
+                
+                completion = client.chat.completions.create(
+                    model="llama-3.1-8b-instant",
+                    messages=full_messages,
+                    temperature=0.3
+                )
+                response = completion.choices[0].message.content
+                st.markdown(response)
+                
+        # Guardar la respuesta de la IA en el historial
+        st.session_state.messages.append({"role": "assistant", "content": response})
+        
                 # =========================================================================
                 # 🧠 ARMADO DEL SYSTEM PROMPT PERSONALIZADO
                 # =========================================================================
