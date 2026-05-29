@@ -454,14 +454,6 @@ elif selected == "EcoIA":
         </div>
     """, unsafe_allow_html=True)
 
-    # =========================================================================
-    # 📝 AQUÍ GUARDAS EL TEXTO COMPLETO DE TUS FICHAS (Los 11 puntos reales)
-    # =========================================================================
-    # Puedes ir completando este diccionario con el texto largo de cada carpeta de campo
-# =========================================================================
-    # 📝 AQUÍ GUARDAS EL TEXTO COMPLETO DE TUS FICHAS (Los 11 puntos reales)
-    # =========================================================================
-    # Puedes ir completando este diccionario con el texto largo de cada carpeta de campo
     TEXTO_COMPLETO_FICHAS = {
         "1": """
         FICHA TÉCNICA #1: PAPEL SEED (Sección: EcoPapel)
@@ -801,46 +793,6 @@ elif selected == "EcoIA":
         10. MEJORAS Y PROYECCIÓN FUTURA: Incorporar colecciones temáticas. Añadir sistema de trazabilidad digital con códigos QR. Desarrollar packaging sustentable propio con EcoPapel. Expandir la línea a aros o llaveros complejos.
         """,
 
-        "17": """
-        FICHA TÉCNICA #17: ECOVOZ (Sección: EcoIndustria)
-        1. CONCEPTO: Dispositivo de amplificación acústica que utiliza resonancia y direccionamiento del sonido para aumentar el volumen de un teléfono celular sin necesidad de electricidad externa. Funciona mediante principios físicos de propagación sonora pasiva.
-        2. OBJETIVO: Demostrar amplificación pasiva basada en física acústica. Reducir la dependencia de dispositivos electrónicos alimentados por red. Construir un objeto funcional con materiales reciclados. Aplicar diseño estructural al sonido.
-        3. MATERIALES: Tubo de cartón grueso (tipo rollo industrial de descarte), dos vasos plásticos o bases de botellas PET, cartón corrugado para base estable, corcho o goma eva (amortiguación y ajuste hermético), cúter y marcador.
-        4. PROCEDIMIENTO:
-           Paso 1: Realizar una ranura precisa en el centro del tubo de cartón para que el celular encaje de forma firme.
-           Paso 2: Perforar los vasos plásticos o bases de PET con el diámetro exacto del contorno del tubo.
-           Paso 3: Insertar el tubo en los vasos asegurando una unión lo más ajustada posible.
-           Paso 4: Colocar y fijar la base de cartón corrugado para dotar al dispositivo de estabilidad horizontal.
-           Paso 5: Probar variaciones internas (cámara vacía, con relieve o cartón interno) para observar cambios de resonancia.
-           Paso 6: Pintar o forrar la estructura exterior para un acabado estético uniforme.
-        5. ACTIVIDAD PARA EL EQUIPO: Construir al menos 1 modelo funcional. Medir el nivel de volumen antes y después con una aplicación de decibeles. Probar distintos diseños de salida (boca más ancha vs más angosta) y documentar diferencias acústicas.
-        6. CRITERIO DE CALIDAD: El celular encaja de forma firme sin transmitir vibraciones parasitarias. Estructura general estable. Ausencia de fugas grandes de aire en las uniones mecánicas. Aumento perceptible y limpio del volumen frontal.
-        7. IMPACTO AMBIENTAL: Reutiliza cartón y plástico de un solo uso. Promueve el desarrollo de tecnologías pasivas sin consumo de energía eléctrica. Fomenta el diseño funcional a partir de residuos urbanos.
-        8. DATOS TÉCNICOS / EXPERIMENTALES: Volumen original sin dispositivo: __ dB. Volumen con ECO-VOZ: __ dB. Diferencia neta obtenida: __ dB.
-        9. COSTO Y VIABILIDAD: Costo estimado por unidad extremadamente bajo: $__. Materiales de fácil acceso doméstico. Tiempo promedio de armado: __ minutos.
-        10. MEJORAS Y PROYECCIÓN FUTURA: Diseño optimizado tipo bocina direccional gramofónica. Modelo plegable portátil. Integración estética con la línea EcoIndustria. Realización de un taller práctico demostrativo en la feria.
-        """,
-        
-        "18": """
-        FICHA TÉCNICA #18: CAÑÓN VORTEX (Sección: EcoIndustria)
-        1. CONCEPTO: Dispositivo experimental que genera anillos de aire (vórtices toroidales) al expulsar una masa de aire comprimido a través de un orificio circular. Permite visualizar dinámicas de fluidos y transmisión de energía mecánica de manera didáctica.
-        2. OBJETIVO: Demostrar principios básicos de dinámica de fluidos. Visualizar la formación geométrica de vórtices en el aire. Construir un dispositivo experimental duradero con materiales industriales reutilizados. Generar impacto visual de alto nivel en la feria.
-        3. MATERIALES: Tacho de pintura limpio (aproximadamente 20 litros) o tubo de gran diámetro rígido, membrana elástica (cámara de neumático vieja o PVC grueso), cuerda resistente, cinta de conductos (duct tape) o precintos plásticos de alta resistencia, herramientas de corte, humo opcional para la visualización del anillo.
-        4. PROCEDIMIENTO:
-           Paso 1: Cortar un orificio perfectamente circular en la parte frontal rígida (aproximadamente 1/3 del diámetro total del tacho).
-           Paso 2: Tensar la membrana elástica en la parte posterior abierta, fijándola firmemente como un parche de tambor.
-           Paso 3: Asegurar los bordes de la membrana con cinta de conductos o precintos para evitar que se desplace.
-           Paso 4: Sujetar la cuerda al centro interno de la membrana elástica con un nudo de anclaje para facilitar el impulso de tracción.
-           Paso 5: Tirar de la cuerda hacia atrás para estirar el parche y soltar bruscamente para expulsar la masa de aire en forma de anillo.
-           Paso 6: Inyectar humo de prueba en el interior del cañón para observar el vórtice toroidal en desplazamiento.
-        5. ACTIVIDAD PARA EL EQUIPO: Construir 1 modelo funcional a gran escala. Registrar y tabular la distancia máxima alcanzada por el anillo de aire antes de disiparse. Documentar visualmente el fenómeno para las carpetas de campo.
-        6. CRITERIO DE CALIDAD: Membrana perfectamente tensada y hermética, sin fugas periféricas de aire. Orificio circular uniforme y sin rebabas. Formación clara, estable y visible del anillo toroidal. Estructura general robusta y segura.
-        7. IMPACTO AMBIENTAL: Reutiliza recipientes industriales plásticos voluminosos de descarte. Promueve la educación científica experimental con nulo consumo energético. Fomenta el aprovechamiento estructural de residuos complejos.
-        8. DATOS TÉCNICOS / EXPERIMENTALES: Diámetro real del orificio: __ cm. Distancia promedio alcanzada por el anillo: __ metros. Tiempo de dispersión visible del toroide: __ segundos.
-        9. COSTO Y VIABILIDAD: Costo estimado total muy bajo por uso de materiales recuperados: $__. Tiempo total de armado: __ horas. Dificultad técnica media. ¿Requeres supervisión adulta?: Sí / No.
-        10. MEJORAS Y PROYECCIÓN FUTURA: Versión portátil más compacta mediante impresión 3D reciclada o tubos PVC. Integración con sensores para medición analógica de flujo. Taller demostrativo interactivo en el stand. Aplicación como recurso educativo en clases de física escolar.
-        """,
-
         "19": """
         FICHA TÉCNICA #19: ECODOLLARS (Sección: EcoPapel - Transversal)
         1. CONCEPTO: Sistema de moneda interna del stand que permite intercambiar productos y servicios mediante una economía cerrada basada en el reciclaje y la producción propia. El EcoDollar (ED) representa el valor generado a partir de los residuos y el trabajo del equipo.
@@ -1053,136 +1005,124 @@ elif selected == "EcoIA":
     else:
         client = Groq(api_key=api_key)
         
+        # Inicializar el historial de mensajes
         if "messages" not in st.session_state:
             st.session_state.messages = []
 
-        for message in st.session_state.messages:
-            with st.chat_message(message["role"]):
-                st.markdown(message["content"])
-
-        if prompt := st.chat_input("Escribe tu consulta de investigación sobre el sistema Eco..."):
-            st.session_state.messages.append({"role": "user", "content": prompt})
-            with st.chat_message("user"):
-                st.markdown(prompt)
-
-            with st.chat_message("assistant"):
-                
-                # =========================================================================
-                # 🔍 DETECTOR INTELIGENTE DE FICHAS
-                # =========================================================================
-                ficha_detectada_contenido = None
-                numero_ficha_encontrada = None
-
-                # Pasamos el prompt a minúsculas
-                prompt_en_minusculas = prompt.lower()
-
-                for numero, info in FICHAS.items():
-                    termino_busqueda_nombre = info['titulo'].lower()
-    
-                    # Esta línea busca "ficha X" de forma exacta como palabra completa (\b)
-                    # Evita que "ficha 1" coincida dentro de "ficha 15"
-                    patron_exacto = rf"\bficha\s+{numero}\b"
-    
-                    if (re.search(patron_exacto, prompt_en_minusculas) or 
-                        numero == prompt_en_minusculas.strip() or 
-                        termino_busqueda_nombre in prompt_en_minusculas):
-        
-                        numero_ficha_encontrada = numero
-                        if numero in TEXTO_COMPLETO_FICHAS:
-                            ficha_detectada_contenido = TEXTO_COMPLETO_FICHAS[numero]
-                        break # Frenamos en la ficha correcta
-
-                # =========================================================================
-                # 🧠 ARMADO DEL SYSTEM PROMPT PERSONALIZADO
-                # =========================================================================
-                sys_prompt = (
-                    "Eres EcoIA, el núcleo de inteligencia computacional de Proyecto Eco 2026 (E.E.S.T N°7). "
-                    "Tu rol es responder preguntas técnicas sobre sustentabilidad basados en los protocolos del colegio.\n\n"
-                )
-                
-                if f_contenido := ficha_detectada_contenido:
-                    # ¡LE INYECTAMOS LA FICHA COMPLETA!
-                    sys_prompt += (
-                        f"¡ALERTA DE CONTEXTO! El usuario está preguntando específicamente por la Ficha #{numero_ficha_encontrada}. "
-                        "A continuación tienes el DOCUMENTO COMPLETO E INTEGRAL de esa ficha (con sus 11 puntos oficiales). "
-                        "Usa esta información detallada para responder de forma extremadamente precisa, técnica y completa a lo que te pidan.\n\n"
-                        f"DOCUMENTO DE LA FICHA DETECTADA:\n{f_contenido}"
-                    )
-                else:
-                    # Si no habló de una ficha específica, le pasamos solo la lista resumida como antes
-                    contexto_resumido = ""
-                    for numero, info in FICHAS.items():
-                        contexto_resumido += f"- Ficha #{numero} [{info['division']}]: {info['titulo']} -> {info['desc']}\n"
-                    
-                    sys_prompt += (
-                        "El usuario está haciendo una pregunta general. Aquí tienes el índice resumido de las 24 fichas para guiarte. "
-                        "Si el usuario menciona una ficha que no está cargada detalladamente, responde con lo que sepas del resumen y "
-                        "sugiérele revisar el Drive.\n\n"
-                        f"ÍNDICE DE FICHAS:\n{contexto_resumido}"
-                    )
-                # =========================================================================
-            
-                # Inicializar el historial de mensajes original si no existe
-        if "chat_history" not in st.session_state:
-            st.session_state.chat_history = []
-
-        # Agregar el mensaje del usuario al historial original
-        st.session_state.chat_history.append({"role": "user", "content": prompt})
-
         # MUESTRA EL HISTORIAL COMPLETO CON AVATARES PERSONALIZADOS
-        for message in st.session_state.chat_history:
-            # Asignamos el avatar: "👤" para el usuario, "🌱" para la IA
+        for message in st.session_state.messages:
             avatar_actual = "👤" if message["role"] == "user" else "🌱"
             with st.chat_message(message["role"], avatar=avatar_actual):
                 st.markdown(message["content"])
 
-        # GENERACIÓN DE LA RESPUESTA EN VIVO (Con avatar ecológico)
-        with st.chat_message("assistant", avatar="🌱"):
-            with st.spinner("Analizando matriz de datos científico-técnicos..."):
-                # (Aquí se mantiene idéntica tu lógica para armar el sys_prompt)
-                
-                # Juntamos el system prompt con todo el historial de chat existente
-                full_messages = [{"role": "system", "content": sys_prompt}] + st.session_state.chat_history
-                
-                completion = client.chat.completions.create(
-                    model="llama-3.1-8b-instant",
-                    messages=full_messages,
-                    temperature=0.3
-                )
-                response = completion.choices[0].message.content
-                st.markdown(response)
-                
-        # Guardar la respuesta de la IA en el historial original
-        st.session_state.chat_history.append({"role": "assistant", "content": response})
+        if prompt := st.chat_input("Escribe tu consulta de investigación sobre el sistema Eco..."):
+            
+            # 1. Guardar el mensaje del usuario en el historial
+            st.session_state.messages.append({"role": "user", "content": prompt})
+            
+            # 2. Mostrar el mensaje del usuario en la interfaz actual
+            with st.chat_message("user", avatar="👤"):
+                st.markdown(prompt)
+
+            # 3. GENERACIÓN DE LA RESPUESTA EN VIVO
+            with st.chat_message("assistant", avatar="🌱"):
+                with st.spinner("Analizando matriz de datos científico-técnicos..."):
+                    
+                    # =========================================================================
+                    # 🔍 DETECTOR INTELIGENTE DE FICHAS (CON REGEX)
+                    # =========================================================================
+                    ficha_detectada_contenido = None
+                    numero_ficha_encontrada = None
+
+                    prompt_en_minusculas = prompt.lower()
+
+                    for numero, info in FICHAS.items():
+                        termino_busqueda_nombre = info['titulo'].lower()
+        
+                        # Busca "ficha X" de forma exacta como palabra completa (\b)
+                        patron_exacto = rf"\bficha\s+{numero}\b"
+      
+                        if (re.search(patron_exacto, prompt_en_minusculas) or 
+                            numero == prompt_en_minusculas.strip() or 
+                            termino_busqueda_nombre in prompt_en_minusculas):
+                            
+                            numero_ficha_encontrada = numero
+                            if numero in TEXTO_COMPLETO_FICHAS:
+                                ficha_detectada_contenido = TEXTO_COMPLETO_FICHAS[numero]
+                            break # Frenamos en la ficha correcta
+                    
+                    # =========================================================================
+                    # 🧠 ARMADO DEL SYSTEM PROMPT PERSONALIZADO
+                    # =========================================================================
+                    sys_prompt = (
+                        "Eres EcoIA, el núcleo de inteligencia computacional de Proyecto Eco 2026 (E.E.S.T N°7).\n"
+                        "Tu rol es responder preguntas técnicas sobre sustentabilidad basados en los protocolos del colegio.\n\n"
+                    )
+                    
+                    if f_contenido := ficha_detectada_contenido:
+                        # ¡LE INYECTAMOS LA FICHA COMPLETA!
+                        sys_prompt += (
+                            f"¡ALERTA DE CONTEXTO! El usuario está preguntando específicamente por la Ficha #{numero_ficha_encontrada}. "
+                            "A continuación tienes el DOCUMENTO COMPLETO E INTEGRAL de esa ficha (con sus 11 puntos oficiales). "
+                            "Usa esta información detallada para responder de forma extremadamente precisa, técnica y completa a lo que te pidan.\n\n"
+                            f"DOCUMENTO DE LA FICHA DETECTADA:\n{f_contenido}"
+                        )
+                    else:
+                        # Si no habló de una ficha específica, le pasamos solo la lista resumida
+                        contexto_resumido = ""
+                        for numero, info in FICHAS.items():
+                            contexto_resumido += f"- Ficha #{numero} [{info['division']}]: {info['titulo']} -> {info['desc']}\n"
+                        
+                        sys_prompt += (
+                            "El usuario está haciendo una pregunta general. Aquí tienes el índice resumido de las 24 fichas para guiarte.\n"
+                            "Si el usuario menciona una ficha que no está cargada detalladamente, responde con lo que sepas del resumen y "
+                            "sugiérele revisar el Drive.\n\n"
+                            f"ÍNDICE DE FICHAS:\n{contexto_resumido}"
+                        )
+
+                    # Unimos el prompt del sistema con el historial de mensajes
+                    full_messages = [{"role": "system", "content": sys_prompt}] + st.session_state.messages
+                    
+                    completion = client.chat.completions.create(
+                        model="llama-3.1-8b-instant",
+                        messages=full_messages,
+                        temperature=0.3
+                    )
+                    response = completion.choices[0].message.content
+        
+                    st.markdown(response)
+                    
+            # 4. Guardar la respuesta de la IA en el historial
+            st.session_state.messages.append({"role": "assistant", "content": response})
 # --------------------------------------------------
 # VISTA 4: EQUIPO (CUADRO DE INVESTIGADORES)
 # --------------------------------------------------
-elif selected == "Equipo":
-    st.markdown("## 👥 Equipo Eco")
-    st.write("Estructura de roles y responsabilidades del grupo/equipo.")
+    elif selected == "Equipo":
+            st.markdown("## 👥 Equipo Eco")
+        st.write("Estructura de roles y responsabilidades del grupo/equipo.")
     
-    equipo = [
-        {"nombre": "Jonathan Orellana", "rol": "Líder de EcoIndustria"},
-        {"nombre": "Facundo Rodriguez", "rol": "Participante de EcoIndustria"},
-        {"nombre": "Tobias Ponce", "rol": "Líder de EcoLab"},
-        {"nombre": "Julian Tejerina", "rol": "Líder de EcoTech"},
-    ]
+        equipo = [
+            {"nombre": "Jonathan Orellana", "rol": "Líder de EcoIndustria"},
+            {"nombre": "Facundo Rodriguez", "rol": "Participante de EcoIndustria"},
+            {"nombre": "Tobias Ponce", "rol": "Líder de EcoLab"},
+            {"nombre": "Julian Tejerina", "rol": "Líder de EcoTech"},
+        ]
     
-    # Cuadrícula limpia de 4 columnas para los integrantes
-    cols = st.columns(4)
-    for index, persona in enumerate(equipo):
-        with cols[index % 4]:
-            st.markdown(f"""
-            <div class="card" style='text-align: center; padding: 20px 15px;'>
-                <div style='background: var(--primary); width: 44px; height: 44px; border-radius: 50%; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; color: #090f0c; font-weight: 700; font-size:1.1rem;'>
-                    {persona['nombre'][0]}
+        # Cuadrícula limpia de 4 columnas para los integrantes
+        cols = st.columns(4)
+        for index, persona in enumerate(equipo):
+            with cols[index % 4]:
+                st.markdown(f"""
+                <div class="card" style='text-align: center; padding: 20px 15px;'>
+                    <div style='background: var(--primary); width: 44px; height: 44px; border-radius: 50%; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; color: #090f0c; font-weight: 700; font-size:1.1rem;'>
+                        {persona['nombre'][0]}
+                    </div>
+                    <b style='font-size: 0.95rem; display:block; margin-bottom:4px;'>{persona['nombre']}</b>
+                    <small style='opacity: 0.75; font-size:0.8rem; color:#a7f3d0;'>{persona['rol']}</small>
                 </div>
-                <b style='font-size: 0.95rem; display:block; margin-bottom:4px;'>{persona['nombre']}</b>
-                <small style='opacity: 0.75; font-size:0.8rem; color:#a7f3d0;'>{persona['rol']}</small>
-            </div>
-            """, unsafe_allow_html=True)
+                """, unsafe_allow_html=True)
 
 # --------------------------------------------------
 # FOOTER UNIVERSAL INSTITUCIONAL
 # --------------------------------------------------
-st.markdown("<br><br><p style='text-align: center; opacity: 0.45; font-size:0.8rem;'>Proyecto Eco 2026 · E.E.S.T N°7 · República Argentina</p>", unsafe_allow_html=True)
+    st.markdown("<br><br><p style='text-align: center; opacity: 0.45; font-size:0.8rem;'>Proyecto Eco 2026 · E.E.S.T N°7 · República Argentina</p>", unsafe_allow_html=True)
