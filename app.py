@@ -1000,90 +1000,90 @@ elif selected == "EcoIA":
     # Autenticación automática por Secrets o Variable de entorno ambiental
     api_key = os.environ.get("GROQ_API_KEY") or st.secrets.get("GROQ_API_KEY", "")
     
-if not api_key:
-    st.warning("⚠️ El sistema requiere la configuración de la clave 'GROQ_API_KEY' en los secretos de la plataforma.")
-else:
-    client = Groq(api_key=api_key)
+    if not api_key:
+        st.warning("⚠️ El sistema requiere la configuración de la clave 'GROQ_API_KEY' en los secretos de la plataforma.")
+    else:
+        client = Groq(api_key=api_key)
     
     # Inicializar el historial de mensajes
-    if "messages" not in st.session_state:
-        st.session_state.messages = []
+        if "messages" not in st.session_state:
+            st.session_state.messages = []
 
     # MUESTRA EL HISTORIAL COMPLETO CON AVATARES PERSONALIZADOS
-    for message in st.session_state.messages:
-        avatar_actual = "👤" if message["role"] == "user" else "🌱"
-        with st.chat_message(message["role"], avatar=avatar_actual):
-            st.markdown(message["content"])
+        for message in st.session_state.messages:
+            avatar_actual = "👤" if message["role"] == "user" else "🌱"
+            with st.chat_message(message["role"], avatar=avatar_actual):
+                st.markdown(message["content"])
 
-    if prompt := st.chat_input("Escribe tu consulta de investigación sobre el sistema Eco..."):
+        if prompt := st.chat_input("Escribe tu consulta de investigación sobre el sistema Eco..."):
         
         # 1. Guardar el mensaje del usuario en el historial
-        st.session_state.messages.append({"role": "user", "content": prompt})
+            st.session_state.messages.append({"role": "user", "content": prompt})
         
         # 2. Mostrar el mensaje del usuario en la interfaz actual
-        with st.chat_message("user", avatar="👤"):
-            st.markdown(prompt)
+            with st.chat_message("user", avatar="👤"):
+                st.markdown(prompt)
 
         # 3. GENERACIÓN DE LA RESPUESTA EN VIVO
-        with st.chat_message("assistant", avatar="🌱"):
-            with st.spinner("Analizando matriz de datos científico-técnicos..."):
+            with st.chat_message("assistant", avatar="🌱"):
+                with st.spinner("Analizando matriz de datos científico-técnicos..."):
                 
                 # 🔍 DETECTOR INTELIGENTE DE FICHAS (CON REGEX)
-                ficha_detectada_contenido = None
-                numero_ficha_encontrada = None
-                prompt_en_minusculas = prompt.lower()
+                    ficha_detectada_contenido = None
+                    numero_ficha_encontrada = None
+                    prompt_en_minusculas = prompt.lower()
 
-                for numero, info in FICHAS.items():
-                    termino_busqueda_nombre = info['titulo'].lower()
-                    patron_exacto = rf"\bficha\s+{numero}\b"
+                    for numero, info in FICHAS.items():
+                        termino_busqueda_nombre = info['titulo'].lower()
+                        patron_exacto = rf"\bficha\s+{numero}\b"
   
-                    if (re.search(patron_exacto, prompt_en_minusculas) or 
-                        numero == prompt_en_minusculas.strip() or 
-                        termino_busqueda_nombre in prompt_en_minusculas):
+                        if (re.search(patron_exacto, prompt_en_minusculas) or 
+                            numero == prompt_en_minusculas.strip() or 
+                            termino_busqueda_nombre in prompt_en_minusculas):
                         
-                        numero_ficha_encontrada = numero
-                        if numero in TEXTO_COMPLETO_FICHAS:
-                            ficha_detectada_contenido = TEXTO_COMPLETO_FICHAS[numero]
-                        break
+                            numero_ficha_encontrada = numero
+                            if numero in TEXTO_COMPLETO_FICHAS:
+                                ficha_detectada_contenido = TEXTO_COMPLETO_FICHAS[numero]
+                            break
                 
                 # 🧠 ARMADO DEL SYSTEM PROMPT PERSONALIZADO
-                sys_prompt = (
-                    "Eres EcoIA, el núcleo de inteligencia computacional de Proyecto Eco 2026 (E.E.S.T N°7).\n"
-                    "Tu rol es responder preguntas técnicas sobre sustentabilidad basados en los protocolos del colegio.\n\n"
-                )
+                    sys_prompt = (
+                        "Eres EcoIA, el núcleo de inteligencia computacional de Proyecto Eco 2026 (E.E.S.T N°7).\n"
+                        "Tu rol es responder preguntas técnicas sobre sustentabilidad basados en los protocolos del colegio.\n\n"
+                    )
                 
-                if f_contenido := ficha_detectada_contenido:
-                    sys_prompt += (
-                        f"¡ALERTA DE CONTEXTO! El usuario está preguntando específicamente por la Ficha #{numero_ficha_encontrada}. "
-                        "A continuación tienes el DOCUMENTO COMPLETO E INTEGRAL de esa ficha (con sus 11 puntos oficiales). "
-                        "Usa esta información detallada para responder de forma extremadamente precisa, técnica y completa a lo que te pidan.\n\n"
-                        f"DOCUMENTO DE LA FICHA DETECTADA:\n{f_contenido}"
-                    )
-                else:
-                    contexto_resumido = ""
-                    for numero, info in FICHAS.items():
-                        contexto_resumido += f"- Ficha #{numero} [{info['division']}]: {info['titulo']} -> {info['desc']}\n"
+                    if f_contenido := ficha_detectada_contenido:
+                        sys_prompt += (
+                            f"¡ALERTA DE CONTEXTO! El usuario está preguntando específicamente por la Ficha #{numero_ficha_encontrada}. "
+                            "A continuación tienes el DOCUMENTO COMPLETO E INTEGRAL de esa ficha (con sus 11 puntos oficiales). "
+                            "Usa esta información detallada para responder de forma extremadamente precisa, técnica y completa a lo que te pidan.\n\n"
+                            f"DOCUMENTO DE LA FICHA DETECTADA:\n{f_contenido}"
+                        )
+                    else:
+                        contexto_resumido = ""
+                        for numero, info in FICHAS.items():
+                            contexto_resumido += f"- Ficha #{numero} [{info['division']}]: {info['titulo']} -> {info['desc']}\n"
                     
-                    sys_prompt += (
-                        "El usuario está haciendo una pregunta general. Aquí tienes el índice resumido de las 24 fichas para guiarte.\n"
-                        "Si el usuario menciona una ficha que no está cargada detalladamente, responde con lo que sepas del resumen y "
-                        "sugiérele revisar el Drive.\n\n"
-                        f"ÍNDICE DE FICHAS:\n{contexto_resumido}"
-                    )
+                        sys_prompt += (
+                            "El usuario está haciendo una pregunta general. Aquí tienes el índice resumido de las 24 fichas para guiarte.\n"
+                            "Si el usuario menciona una ficha que no está cargada detalladamente, responde con lo que sepas del resumen y "
+                            "sugiérele revisar el Drive.\n\n"
+                            f"ÍNDICE DE FICHAS:\n{contexto_resumido}"
+                        )
 
                 # Unimos el prompt del sistema con el historial de mensajes
-                full_messages = [{"role": "system", "content": sys_prompt}] + st.session_state.messages
+                    full_messages = [{"role": "system", "content": sys_prompt}] + st.session_state.messages
                 
-                completion = client.chat.completions.create(
-                    model="llama-3.1-8b-instant",
-                    messages=full_messages,
-                    temperature=0.3
-                )
-                response = completion.choices[0].message.content
-                st.markdown(response)
+                    completion = client.chat.completions.create(
+                        model="llama-3.1-8b-instant",
+                        messages=full_messages,
+                        temperature=0.3
+                    )
+                    response = completion.choices[0].message.content
+                    st.markdown(response)
                 
         # 4. Guardar la respuesta de la IA en el historial
-        st.session_state.messages.append({"role": "assistant", "content": response})
+            st.session_state.messages.append({"role": "assistant", "content": response})
 # --------------------------------------------------
 # VISTA 4: EQUIPO (CUADRO DE INVESTIGADORES)
 # --------------------------------------------------
