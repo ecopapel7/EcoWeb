@@ -1122,26 +1122,27 @@ elif selected == "EcoIA":
                     )
                 # =========================================================================
             
-                # Inicializar el historial de mensajes si no existe
-        if "messages" not in st.session_state:
-            st.session_state.messages = []
+                # Inicializar el historial de mensajes original si no existe
+        if "chat_history" not in st.session_state:
+            st.session_state.chat_history = []
 
-        # Agregar el mensaje del usuario al historial
-        st.session_state.messages.append({"role": "user", "content": prompt})
+        # Agregar el mensaje del usuario al historial original
+        st.session_state.chat_history.append({"role": "user", "content": prompt})
 
-        # DISPLAY DEL HISTORIAL COMPLETO CON AVATARES PERSONALIZADOS
-        for message in st.session_state.messages:
-            # Asignamos el avatar según corresponda
+        # MUESTRA EL HISTORIAL COMPLETO CON AVATARES PERSONALIZADOS
+        for message in st.session_state.chat_history:
+            # Asignamos el avatar: "👤" para el usuario, "🌱" para la IA
             avatar_actual = "👤" if message["role"] == "user" else "🌱"
             with st.chat_message(message["role"], avatar=avatar_actual):
                 st.markdown(message["content"])
 
-        # GENERACIÓN DE LA NUEVA RESPUESTA EN VIVO
-        with st.chat_message("assistant", avatar="🌱"): # 🟢 Avatar personalizado para la respuesta en vivo
+        # GENERACIÓN DE LA RESPUESTA EN VIVO (Con avatar ecológico)
+        with st.chat_message("assistant", avatar="🌱"):
             with st.spinner("Analizando matriz de datos científico-técnicos..."):
-                # ... (Dejas intacto tu bloque de armado del sys_prompt tal cual lo tienes) ...
+                # (Aquí se mantiene idéntica tu lógica para armar el sys_prompt)
                 
-                full_messages = [{"role": "system", "content": sys_prompt}] + st.session_state.messages[:-1]
+                # Juntamos el system prompt con todo el historial de chat existente
+                full_messages = [{"role": "system", "content": sys_prompt}] + st.session_state.chat_history
                 
                 completion = client.chat.completions.create(
                     model="llama-3.1-8b-instant",
@@ -1151,8 +1152,8 @@ elif selected == "EcoIA":
                 response = completion.choices[0].message.content
                 st.markdown(response)
                 
-        # Guardar la respuesta de la IA en el historial
-        st.session_state.messages.append({"role": "assistant", "content": response})
+        # Guardar la respuesta de la IA en el historial original
+        st.session_state.chat_history.append({"role": "assistant", "content": response})
 # --------------------------------------------------
 # VISTA 4: EQUIPO (CUADRO DE INVESTIGADORES)
 # --------------------------------------------------
