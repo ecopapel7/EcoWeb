@@ -1090,7 +1090,7 @@ elif selected == "EcoIA":
 elif selected == "Equipo":
     st.markdown("## Equipo Eco")
 
-    st.info("""
+    st.write("""
 **Sistema de Reconocidos**
 
 Proyecto Eco utiliza un sistema de participación mensual llamado **Reconocidos**.
