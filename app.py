@@ -1088,18 +1088,38 @@ elif selected == "EcoIA":
 # VISTA 4: EQUIPO (CUADRO DE INVESTIGADORES)
 # --------------------------------------------------
 elif selected == "Equipo":
-    st.markdown("## 👥 Equipo Eco")
-    st.write("Estructura de roles y responsabilidades del grupo/equipo.")
-    
+    st.markdown("## Equipo Eco")
+
+    st.info("""
+**Sistema de Reconocidos**
+
+Proyecto Eco utiliza un sistema de participación mensual llamado **Reconocidos**.
+
+Cada semana los participantes acumulan puntos según su participación, asistencia,
+trabajo en fichas, aporte de materiales, documentación fotográfica y comprensión
+de los proyectos.
+
+Al finalizar cada mes se calcula un promedio general.
+
+Promedio superior a 5 → Participante Reconocido.
+
+Promedio inferior a 5 → Colaborador No Reconocido.
+
+Los integrantes mostrados a continuación corresponden al equipo oficial reconocido
+del mes actual. Esta lista puede modificarse mensualmente según la participación.
+""")
+
     equipo = [
         {"nombre": "Jonathan Orellana", "rol": "Líder de EcoIndustria"},
         {"nombre": "Facundo Rodriguez", "rol": "Participante de EcoIndustria"},
         {"nombre": "Tobias Ponce", "rol": "Líder de EcoLab"},
         {"nombre": "Julian Tejerina", "rol": "Líder de EcoTech"},
-        ]
-    
-        # Cuadrícula limpia de 4 columnas para los integrantes
+    ]
+
+    st.markdown("### Reconocidos del Mes")
+
     cols = st.columns(4)
+
     for index, persona in enumerate(equipo):
         with cols[index % 4]:
             st.markdown(f"""
@@ -1111,6 +1131,24 @@ elif selected == "Equipo":
                 <small style='opacity: 0.75; font-size:0.8rem; color:#a7f3d0;'>{persona['rol']}</small>
             </div>
             """, unsafe_allow_html=True)
+
+    st.markdown("---")
+
+    st.markdown("""
+### ¿Por qué existe este sistema?
+
+El Sistema de Reconocidos busca:
+
+- Reconocer el compromiso real.
+- Mantener la participación constante.
+- Evitar grupos pasivos.
+- Organizar el crecimiento del proyecto.
+- Construir un sistema sostenible en el tiempo.
+
+Cualquier estudiante puede colaborar con Proyecto Eco, pero únicamente los
+participantes reconocidos forman parte del equipo oficial del mes y aparecen en la
+Página Web, Redes Sociales y documentación institucional.
+""")
 
 # --------------------------------------------------
 # FOOTER UNIVERSAL INSTITUCIONAL
