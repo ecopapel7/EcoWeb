@@ -1111,8 +1111,12 @@ del mes actual. Esta lista puede modificarse mensualmente según la participaci�
 
     equipo = [
         {"nombre": "Jonathan Orellana", "rol": "Líder de EcoIndustria"},
-        {"nombre": "Facundo Rodriguez", "rol": "Participante de EcoIndustria"},
+        {"nombre": "Facundo Rodriguez", "rol": "Participante de EcoIndustria, EcoLab y EcoPapel"},
         {"nombre": "Tobias Ponce", "rol": "Líder de EcoLab"},
+        {"nombre": "Franco Titirico", "rol": "Líder de EcoPapel"},
+        {"nombre": "Octavio Vidal", "rol": "Participante de EcoPapel"},
+        {"nombre": "Taina Pral", "rol": "Particpante de EcoPapel y EcoLab"},
+        {"nombre": "Romina Colque", "rol": "Participante de EcoLab"},
         {"nombre": "Julian Tejerina", "rol": "Líder de EcoTech"},
     ]
 
