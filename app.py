@@ -1101,9 +1101,9 @@ de los proyectos.
 
 Al finalizar cada mes se calcula un promedio general.
 
-Promedio superior a 5 → Participante Reconocido.
+Promedio superior a 6 → Participante Reconocido.
 
-Promedio inferior a 5 → Colaborador No Reconocido.
+Promedio inferior a 6 → Colaborador No Reconocido.
 
 Los integrantes mostrados a continuación corresponden al equipo oficial reconocido
 del mes actual. Esta lista puede modificarse mensualmente según la participación.
