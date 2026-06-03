@@ -160,9 +160,9 @@ if selected == "Inicio":
             st.markdown("""
             <div class="card">
                 <h3>¿Qué es el Proyecto Eco?</h3>
-                <p><b>Proyecto Eco</b> no es un taller aislado de reciclaje ni una exhibición de manualidades temporales; representa una auténtica <b>infraestructura de conocimiento aplicado</b> y de ciclo cerrado dentro de la escuela[cite: 4, 15, 125, 126].</p>
-                <p>A través de una arquitectura interdependiente de cuatro divisiones técnicas (Celulosa, Ciencia, Tecnología e Ingeniería), transformamos los residuos en recursos de alto valor pedagógico, tecnológico y económico[cite: 12, 60, 132]. Aquí, el desecho de un proceso es el insumo del siguiente, todo regulado por un sistema macroeconómico propio[cite: 40, 139, 195].</p>
-                <p>No demostramos soluciones pasajeras; demostramos una <b>viabilidad sistémica, trazabilidad e institucionalización del saber</b> donde la ciencia y la tecnología resuelven problemas reales[cite: 11, 12, 140].</p>
+                <p><b>Proyecto Eco</b> no es un taller aislado de reciclaje ni una exhibición de manualidades temporales; representa una auténtica <b>infraestructura de conocimiento aplicado</b> y de ciclo cerrado dentro de la escuela.</p>
+                <p>A través de una arquitectura interdependiente de cuatro divisiones técnicas (Celulosa, Ciencia, Tecnología e Ingeniería), transformamos los residuos en recursos de alto valor pedagógico, tecnológico y económico. Aquí, el desecho de un proceso es el insumo del siguiente, todo regulado por un sistema macroeconómico propio.</p>
+                <p>No demostramos soluciones pasajeras; demostramos una <b>viabilidad sistémica, trazabilidad e institucionalización del saber</b> donde la ciencia y la tecnología resuelven problemas reales.</p>
             </div>
             """, unsafe_allow_html=True)
         with col2:
