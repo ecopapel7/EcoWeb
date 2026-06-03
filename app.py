@@ -4,9 +4,6 @@ from groq import Groq
 import os
 import re
 
-# --------------------------------------------------
-# CONFIGURACIÓN DE PÁGINA
-# --------------------------------------------------
 st.set_page_config(
     page_title="EcoWeb",
     page_icon="🌱",
@@ -14,9 +11,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# --------------------------------------------------
-# ESTILOS CSS (UI ECO-TECH PREMIUM)
-# --------------------------------------------------
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
@@ -104,10 +98,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# --------------------------------------------------
-# BASE DE DATOS MATRIZ: 24 FICHAS TÉCNICAS
-# --------------------------------------------------
-# Espacio 'drive_url' listo para colocar los enlaces de descarga de Google Drive.
 FICHAS = {
     "1": {"titulo": "Papel Seed", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1S5sREmBrapKftJM5z8iZjtj46rLXer0t/view?usp=sharing", "desc": "Papel artesanal biodegradable con semillas incorporadas."},
     "2": {"titulo": "FibroPapel", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1JV_LZ_25r-gyqP27gndXCKweqzovfaiN/view?usp=sharing", "desc": "Papel compuesto reforzado con fibras textiles de algodón."},
@@ -135,9 +125,6 @@ FICHAS = {
     "24": {"titulo": "TerrarIA", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1P3r5UlcdPS4KWDcuYPN45qJWmD_KTBDu/view?usp=sharing", "desc": "Ecosistema cerrado automatizado y monitoreado por matrices de sensores."},
 }
 
-# --------------------------------------------------
-# MENÚ DE NAVEGACIÓN LATERAL
-# --------------------------------------------------
 with st.sidebar:
     st.image("https://cdn-icons-png.flaticon.com/512/2913/2913520.png", width=70)
     st.markdown("### Ecosistema Eco 2026")
@@ -158,9 +145,6 @@ with st.sidebar:
         }
     )
 
-# --------------------------------------------------
-# VISTA 1: INICIO (CON INTERFAZ DE TABS E HISTORIA COMPLETA)
-# --------------------------------------------------
 if selected == "Inicio":
     st.markdown("""
         <div class="hero">
@@ -168,17 +152,17 @@ if selected == "Inicio":
             <p style='font-size: 1.1rem; opacity: 0.85;'>Infraestructura Educativa Continua y Sistema Integral de Innovación Sustentable</p>
         </div>
     """, unsafe_allow_html=True)
-    
-    # Navegación por pestañas internas para balancear el contenido
+
     tab_resumen, tab_carpeta = st.tabs(["Introducción", "Historia y Evolución"])
     with tab_resumen:
         col1, col2 = st.columns([2, 1])
         with col1:
             st.markdown("""
             <div class="card">
-                <h3>¿Que es el Proyecto Eco?</h3>
-                <p><b>Proyecto Eco</b> no constituye simplemente un taller aislado de reciclaje; representa una auténtica <b>infraestructura de conocimiento</b> instalada y arraigada dentro de la institución escolar.</p>
-                <p>Buscamos transformar de manera práctica los residuos convencionales en recursos de alto valor técnico y pedagógico a través de una red interconectada de cuatro áreas del saber, asegurando que el conocimiento trascienda a las personas y se preserve en protocolos institucionales continuos.</p>
+                <h3>¿Qué es el Proyecto Eco?</h3>
+                <p><b>Proyecto Eco</b> no es un taller aislado de reciclaje ni una exhibición de manualidades temporales; representa una auténtica <b>infraestructura de conocimiento aplicado</b> y de ciclo cerrado dentro de la escuela[cite: 4, 15, 125, 126].</p>
+                <p>A través de una arquitectura interdependiente de cuatro divisiones técnicas (Celulosa, Ciencia, Tecnología e Ingeniería), transformamos los residuos en recursos de alto valor pedagógico, tecnológico y económico[cite: 12, 60, 132]. Aquí, el desecho de un proceso es el insumo del siguiente, todo regulado por un sistema macroeconómico propio[cite: 40, 139, 195].</p>
+                <p>No demostramos soluciones pasajeras; demostramos una <b>viabilidad sistémica, trazabilidad e institucionalización del saber</b> donde la ciencia y la tecnología resuelven problemas reales[cite: 11, 12, 140].</p>
             </div>
             """, unsafe_allow_html=True)
         with col2:
@@ -209,7 +193,6 @@ if selected == "Inicio":
     with tab_carpeta:
         st.markdown("### Registro Documental de 2025")
         
-        # 1. Introducción
         with st.expander("1. Introducción", expanded=True):
             st.write("""
             El presente documento describe el desarrollo y evolución de nuestro Proyecto Eco, desde nuestros inicios en el año 2025 bajo el nombre de EcoPapel, hasta su transformación en un systema integral en 2026.
@@ -219,7 +202,6 @@ if selected == "Inicio":
             Además, buscamos evidenciar no solo los resultados obtenidos, sino también nuestro proceso de aprendizaje, los errores y las decisiones que nos llevaron a la evolución del proyecto.
             """)
         
-        # 2. Origen
         with st.expander("2. Origen del Proyecto (2025)"):
             st.write("""
             Nuestro proyecto comenzó en el año 2025 a partir de una propuesta de trabajo anual planteada por el docente. Frente a esta consigna, iniciamos una etapa de ideas iniciales, donde planteamos múltiples posibles proyectos que abarcaban distintas áreas.
@@ -231,7 +213,6 @@ if selected == "Inicio":
             La elección de esta idea no fue aleatoria, sino que la basamos en la identificación de una problemática presente en la comunidad: el manejo de los residuos y, en particular, la falta de aprovechamiento del papel descartado. De esta manera, decidimos enfocar el proyecto en la recuperación y transformación del papel, dando origen a EcoPapel, que se convertiría en el eje central de nuestro trabajo durante todo el ciclo 2025.
             """)
         
-        # 3. Problema
         with st.expander("3. Problema Detectado en 2025"):
             st.write("""
             Durante la etapa inicial del proyecto, identificamos una situación particular dentro del entorno escolar: si bien la mayoría de las personas reconoce la importancia del reciclaje, en la práctica no sabe cómo llevarlo a cabo.
@@ -243,7 +224,6 @@ if selected == "Inicio":
             De esta manera, orientamos el proyecto a la concientización a través de la práctica, utilizando la transformación real de materiales como herramienta principal para generar aprendizaje e interés en la comunidad.
             """)
         
-        # 4. Desarrollo EcoPapel 2025
         with st.expander("4. Desarrollo de EcoPapel 2025"):
             st.write("""
             Una vez definido el enfoque del proyecto, comenzamos el desarrollo práctico de EcoPapel, centrado en la producción de papel reciclado y la demostración de nuestro proceso.
@@ -270,7 +250,6 @@ if selected == "Inicio":
             Durante el desarrollo, enfrentamos dificultades principalmente relacionadas con nuestra falta de experiencia. En las primeras pruebas, el papel que obteníamos presentaba problemas de calidad, como hojas demasiado finas o bordes irregulares. Sin embargo, superamos estos inconvenientes a través de la repetición del proceso y el ajuste de las técnicas utilizadas. Este proceso de prueba y error nos permitió mejorar progresivamente los resultados, logrando productos más consistentes y estéticamente más cuidados.
             """)
         
-        # 5. Resultados
         with st.expander("5. Resultados y Aprendizajes"):
             st.write("""
             A lo largo del desarrollo de EcoPapel 2025, logramos obtener resultados concretos tanto a nivel técnico como en nuestro proceso de aprendizaje. En primer lugar, consolidamos la producción de papel reciclado como eje principal del proyecto. A través de la práctica constante, logramos mejorar la calidad de las hojas, corrigiendo problemas iniciales como el espesor irregular y los bordes poco definidos. Este avance nos permitió obtener un material más resistente y estéticamente más prolijo.
@@ -282,7 +261,6 @@ if selected == "Inicio":
             Sin embargo, uno de los resultados más importantes no fue un producto físico, sino el aprendizaje obtenido a partir de la experiencia. Entendimos la importancia de la práctica, la repetición y la mejora progresiva, así como la necesidad de adaptar los procesos según los errores que detectamos. En este sentido, el proyecto no solo nos permitió aprender a reciclar papel, sino también desarrollar una forma de trabajo basada en la experimentación y la resolución de problemas.
             """)
         
-        # 6. Limitaciones
         with st.expander("6. Limitaciones del Proyecto"):
             st.write("""
             A pesar de los resultados que obtuvimos durante el desarrollo de EcoPapel 2025, nuestro proyecto presentó diversas limitaciones, principalmente relacionadas con nuestra inexperiencia inicial y la falta de una estructura definida.
@@ -294,7 +272,6 @@ if selected == "Inicio":
             Estas limitaciones no impidieron el desarrollo de EcoPapel, pero sí nos marcaron un punto importante: la necesidad de evolucionar hacia un modelo más estructurado, que nos permitiera mejorar la calidad, organizar el trabajo y asegurar la continuidad del proyecto.
             """)
         
-        # 7. Punto de Evolución
         with st.expander("7. Punto de Evolución"):
             st.write("""
             A medida que avanzaba el desarrollo de EcoPapel 2025, empezamos a notar que el proyecto tenía un potencial mayor al esperado inicialmente. Lo que en un principio era una propuesta enfocada en el reciclaje de papel empezó a mostrar posibilidades de crecimiento más amplias.
@@ -304,7 +281,6 @@ if selected == "Inicio":
             A partir de esta reflexión, detectamos un problema más general: muchos proyectos ecológicos surgen con buenas ideas, pero terminan desapareciendo con el tiempo. No logran mantenerse activos ni generar un impacto duradero, ya sea por falta de organización, continuidad o integración con otros procesos. Este análisis nos llevó a replantear el enfoque del proyecto. Ya no se trataba únicamente de mejorar lo que estábamos haciendo, sino de cambiar la lógica del proyecto en sí. Nuestro objetivo pasó de desarrollar un proyecto funcional a diseñar un sistema capaz de mantenerse, crecer y adaptarse con el tiempo. Este cambio de perspectiva marcó el punto de evolución entre nuestro EcoPapel 2025 y lo que posteriormente se convertiría en nuestro Proyecto Eco 2026.
             """)
         
-        # 8. Nacimiento del Proyecto Eco 2026
         with st.expander("8. Nacimiento del Proyecto Eco 2026"):
             st.write("""
             A partir del punto de evolución alcanzado en 2025, decidimos transformar el enfoque de nuestro proyecto para el nuevo ciclo lectivo. De esta manera, EcoPapel deja de ser nuestro proyecto principal y pasa a formar parte de una estructura más amplia: el Proyecto Eco 2026.
@@ -326,8 +302,7 @@ if selected == "Inicio":
             st.write("""
             Además, ampliamos el alcance del proyecto, incorporando nuevas ideas y líneas de trabajo que van más allá del reciclaje de papel, lo que nos permite abordar el problema ambiental desde múltiples enfoques. De esta manera, el nacimiento de nuestro Proyecto Eco 2026 representa un cambio de escala: de un proyecto puntual a un sistema en desarrollo, con intención de continuidad, crecimiento y mejora constante.
             """)
-        
-        # 9. Nuevo Enfoque y Objetivos
+
         with st.expander("9. Nuevo Enfoque y Objetivos"):
             st.write("""
             A partir de la creación de nuestro Proyecto Eco 2026, adoptamos un nuevo enfoque basado en la organización, la integración de áreas y la proyección a largo plazo. El cambio principal radica en dejar atrás un modelo centrado en actividades aisladas para pasar a un sistema estructurado, donde cada parte de nuestro proyecto cumple una función específica dentro de un conjunto mayor.
@@ -351,7 +326,6 @@ if selected == "Inicio":
             """, unsafe_allow_html=True)
             st.markdown("</div>", unsafe_allow_html=True)
         
-        # 10. Conclusión
         with st.expander("10. Conclusión"):
             st.write("""
             El desarrollo de nuestro proyecto a lo largo de 2025 y su evolución en 2026 permite evidenciar un cambio significativo tanto en el enfoque como en la forma de trabajo de nuestro equipo.
@@ -388,14 +362,10 @@ elif selected == "Los 7 Pilares":
                 </div>
                 """, unsafe_allow_html=True)
                 
-# --------------------------------------------------
-# VISTA 2: BIBLIOTECA DE FICHAS TÉCNICAS (CON ESTRUCTURA DE 11 PUNTOS)
-# --------------------------------------------------
 elif selected == "Fichas Técnicas":
     st.markdown("## Biblioteca de Fichas 2026")
     st.write("Las 24 Fichas constituyen el núcleo técnico y organizativo de Proyecto Eco. Cada ficha funciona como un protocolo documentado que explica, estructura y estandariza un proceso, experimento, sistema o actividad dentro del proyecto. Su función principal es transformar ideas aisladas en conocimiento organizado, permitiendo que los procesos puedan repetirse, mejorarse, enseñarse y mantenerse en el tiempo. Gracias a esta sistematización, Proyecto Eco deja de depender únicamente de la memoria o experiencia de sus integrantes y se convierte en una infraestructura educativa continua.")
     
-    # Expander con el diseño oficial de la estructura interna
     with st.expander("Ver Estructura Estándar de las Fichas (11 Puntos)"):
         st.markdown("""
         <div style='background: rgba(16, 185, 129, 0.04); padding: 20px; border-radius: 12px; border-left: 4px solid #10b981; line-height: 1.5;'>
@@ -414,19 +384,15 @@ elif selected == "Fichas Técnicas":
         """, unsafe_allow_html=True)
         
     st.write("---")
-    
-    # Filtro del Selectbox actualizado correctamente sin "Estrategia" y sumando "Transversal"
+
     f_cat = st.selectbox("Filtrar por División o Eje:", ["Todas", "EcoPapel", "EcoLab", "EcoTech", "EcoIndustria", "Transversal"])
     st.markdown("<br>", unsafe_allow_html=True)
     
-    # Filtrado lógico
     filtered_items = {k: v for k, v in FICHAS.items() if f_cat == "Todas" or v["division"] == f_cat}
     
-    # Despliegue en Grid de 3 columnas
     cols = st.columns(3)
     for index, (idx, data) in enumerate(filtered_items.items()):
         with cols[index % 3]:
-            # Badge de color condicional rápido
             badge_color = "#10b981" if data['division'] != "Transversal" else "#34d399"
             st.markdown(f"""
             <div class="card">
@@ -437,15 +403,6 @@ elif selected == "Fichas Técnicas":
             </div>
             """, unsafe_allow_html=True)
 
-# --------------------------------------------------
-# VISTA 3: ECOIA (SISTEMA DE INTELIGENCIA ARTIFICIAL)
-# --------------------------------------------------
-# --------------------------------------------------
-# VISTA 3: ECOIA (CON INYECCIÓN AUTOMÁTICA DE LAS 24 FICHAS)
-# --------------------------------------------------
-# --------------------------------------------------
-# VISTA 3: ECOIA (DETECCIÓN E INYECCIÓN DE FICHA COMPLETA)
-# --------------------------------------------------
 elif selected == "EcoIA":
     st.markdown("""
         <div class="card">
@@ -997,7 +954,7 @@ elif selected == "EcoIA":
         10. MEJORAS Y PROYECCIÓN FUTURA: Integración modular con sensores adicionales de última generación para medir concentración de Dióxido de Carbono (CO₂) e intensidad lumínica (Lux). Implementación de una base de datos web para almacenar el registro histórico digital de la evolución biológica. Versión modular automatizada para recrear múltiples ecosistemas y biomas. Desarrollo como un recurso interactivo y aplicación educativa transversal para las clases de ciencias naturales y tecnología.
         """,
     }
-    # Autenticación automática por Secrets o Variable de entorno ambiental
+
     api_key = os.environ.get("GROQ_API_KEY") or st.secrets.get("GROQ_API_KEY", "")
     
     if not api_key:
@@ -1005,11 +962,9 @@ elif selected == "EcoIA":
     else:
         client = Groq(api_key=api_key)
     
-    # Inicializar el historial de mensajes
         if "messages" not in st.session_state:
             st.session_state.messages = []
 
-    # MUESTRA EL HISTORIAL COMPLETO CON AVATARES PERSONALIZADOS
         for message in st.session_state.messages:
             avatar_actual = "👤" if message["role"] == "user" else "🌱"
             with st.chat_message(message["role"], avatar=avatar_actual):
@@ -1017,18 +972,14 @@ elif selected == "EcoIA":
 
         if prompt := st.chat_input("Escribe tu consulta de investigación sobre el sistema Eco..."):
         
-        # 1. Guardar el mensaje del usuario en el historial
             st.session_state.messages.append({"role": "user", "content": prompt})
-        
-        # 2. Mostrar el mensaje del usuario en la interfaz actual
+            
             with st.chat_message("user", avatar="👤"):
                 st.markdown(prompt)
-
-        # 3. GENERACIÓN DE LA RESPUESTA EN VIVO
+                
             with st.chat_message("assistant", avatar="🌱"):
                 with st.spinner("Analizando matriz de datos científico-técnicos..."):
-                
-                # 🔍 DETECTOR INTELIGENTE DE FICHAS (CON REGEX)
+                    
                     ficha_detectada_contenido = None
                     numero_ficha_encontrada = None
                     prompt_en_minusculas = prompt.lower()
@@ -1046,7 +997,6 @@ elif selected == "EcoIA":
                                 ficha_detectada_contenido = TEXTO_COMPLETO_FICHAS[numero]
                             break
                 
-                # 🧠 ARMADO DEL SYSTEM PROMPT PERSONALIZADO
                     sys_prompt = (
                         "Eres EcoIA, el núcleo de inteligencia computacional de Proyecto Eco 2026 (E.E.S.T N°7).\n"
                         "Tu rol es responder preguntas técnicas sobre sustentabilidad basados en los protocolos del colegio.\n\n"
@@ -1071,7 +1021,6 @@ elif selected == "EcoIA":
                             f"ÍNDICE DE FICHAS:\n{contexto_resumido}"
                         )
 
-                # Unimos el prompt del sistema con el historial de mensajes
                     full_messages = [{"role": "system", "content": sys_prompt}] + st.session_state.messages
                 
                     completion = client.chat.completions.create(
@@ -1082,7 +1031,6 @@ elif selected == "EcoIA":
                     response = completion.choices[0].message.content
                     st.markdown(response)
                 
-        # 4. Guardar la respuesta de la IA en el historial
             st.session_state.messages.append({"role": "assistant", "content": response})
 # --------------------------------------------------
 # VISTA 4: EQUIPO (CUADRO DE INVESTIGADORES)
@@ -1154,7 +1102,4 @@ participantes reconocidos forman parte del equipo oficial del mes y aparecen en 
 Página Web, Redes Sociales y documentación institucional.
 """)
 
-# --------------------------------------------------
-# FOOTER UNIVERSAL INSTITUCIONAL
-# --------------------------------------------------
 st.markdown("<br><br><p style='text-align: center; opacity: 0.45; font-size:0.8rem;'>Proyecto Eco 2026 · E.E.S.T N°7 · República Argentina</p>", unsafe_allow_html=True)
