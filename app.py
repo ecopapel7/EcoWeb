@@ -161,7 +161,7 @@ if selected == "Inicio":
             <div class="card">
                 <h3>¿Qué es el Proyecto Eco?</h3>
                 <p><b>Proyecto Eco</b> no es un taller aislado de reciclaje ni una exhibición de manualidades temporales; representa una auténtica <b>infraestructura de conocimiento aplicado</b> y de ciclo cerrado dentro de la escuela.</p>
-                <p>A través de una arquitectura interdependiente de cuatro divisiones técnicas (Celulosa, Ciencia, Tecnología e Ingeniería), transformamos los residuos en recursos de alto valor pedagógico, tecnológico y económico. Aquí, el desecho de un proceso es el insumo del siguiente, todo regulado por un sistema macroeconómico propio.</p>
+                <p>A través de una arquitectura interdependiente de cuatro secciones (EcoPapel, EcoIndustria, EcoLab y EcoTech), transformamos los residuos en recursos de alto valor pedagógico, tecnológico y económico. Aquí, el desecho de un proceso es el insumo del siguiente, todo regulado por un sistema macroeconómico propio.</p>
                 <p>No demostramos soluciones pasajeras; demostramos una <b>viabilidad sistémica, trazabilidad e institucionalización del saber</b> donde la ciencia y la tecnología resuelven problemas reales.</p>
             </div>
             """, unsafe_allow_html=True)
