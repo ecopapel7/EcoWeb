@@ -166,11 +166,11 @@ if selected == "Inicio":
             </div>
             """, unsafe_allow_html=True)
         with col2:
-            st.metric("Divisiones Operativas", "4", delta="Estructuradas")
+            st.metric("Secciones Operativas", "4", delta="Estructuradas")
             st.metric("Protocolos Documentados", "24 Fichas", delta="Metodología Científica")
             
         st.write("<br>", unsafe_allow_html=True)
-        st.subheader("Divisiones Técnicas del Sistema")
+        st.subheader("Secciones del Sistema")
         
         c1, c2, c3, c4 = st.columns(4)
         divs_data = [
