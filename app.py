@@ -12,24 +12,24 @@ st.set_page_config(
 )
 
 # ==========================================
-# INYECCIÓN DE INTERFAZ DE ALTO IMPACTO (CSS)
+# INYECCIÓN DE INTERFAZ DE ALTO IMPACTO (CSS CORREGIDO)
 # ==========================================
 st.markdown("""
     <style>
-    /* Fondo con degradado general que combina verde profundo y azul técnico */
+    /* Fondo con degradado fluido: verde selva profundo y azul medianoche técnico */
     .stApp {
         background: linear-gradient(135deg, #0b2310 0%, #081018 50%, #05080c 100%) !important;
         color: #E0E6ED !important;
     }
     
-    /* Estilo del menú lateral */
+    /* Estilo del menú lateral blur */
     [data-testid="stSidebar"] {
-        background-color: rgba(11, 25, 16, 0.85) !important;
+        background-color: rgba(11, 25, 16, 0.9) !important;
         backdrop-filter: blur(10px);
         border-right: 1px solid rgba(46, 125, 50, 0.3);
     }
 
-    /* Títulos Principales */
+    /* Títulos Principales en Degradado */
     .main-title {
         font-family: 'Helvetica Neue', Arial, sans-serif;
         font-size: 46px !important;
@@ -56,11 +56,9 @@ st.markdown("""
         color: #B9F6CA !important;
         margin-top: 25px;
         margin-bottom: 15px;
-        display: flex;
-        align-items: center;
     }
 
-    /* Tarjetas con efecto Glassmorphism (Contenedores Llamativos) */
+    /* Tarjetas con efecto Glassmorphism */
     .glass-card {
         background: rgba(255, 255, 255, 0.03) !important;
         backdrop-filter: blur(12px);
@@ -78,27 +76,25 @@ st.markdown("""
         transform: translateY(-3px);
     }
 
-    /* Listas estilizadas */
-    .custom-list {
-        list-style-type: none;
-        padding-left: 0;
+    /* CONTENEDOR FLUIDO COHESIVO (Solución al desorden de la lista) */
+    .info-item {
+        margin-bottom: 16px;
+        line-height: 1.5;
+        font-size: 15.5px;
     }
-    .custom-list li {
-        margin-bottom: 12px;
-        font-size: 16px;
-        display: flex;
-        align-items: flex-start;
-    }
-    .custom-list li::before {
-        content: "✦";
+    .info-bullet {
         color: #00E676;
         font-weight: bold;
-        display: inline-block; 
-        width: 25px;
-        flex-shrink: 0;
+        margin-right: 8px;
+        display: inline-block;
+    }
+    .info-tag {
+        color: #B9F6CA;
+        font-weight: 700;
+        margin-right: 6px;
     }
 
-    /* TABLA PERSONALIZADA ESTILO CYBER-GREEN */
+    /* TABLA PREMIUM ESTILO CYBER-GREEN */
     .custom-table {
         width: 100%;
         border-collapse: collapse;
@@ -143,16 +139,15 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ==========================================
-# MENÚ LATERAL (SIDEBAR)
+# MENÚ LATERAL (SIDEBAR MODULAR)
 # ==========================================
 with st.sidebar:
-    # Logo del proyecto
     st.markdown("<div style='text-align: center;'><img src='https://cdn-icons-png.flaticon.com/512/2913/2913520.png' width='80'></div>", unsafe_allow_html=True)
     st.markdown("<h3 style='text-align: center; color: #B9F6CA; margin-bottom: 0;'>Ecosistema Eco 2026</h3>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center; color: #81C784; font-size: 14px;'>E.E.S.T N°7 | 4° 4°</p>", unsafe_allow_html=True)
     st.write("---")
     
-    # Navegación simplificada solo con Inicio por el momento
+    # Menú dinámico: quitamos las páginas viejas, listo para la reconstrucción
     selected = option_menu(
         menu_title=None,
         options=["Inicio"],
@@ -170,11 +165,11 @@ with st.sidebar:
     st.caption("Feria Tecnológica 2026")
 
 # ==========================================
-# CONTENIDO CENTRAL: PÁGINA 1 — INICIO
+# PÁGINA 1 — INICIO (RECONSTRUCCIÓN COMPLETADA)
 # ==========================================
 if selected == "Inicio":
     
-    # Encabezado Principal Impactante
+    # Encabezado de la Plataforma Principal
     st.markdown('<div class="main-title">PROYECTO ECO 2026</div>', unsafe_allow_html=True)
     st.markdown('<div class="subtitle">Infraestructura Educativa Continua y Sistema Integral de Innovación Sustentable</div>', unsafe_allow_html=True)
     
@@ -183,16 +178,15 @@ if selected == "Inicio":
     st.markdown(
         """
         <div class="glass-card" style="font-size: 18px; line-height: 1.6; border-left: 5px solid #00E676;">
-        <strong>EcoWeb</strong> es la plataforma digital oficial y el núcleo tecnológico de <strong>Proyecto Eco</strong>. 
-        Fue diseñada con el propósito fundamental de centralizar información, documentación de ingeniería, fichas técnicas, 
-        recursos educativos y herramientas interactivas del proyecto. De esta manera, garantizamos que los conocimientos 
-        científicos y prácticos generados puedan conservarse de manera inalterable, consultarse de forma dinámica y 
-        replicarse eficientemente en cualquier entorno institucional.
+        <strong>EcoWeb</strong> es la plataforma digital oficial de <strong>Proyecto Eco</strong>. 
+        Fue desarrollada para centralizar información, documentación, fichas técnicas, recursos educativos y 
+        herramientas relacionadas con el proyecto, permitiendo que los conocimientos generados puedan conservarse, 
+        consultarse y replicarse con mayor facilidad.
         </div>
         """, unsafe_allow_html=True
     )
     
-    # Columnas para Distribución de Problemática vs Soluciones Operativas
+    # Contenedores organizados en Columnas en paralelo (Corregido sin bugs de espaciado)
     col1, col2 = st.columns(2)
     
     with col1:
@@ -200,77 +194,96 @@ if selected == "Inicio":
         st.markdown(
             """
             <div class="glass-card">
-                <p style="margin-top:0; color:#81C784; font-weight:600;">Respuesta a problemáticas críticas de infraestructura y gestión de conocimiento:</p>
-                <ul class="custom-list">
-                    <li><strong>Dispersión de información:</strong> Centraliza grandes volúmenes de datos e investigaciones que antes se encontraban fragmentados en formatos físicos o carpetas aisladas.</li>
-                    <li><strong>Crecimiento exponencial del proyecto:</strong> Responde de manera elástica a la evolución constante y al nacimiento de nuevos subproyectos ecológicos dentro de la iniciativa.</li>
-                    <li><strong>Conservación transgeneracional de saberes:</strong> Protege el capital intelectual del proyecto, evitando la pérdida de información clave cuando los alumnos finalizan su ciclo escolar.</li>
-                    <li><strong>Facilidad de replicabilidad técnica:</strong> Provee una base sólida de manuales estandarizados listos para transferir el modelo sustentable a cualquier otra escuela.</li>
-                    <li><strong>Evidencia transparente de resultados:</strong> Establece un espacio abierto al público y evaluadores para la visualización del impacto ambiental real.</li>
-                </ul>
+                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:18px;">Necesitábamos resolver un problema:</p>
+                
+                <div class="info-item">
+                    <span class="info-bullet">✦</span><span class="info-tag">Gran cantidad de información dispersa:</span> Centraliza datos fragmentados de investigaciones anteriores.
+                </div>
+                <div class="info-item">
+                    <span class="info-bullet">✦</span><span class="info-tag">Crecimiento del proyecto:</span> Soporta de forma escalable la evolución continua del ecosistema.
+                </div>
+                <div class="info-item">
+                    <span class="info-bullet">✦</span><span class="info-tag">Necesidad de conservar conocimientos:</span> Evita la pérdida del capital intelectual al egresar los estudiantes.
+                </div>
+                <div class="info-item">
+                    <span class="info-bullet">✦</span><span class="info-tag">Necesidad de facilitar la replicabilidad:</span> Prepara manuales listos para exportar el modelo a otras escuelas.
+                </div>
+                <div class="info-item">
+                    <span class="info-bullet">✦</span><span class="info-tag">Necesidad de mostrar resultados:</span> Crea una ventana pública y auditable de mitigación ambiental real.
+                </div>
             </div>
             """, unsafe_allow_html=True
         )
         
     with col2:
-        st.markdown('<div class="section-header">⚙️ Funciones Principales</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-header">⚙️ Funciones de EcoWeb</div>', unsafe_allow_html=True)
         st.markdown(
             """
             <div class="glass-card">
-                <p style="margin-top:0; color:#81C784; font-weight:600;">Como motor operativo y centro operativo del ecosistema, EcoWeb permite:</p>
-                <ul class="custom-list">
-                    <li><strong>Organizar metódicamente</strong> y estructurar toda la arquitectura de datos e información base de la iniciativa.</li>
-                    <li><strong>Almacenar y disponibilizar</strong> de forma inmediata las fichas técnicas de ingeniería y protocolos de acción de los laboratorios.</li>
-                    <li><strong>Difundir activamente</strong> las campañas, experimentos aplicados y pruebas de campo sustentables.</li>
-                    <li><strong>Facilitar la consulta dinámica</strong> e interactiva de contenidos científico-técnicos para toda la comunidad académica.</li>
-                    <li><strong>Mostrar resultados e impacto de métricas</strong> cuantitativas de mitigación y huella ambiental de los prototipos.</li>
-                    <li><strong>Favorecer la replicabilidad del ecosistema</strong> acelerando los tiempos de adopción en nuevas locaciones.</li>
-                </ul>
+                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:18px;">Para qué sirve nuestra plataforma digital:</p>
+                
+                <div class="info-item">
+                    <span class="info-bullet">✦</span><span class="info-tag">Organizar información:</span> Sistematiza el árbol de subproyectos e iniciativas del equipo.
+                </div>
+                <div class="info-item">
+                    <span class="info-bullet">✦</span><span class="info-tag">Almacenar fichas técnicas:</span> Ofrece descarga y lectura inmediata de los protocolos de ingeniería.
+                </div>
+                <div class="info-item">
+                    <span class="info-bullet">✦</span><span class="info-tag">Difundir iniciativas ecológicas:</span> Comunica las campañas aplicadas y las bitácoras experimentales.
+                </div>
+                <div class="info-item">
+                    <span class="info-bullet">✦</span><span class="info-tag">Facilitar la consulta de contenidos:</span> Optimiza la búsqueda de material educativo de base científica.
+                </div>
+                <div class="info-item">
+                    <span class="info-bullet">✦</span><span class="info-tag">Mostrar resultados e impacto:</span> Muestra de forma transparente las métricas logradas por los dispositivos.
+                </div>
+                <div class="info-item">
+                    <span class="info-bullet">✦</span><span class="info-tag">Favorecer la replicabilidad:</span> Agiliza la transferencia metodológica del ecosistema escolar.
+                </div>
             </div>
             """, unsafe_allow_html=True
         )
         
-    # 4. Relación con los pilares (La tabla de la imagen en formato HTML premium)
-    st.markdown('<div class="section-header">📊 Relación de EcoWeb con los Pilares Fundamentales</div>', unsafe_allow_html=True)
+    # 4. Relación con los pilares (Cuadro final de cierre)
+    st.markdown('<div class="section-header">📊 Relación con los Pilares</div>', unsafe_allow_html=True)
     st.markdown(
         """
         <div class="glass-card" style="padding: 10px 20px 20px 20px;">
-        <p style="color: #A5D6A7; margin-bottom: 15px;">La plataforma web no actúa como un elemento aislado, sino como la infraestructura digital que valida y potencia cada principio rector del Proyecto Eco:</p>
         <table class="custom-table">
             <thead>
                 <tr>
                     <th style="width: 25%;">Pilar</th>
-                    <th style="width: 75%;">Relación directa con el Entorno EcoWeb</th>
+                    <th style="width: 75%;">Relación con EcoWeb</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td><span class="pilar-tag">Replicable</span></td>
-                    <td>Permite acceder de forma global y abierta a toda la documentación técnica, planos y fichas de procesos.</td>
+                    <td>Permite acceder a documentación y fichas técnicas desde cualquier lugar.</td>
                 </tr>
                 <tr>
                     <td><span class="pilar-tag">Continuo</span></td>
-                    <td>Conserva la información técnica de manera perpetua, asegurando el traspaso fluido de conocimiento entre generaciones.</td>
+                    <td>Conserva la información y el conocimiento técnico entre generaciones de estudiantes.</td>
                 </tr>
                 <tr>
                     <td><span class="pilar-tag">Medible</span></td>
-                    <td>Permite registrar de manera pública, auditable y transparente los avances históricos de las métricas y resultados.</td>
+                    <td>Permite registrar de manera pública y transparente los avances y resultados.</td>
                 </tr>
                 <tr>
                     <td><span class="pilar-tag">Interdisciplinario</span></td>
-                    <td>Integra y unifica en una sola interfaz digital todas las secciones operativas, laboratorios y áreas técnicas de estudio.</td>
+                    <td>Integra y unifica todas las secciones, áreas y divisiones tecnológicas.</td>
                 </tr>
                 <tr>
                     <td><span class="pilar-tag">Experimental</span></td>
-                    <td>Difunde de manera abierta los experimentos, bitácoras de fallos, pruebas de laboratorio y optimizaciones aplicadas.</td>
+                    <td>Difunde los experimentos, pruebas, fallos y optimizaciones de las fichas.</td>
                 </tr>
                 <tr>
                     <td><span class="pilar-tag">Circular</span></td>
-                    <td>Facilita el intercambio abierto y democrático de conocimientos bajo una filosofía de código y datos abiertos (Open Source).</td>
+                    <td>Facilita el intercambio abierto de conocimientos bajo una filosofía Open Source.</td>
                 </tr>
                 <tr>
                     <td><span class="pilar-tag">Sustentable</span></td>
-                    <td>Reduce de manera drástica la necesidad de copias, carpetas e informes en soporte físico, digitalizando la gestión.</td>
+                    <td>Reduce la necesidad de copias impresas y digitaliza la infraestructura de auditoría.</td>
                 </tr>
             </tbody>
         </table>
@@ -278,7 +291,7 @@ if selected == "Inicio":
         """, unsafe_allow_html=True
     )
 
-    # Footer institucional técnico al final de la página
+    # Footer institucional 
     st.markdown(
         """
         <div style="text-align: center; margin-top: 50px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
