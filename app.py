@@ -5,198 +5,330 @@ from streamlit_option_menu import option_menu
 # CONFIGURACIÓN DE LA PÁGINA
 # ==========================================
 st.set_page_config(
-    page_title="EcoWeb",
+    page_title="EcoWeb 1.0 - Feria Tecnológica",
     page_icon="🌱",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# Estilos CSS personalizados para mejorar la estética de la interfaz
+# ==========================================
+# ARQUITECTURA DE DISEÑO CSS AVANZADO (UI/UX)
+# ==========================================
 st.markdown("""
     <style>
-    .main-title {
-        font-size: 42px !important;
+    /* Importación de tipografía moderna */
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+    
+    * {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    
+    /* Fondo general y scroll personalizado */
+    .stApp {
+        background-color: #0B0F12;
+    }
+    
+    /* Título Principal Neo-Glow */
+    .hero-title {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 52px !important;
+        font-weight: 800;
+        background: linear-gradient(135deg, #A5D6A7 0%, #2E7D32 50%, #1B5E20 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -1px;
+        margin-bottom: 0px;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 16px !important;
+        color: #81C784;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+    }
+    
+    /* Encabezados de Sección */
+    .section-glow {
+        font-size: 26px !important;
         font-weight: 700;
-        color: #2E7D32;
-        margin-bottom: 5px;
-    }
-    .subtitle {
-        font-size: 18px !important;
-        color: #558B2F;
-        margin-bottom: 25px;
-    }
-    .section-header {
-        font-size: 24px !important;
-        font-weight: 600;
-        color: #1B5E20;
-        border-bottom: 2px solid #A5D6A7;
-        padding-bottom: 8px;
-        margin-top: 30px;
-        margin-bottom: 15px;
-    }
-    .highlight-box {
-        background-color: #F1F8E9;
-        padding: 20px;
-        border-radius: 10px;
-        border-left: 5px solid #7CB342;
+        color: #FFFFFF;
+        border-left: 4px solid #4CAF50;
+        padding-left: 15px;
+        margin-top: 40px;
         margin-bottom: 20px;
+    }
+    
+    /* Tarjeta Principal Interactiva (¿Qué es EcoWeb?) */
+    .main-card {
+        background: linear-gradient(145deg, #11181C 0%, #161F24 100%);
+        border: 1px solid #233038;
+        border-radius: 16px;
+        padding: 30px;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .main-card:hover {
+        transform: translateY(-3px);
+        border-color: #4CAF50;
+    }
+    
+    /* Tarjetas de Contenido Cuadrículas (Grid Cards) */
+    .grid-card {
+        background: #12181D;
+        border: 1px solid #1C262C;
+        border-radius: 12px;
+        padding: 24px;
+        height: 100%;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    .grid-card:hover {
+        background: #161F25;
+        border-color: #388E3C;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    }
+    
+    /* Estilización de Listas con Iconos Tech */
+    .tech-list-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 14px;
+        font-size: 15px;
+        color: #E2E8F0;
+        line-height: 1.5;
+    }
+    .tech-icon {
+        color: #4CAF50;
+        margin-right: 12px;
+        font-weight: bold;
+        font-family: 'JetBrains Mono', monospace;
+    }
+    
+    /* Tabla de Pilares Futurista mediante HTML puro */
+    .custom-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 8px;
+        margin-top: 15px;
+    }
+    .custom-table th {
+        background-color: #161F24;
+        color: #81C784;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: 1px;
+        padding: 16px;
+        text-align: left;
+        border-bottom: 2px solid #2E7D32;
+    }
+    .custom-table td {
+        background-color: #11181C;
+        color: #E2E8F0;
+        padding: 16px;
+        font-size: 15px;
+        border-top: 1px solid #1C262C;
+        border-bottom: 1px solid #1C262C;
+    }
+    .custom-table td:first-child {
+        border-left: 1px solid #1C262C;
+        border-radius: 8px 0 0 8px;
+        font-weight: 600;
+        color: #FFFFFF;
+    }
+    .custom-table td:last-child {
+        border-right: 1px solid #1C262C;
+        border-radius: 0 8px 8px 0;
+    }
+    .custom-table tr:hover td {
+        background-color: #161F24;
+        border-color: #4CAF50;
+        color: #FFFFFF;
+    }
+    
+    /* Métricas del Ecosistema Inferior */
+    .metric-container {
+        background: linear-gradient(180deg, #11181C 0%, #0D1316 100%);
+        border: 1px solid #1C262C;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        transition: all 0.2s ease;
+    }
+    .metric-container:hover {
+        border-color: #2E7D32;
+    }
+    .metric-num {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 32px;
+        font-weight: 700;
+        color: #4CAF50;
+    }
+    .metric-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #FFFFFF;
+        margin-top: 4px;
+    }
+    .metric-delta {
+        font-size: 13px;
+        color: #81C784;
+        margin-top: 2px;
     }
     </style>
 """, unsafe_allow_html=True)
 
 # ==========================================
-# BASE DE DATOS DE FICHAS TÉCNICAS
-# ==========================================
-FICHAS = {
-    "1": {"titulo": "Papel Seed", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1S5sREmBrapKftJM5z8iZjtj46rLXer0t/view?usp=sharing", "desc": "Papel artesanal biodegradable con semillas incorporadas."},
-    "2": {"titulo": "FibroPapel", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1JV_LZ_25r-gyqP27gndXCKweqzovfaiN/view?usp=sharing", "desc": "Papel compuesto reforzado con fibras textiles de algodón."},
-    "3": {"titulo": "Manual del Reciclador", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1icRZmLchhPNXkbqHRKe3rsGF2yQdsXHq/view?usp=sharing", "desc": "Documento técnico educativo 100% sustentable."},
-    "4": {"titulo": "Marca-Páginas", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1LVUYPIBTA6mY61HVtQn7f15ud1sw-3Rv/view?usp=sharing", "desc": "Souvenir funcional de cartón recuperado."},
-    "5": {"titulo": "Eco-Carrier", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1q2m3efrr3WPZtJ_a__8YZ6m42nK-3y31/view?usp=sharing", "desc": "Bolsas estructurales que reemplazan el plástico de un solo uso."},
-    "6": {"titulo": "Colorantes Naturales", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1EGy35MOOpkKR3-ksINjzhkurokfqwdWz/view?usp=sharing", "desc": "Extracción de pigmentos puros de residuos vegetales y cáscaras."},
-    "7": {"titulo": "EcoIA", "division": "EcoTech", "drive_url": "https://drive.google.com/file/d/1H0seDIImClVjA5UrHELyucapO9DzXrHH/view?usp=sharing", "desc": "Asistente inteligente de documentación técnica y auditoría sustentable."},
-    "8": {"titulo": "Organizadores Ecomodulares", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1sJP_u9-UgqRWkXk3f3PsvUVzLCa93Uow/view?usp=sharing", "desc": "Sistemas de ordenamiento de escritorio mediante latas y tubos."},
-    "9": {"titulo": "Eco-Estelar", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/15qlgSz3v6YOLmHTWVmubTMknKM0WVUNS/view?usp=sharing", "desc": "Lámparas decorativas perforadas mediante técnica avanzada de congelado."},
-    "10": {"titulo": "EcoChallenge", "division": "Transversal", "drive_url": "https://drive.google.com/file/d/1n6C2rPadtw662DZfogxJagQrbVvhem90/view?usp=sharing", "desc": "Sistema transversal de desafíos interactivos aplicable a todas las áreas."},
-    "11": {"titulo": "Eco-Hidro", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1q5ImtWBOhHfztDthNQs1yPdmIiK3zZYJ/view?usp=sharing", "desc": "Módulo de riego autónomo por capilaridad optimizado en botellas PET."},
-    "12": {"titulo": "EcoTrash", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1XdaHhW7Z5nzfBHBr3dj7I-N0HNQuLp8k/view?usp=sharing", "desc": "Escoba técnica de alta resistencia construida con cerdas de PET alineadas."},
-    "13": {"titulo": "EcoWallet", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1xWXIx2TAa1QJU2izv0KwqhtEiZSo4GvW/view?usp=sharing", "desc": "Billetera impermeable mediante upcycling estructurado de Tetra Pak."},
-    "14": {"titulo": "Carbon Ink", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1njzGFWQbRuRo-_ucORzZMYceuOE6uoOt/view?usp=sharing", "desc": "Tinta negra premium obtenida por pirólisis controlada de papel sucio."},
-    "15": {"titulo": "Nendo Dango", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1NO2FaJdNvlYZA9X8PKMSUAZ8gXJ4PzG8/view?usp=sharing", "desc": "Bolas de arcilla, sustrato y semillas para reforestación masiva guiada."},
-    "16": {"titulo": "EcoWear", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1tDOsmBio3hPoLzTVGfHzaauTz-wmhEtf/view?usp=sharing", "desc": "Cuentas estructurales y elementos decorativos de papel enrollado."},
-    "17": {"titulo": "Eco-Voz", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1xh5hOjk_HXqaMcFr431Od3z15norhe1q/view?usp=sharing", "desc": "Amplificador acústico pasivo diseñado en cartón corrugado."},
-    "18": {"titulo": "Cañón Vortex", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1h8tS94N0edR9Tw7GU94dummpULnt32zi/view?usp=sharing", "desc": "Generador físico de anillos de aire para demostración de dinámica de fluidos."},
-    "19": {"titulo": "Eco-Dollars", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1xQSQpyuVH-YSgtjWZYahVeterC99r70/view?usp=sharing", "desc": "Sistema monetario de economía circular impreso sobre papel reciclado propio."},
-    "20": {"titulo": "EcoVolt", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1OmhWYiMxZvxMxHFRO7slATfgt_Brwhui/view?usp=sharing", "desc": "Generación teórica de energía limpia aprovechando el gradiente salino (agua dulce y salada)."},
-    "21": {"titulo": "EcoCristales", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1jQwwWbwoUoq3xlcBYY5aVB1WoOieLQ30/view?usp=sharing", "desc": "Cristalización de alumbre orientada al estudio de la geometría química."},
-    "22": {"titulo": "Biogás", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1m4l9L2Y5sXrWz2KlmgfjfDii76ZwBtS6/view?usp=sharing", "desc": "Investigación avanzada sobre digestión anaeróbica y captura de metano."},
-    "23": {"titulo": "EcoMod", "division": "EcoTech", "drive_url": "https://drive.google.com/file/d/13qfQNtrsH1iAjTEAck-LrFfluuHgZZGf/view?usp=sharing", "desc": "Transforma mecánicas de juego en procesos interactivos de reciclaje, producción sustentable y economía circular (EcoDollars) para un aprendizaje activo en Minecraft."},
-    "24": {"titulo": "TerrarIA", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1P3r5UlcdPS4KWDcuYPN45qJWmD_KTBDu/view?usp=sharing", "desc": "Ecosistema cerrado automatizado y monitoreado por matrices de sensores."}
-}
-
-# ==========================================
-# MENÚ LATERAL (SIDEBAR)
+# MENÚ LATERAL (SIDEBAR TÉCNICO)
 # ==========================================
 with st.sidebar:
-    st.image("https://cdn-icons-png.flaticon.com/512/2913/2913520.png", width=70)
-    st.markdown("### Ecosistema Eco 2026")
-    st.caption("E.E.S.T N°7 | 4° 4°")
+    # Logo del proyecto (puedes cambiar la URL por tu logo oficial si lo deseas)
+    st.image("https://cdn-icons-png.flaticon.com/512/2913/2913520.png", width=75)
+    st.markdown("<h2 style='color:white; margin-bottom:0;'>EcoWeb 1.0</h2>", unsafe_allow_html=True)
+    st.markdown("<p style='color:#81C784; font-family:\"JetBrains Mono\"; font-size:13px; margin-top:0;'>E.E.S.T N°7 | 4° 4°</p>", unsafe_allow_html=True)
     st.write("---")
     
-    # Menú de navegación
+    # Menú simplificado enfocado temporalmente en Inicio por requerimiento de la feria
     selected = option_menu(
-        menu_title=None,
-        options=["Inicio", "Los 7 Pilares", "Fichas Técnicas", "EcoIA", "Equipo"],
-        icons=["house", "bookmark-star", "collection", "robot", "people"],
-        menu_icon="cast",
+        menu_title="NAVEGACIÓN PRINCIPAL",
+        options=["Inicio"],
+        icons=["house-rocket"],
+        menu_icon="layers",
         default_index=0,
         styles={
-            "container": {"padding": "0!important", "background-color": "transparent"},
-            "icon": {"color": "#558B2F", "font-size": "18px"}, 
-            "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#E8F5E9"},
-            "nav-link-selected": {"background-color": "#2E7D32", "color": "white"},
+            "container": {"padding": "5px!important", "background-color": "#0B0F12"},
+            "icon": {"color": "#4CAF50", "font-size": "18px"}, 
+            "nav-link": {"font-size": "15px", "text-align": "left", "margin":"5px", "color": "#A0AEC0", "--hover-color": "#161F24"},
+            "nav-link-selected": {"background-color": "#2E7D32", "color": "white", "font-weight": "600"},
+            "menu-title": {"color": "#4A5568", "font-size": "11px", "font-weight": "700", "letter-spacing": "1px"}
         }
     )
-
-# ==========================================
-# CONTENIDO DE LAS PÁGINAS
-# ==========================================
-
-# --- PÁGINA 1: INICIO (INTRODUCCIÓN A ECOWEB) ---
-if selected == "Inicio":
-    st.markdown('<div class="main-title">PROYECTO ECO 2026</div>', unsafe_allow_html=True)
-    st.markdown('<div class="subtitle">Infraestructura Educativa Continua y Sistema Integral de Innovación Sustentable</div>', unsafe_allow_html=True)
-    st.write("---")
     
-    # 1. ¿Qué es EcoWeb?
-    st.markdown('<div class="section-header">¿Qué es EcoWeb?</div>', unsafe_allow_html=True)
+    st.write("---")
+    st.caption("⚡ Foco de Proyecto Activo - Feria de Innovación y Tecnología 2026")
+
+# ==========================================
+# DESARROLLO DE LA PÁGINA: INICIO
+# ==========================================
+if selected == "Inicio":
+    
+    # --- BLOQUE HERO (CABECERA) ---
+    st.markdown('<h1 class="hero-title">PROYECTO ECO 2026</h1>', unsafe_allow_html=True)
+    st.markdown('<p class="hero-subtitle">Infraestructura Educativa Continua y Sistema Integral de Innovación Sustentable</p>', unsafe_allow_html=True)
+    
+    # --- SECCIÓN 1: ¿QUÉ ES ECOWEB? ---
+    st.markdown('<div class="section-glow">¿Qué es EcoWeb?</div>', unsafe_allow_html=True)
     st.markdown(
         """
-        <div class="highlight-box">
-        <strong>EcoWeb</strong> es la plataforma digital oficial de <strong>Proyecto Eco</strong>. 
-        Fue desarrollada para centralizar información, documentación, fichas técnicas, recursos educativos y 
-        herramientas relacionadas con el proyecto, permitiendo que los conocimientos generados puedan conservarse, 
-        consultarse y replicarse con mayor facilidad.
+        <div class="main-card">
+            <p style="font-size: 17px; line-height: 1.7; color: #E2E8F0; margin: 0;">
+                <b style="color: #4CAF50; font-size: 19px;">EcoWeb</b> es la plataforma digital oficial y el 
+                núcleo tecnológico de <strong>Proyecto Eco</strong>. Fue desarrollada con el fin estratégico de 
+                centralizar información, documentación de ingeniería, fichas técnicas, recursos educativos y herramientas 
+                avanzadas de auditoría. Su estructura permite que los conocimientos generados por los estudiantes puedan 
+                <strong>conservarse a través de las generaciones, consultarse dinámicamente y replicarse</strong> de manera libre en cualquier entorno institucional.
+            </p>
         </div>
         """, unsafe_allow_html=True
     )
     
-    # 2. ¿Por qué fue creada? & 3. Funciones principales
-    col1, col2 = st.columns(2)
+    # --- SECCIÓN 2 y 3: COLUMNAS DE RESOLUCIÓN DE PROBLEMAS Y FUNCIONES ---
+    col1, col2 = st.columns(2, gap="large")
     
     with col1:
-        st.markdown('<div class="section-header">¿Por qué fue creada?</div>', unsafe_allow_html=True)
-        st.write("EcoWeb surge de la necesidad real de resolver problemáticas críticas de gestión e infraestructura:")
-        st.markdown("""
-        * 📉 **Dispersión de información:** Centraliza grandes volúmenes de datos que antes se encontraban fragmentados.
-        * 📈 **Crecimiento exponencial:** Responde a la evolución y expansión constante de los subproyectos de la iniciativa.
-        * 🧠 **Conservación del conocimiento:** Protege el capital intelectual del proyecto para que trascienda los ciclos escolares.
-        * 🔄 **Facilidad de replicabilidad:** Provee las herramientas metodológicas para transferir el modelo a otras instituciones.
-        * 📊 **Evidencia de impacto:** Establece un espacio transparente para la exposición de resultados medibles.
-        """)
+        st.markdown('<div class="section-glow">¿Por qué fue creada?</div>', unsafe_allow_html=True)
+        st.markdown(
+            """
+            <div class="grid-card">
+                <p style="color: #A0AEC0; font-size: 14px; margin-bottom: 20px; font-family: 'JetBrains Mono', monospace;">// RESOLUCIÓN DE PROBLEMÁTICAS CRÍTICAS</p>
+                <div class="tech-list-item"><span class="tech-icon">[⚡]</span><div><b>Dispersión de información:</b> Centraliza grandes volúmenes de datos científico-técnicos que antes se encontraban fragmentados.</div></div>
+                <div class="tech-list-item"><span class="tech-icon">[⚡]</span><div><b>Crecimiento exponencial:</b> Responde a la evolución y expansión constante de los nuevos subproyectos de la iniciativa.</div></div>
+                <div class="tech-list-item"><span class="tech-icon">[⚡]</span><div><b>Conservación del conocimiento:</b> Protege el capital intelectual para que trascienda la rotación de los ciclos escolares.</div></div>
+                <div class="tech-list-item"><span class="tech-icon">[⚡]</span><div><b>Facilidad de replicabilidad:</b> Provee las herramientas metodológicas limpias para transferir el modelo a otras escuelas.</div></div>
+                <div class="tech-list-item"><span class="tech-icon">[⚡]</span><div><b>Evidencia de impacto:</b> Establece un canal abierto y transparente para la exposición de métricas y resultados reales.</div></div>
+            </div>
+            """, unsafe_allow_html=True
+        )
         
     with col2:
-        st.markdown('<div class="section-header">Funciones Principales</div>', unsafe_allow_html=True)
-        st.write("Como núcleo operativo y tecnológico de la iniciativa, EcoWeb está diseñada para:")
-        st.markdown("""
-        * 🗂️ **Organizar metódicamente** toda la información estructural del proyecto.
-        * 📥 **Almacenar y disponibilizar** las fichas técnicas y protocolos de trabajo.
-        * 📢 **Difundir activamente** las iniciativas y experimentos ecológicos realizados.
-        * 🔍 **Facilitar la consulta dinámica** de contenidos científico-técnicos esenciales.
-        * 📈 **Visibilizar los resultados cuantitativos** y el impacto real en el entorno.
-        * 🚀 **Favorecer la replicabilidad del ecosistema** en nuevos entornos educativos.
-        """)
+        st.markdown('<div class="section-glow">Funciones Principales</div>', unsafe_allow_html=True)
+        st.markdown(
+            """
+            <div class="grid-card">
+                <p style="color: #A0AEC0; font-size: 14px; margin-bottom: 20px; font-family: 'JetBrains Mono', monospace;">// ARQUITECTURA OPERATIVA DEL SITIO</p>
+                <div class="tech-list-item"><span class="tech-icon">{✓}</span><div><b>Organizar metódicamente</b> toda la información conceptual y estructural del proyecto general.</div></div>
+                <div class="tech-list-item"><span class="tech-icon">{✓}</span><div><b>Almacenar y disponibilizar</b> las fichas técnicas normalizadas de desarrollo y sus protocolos.</div></div>
+                <div class="tech-list-item"><span class="tech-icon">{✓}</span><div><b>Difundir activamente</b> las iniciativas tecnológicas, laboratorios y experimentos ecológicos realizados.</div></div>
+                <div class="tech-list-item"><span class="tech-icon">{✓}</span><div><b>Facilitar la consulta dinámica</b> e interactiva de contenidos académicos esenciales para la comunidad.</div></div>
+                <div class="tech-list-item"><span class="tech-icon">{✓}</span><div><b>Mostrar resultados e impacto</b> directo de manera pública, combatiendo prácticas de lavado de imagen verde.</div></div>
+                <div class="tech-list-item"><span class="tech-icon">{✓}</span><div><b>Favorecer la replicabilidad del ecosistema</b> mediante licencias abiertas y guías paso a paso.</div></div>
+            </div>
+            """, unsafe_allow_html=True
+        )
         
-    # 4. Relación con los pilares
-    st.markdown('<div class="section-header">Relación con los Pilares Fundamentales</div>', unsafe_allow_html=True)
-    st.write("La plataforma web no es solo un sitio informativo; es la materialización tecnológica de los principios del proyecto:")
+    # --- SECCIÓN 4: RELACIÓN CON LOS PILARES (TABLA DISEÑADA CON HTML) ---
+    st.markdown('<div class="section-glow">Relación de EcoWeb con los Pilares Fundamentales</div>', unsafe_allow_html=True)
+    st.markdown(
+        """
+        <table class="custom-table">
+            <thead>
+                <tr>
+                    <th style="width: 25%;">Pilar del Proyecto</th>
+                    <th style="width: 75%;">Relación e Integración con EcoWeb</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Replicable</td>
+                    <td>Permite acceder a documentación, diagramas de flujo y fichas desde cualquier lugar del mundo de manera libre.</td>
+                </tr>
+                <tr>
+                    <td>Continuo</td>
+                    <td>Conserva la información técnica e histórica entre generaciones de estudiantes, evitando la pérdida de conocimiento.</td>
+                </tr>
+                <tr>
+                    <td>Medible</td>
+                    <td>Permite registrar de forma pública y auditable los avances, métricas, analíticas de impacto y resultados reales.</td>
+                </tr>
+                <tr>
+                    <td>Interdisciplinario</td>
+                    <td>Integra y unifica todas las secciones técnicas (EcoPapel, EcoLab, EcoTech, EcoIndustria) en un solo software unificado.</td>
+                </tr>
+                <tr>
+                    <td>Experimental</td>
+                    <td>Difunde los experimentos, bitácoras de fallos, matrices de pruebas y optimizaciones de diseño de cada ficha.</td>
+                </tr>
+                <tr>
+                    <td>Circular</td>
+                    <td>Facilita el intercambio abierto y descentralizado de conocimientos técnicos bajo la filosofía de código abierto.</td>
+                </tr>
+                <tr>
+                    <td>Sustentable</td>
+                    <td>Reduce de manera absoluta la necesidad de copias físicas en papel y digitaliza la infraestructura administrativa.</td>
+                </tr>
+            </tbody>
+        </table>
+        """, unsafe_allow_html=True
+    )
     
-    # Construcción de la tabla estética de pilares utilizando st.dataframe para un look moderno
-    tabla_pilares = {
-        "Pilar": ["Replicable", "Continuo", "Medible", "Interdisciplinario", "Experimental", "Circular", "Sustentable"],
-        "Relación con EcoWeb": [
-            "Permite acceder a documentación y fichas técnicas desde cualquier lugar.",
-            "Conserva la información y el conocimiento técnico entre generaciones de estudiantes.",
-            "Permite registrar de manera pública y transparente los avances y resultados.",
-            "Integra y unifica todas las secciones, áreas y divisiones tecnológicas.",
-            "Difunde los experimentos, pruebas, fallos y optimizaciones de las fichas.",
-            "Facilita el intercambio abierto de conocimientos bajo una filosofía Open Source.",
-            "Reduce la necesidad de copias impresas y digitaliza la infraestructura de auditoría."
-        ]
-    }
-    st.dataframe(tabla_pilares, use_container_width=True, hide_index=True)
+    # --- SECCIÓN 5: VISTA PREVIA DEL DESPLIEGUE ARQUITECTÓNICO (METRICS) ---
+    st.markdown('<div class="section-glow">Estructura General del Ecosistema Integrado</div>', unsafe_allow_html=True)
     
-    # 5. Estructura general de la plataforma
-    st.markdown('<div class="section-header">Estructura General del Ecosistema</div>', unsafe_allow_html=True)
-    st.write("A través del menú de navegación lateral, se puede explorar la arquitectura completa de nuestra solución sustentable:")
+    m_col1, m_col2, m_col3, m_col4, m_col5 = st.columns(5)
     
-    step_col1, step_col2, step_col3, step_col4, step_col5 = st.columns(5)
-    step_col1.metric(label="01", value="Inicio", delta="Introducción")
-    step_col2.metric(label="02", value="Fundamentos", delta="7 Pilares Eco")
-    step_col3.metric(label="03", value="Biblioteca", delta="24 Fichas Técnicas")
-    step_col4.metric(label="04", value="EcoIA", delta="Consultor de IA")
-    step_col5.metric(label="05", value="Equipo", delta="Reconocidos 2026")
+    with m_col1:
+        st.markdown('<div class="metric-container"><div class="metric-num">01</div><div class="metric-title">Inicio</div><div class="metric-delta">Introducción General</div></div>', unsafe_allow_html=True)
+    with m_col2:
+        st.markdown('<div class="metric-container"><div class="metric-num">02</div><div class="metric-title">Los 7 Pilares</div><div class="metric-delta">Bases Conceptuales</div></div>', unsafe_allow_html=True)
+    with m_col3:
+        st.markdown('<div class="metric-container"><div class="metric-num">24</div><div class="metric-title">Fichas Técnicas</div><div class="metric-delta">Biblioteca de Protocolos</div></div>', unsafe_allow_html=True)
+    with m_col4:
+        st.markdown('<div class="metric-container"><div class="metric-num">🤖</div><div class="metric-title">EcoIA</div><div class="metric-delta">Consultor Científico</div></div>', unsafe_allow_html=True)
+    with m_col5:
+        st.markdown('<div class="metric-container"><div class="metric-num">4°4°</div><div class="metric-title">Equipo Eco</div><div class="metric-delta">Investigadores E.E.S.T N°7</div></div>', unsafe_allow_html=True)
 
-# --- PÁGINA 2: LOS 7 PILARES ---
-elif selected == "Los 7 Pilares":
-    st.markdown("## ¿Qué son los 7 Pilares?")
-    st.write("Los 7 Pilares representan los principios fundamentales sobre los que se construye Proyecto Eco...")
-    # (Aquí irá el desarrollo extendido de la Página 2 en los siguientes pasos)
-
-# --- PÁGINA 3: FICHAS TÉCNICAS ---
-elif selected == "Fichas Técnicas":
-    st.markdown("## Biblioteca de Fichas 2026")
-    st.write("Las 24 Fichas constituyen el núcleo técnico y organizativo de Proyecto Eco...")
-    # (Aquí irá el desarrollo extendido de la Página 3 en los siguientes pasos)
-
-# --- PÁGINA 4: ECOIA ---
-elif selected == "EcoIA":
-    st.markdown("## 🤖 EcoIA: Consultor de Procesos Sustentables")
-    st.write("Módulo de Inteligencia Artificial integrado para auditar y responder...")
-    # (Aquí irá el desarrollo extendido de la Página 4 en los siguientes pasos)
-
-# --- PÁGINA 5: EQUIPO ---
-elif selected == "Equipo":
-    st.markdown("## Equipo Eco")
-    st.write("Sistema de Reconocidos Proyecto Eco...")
-    # (Aquí irá el desarrollo extendido de la Página 5 en los siguientes pasos)
+    # Footer institucional discreto y elegante
+    st.write("<br><br><p style='text-align: center; color: #4A5568; font-family: \"JetBrains Mono\", monospace; font-size: 12px;'>Proyecto Eco 2026 · E.E.S.T N°7 · República Argentina · Open Source Platform</p>", unsafe_allow_html=True)
