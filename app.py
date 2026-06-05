@@ -1910,7 +1910,7 @@ elif selected == "Preguntas Frecuentes":
     """, unsafe_allow_html=True)
     
 # ==========================================
-# PÁGINA 13 — ECOIA (NÚCLEO INTEGRADO - IMPORTACIÓN INYECTADA)
+# PÁGINA 13 — ECOIA (NÚCLEO MIGRADO A LLAMA 3.3 / 3.1)
 # ==========================================
 elif selected == "EcoIA":
     st.markdown('<div class="main-title">ECOIA: NÚCLEO COGNITIVO</div>', unsafe_allow_html=True)
@@ -1920,7 +1920,7 @@ elif selected == "EcoIA":
     st.markdown("""
         <div class="glass-card" style="border-left: 5px solid #64FFDA; margin-bottom: 25px;">
             <strong style="color:#64FFDA; font-size:16px;">🤖 Consultoría Algorítmica en Tiempo Real</strong><br>
-            Este módulo interactivo se conecta de forma directa al pipeline de inferencia de <strong>Groq Cloud</strong>. Su arquitectura fue programada para actuar como un auditor metodológico capaz de responder dudas analíticas sobre nuestras 24 fichas estructurales, las formulaciones de laboratorio de Carbon Ink y el sistema logístico de la E.E.S.T N°7.
+            Este módulo interactivo se conecta de forma directa al pipeline de inferencia de <strong>Groq Cloud</strong>. Su arquitectura fue actualizada a los últimos modelos de producción para actuar como un auditor metodológico capaz de responder dudas analíticas sobre nuestras 24 fichas estructurales, las formulaciones de laboratorio de Carbon Ink y el sistema logístico de la E.E.S.T N°7.
         </div>
     """, unsafe_allow_html=True)
 
@@ -1977,15 +1977,14 @@ elif selected == "EcoIA":
             if api_key_groq != "":
                 with st.spinner("🧠 Computando tensores de lenguaje y analizando base de conocimiento de Proyecto Eco..."):
                     try:
-                        # INYECTAMOS LA IMPORTACIÓN EXPLÍCITA EN CALIENTE PARA EVITAR EL NAMEERROR
+                        # Inyección segura de la librería instalada
                         from groq import Groq
                         
-                        # Instanciación nativa estándar utilizando el parámetro exacto api_key
                         client = Groq(api_key=api_key_groq)
                         
-                        # Llamada a la API de inferencia utilizando el modelo Llama3
+                        # LLAMADA ACTUALIZADA: Usamos 'llama-3.3-70b-versatile' o 'llama-3.1-8b-instant'
                         completion = client.chat.completions.create(
-                            model="llama3-8b-8192",
+                            model="llama-3-1-8b-instant",  # El reemplazo directo, ultrarrápido y activo en Groq
                             messages=[
                                 {"role": "system", "content": system_prompt},
                                 {"role": "user", "content": user_query}
@@ -2003,14 +2002,13 @@ elif selected == "EcoIA":
                     except Exception as e:
                         st.error(f"Error de conexión con la infraestructura de Groq: {str(e)}")
             else:
-                # Fallback didáctico únicamente si fallan ambos métodos de credenciales
+                # Fallback alternativo
                 with st.spinner("⚙️ Ejecutando matriz cognitiva local..."):
                     import time
                     time.sleep(1.0)
                     respuesta_fallback = (
                         f"🤖 **[EcoIA - Modo Autónomo offline]:** Recibí tu consulta sobre '{user_query}'. "
-                        "No se detectaron las credenciales activas en `st.secrets`. "
-                        "Verificá que el nombre en el panel de control de Streamlit coincida con `GROQ_API_KEY`."
+                        "No se detectaron las credenciales activas en `st.secrets`."
                     )
                     st.session_state.messages_ecoia.append({"role": "assistant", "content": respuesta_fallback})
 
@@ -2035,7 +2033,7 @@ elif selected == "EcoIA":
                     </div>
                 """, unsafe_allow_html=True)
 
-    # Footer de página
+    # Footer de la página
     st.markdown("""
         <div style="text-align: center; margin-top: 50px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • Suite EcoIA Operativa v2.0 • Procesamiento de Lenguaje Natural en Escuelas Técnicas • E.E.S.T N°7
