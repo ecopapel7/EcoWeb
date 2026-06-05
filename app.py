@@ -1910,7 +1910,7 @@ elif selected == "Preguntas Frecuentes":
     """, unsafe_allow_html=True)
     
 # ==========================================
-# PÁGINA 13 — ECOIA (NÚCLEO MIGRADO A LLAMA 3.3 / 3.1)
+# PÁGINA 13 — ECOIA (NÚCLEO MIGRADO CON IDENTIFICADOR CORREGIDO)
 # ==========================================
 elif selected == "EcoIA":
     st.markdown('<div class="main-title">ECOIA: NÚCLEO COGNITIVO</div>', unsafe_allow_html=True)
@@ -1982,9 +1982,10 @@ elif selected == "EcoIA":
                         
                         client = Groq(api_key=api_key_groq)
                         
-                        # LLAMADA ACTUALIZADA: Usamos 'llama-3.3-70b-versatile' o 'llama-3.1-8b-instant'
+                        # ID DE MODELO CORREGIDO PARA EVITAR EL 404 (Sintaxis exacta aceptada por la API de Groq)
+                        # Probamos con el modelo Llama 3.1 8b oficial en su string de producción de Groq
                         completion = client.chat.completions.create(
-                            model="llama-3-1-8b-instant",  # El reemplazo directo, ultrarrápido y activo en Groq
+                            model="llama-3.1-8b-instant",  
                             messages=[
                                 {"role": "system", "content": system_prompt},
                                 {"role": "user", "content": user_query}
