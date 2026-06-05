@@ -1919,7 +1919,7 @@ elif selected == "EcoIA":
     # -----------------------------------------------------------------
     # 📜 BASE DE DATOS GLOBAL: EL DICCIONARIO VA ACÁ (FUERA DEL BOTÓN)
     # -----------------------------------------------------------------
-        TEXTO_COMPLETO_FICHAS = {
+    TEXTO_COMPLETO_FICHAS = {
         "1": """
         FICHA TÉCNICA #1: PAPEL SEED (Sección: EcoPapel)
         1. CONCEPTO: Papel artesanal biodegradable que contiene semillas en su interior. Cuando se entierra en tierra húmeda, el papel se descompone y las semillas germinan, dando flores o hortalizas.
