@@ -1547,6 +1547,7 @@ elif selected == "Sistema Reconocidos":
             Proyecto Eco 2026 • Registro del Capital Humano y Convivencia Técnica • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
+    
 # ==========================================
 # PÁGINA 10 — ¿CÓMO REPLICAR ECO?
 # ==========================================
