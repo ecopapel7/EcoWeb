@@ -14,7 +14,44 @@ st.set_page_config(
 # ==========================================
 # INYECCIÓN DE INTERFAZ DE ALTO IMPACTO (CSS FIJO Y RESPONSIVE)
 # ==========================================
-st.markdown("""
+st.markdown(/* ==========================================
+       PARCHE RESPONSIVE MÓVIL DE EMERGENCIA
+       ========================================== */
+    
+    /* Hace que los textos largos se quiebren y no ensanchen la caja */
+    .glass-card, .tech-card, .metric-card {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Cuando se abre en un celular (pantallas menores a 768px) */
+    @media (max-width: 768px) {
+        /* Forzamos a las tarjetas a que dejen de tener ancho fijo en píxeles y usen el 100% */
+        .glass-card, .tech-card, .metric-card {
+            width: 100% !important;
+            min-width: 100% !important;
+            max-width: 100% !important;
+            padding: 15px !important; /* Achicamos un toque el margen interno */
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+
+        /* Si usás flexbox o filas en HTML, esto las obliga a apilarse verticalmente */
+        div[style*="display: flex"], div[style*="display:flex"] {
+            flex-direction: column !important;
+            align-items: center !important;
+            width: 100% !important;
+        }
+        
+        /* Evita que los títulos gigantes deformen el diseño en teléfonos */
+        h1, .main-title {
+            font-size: 2rem !important;
+        }
+        h2 {
+            font-size: 1.5rem !important;
+        }
+    }"""
     <style>
     /* Fondo con degradado fluido original */
     .stApp {
