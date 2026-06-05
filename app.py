@@ -148,8 +148,8 @@ with st.sidebar:
 # === REEMPLAZAR EL BLOQUE OPTION_MENU POR ESTE ===
     selected = option_menu(
         menu_title=None,
-        options=["Inicio", "Objetivo Eco", "Fundamentos Eco", "Cronología Eco", "Fichas Técnicas", "Explorador Eco", "Impacto Eco"], # Agregamos la Página 8
-        icons=["house-door-fill", "target", "diagram-3-fill", "clock-history", "file-earmark-text-fill", "search-heart-fill", "activity"], # Ícono de impacto/actividad métrica
+        options=["Inicio", "Objetivo Eco", "Fundamentos Eco", "Cronología Eco", "Fichas Técnicas", "Explorador Eco", "Impacto Eco", "Sistema Reconocidos"], # Agregamos la Página 9
+        icons=["house-door-fill", "target", "diagram-3-fill", "clock-history", "file-earmark-text-fill", "search-heart-fill", "activity", "award-fill"], # Ícono de medalla/reconocimiento
         menu_icon="cast",
         default_index=0,
         styles={
@@ -1374,5 +1374,174 @@ elif selected == "Impacto Eco":
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • Auditoría General de Calidad y Resultados de Impacto • E.E.S.T N°7
+        </div>
+    """, unsafe_allow_html=True)
+# ==========================================
+# PÁGINA 9 — SISTEMA DE RECONOCIDOS
+# ==========================================
+elif selected == "Sistema Reconocidos":
+    
+    st.markdown('<div class="main-title">SISTEMA DE RECONOCIDOS</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Estructura de Incentivo Sociolaboral, Gestión Conductual y Auditoría de Compromiso</div>', unsafe_allow_html=True)
+
+    # DATASET DE CONTROL DE RECONOCIDOS (Base de datos para analítica en tiempo real)
+    RECONOCIDOS_DB = [
+        {"nombre": "Benitez, Thiago", "division": "EcoTech", "periodo": "Mayo 2026", "motivo": "Liderazgo en la codificación de la arquitectura digital EcoWeb y persistencia de datos.", "tipo": "Actual"},
+        {"nombre": "Gómez, Milagros", "division": "EcoPapel", "periodo": "Mayo 2026", "motivo": "Optimización del tamizado y control de calidad en la producción de FibroPapel.", "tipo": "Actual"},
+        {"nombre": "Rodriguez, Lucas", "division": "EcoLab", "periodo": "Mayo 2026", "motivo": "Precisión matemática en el confinamiento térmico de pirólisis para Carbon Ink.", "tipo": "Actual"},
+        {"nombre": "Martínez, Sofía", "division": "EcoIndustria", "periodo": "Abril 2026", "motivo": "Diseño y matricería del amplificador acústico pasivo Eco-Voz.", "tipo": "Histórico", "anio": 2026},
+        {"nombre": "Álvarez, Bruno", "division": "EcoTech", "periodo": "Abril 2026", "motivo": "Desarrollo del módulo interactivo EcoMod para entornos virtuales de Minecraft.", "tipo": "Histórico", "anio": 2026},
+        {"nombre": "Sánchez, Lautaro", "division": "EcoLab", "periodo": "Noviembre 2025", "motivo": "Co-redacción técnica del Manual del Reciclador original en la primera fase.", "tipo": "Histórico", "anio": 2025},
+        {"nombre": "Fernández, Zoe", "division": "EcoPapel", "periodo": "Octubre 2025", "motivo": "Coordinación de los primeros ensayos exitosos de Papel Seed con semillas nativas.", "tipo": "Histórico", "anio": 2025},
+    ]
+
+    # SECCIÓN 1 & SECCIÓN 2: FILOSOFÍA DEL SISTEMA Y PROBLEMÁTICA
+    col_fil, col_prob = st.columns(2)
+    
+    with col_fil:
+        st.markdown('<div class="section-header">🛡️ 1. Filosofía del Sistema: Rompiendo Mitos</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card" style="height: 330px;">
+                <p style="margin-top:0; color:#00E676; font-weight:600; margin-bottom:12px;">Principios fundamentales de convivencia técnica:</p>
+                El Sistema de Reconocidos <strong>no es un concurso</strong>, una competencia meritocrática ni un esquema de exclusión jerárquica. Su diseño persigue un fin puramente humano y profesional: <strong>hacer visible el trabajo silencioso y constante</strong>.
+                <br><br>
+                <span style="color:#64FFDA; font-weight:bold;">Declaración de principios:</span>
+                <ul style="margin-top:5px; padding-left:18px; font-size:13.5px; color:#E0E6ED; line-height:1.4;">
+                    <li>No determina quién vale más o menos en los laboratorios.</li>
+                    <li>No otorga privilegios de autoridad técnica arbitraria.</li>
+                    <li>Premia la regularidad, el orden de banco y la persistencia conductual.</li>
+                </ul>
+            </div>
+        """, unsafe_allow_html=True)
+        
+    with col_prob:
+        st.markdown('<div class="section-header">⚠️ 2. La Necesidad: ¿Qué problemas resuelve?</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card" style="height: 330px;">
+                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:12px;">Desafíos escolares crónicos que este algoritmo mitiga:</p>
+                <div class="info-item"><strong>Falta de Participación Sostenida:</strong> Evita que los alumnos arranquen con alta energía y abandonen el contraturno a mitad de año.</div>
+                <div class="info-item"><strong>Invisibilidad de Contribuciones:</strong> Soluciona el clásico problema donde el trabajo técnico minucioso queda opacado por perfiles puramente expositores.</div>
+                <div class="info-item"><strong>Desmotivación por Falta de Seguimiento:</strong> Rompe la apatía escolar al registrar formalmente cada hito, validando el tiempo invertido por el operador.</div>
+            </div>
+        """, unsafe_allow_html=True)
+
+    # SECCIÓN 3 & SECCIÓN 4: FUNCIONAMIENTO GENERAL Y CRITERIOS OFICIALES
+    st.markdown('<div class="section-header">⚙️ 3. Protocolo de Funcionamiento y Criterios de Evaluación</div>', unsafe_allow_html=True)
+    st.markdown('<p style="color:#A5D6A7; font-size:14px; margin-bottom:12px;">Mapeo claro y auditable del proceso de ponderación semanal:</p>', unsafe_allow_html=True)
+    
+    col_func, col_crit = st.columns([6, 4])
+    
+    with col_func:
+        st.markdown("""
+            <div class="glass-card" style="height: 330px; display:flex; flex-direction:column; justify-content:center;">
+                <p style="margin-top:0; color:#A5D6A7; font-weight:600; margin-bottom:15px;">Las 4 Etapas del Registro Operativo:</p>
+                <div style="font-size:13.5px; line-height:1.6; color:#E0E6ED;">
+                    <strong>1. Bitácora de Asiento:</strong> Cada jefe de celda anota diariamente las tareas cumplidas en su sección.<br>
+                    <strong>2. Evaluación Periódica:</strong> Reunión semanal inter-áreas para analizar la constancia y el mantenimiento del orden.<br>
+                    <strong>3. Consolidación de Datos:</strong> Se cruzan las métricas conductuales con los objetivos de las fichas técnicas asignadas.<br>
+                    <strong>4. Publicación en EcoWeb:</strong> Se formaliza el reconocimiento en la cartelera digital para conocimiento de toda la institución.
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+        
+    with col_crit:
+        st.markdown("""
+            <div class="glass-card" style="height: 330px;">
+                <p style="margin-top:0; color:#A5D6A7; font-weight:600; margin-bottom:12px;">Criterios Técnicos Evaluados:</p>
+                <span style="font-size:13px; color:#CFD8DC;">Solo se consideran variables documentadas:</span>
+                <div style="margin-top:8px; display:flex; flex-direction:column; gap:8px; font-size:13px;">
+                    <div style="background:rgba(0,230,118,0.05); padding:6px; border-radius:4px; border-left:3px solid #00E676;">🤝 <strong>Colaboración Transversal</strong></div>
+                    <div style="background:rgba(0,230,118,0.05); padding:6px; border-radius:4px; border-left:3px solid #00E676;">⏱️ <strong>Compromiso y Puntualidad</strong></div>
+                    <div style="background:rgba(0,230,118,0.05); padding:6px; border-radius:4px; border-left:3px solid #00E676;">🧹 <strong>Responsabilidad y Seguridad</strong></div>
+                    <div style="background:rgba(0,230,118,0.05); padding:6px; border-radius:4px; border-left:3px solid #00E676;">🔧 <strong>Cumplimiento Absoluto de Fichas</strong></div>
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+
+    # SECCIÓN 7: ESTADÍSTICAS DEL SISTEMA (Procesadas dinámicamente)
+    st.markdown('<div class="section-header">📈 4. Analítica de Alcance y Métricas del Sistema</div>', unsafe_allow_html=True)
+    
+    tot_otorgados = len(RECONOCIDOS_DB)
+    unicos_alumnos = len(set(r["nombre"] for r in RECONOCIDOS_DB))
+    por_seccion = {}
+    for r in RECONOCIDOS_DB:
+        por_seccion[r["division"]] = por_seccion.get(r["division"], 0) + 1
+
+    col_s1, col_s2, col_s3 = st.columns(3)
+    with col_s1:
+        st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:28px; font-weight:bold; color:#00E676;">{tot_otorgados}</span><br><span style="font-size:13px; color:#B0BEC5;">Menciones Otorgadas</span></div>', unsafe_allow_html=True)
+    with col_s2:
+        st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:28px; font-weight:bold; color:#64FFDA;">{unicos_alumnos}</span><br><span style="font-size:13px; color:#B0BEC5;">Alumnos Únicos de 4° 4°</span></div>', unsafe_allow_html=True)
+    with col_s3:
+        st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:28px; font-weight:bold; color:#FFD54F;">{len(por_seccion)}</span><br><span style="font-size:13px; color:#B0BEC5;">Divisiones Involucradas</span></div>', unsafe_allow_html=True)
+
+    # SECCIÓN 5 & SECCIÓN 6: RECONOCIDOS ACTUALES E HISTORIAL INTERACTIVO
+    st.markdown('<div class="section-header">🥇 5. Cuadro de Honor e Historial de Operadores</div>', unsafe_allow_html=True)
+    
+    tab_act, tab_hist = st.tabs(["⚡ Período Vigente (Mayo 2026)", "📜 Registro Histórico Acumulado"])
+    
+    with tab_act:
+        for r in RECONOCIDOS_DB:
+            if r["tipo"] == "Actual":
+                st.markdown(f"""
+                    <div style="background: rgba(0, 230, 118, 0.03); border: 1px solid #00E676; border-radius: 10px; padding: 15px; margin-bottom: 12px;">
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                            <strong style="font-size:17px; color:white;">⭐ {r['nombre']}</strong>
+                            <span style="background:#00E676; color:black; font-weight:bold; padding:2px 8px; border-radius:4px; font-size:11px; text-transform:uppercase;">{r['division']}</span>
+                        </div>
+                        <p style="margin:8px 0 0 0; color:#CFD8DC; font-size:14px; line-height:1.4;"><strong>Motivo del Reconocimiento:</strong> {r['motivo']}</p>
+                        <span style="font-size:11px; color:#90A4AE; display:block; margin-top:6px;">📆 Registro: {r['periodo']} • E.E.S.T N°7</span>
+                    </div>
+                """, unsafe_allow_html=True)
+                
+    with tab_hist:
+        # Filtro interactivo de año para el historial
+        anio_sel = st.radio("Filtrar historial por Ciclo Lectivo:", [2026, 2025], horizontal=True)
+        
+        for r in RECONOCIDOS_DB:
+            if r["tipo"] == "Histórico" and r["anio"] == anio_sel:
+                st.markdown(f"""
+                    <div style="background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 15px; margin-bottom: 12px;">
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                            <strong style="font-size:16px; color:#B0BEC5;">{r['nombre']}</strong>
+                            <span style="background:rgba(255,255,255,0.08); color:#E0E6ED; padding:2px 8px; border-radius:4px; font-size:11px;">{r['division']}</span>
+                        </div>
+                        <p style="margin:6px 0 0 0; color:#90A4AE; font-size:13.5px;">{r['motivo']}</p>
+                        <span style="font-size:11px; color:#607D8B; display:block; margin-top:4px;">📆 Historial: {r['periodo']}</span>
+                    </div>
+                """, unsafe_allow_html=True)
+
+    # SECCIÓN 8: RELACIÓN CON LOS PILARES OFICIALES
+    st.markdown('<div class="section-header">⚖️ 6. Blindaje de los Pilares Eco mediante la Gestión</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="glass-card">
+        <p style="margin-top:0; color:#A5D6A7; font-weight:600; margin-bottom:12px;">Cómo impacta el sistema conductual en la matriz dogmática:</p>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:12px; font-size:13.5px;">
+            <div style="background:rgba(0,0,0,0.15); padding:10px; border-radius:6px;">🧪 <strong>Continuo:</strong> Favorece la permanencia ininterrumpida de los alumnos evitando baches operativos.</div>
+            <div style="background:rgba(0,0,0,0.15); padding:10px; border-radius:6px;">📊 <strong>Medible:</strong> Asienta un registro cuantitativo exacto del compromiso humano de la división.</div>
+            <div style="background:rgba(0,0,0,0.15); padding:10px; border-radius:6px;">🏢 <strong>Interdisciplinar:</strong> Rompe fronteras unificando y valorando aportes de software, metalmecánica o química.</div>
+            <div style="background:rgba(0,0,0,0.15); padding:10px; border-radius:6px;">📋 <strong>Replicable:</strong> Su lógica de control matricial puede exportarse intacta a cualquier otra institución técnica.</div>
+        </div>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # SECCIÓN 9: PARTICIPAR Y SER RECONOCIDO (Orientado a nuevos integrantes)
+    st.markdown('<div class="section-header">🚀 7. ¿Sos nuevo? Cómo integrarte al Engranaje Eco</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="glass-card" style="border-left: 5px solid #64FFDA;">
+            <p style="margin-top:0; color:#64FFDA; font-weight:600; margin-bottom:10px;">Guía de embarque para nuevos estudiantes y colaboradores:</p>
+            <ol style="margin:0; padding-left:20px; font-size:14px; color:#E0E6ED; display:flex; flex-direction:column; gap:8px;">
+                <li><strong>Elegí tu Celda:</strong> Acercate a cualquiera de las 4 divisiones según tu afinidad (Papel, Laboratorio, Software o Matricería).</li>
+                <li><strong>Estudiá la Ficha:</strong> Solicitá al Jefe de Sección el manual técnico de la actividad asignada y cumplí los pasos de seguridad de banco.</li>
+                <li><strong>Asentá tu Huella:</strong> Tus horas operativas de contraturno y el cuidado de las herramientas se registran de forma automática en la bitácora semanal.</li>
+                <li><strong>Evolucioná el Sistema:</strong> Al proponer mejoras validadas para los protocolos existentes, sumás puntos directos para el próximo ciclo de Reconocidos.</li>
+            </ol>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # Footer institucional
+    st.markdown("""
+        <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
+            Proyecto Eco 2026 • Registro del Capital Humano y Convivencia Técnica • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
