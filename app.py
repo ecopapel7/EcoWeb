@@ -148,14 +148,22 @@ with st.sidebar:
 # === REEMPLAZAR EL BLOQUE OPTION_MENU POR ESTE ===
     selected = option_menu(
         menu_title=None,
-        options=["Inicio", "Objetivo Eco", "Fundamentos Eco", "Cronología Eco", "Fichas Técnicas", "Explorador Eco", "Impacto Eco", "Sistema Reconocidos", "¿Cómo Replicar Eco?"], # Agregamos la Página 10
-        icons=["house-door-fill", "target", "diagram-3-fill", "clock-history", "file-earmark-text-fill", "search-heart-fill", "activity", "award-fill", "share-fill"], # Ícono de compartir/replicar
+        options=[
+            "Inicio", "Objetivo Eco", "Fundamentos Eco", "Cronología Eco", 
+            "Fichas Técnicas", "Explorador Eco", "Impacto Eco", 
+            "Sistema Reconocidos", "Replicar Eco", "Galería Eco", "Preguntas Frecuentes"
+        ], # Agregadas Páginas 11 y 12
+        icons=[
+            "house-door-fill", "target", "diagram-3-fill", "clock-history", 
+            "file-earmark-text-fill", "search-heart-fill", "activity", 
+            "award-fill", "share-fill", "images", "patch-question-fill"
+        ], # Íconos correspondientes para Galería y FAQs
         menu_icon="cast",
         default_index=0,
         styles={
             "container": {"padding": "0!important", "background-color": "transparent"},
             "icon": {"color": "#00E676", "font-size": "18px"}, 
-            "nav-link": {"font-size": "16px", "color": "#E0E6ED", "text-align": "left", "margin":"5px 0px", "--hover-color": "rgba(0, 230, 118, 0.1)"},
+            "nav-link": {"font-size": "15px", "color": "#E0E6ED", "text-align": "left", "margin":"3px 0px", "--hover-color": "rgba(0, 230, 118, 0.1)"},
             "nav-link-selected": {"background-color": "rgba(46, 125, 50, 0.5)", "border": "1px solid #00E676", "color": "white", "font-weight": "600"},
         }
     )
@@ -1741,5 +1749,123 @@ elif selected == "¿Cómo Replicar Eco?":
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • Manual Abierto de Transferencia y Escalabilidad Institucional • E.E.S.T N°7
+        </div>
+    """, unsafe_allow_html=True)
+# ==========================================
+# PÁGINA 11 — GALERÍA ECO / MAPA
+# ==========================================
+elif selected == "Galería Eco":
+    st.markdown('<div class="main-title">GALERÍA Y MAPA ECO</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Registro Visual de Infraestructura y Evidencias Fotográficas de Laboratorio</div>', unsafe_allow_html=True)
+    
+    st.markdown("""
+        <div class="glass-card" style="text-align: center; padding: 40px; border: 1px dashed rgba(0, 230, 118, 0.4);">
+            <p style="font-size: 24px; color: #00E676; margin-bottom: 10px;">📸 Contenedor Multimedia Activo</p>
+            <p style="color: #90A4AE; font-size: 15px;">Espacio reservado para el despliegue del mapeo interactivo de celdas y la galería fotográfica de la E.E.S.T N°7.</p>
+        </div>
+    """, unsafe_allow_html=True)
+
+# ==========================================
+# PÁGINA 12 — PREGUNTAS FRECUENTES (FAQ)
+# ==========================================
+elif selected == "Preguntas Frecuentes":
+    
+    st.markdown('<div class="main-title">PREGUNTAS FRECUENTES</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Centro de Consulta Rápida y Respuestas Fundacionales del Ecosistema</div>', unsafe_allow_html=True)
+
+    # SECCIÓN 1: INTRODUCCIÓN
+    st.markdown('<div class="section-header">💡 ¿Para qué sirve esta sección?</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="glass-card" style="margin-bottom: 25px;">
+        Bienvenido al <strong>Portal Analítico de FAQs</strong>. Esta sección reúne y estructura de forma concisa las dudas y consultas más habituales que tanto visitantes, participantes técnicos, docentes como evaluadores externos suelen plantearse al auditar el <strong>Proyecto Eco</strong>. Nuestro objetivo es que encuentres respuestas directas sin necesidad de navegar exhaustivamente por los manuales técnicos complejos.
+        </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown('<div class="section-header">🔍 Consultas de Auditoría Metodológica</div>', unsafe_allow_html=True)
+
+    # SECCIÓN 2: ¿QUÉ ES PROYECTO ECO?
+    with st.expander("❓ 1. ¿Qué es Proyecto Eco y cuál es su objetivo principal?"):
+        st.markdown("""
+            <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
+                <strong>Proyecto Eco</strong> es una matriz de gestión sociolaboral y ambiental desarrollada por estudiantes de la <strong>E.E.S.T N°7</strong>. Su objetivo principal es transformar los desechos institucionales (celulosa y plásticos) en subproductos de alto valor utilitario para el colegio mediante un enfoque estrictamente <strong>interdisciplinario</strong> que fusiona programación, ingeniería de materiales y procesos químicos.
+            </div>
+        """, unsafe_allow_html=True)
+
+    # SECCIÓN 3: ¿QUÉ ES UNA FICHA TÉCNICA?
+    with st.expander("❓ 2. ¿Qué es una Ficha Técnica y para qué sirve?"):
+        st.markdown("""
+            <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
+                Una <strong>Ficha Técnica</strong> es el plano de ingeniería del conocimiento dentro de Eco. Es un documento normalizado que detalla los elementos químicos, los Equipos de Protección Personal (EPP) y la guía paso a paso para ejecutar un experimento o manufactura. Su función crítica es blindar la <strong>replicabilidad</strong> y asegurar la continuidad de los laboratorios sin depender de la memoria de un operario o docente.
+            </div>
+        """, unsafe_allow_html=True)
+
+    # SECCIÓN 4: ¿QUÉ SON LOS PILARES ECO?
+    with st.expander("❓ 3. ¿Qué son los Pilares Eco y cómo orientan el proyecto?"):
+        st.markdown("""
+            <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
+                Los Pilares Eco constituyen el marco constitucional del proyecto. Son 7 principios inviolables: <strong>Replicable, Circular, Continuo, Sustentable, Experimental, Medible e Interdisciplinario</strong>. Cualquier actividad, celda de trabajo o nueva ficha debe responder de forma afirmativa a estos pilares para integrarse oficialmente al sistema.
+            </div>
+        """, unsafe_allow_html=True)
+
+    # SECCIÓN 5: ¿QUÉ ES EL FLUJO ECO?
+    with st.expander("❓ 4. ¿Qué es el Flujo Eco?"):
+        st.markdown("""
+            <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
+                Es el protocolo logístico estandarizado del proyecto. Define cómo ingresan los residuos de la escuela, cómo se distribuyen entre las diferentes celdas operativas (EcoPapel, EcoLab, EcoTech, EcoIndustria), y la secuencia metodológica bajo la cual un residuo se procesa, se valida químicamente y se asienta en la base documental digital.
+            </div>
+        """, unsafe_allow_html=True)
+
+    # SECCIÓN 6: ¿QUÉ ES UN RECONOCIDO?
+    with st.expander("❓ 5. ¿Qué significa ser un Alumno Reconocido?"):
+        st.markdown("""
+            <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
+                Ser un <strong>Reconocido</strong> significa que la constancia, la responsabilidad de banco y el compromiso del estudiante han sido validados formalmente en la bitácora semanal. Es un sistema cerrado de incentivos sociolaborales diseñado para fomentar la permanencia de contraturno. <strong>No es un concurso</strong> ni persigue dinámicas competitivas; premia el esfuerzo silencioso y regular.
+            </div>
+        """, unsafe_allow_html=True)
+
+    # SECCIÓN 7: ¿QUÉ SON LOS ECODOLLARS?
+    with st.expander("❓ 6. ¿Qué son los EcoDollars y cuál es su utilidad real?"):
+        st.markdown("""
+            <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
+                El <strong>EcoDollar</strong> es el vector simbólico de nuestra economía circular interna. Representa una unidad de valor acuñada sobre papel reciclado germinable (Papel Seed), utilizada de forma didáctica dentro de la estructura del proyecto para cuantificar el intercambio de recursos recuperados y balancear los aportes de materiales entre las diferentes divisiones técnicas.
+            </div>
+        """, unsafe_allow_html=True)
+
+    # SECCIÓN 8: ¿CÓMO PARTICIPAR EN PROYECTO ECO?
+    with st.expander("❓ 7. ¿Cómo puede un nuevo estudiante o colaborador participar de Proyecto Eco?"):
+        st.markdown("""
+            <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
+                La integración al sistema se realiza de forma orgánica escogiendo una de nuestras secciones operativas según la afinidad técnica del participante. El nuevo colaborador asume la ejecución de fichas técnicas preexistentes en los talleres de contraturno, registra sus actividades colaborativas y sus contribuciones ingresan directamente al circuito del Sistema de Reconocidos.
+            </div>
+        """, unsafe_allow_html=True)
+
+    # SECCIÓN 9: ¿PUEDE REPLICARSE ECO?
+    with st.expander("❓ 8. ¿Se puede aplicar e implementar el framework Eco en otras instituciones?"):
+        st.markdown("""
+            <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
+                <strong>Absolutamente sí.</strong> La replicabilidad es uno de nuestros pilares dogmáticos. El framework está pensado para que cualquier otra escuela técnica, comunidad vecinal o equipo de trabajo pueda descargar nuestras fichas analíticas, adaptar las secciones a su infraestructura local y desplegar el sistema sin barreras económicas iniciales, moldeándolo a su propio contexto.
+            </div>
+        """, unsafe_allow_html=True)
+
+    # SECCIÓN 10: ¿ECO SIGUE CRECIENDO?
+    with st.expander("❓ 9. ¿Es Proyecto Eco una estructura terminada o sigue en evolución?"):
+        st.markdown("""
+            <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
+                Eco es un <strong>sistema vivo y en evolución constante</strong>. No se detiene con los resultados actuales. El proyecto continúa expandiendo de manera continua su base de conocimiento con nuevas fichas de ingeniería, optimizaciones algorítmicas en la suite EcoWeb, nuevas celdas de integración comunitaria y la renovación cíclica de participantes de las nuevas generaciones.
+            </div>
+        """, unsafe_allow_html=True)
+
+    # Bloque Informativo Final de Soporte
+    st.markdown("""
+        <div class="glass-card" style="margin-top: 30px; border-left: 4px solid #64FFDA; background: rgba(100, 255, 218, 0.02);">
+            <span style="font-weight: bold; color: #64FFDA;">ℹ️ ¿Tu duda técnica no está listada?</span><br>
+            <span style="font-size: 13.5px; color: #CFD8DC;">Podés consultar de forma interactiva con nuestro asistente entrenado en la celda de control <strong>EcoIA</strong> o revisar el <strong>Manual Metodológico Completo</strong> impreso en los bancos de trabajo de la E.E.S.T N°7.</span>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # Footer institucional
+    st.markdown("""
+        <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
+            Proyecto Eco 2026 • Consultas Frecuentes de la Comunidad y Jurados • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
