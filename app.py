@@ -148,8 +148,8 @@ with st.sidebar:
 # === REEMPLAZAR EL BLOQUE OPTION_MENU POR ESTE ===
     selected = option_menu(
         menu_title=None,
-        options=["Inicio", "Objetivo Eco", "Fundamentos Eco", "Cronología Eco", "Fichas Técnicas", "Explorador Eco"],  # Agregamos la Página 7
-        icons=["house-door-fill", "target", "diagram-3-fill", "clock-history", "file-earmark-text-fill", "search-heart-fill"], # Ícono de lupa/explorador
+        options=["Inicio", "Objetivo Eco", "Fundamentos Eco", "Cronología Eco", "Fichas Técnicas", "Explorador Eco", "Impacto Eco"], # Agregamos la Página 8
+        icons=["house-door-fill", "target", "diagram-3-fill", "clock-history", "file-earmark-text-fill", "search-heart-fill", "activity"], # Ícono de impacto/actividad métrica
         menu_icon="cast",
         default_index=0,
         styles={
@@ -414,12 +414,6 @@ elif selected == "Objetivo Eco":
         </div>
     """, unsafe_allow_html=True)
     
-    # Footer institucional 
-    st.markdown("""
-        <div style="text-align: center; margin-top: 50px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
-            Proyecto Eco 2026 • Escuela de Educación Secundaria Técnica N°7 • República Argentina
-        </div>
-    """, unsafe_allow_html=True)
 # ==========================================
 # PÁGINA 3 — FUNDAMENTOS ECO
 # ==========================================
@@ -1138,5 +1132,247 @@ elif selected == "Explorador Eco":
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • Motor de Consultas Inteligente • E.E.S.T N°7
+        </div>
+    """, unsafe_allow_html=True)
+
+# ==========================================
+# PÁGINA 8 — IMPACTO ECO
+# ==========================================
+elif selected == "Impacto Eco":
+    
+    st.markdown('<div class="main-title">IMPACTO ECO</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Auditoría de Resultados Metodológicos, Alcance de Infraestructura y Métricas de Evolución</div>', unsafe_allow_html=True)
+
+    # Base de datos local para cálculos analíticos de impacto (Sincronizada con Fichas Avanzadas)
+    FICHAS_IMPACTO = {
+        "1": {"division": "EcoPaper", "concepto": "Sustentabilidad", "tipo": "Producto"},
+        "2": {"division": "EcoPaper", "concepto": "Reciclaje", "tipo": "Producto"},
+        "3": {"division": "EcoPaper", "concepto": "Sustentabilidad", "tipo": "Manual"},
+        "4": {"division": "EcoPaper", "concepto": "Reciclaje", "tipo": "Producto"},
+        "5": {"division": "EcoPaper", "concepto": "Sustentabilidad", "tipo": "Producto"},
+        "6": {"division": "EcoLab", "concepto": "Química", "tipo": "Experimento"},
+        "7": {"division": "EcoTech", "concepto": "Tecnología", "tipo": "Sistema Digital"},
+        "8": {"division": "EcoIndustria", "concepto": "Reciclaje", "tipo": "Producto"},
+        "9": {"division": "EcoIndustria", "concepto": "Tecnología", "tipo": "Producto"},
+        "10": {"division": "Transversal", "concepto": "Sustentabilidad", "tipo": "Sistema"},
+        "11": {"division": "EcoIndustria", "concepto": "Tecnología", "tipo": "Producto"},
+        "12": {"division": "EcoIndustria", "concepto": "Reciclaje", "tipo": "Producto"},
+        "13": {"division": "EcoIndustria", "concepto": "Reciclaje", "tipo": "Producto"},
+        "14": {"division": "EcoLab", "concepto": "Química", "tipo": "Experimento"},
+        "15": {"division": "EcoLab", "concepto": "Sustentabilidad", "tipo": "Experimento"},
+        "16": {"division": "EcoPaper", "concepto": "Reciclaje", "tipo": "Producto"},
+        "17": {"division": "EcoIndustria", "concepto": "Tecnología", "tipo": "Producto"},
+        "18": {"division": "EcoIndustria", "concepto": "Tecnología", "tipo": "Experimento"},
+        "19": {"division": "EcoPaper", "concepto": "Sustentabilidad", "tipo": "Sistema"},
+        "20": {"division": "EcoLab", "concepto": "Energía", "tipo": "Investigación"},
+        "21": {"division": "EcoLab", "concepto": "Química", "tipo": "Experimento"},
+        "22": {"division": "EcoLab", "concepto": "Energía", "tipo": "Investigación"},
+        "23": {"division": "EcoTech", "concepto": "Tecnología", "tipo": "Sistema Digital"},
+        "24": {"division": "EcoLab", "concepto": "Tecnología", "tipo": "Sistema"},
+    }
+
+    # SECCIÓN 1: INTRODUCCIÓN AL IMPACTO ECO
+    st.markdown('<div class="section-header">🌍 ¿Qué significa "Impacto" para Proyecto Eco?</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="glass-card" style="font-size: 16px; border-left: 5px solid #64FFDA; line-height:1.6;">
+        Para nuestra comunidad técnica, el <strong>Impacto Eco</strong> no es una simple métrica de kilos de papel acumulados en un depósito. Entendemos el impacto como una <strong>matriz sistémica e interdisciplinaria</strong>. Una verdadera solución ambiental es aquella que transforma la cultura de una institución, automatiza el acceso al conocimiento, promueve la regularidad del alumnado mediante incentivos de gestión y blinda los procesos para que trasciendan el ciclo lectivo vigente.
+        </div>
+    """, unsafe_allow_html=True)
+
+    # SECCIÓN 8: INDICADORES GENERALES (Panel de Control Analítico Inicial)
+    st.markdown('<div class="section-header">📊 1. Panel Global de Indicadores de Gestión (KPIs)</div>', unsafe_allow_html=True)
+    
+    # Pre-cálculos analíticos automáticos sobre el diccionario
+    num_fichas = len(FICHAS_IMPACTO)
+    num_conceptos = len(set(f["concepto"] for f in FICHAS_IMPACTO.values()))
+    num_experimentos = len([f for f in FICHAS_IMPACTO.values() if f["tipo"] in ["Experimento", "Investigación"]])
+    
+    col_k1, col_k2, col_k3, col_k4 = st.columns(4)
+    with col_k1:
+        st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:26px; font-weight:bold; color:#00E676;">{num_fichas}</span><br><span style="font-size:12px; color:#CFD8DC;">Fichas de Ingeniería</span></div>', unsafe_allow_html=True)
+    with col_k2:
+        st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:26px; font-weight:bold; color:#64FFDA;">{num_conceptos}</span><br><span style="font-size:12px; color:#CFD8DC;">Ejes Científicos</span></div>', unsafe_allow_html=True)
+    with col_k3:
+        st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:26px; font-weight:bold; color:#FFD54F;">{num_experimentos}</span><br><span style="font-size:12px; color:#CFD8DC;">Ensayos de Lab</span></div>', unsafe_allow_html=True)
+    with col_k4:
+        st.markdown('<div class="glass-card" style="text-align:center;"><span style="font-size:26px; font-weight:bold; color:#B9F6CA;">4</span><br><span style="font-size:12px; color:#CFD8DC;">Divisiones Activas</span></div>', unsafe_allow_html=True)
+
+    # SECCIÓN 2 & SECCIÓN 3: IMPACTO EN PARTICIPANTES Y CONOCIMIENTO
+    col_part, col_cono = st.columns(2)
+    
+    with col_part:
+        st.markdown('<div class="section-header">👥 2. Transformación Humana y Alumnado</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card" style="height: 310px;">
+                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:12px;">Métricas del Capital Humano Estructurado (4° 4°):</p>
+                <div class="info-item"><strong>Participantes Operativos Activos:</strong> El 100% de la división técnica involucrada en laboratorios.</div>
+                <div class="info-item"><strong>Alumnos Reconocidos Auditados:</strong> Sistema cerrado con asignación de puntaje por mérito técnico semanal.</div>
+                <div class="info-item"><strong>Estructura de Líderes de Celda:</strong> 4 Jefes de Sección encargados de velar por la seguridad y calidad en contraturno.</div>
+                <div class="info-item"><strong>Evolución Histórica:</strong> De una participación informal y fragmentada en 2025 a un organigrama de ingeniería industrial en 2026.</div>
+            </div>
+        """, unsafe_allow_html=True)
+        
+    with col_cono:
+        st.markdown('<div class="section-header">🧠 3. Capital Intelectual Producido</div>', unsafe_allow_html=True)
+        st.markdown(f"""
+            <div class="glass-card" style="height: 310px;">
+                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:12px;">Resultados de la Producción Científica Acumulada:</p>
+                <ul class="custom-list" style="font-size:14px; line-height:1.6;">
+                    <li><strong>Estandarización Absoluta:</strong> {num_fichas} protocolos subidos a la infraestructura de la nube.</li>
+                    <li><strong>Transferencia de Experiencia:</strong> Rompe la dependencia del personalismo docente; la información le pertenece al taller.</li>
+                    <li><strong>Recursos Libres Desarrollos:</strong> Repositorio abierto para que cursos entrantes sigan los manuales de procedimientos paso a paso.</li>
+                    <li><strong>Marcos Epistemológicos:</strong> Vinculación directa con papers de pirólisis, termodinámica y ciencias químicas básicas.</li>
+                </ul>
+            </div>
+        """, unsafe_allow_html=True)
+
+    # SECCIÓN 4: IMPACTO ORGANIZATIVO (Herramientas y Sistemas Propios)
+    st.markdown('<div class="section-header">🏗️ 4. Infraestructura Organizativa y Herramientas Creadas</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="glass-card">
+        <p style="margin-top:0; color:#A5D6A7; font-weight:600;">Sistemas de control lógico desarrollados desde cero para el soporte institucional:</p>
+        <table class="custom-table" style="font-size:14px;">
+            <thead>
+                <tr>
+                    <th style="width: 25%;">Sistema / Herramienta</th>
+                    <th style="width: 75%;">Función Operativa y Aporte Organizacional</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Los 7 Pilares Eco</strong></td>
+                    <td>La constitución dogmática técnica que audita que todo proyecto sea Continuo, Replicable y Medible.</td>
+                </tr>
+                <tr>
+                    <td><strong>Sistema de Reconocidos</strong></td>
+                    <td>Algoritmo de gamificación conductual que premia la regularidad, el orden de banco y los hitos de laboratorio.</td>
+                </tr>
+                <tr>
+                    <td><strong>El Flujo Eco</strong></td>
+                    <td>Protocolo logístico interno que conecta los residuos plásticos y de celulosa del colegio con las celdas de refinamiento.</td>
+                </tr>
+                <tr>
+                    <td><strong>Plataforma EcoWeb</strong></td>
+                    <td>Interfaz de software interactiva (Streamlit) utilizada para centralizar los indicadores ante entes evaluadores.</td>
+                </tr>
+                <tr>
+                    <td><strong>Módulo EcoIA</strong></td>
+                    <td>Entrenamiento de matrices de prompts para la asistencia automática en el diseño formal de nuevas fichas de ingeniería.</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # SECCIÓN 5: IMPACTO POR SECCIÓN (Distribución analítica automatizada de cargas técnicas)
+    st.markdown('<div class="section-header">🏢 5. Rendimiento Operativo Descentralizado por División</div>', unsafe_allow_html=True)
+    
+    col_s1, col_s2, col_s3, col_s4 = st.columns(4)
+    
+    with col_s1:
+        st.markdown("""
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(0, 230, 118, 0.2); padding: 15px; border-radius: 10px; height: 260px;">
+                <h4 style="margin:0 0 8px 0; color:#00E676; text-align:center;">EcoPapel</h4>
+                <p style="font-size:13px; color:#CFD8DC; line-height:1.4; margin:0;">
+                <strong>Fichas:</strong> N°1 al N°5, N°16, N°19.<br><br>
+                <strong>Eje:</strong> Recuperación de celulosa, Papel Seed de germinación y acuñación de Eco-Dollars.<br><br>
+                <strong>Resultado:</strong> Sustitución total de hojas en desuso de preceptoría.
+                </p>
+            </div>
+        """, unsafe_allow_html=True)
+        
+    with col_s2:
+        st.markdown("""
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(100, 255, 218, 0.2); padding: 15px; border-radius: 10px; height: 260px;">
+                <h4 style="margin:0 0 8px 0; color:#64FFDA; text-align:center;">EcoLab</h4>
+                <p style="font-size:13px; color:#CFD8DC; line-height:1.4; margin:0;">
+                <strong>Fichas:</strong> N°6, N°14, N°15, N°20, N°21, N°22, N°24.<br><br>
+                <strong>Eje:</strong> Pirólisis de Carbon Ink, ensayos de biogás metanogénico y soluciones salinas.<br><br>
+                <strong>Resultado:</strong> Validación química y control físico de tolerancias.
+                </p>
+            </div>
+        """, unsafe_allow_html=True)
+        
+    with col_s3:
+        st.markdown("""
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255, 213, 79, 0.2); padding: 15px; border-radius: 10px; height: 260px;">
+                <h4 style="margin:0 0 8px 0; color:#FFD54F; text-align:center;">EcoTech</h4>
+                <p style="font-size:13px; color:#CFD8DC; line-height:1.4; margin:0;">
+                <strong>Fichas:</strong> N°7, N°23.<br><br>
+                <strong>Eje:</strong> Algoritmia computacional, programación de la arquitectura digital y modelado de entornos virtuales en Minecraft (EcoMod).<br><br>
+                <strong>Resultado:</strong> Digitalización total del conocimiento operativo.
+                </p>
+            </div>
+        """, unsafe_allow_html=True)
+        
+    with col_s4:
+        st.markdown("""
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(165, 214, 167, 0.2); padding: 15px; border-radius: 10px; height: 260px;">
+                <h4 style="margin:0 0 8px 0; color:#A5D6A7; text-align:center;">EcoIndustria</h4>
+                <p style="font-size:13px; color:#CFD8DC; line-height:1.4; margin:0;">
+                <strong>Fichas:</strong> N°8, N°9, N°11, N°12, N°13, N°17, N°18.<br><br>
+                <strong>Eje:</strong> Matricería mecánica, upcycling estructural de TetraPak/PET y amplificadores acústicos.<br><br>
+                <strong>Resultado:</strong> Productos físicos de alta resistencia y utilidad escolar.
+                </p>
+            </div>
+        """, unsafe_allow_html=True)
+
+    # SECCIÓN 6 & SECCIÓN 7: IMPACTO AMBIENTAL Y EDUCATIVO
+    col_amb, col_edu = st.columns(2)
+    
+    with col_amb:
+        st.markdown('<div class="section-header">🍃 6. Vector e Impacto Ambiental Real</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card" style="height: 330px; border-left: 4px solid #00E676;">
+                <p style="margin-top:0; color:#B9F6CA; font-weight:600; margin-bottom:12px;">Efectos Directos en Sustentabilidad y Reciclaje Técnico:</p>
+                <div class="info-item">♻️ <strong>Mitigación de Desperdicio Rígido:</strong> Reciclado activo de botellas PET (cerdas para EcoTrash) y envases de TetraPak (EcoWallet impermeables).</div>
+                <div class="info-item">♻️ <strong>Tratamiento Térmico Controlado:</strong> Reutilización de celulosa residual sucia mediante pirólisis confinada para la generación de tinta escolar (Carbon Ink).</div>
+                <div class="info-item">♻️ <strong>Prácticas Promovidas:</strong> Concientización activa en la separación en origen dentro de los talleres y laboratorios de la E.E.S.T N°7.</div>
+            </div>
+        """, unsafe_allow_html=True)
+        
+    with col_edu:
+        st.markdown('<div class="section-header">🎓 7. Impacto Educativo e Interdisciplinar</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card" style="height: 330px; border-left: 4px solid #64FFDA;">
+                <p style="margin-top:0; color:#64FFDA; font-weight:600; margin-bottom:12px;">Habilidades Profesionales y Fusión de Saberes:</p>
+                <div class="info-item">🧠 <strong>Interdisciplinaridad Nativa:</strong> Amalgama orgánica de conceptos de Química Orgánica (EcoLab), Programación Estructurada (EcoTech), y Diseño de Procesos Industriales (EcoIndustria).</div>
+                <div class="info-item">🧠 <strong>Habilidades Técnicas Clave:</strong> Redacción de protocolos normalizados, manejo riguroso de variables experimentales y pensamiento crítico orientado a fallos.</div>
+                <div class="info-item">🧠 <strong>Aprendizaje Basado en Proyectos:</strong> El alumno deja de ser un receptor pasivo; se transforma en un diseñador activo de soluciones para su propia institución.</div>
+            </div>
+        """, unsafe_allow_html=True)
+
+    # SECCIÓN 9: PROYECCIÓN DE IMPACTO (Logrado vs Proyectado)
+    st.markdown('<div class="section-header">🔮 8. Matriz de Proyección Temática y Escalabilidad</div>', unsafe_allow_html=True)
+    
+    col_log, col_proy = st.columns(2)
+    with col_log:
+        st.markdown("""
+            <div style="background: rgba(76, 175, 80, 0.05); border: 1px solid #4CAF50; padding: 18px; border-radius: 12px; height: 180px;">
+                <h4 style="margin: 0 0 10px 0; color:#81C784;">✅ Impacto Logrado (Consolidado 2026)</h4>
+                <span style="font-size:14px; color:#E0E6ED; line-height:1.5;">
+                • Estructuración matemática de 24 fichas de ingeniería.<br>
+                • Lanzamiento funcional de la suite interactiva EcoWeb.<br>
+                • Sistema de control conductual y académico por Reconocidos operando.
+                </span>
+            </div>
+        """, unsafe_allow_html=True)
+        
+    with col_proy:
+        st.markdown("""
+            <div style="background: rgba(33, 150, 243, 0.05); border: 1px solid #2196F3; padding: 18px; border-radius: 12px; height: 180px;">
+                <h4 style="margin: 0 0 10px 0; color:#64B5F6;">🚀 Impacto Proyectado (Escalabilidad Futura)</h4>
+                <span style="font-size:14px; color:#E0E6ED; line-height:1.5;">
+                • Exportación de la base documental empaquetada a otras escuelas técnicas del distrito.<br>
+                • Migración del backend analítico hacia sensores IoT reales en tiempo de ejecución.<br>
+                • Expansión formal de la división EcoCommunity para inserción en comedores barriales.
+                </span>
+            </div>
+        """, unsafe_allow_html=True)
+
+    # Footer institucional
+    st.markdown("""
+        <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
+            Proyecto Eco 2026 • Auditoría General de Calidad y Resultados de Impacto • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
