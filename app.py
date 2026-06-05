@@ -5,120 +5,129 @@ from streamlit_option_menu import option_menu
 # CONFIGURACIÓN DE LA PÁGINA
 # ==========================================
 st.set_page_config(
-    page_title="EcoWeb 2.0 - Proyecto Eco",
+    page_title="EcoWeb 1.0 - Proyecto Eco",
     page_icon="🌱",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
 # ==========================================
-# INYECCIÓN DE INTERFAZ DE ALTO IMPACTO (CSS BLINDADO RESPONSIVE)
+# INYECCIÓN DE INTERFAZ DE ALTO IMPACTO (CSS FIJO Y RESPONSIVE)
 # ==========================================
-styles = """
-<style>
-/* --- FONDO GLOBAL ULTRA-PRO --- */
-.stApp {
-    background: linear-gradient(135deg, #0b2310 0%, #081018 50%, #05080c 100%) !important;
-    color: #E0E6ED !important;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-}
+st.markdown("""
+    <style>
+    /* Fondo con degradado fluido original */
+    .stApp {
+        background: linear-gradient(135deg, #0b2310 0%, #081018 50%, #05080c 100%) !important;
+        color: #E0E6ED !important;
+    }
+    
+    /* Estilo del menú lateral blur original */
+    [data-testid="stSidebar"] {
+        background-color: rgba(11, 25, 16, 0.9) !important;
+        backdrop-filter: blur(10px);
+        border-right: 1px solid rgba(46, 125, 50, 0.3);
+    }
 
-/* --- CONTENEDORES FLUIDOS --- */
-.main-container {
-    padding: 2% 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+    /* Títulos Principales en Degradado */
+    .main-title {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-size: 3.5rem !important;
+        font-weight: 800 !important;
+        background: linear-gradient(45deg, #00E676, #00B0FF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+        color: #81C784;
+        text-align: center;
+        margin-bottom: 40px;
+        font-weight: 300;
+    }
 
-/* --- CONTENEDOR DE TARJETAS (FLEXBOX ELÁSTICO) --- */
-.card-container {
-    display: flex;
-    flex-wrap: wrap; /* Si no entran en la pantalla del celu, bajan solas */
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
-    width: 100%;
-}
+    /* CONTENEDOR DE TARJETAS (Ahora adaptables) */
+    .card-container {
+        display: flex;
+        flex-wrap: wrap; /* Permite que bajen en el celu */
+        gap: 25px;
+        justify-content: center;
+        margin-top: 20px;
+        width: 100%;
+    }
 
-/* --- TARJETAS ESTILO GLASSMORPHISM OPTIMIZADAS --- */
-.pilar-card, .componente-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 25px;
-    flex: 1 1 300px; /* Base elástica para que se adapte al ancho */
-    max-width: 340px; 
-    box-sizing: border-box;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    word-wrap: break-word; /* Evita que el texto se salga del cuadro */
-    overflow-wrap: break-word;
-}
-
-.pilar-card:hover, .componente-card:hover {
-    transform: translateY(-5px);
-    border-color: #00ff88;
-    box-shadow: 0 12px 40px 0 rgba(0, 255, 136, 0.15);
-}
-
-/* --- ICONOS Y TEXTOS --- */
-.pilar-icon {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
-
-.pilar-title, .componente-title {
-    color: #00ff88 !important;
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 12px;
-}
-
-.pilar-desc, .componente-desc {
-    color: #a0aec0;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-/* --- CONTENEDOR DE TABLAS FLUIDAS (Para las fichas técnicas) --- */
-.table-responsive {
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    margin-top: 15px;
-    border-radius: 8px;
-}
-
-/* --- AJUSTES EXCLUSIVOS PARA PANTALLAS DE CELULARES --- */
-@media (max-width: 768px) {
+    /* TARJETAS ESTILO GLASSMORPHISM (Conservan tu estética, pero con ancho máximo fluido) */
     .pilar-card, .componente-card {
-        flex: 1 1 100%; /* En celu, cada tarjeta ocupa todo el ancho disponible */
-        max-width: 100%;
-        padding: 20px;
+        background: rgba(255, 255, 255, 0.03) !important;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 16px !important;
+        padding: 25px;
+        /* En PC mantienen los 320px aproximados, en celu se adaptan */
+        flex: 1 1 300px;
+        max-width: 320px;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        transition: transform 0.3s ease, border-color 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        /* PARCHE DE TEXTO: Evita que las palabras largas deformen la tarjeta */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
-    
+
+    .pilar-card:hover, .componente-card:hover {
+        transform: translateY(-5px);
+        border-color: #00E676 !important;
+        box-shadow: 0 12px 40px 0 rgba(0, 230, 118, 0.15);
+    }
+
+    .pilar-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
     .pilar-title, .componente-title {
-        font-size: 1.25rem;
+        color: #00E676 !important;
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 12px;
     }
-    
-    h1 {
-        font-size: 1.9rem !important;
-    }
-    
-    h2 {
-        font-size: 1.5rem !important;
-    }
-}
-</style>
-"""
 
-st.markdown(styles, unsafe_allow_html=True)
+    .pilar-desc, .componente-desc {
+        color: #B0BEC5;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
 
+    /* CONTENEDOR PARA PROTEGER LAS TABLAS EN CELULAR */
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* AJUSTES DE EMERGENCIA PARA PANTALLAS CHICAS (CELULARES) */
+    @media (max-width: 768px) {
+        .main-title {
+            font-size: 2.2rem !important; /* Achica el título en celu para que no desborde */
+        }
+        .pilar-card, .componente-card {
+            flex: 1 1 100% !important; /* Fuerza a ocupar todo el ancho del celu */
+            max-width: 100% !important;
+        }
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+# ==========================================
+# MENÚ LATERAL (SIDEBAR MODULAR)
+# ==========================================
 # ==========================================
 # MENÚ DE NAVEGACIÓN (A partir de acá sigue tu código igual)
 # ==========================================
