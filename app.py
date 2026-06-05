@@ -1910,61 +1910,16 @@ elif selected == "Preguntas Frecuentes":
     """, unsafe_allow_html=True)
     
 # ==========================================
-# PÁGINA 13 — ECOIA (SISTEMA INTEGRAL DE DETECCIÓN DE FICHAS)
+# PÁGINA 13 — ECOIA (REPARADA SIN NAMEERROR)
 # ==========================================
 elif selected == "EcoIA":
     st.markdown('<div class="main-title">ECOIA: NÚCLEO COGNITIVO</div>', unsafe_allow_html=True)
     st.markdown('<div class="subtitle">Modelado Lingüístico de Contraturno entrenado en Protocolos y Fichas Técnicas de Proyecto Eco</div>', unsafe_allow_html=True)
 
-    # Tarjeta de Contexto de Ingeniería de Prompts
-    st.markdown("""
-        <div class="glass-card" style="border-left: 5px solid #64FFDA; margin-bottom: 25px;">
-            <strong style="color:#64FFDA; font-size:16px;">🤖 Auditoría por Segmentación de Contexto</strong><br>
-            Este módulo interactivo detecta automáticamente mediante expresiones regulares qué ficha técnica estás consultando. 
-            Extrae de forma quirúrgica el texto correspondiente de la base de datos y alimenta el pipeline de <strong>Groq Cloud</strong> 
-            únicamente con ese fragmento para garantizar una respuesta exacta y libre de alucinaciones.
-        </div>
-    """, unsafe_allow_html=True)
-
-    # Inicializar el historial de conversación en la sesión de Streamlit para persistencia visual
-    if "messages_ecoia" not in st.session_state:
-        st.session_state.messages_ecoia = []
-
-    # Bloque UI del Chat - Entrada y Salida unificada
-    col_input, col_info = st.columns([7, 3])
-
-    with col_info:
-        st.markdown("""
-            <div class="glass-card" style="height: 340px; font-size: 13px;">
-                <p style="margin-top:0; color:#00E676; font-weight:600; margin-bottom:10px;">🎯 Sugerencias de Auditoría:</p>
-                Hacé clic o inspirate en estos prompts técnicos para interrogar al núcleo cognitivo:
-                <hr style="border:0; border-top:1px solid rgba(255,255,255,0.08); margin:8px 0;">
-                <ul style="padding-left:15px; margin:0; display:flex; flex-direction:column; gap:8px; color:#B0BEC5;">
-                    <li><i>"Explicame detalladamente la ficha 1"</i></li>
-                    <li><i>"¿Cuál es el procedimiento de la ficha 14?"</i></li>
-                    <li><i>"¿Qué impacto ambiental tiene la ficha 19?"</i></li>
-                </ul>
-            </div>
-        """, unsafe_allow_html=True)
-
-    with col_input:
-        # Caja de texto interactiva estilizada de Streamlit
-        user_query = st.text_input("📝 Ingresá tu consulta técnica para EcoIA:", placeholder="Escribí acá tu pregunta (Ej: explicame la ficha 14)...", key="ecoia_input_text")
-        
-        btn_enviar = st.button("🚀 Procesar Inferencia", use_container_width=True)
-
-        if btn_enviar and user_query:
-            # INTERCEPCIÓN DINÁMICA DE CREDENCIALES
-            api_key_groq = ""
-            if "GROQ_API_KEY" in st.secrets:
-                api_key_groq = st.secrets["GROQ_API_KEY"]
-            elif os.getenv("GROQ_API_KEY"):
-                api_key_groq = os.getenv("GROQ_API_KEY")
-
-            # -------------------------------------------------------------
-            # 📜 DICCIONARIO GIGANTE: HACÉ TU COPY-PASTE ACÁ ADENTRO 👇
-            # -------------------------------------------------------------
-                TEXTO_COMPLETO_FICHAS = {
+    # -----------------------------------------------------------------
+    # 📜 BASE DE DATOS GLOBAL: EL DICCIONARIO VA ACÁ (FUERA DEL BOTÓN)
+    # -----------------------------------------------------------------
+        TEXTO_COMPLETO_FICHAS = {
         "1": """
         FICHA TÉCNICA #1: PAPEL SEED (Sección: EcoPapel)
         1. CONCEPTO: Papel artesanal biodegradable que contiene semillas en su interior. Cuando se entierra en tierra húmeda, el papel se descompone y las semillas germinan, dando flores o hortalizas.
@@ -2507,9 +2462,52 @@ elif selected == "EcoIA":
         10. MEJORAS Y PROYECCIÓN FUTURA: Integración modular con sensores adicionales de última generación para medir concentración de Dióxido de Carbono (CO₂) e intensidad lumínica (Lux). Implementación de una base de datos web para almacenar el registro histórico digital de la evolución biológica. Versión modular automatizada para recrear múltiples ecosistemas y biomas. Desarrollo como un recurso interactivo y aplicación educativa transversal para las clases de ciencias naturales y tecnología.
         """,
     }
-            # -------------------------------------------------------------
+    # -----------------------------------------------------------------
 
-            # Insertar la consulta del usuario al historial visual antes del proceso
+    # Tarjeta de Contexto de Ingeniería de Prompts
+    st.markdown("""
+        <div class="glass-card" style="border-left: 5px solid #64FFDA; margin-bottom: 25px;">
+            <strong style="color:#64FFDA; font-size:16px;">🤖 Auditoría por Segmentación de Contexto</strong><br>
+            Este módulo interactivo detecta automáticamente mediante expresiones regulares qué ficha técnica estás consultando. 
+            Extrae de forma quirúrgica el texto correspondiente de la base de datos y alimenta el pipeline de <strong>Groq Cloud</strong> 
+            únicamente con ese fragmento para garantizar una respuesta exacta y libre de alucinaciones.
+        </div>
+    """, unsafe_allow_html=True)
+
+    # Inicializar el historial de conversación en la sesión
+    if "messages_ecoia" not in st.session_state:
+        st.session_state.messages_ecoia = []
+
+    # Bloque UI del Chat - Entrada y Salida unificada
+    col_input, col_info = st.columns([7, 3])
+
+    with col_info:
+        st.markdown("""
+            <div class="glass-card" style="height: 340px; font-size: 13px;">
+                <p style="margin-top:0; color:#00E676; font-weight:600; margin-bottom:10px;">🎯 Sugerencias de Auditoría:</p>
+                Hacé clic o inspirate en estos prompts técnicos para interrogar al núcleo cognitivo:
+                <hr style="border:0; border-top:1px solid rgba(255,255,255,0.08); margin:8px 0;">
+                <ul style="padding-left:15px; margin:0; display:flex; flex-direction:column; gap:8px; color:#B0BEC5;">
+                    <li><i>"Explicame detalladamente la ficha 1"</i></li>
+                    <li><i>"¿Cuál es el procedimiento de la ficha 14?"</i></li>
+                    <li><i>"¿Qué impacto ambiental tiene la ficha 19?"</i></li>
+                </ul>
+            </div>
+        """, unsafe_allow_html=True)
+
+    with col_input:
+        user_query = st.text_input("📝 Ingresá tu consulta técnica para EcoIA:", placeholder="Escribí acá tu pregunta (Ej: explicame la ficha 14)...", key="ecoia_input_text")
+        btn_enviar = st.button("🚀 Procesar Inferencia", use_container_width=True)
+
+        if btn_enviar and user_query:
+            # INTERCEPCIÓN DINÁMICA DE CREDENCIALES
+            api_key_groq = ""
+            if "GROQ_API_KEY" in st.secrets:
+                api_key_groq = st.secrets["GROQ_API_KEY"]
+            elif os.getenv("GROQ_API_KEY"):
+                api_key_groq = os.getenv("GROQ_API_KEY")
+
+            # Insertar la consulta del usuario al historial visual
             st.session_state.messages_ecoia.append({"role": "user", "content": user_query})
 
             # Algoritmo de detección por Expresiones Regulares (Misma lógica de tu código 1.0)
@@ -2520,7 +2518,6 @@ elif selected == "EcoIA":
 
             for numero, contenido_completo in TEXTO_COMPLETO_FICHAS.items():
                 patron_exacto = rf"\bficha\s+{numero}\b"
-                # Si dice "ficha 14", "ficha14" o si el usuario tipea directamente el número solo "14"
                 if re.search(patron_exacto, query_minusculas) or numero == query_minusculas.strip():
                     ficha_detectada_contenido = contenido_completo
                     numero_ficha_encontrada = numero
@@ -2538,19 +2535,17 @@ elif selected == "EcoIA":
                     "====================================================="
                 )
             else:
-                # Contexto global por si pregunta algo genérico del colegio sin especificar ficha
                 system_prompt = (
                     "Actuás como EcoIA, la inteligencia artificial oficial de Proyecto Eco de la escuela E.E.S.T N°7. "
                     "Respondé con tono formal, científico y de ingeniería. Como no especificaron una ficha técnica concreta en la pregunta, "
                     "respondé usando tus conocimientos generales sobre las celdas del colegio (EcoPapel, EcoLab, EcoTech, EcoIndustria) de forma prudente y profesional."
                 )
 
-            # Enviar a la infraestructura de Groq si hay credenciales válidas
+            # Enviar a Groq Cloud
             if api_key_groq != "":
                 with st.spinner("🧠 Extrayendo segmento de la batea de datos y ejecutando inferencia..."):
                     try:
                         from groq import Groq
-                        
                         client = Groq(api_key=api_key_groq)
                         
                         completion = client.chat.completions.create(
@@ -2559,7 +2554,7 @@ elif selected == "EcoIA":
                                 {"role": "system", "content": system_prompt},
                                 {"role": "user", "content": user_query}
                             ],
-                            temperature=0.2, # Súper baja para obligarlo a ser ultra exacto con tu texto
+                            temperature=0.2,
                             max_tokens=1024
                         )
                         respuesta_ia = completion.choices[0].message.content
@@ -2575,7 +2570,7 @@ elif selected == "EcoIA":
                     respuesta_fallback = f"🤖 **[EcoIA - Modo Offline]:** Procesé tu consulta sobre la ficha. Activá `GROQ_API_KEY` para conectar con el modelo Llama."
                     st.session_state.messages_ecoia.append({"role": "assistant", "content": respuesta_fallback})
 
-    # Renderizado elegante e histórico del Chat
+    # Renderizado elegante e histórico del Chat (Acá abajo es donde se rompía porque no encontraba el diccionario)
     if st.session_state.messages_ecoia:
         st.markdown('<p style="color:#A5D6A7; font-size:14px; margin-top:20px; margin-bottom:10px; font-weight:600;">📜 Flujo de la Conversación Actual:</p>', unsafe_allow_html=True)
         
@@ -2595,7 +2590,7 @@ elif selected == "EcoIA":
                     </div>
                 """, unsafe_allow_html=True)
 
-    # Footer de la página
+    # Footer
     st.markdown("""
         <div style="text-align: center; margin-top: 50px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • Suite EcoIA Operativa v2.0 • Procesamiento de Lenguaje Natural en Escuelas Técnicas • E.E.S.T N°7
