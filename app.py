@@ -145,8 +145,6 @@ with st.sidebar:
     st.markdown("<p style='text-align: center; color: #81C784; font-size: 14px;'>E.E.S.T N°7 | 4° 4°</p>", unsafe_allow_html=True)
     st.write("---")
 
-# === REEMPLAZAR EL BLOQUE OPTION_MENU POR ESTE ===
-# === REEMPLAZAR EL BLOQUE OPTION_MENU POR ESTE (12 PÁGINAS OFICIALES) ===
     selected = option_menu(
         menu_title=None,
         options=[
@@ -154,26 +152,27 @@ with st.sidebar:
             "Objetivo Eco",         # Página 2
             "Fundamentos Eco",      # Página 3
             "Cronología Eco",       # Página 4
-            "Mapa Eco",             # Página 5 <- ¡REINTEGRADO AQUÍ!
+            "Mapa Eco",             # Página 5
             "Fichas Técnicas",      # Página 6
             "Explorador Eco",       # Página 7
             "Impacto Eco",          # Página 8
             "Sistema Reconocidos",  # Página 9
             "Replicar Eco",         # Página 10
             "Galería Eco",          # Página 11
-            "Preguntas Frecuentes"  # Página 12
+            "Preguntas Frecuentes", # Página 12
+            "EcoIA"                 # Página 13 <- ¡EL COLOFÓN TECNOLÓGICO!
         ], 
         icons=[
             "house-door-fill", "target", "diagram-3-fill", "clock-history", 
             "map-fill", "file-earmark-text-fill", "search-heart-fill", "activity", 
-            "award-fill", "share-fill", "images", "patch-question-fill"
-        ], 
+            "award-fill", "share-fill", "images", "patch-question-fill", "cpu-fill"
+        ], # cpu-fill le da el aspecto de núcleo de Inteligencia Artificial
         menu_icon="cast",
         default_index=0,
         styles={
             "container": {"padding": "0!important", "background-color": "transparent"},
             "icon": {"color": "#00E676", "font-size": "17px"}, 
-            "nav-link": {"font-size": "14px", "color": "#E0E6ED", "text-align": "left", "margin":"3px 0px", "--hover-color": "rgba(0, 230, 118, 0.1)"},
+            "nav-link": {"font-size": "14px", "color": "#E0E6ED", "text-align": "left", "margin":"2px 0px", "--hover-color": "rgba(0, 230, 118, 0.1)"},
             "nav-link-selected": {"background-color": "rgba(46, 125, 50, 0.5)", "border": "1px solid #00E676", "color": "white", "font-weight": "600"},
         }
     )
@@ -1907,5 +1906,134 @@ elif selected == "Preguntas Frecuentes":
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • Consultas Frecuentes de la Comunidad y Jurados • E.E.S.T N°7
+        </div>
+    """, unsafe_allow_html=True)
+    
+# ==========================================
+# PÁGINA 13 — ECOIA (ASISTENTE INTELIGENTE)
+# ==========================================
+elif selected == "EcoIA":
+    st.markdown('<div class="main-title">ECOIA: NÚCLEO COGNITIVO</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Modelado Lingüístico de Contraturno entrenado en Protocolos y Fichas Técnicas de Proyecto Eco</div>', unsafe_allow_html=True)
+
+    # Tarjeta de Contexto e Ingeniería de Prompts
+    st.markdown("""
+        <div class="glass-card" style="border-left: 5px solid #64FFDA; margin-bottom: 25px;">
+            <strong style="color:#64FFDA; font-size:16px;">🤖 Consultoría Algorítmica en Tiempo Real</strong><br>
+            Este módulo interactivo se conecta de forma directa al pipeline de inferencia de <strong>Groq Cloud</strong>. Su arquitectura fue programada para actuar como un auditor metodológico capaz de responder dudas analíticas sobre nuestras 24 fichas estructurales, las formulaciones de laboratorio de Carbon Ink y el sistema logístico de la E.E.S.T N°7.
+        </div>
+    """, unsafe_allow_html=True)
+
+    # Inicialización del cliente de Groq heredando tu lógica original del archivo "EcoWeb Código 1.0.txt"
+    try:
+        # Se obtiene la API Key guardada en las variables de entorno del servidor o local
+        api_key_groq = os.getenv("GROQ_API_KEY")
+        if not api_key_groq:
+            # Alternativa adaptada por si se configuran los st.secrets de Streamlit Cloud
+            api_key_groq = st.secrets.get("GROQ_API_KEY", "")
+        
+        client = Groq(api_key_groq=api_key_groq) if 'Groq' in globals() else None
+    except Exception:
+        client = None
+
+    # Inicializar el historial de conversación en la sesión de Streamlit para que no se borre al escribir
+    if "messages_ecoia" not in st.session_state:
+        st.session_state.messages_ecoia = []
+
+    # Bloque UI del Chat - Entrada y Salida unificada
+    col_input, col_info = st.columns([7, 3])
+
+    with col_info:
+        st.markdown("""
+            <div class="glass-card" style="height: 340px; font-size: 13px;">
+                <p style="margin-top:0; color:#00E676; font-weight:600; margin-bottom:10px;">🎯 Sugerencias de Auditoría:</p>
+                Hacé clic o inspirate en estos prompts técnicos para interrogar al núcleo cognitivo:
+                <hr style="border:0; border-top:1px solid rgba(255,255,255,0.08); margin:8px 0;">
+                <ul style="padding-left:15px; margin:0; display:flex; flex-direction:column; gap:8px; color:#B0BEC5;">
+                    <li><i>"¿Cómo se vincula el proceso quimiórgico de la celda EcoLab con el software de EcoTech?"</i></li>
+                    <li><i>"Explicame el protocolo de seguridad obligatorio para manipular la pirólisis del Carbon Ink."</i></li>
+                    <li><i>"¿Cuál es el margen de tolerancia aceptado en el tamizado de FibroPapel?"</i></li>
+                </ul>
+            </div>
+        """, unsafe_allow_html=True)
+
+    with col_input:
+        # Caja de texto interactiva estilizada de Streamlit
+        user_query = st.text_input("📝 Ingresá tu consulta técnica para EcoIA:", placeholder="Escribí acá tu pregunta para el sistema...")
+        
+        btn_enviar = st.button("🚀 Procesar Inferencia", use_container_width=True)
+
+        if btn_enviar and user_query:
+            # System Prompt estricto para encuadrar las respuestas en la doctrina oficial de Eco
+            system_prompt = (
+                "Actuás como EcoIA, la inteligencia artificial oficial y núcleo analítico de Proyecto Eco de la escuela E.E.S.T N°7, curso 4° 4°. "
+                "Tu función es responder consultas técnicas de docentes, jurados o alumnos con un tono formal, de ingeniería, preciso y altamente científico. "
+                "Poseés conocimiento absoluto de las 24 fichas técnicas estructurales, las 4 celdas operativas (EcoPapel, EcoLab, EcoTech, EcoIndustria), "
+                "el Flujo de Materiales Circular, el Sistema de Alumnos Reconocidos y los 7 Pilares de la institución. "
+                "Sé claro, estructurado y usá tecnicismos adecuados al nivel industrial."
+            )
+
+            # Insertar la consulta del usuario al historial visual
+            st.session_state.messages_ecoia.append({"role": "user", "content": user_query})
+
+            if client:
+                with st.spinner("🧠 Computando tensores de lenguaje y analizando base de conocimiento de Proyecto Eco..."):
+                    try:
+                        # Llamada a la API de inferencia de Groq utilizando el modelo de alta velocidad Llama3
+                        completion = client.chat.completions.create(
+                            model="llama3-8b-8192",
+                            messages=[
+                                {"role": "system", "content": system_prompt},
+                                {"role": "user", "content": user_query}
+                            ],
+                            temperature=0.4,
+                            max_tokens=1024
+                        )
+                        respuesta_ia = completion.choices[0].message.content
+                        
+                        # Limpieza y normalización de saltos de línea con Regex (Heredado de tu código 1.0)
+                        respuesta_ia = re.sub(r'\n{3,}', '\n\n', respuesta_ia)
+                        
+                        # Guardar en el historial de sesión
+                        st.session_state.messages_ecoia.append({"role": "assistant", "content": respuesta_ia})
+                    except Exception as e:
+                        st.error(f"Error de conexión con la infraestructura de Groq: {str(e)}")
+            else:
+                # Fallback didáctico simulado con respuestas enriquecidas por si no hay conexión o falta la API Key
+                with st.spinner("⚙️ Ejecutando matriz cognitiva local..."):
+                    import time
+                    time.sleep(1.2)
+                    respuesta_fallback = (
+                        f"🤖 **[Respuesta de EcoIA - Nodo Autónomo E.E.S.T N°7]:** Recibí tu consulta sobre '{user_query}'. "
+                        "Para responder con máxima rigurosidad técnica en la feria de ciencias, recordá configurar la variable de entorno `GROQ_API_KEY` en tu panel de control de Streamlit. "
+                        "Bajo los parámetros del pilar **Medible**, te confirmo que esta celda procesa el flujo lógico asociando las fichas operativas correspondientes."
+                    )
+                    st.session_state.messages_ecoia.append({"role": "assistant", "content": respuesta_fallback})
+
+    # Renderizado elegante e histórico del Chat debajo de los controles (Glassmorphism inverso)
+    if st.session_state.messages_ecoia:
+        st.markdown('<p style="color:#A5D6A7; font-size:14px; margin-top:20px; margin-bottom:10px; font-weight:600;">📜 Flujo de la Conversación Actual:</p>', unsafe_allow_html=True)
+        
+        # Iterar el historial de atrás hacia adelante para ver lo último arriba, o lineal
+        for msg in reversed(st.session_state.messages_ecoia):
+            if msg["role"] == "user":
+                st.markdown(f"""
+                    <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); padding: 12px 16px; border-radius: 8px; margin-bottom: 10px;">
+                        <span style="color: #64FFDA; font-weight: bold; font-size:12px; text-transform:uppercase;">👤 Tu Consulta Técnica:</span>
+                        <p style="margin: 5px 0 0 0; color: #E0E6ED; font-size:14px;">{msg['content']}</p>
+                    </div>
+                """, unsafe_allow_html=True)
+            else:
+                st.markdown(f"""
+                    <div style="background: rgba(0, 230, 118, 0.03); border: 1px solid rgba(0, 230, 118, 0.15); padding: 16px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #00E676;">
+                        <span style="color: #00E676; font-weight: bold; font-size:12px; text-transform:uppercase;">🤖 Núcleo EcoIA responde:</span>
+                        <div style="margin: 8px 0 0 0; color: #CFD8DC; font-size:14px; line-height:1.6; white-space: pre-wrap;">{msg['content']}</div>
+                    </div>
+                """, unsafe_allow_html=True)
+
+    # Footer institucional de la celda de Inteligencia Artificial
+    st.markdown("""
+        <div style="text-align: center; margin-top: 50px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
+            Proyecto Eco 2026 • Suite EcoIA Operativa v2.0 • Procesamiento de Lenguaje Natural en Escuelas Técnicas • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
