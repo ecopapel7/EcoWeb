@@ -12,7 +12,7 @@ st.set_page_config(
 )
 
 # ==========================================
-# INYECCIÓN DE INTERFAZ DE ALTO IMPACTO (CSS FIJO Y RESPONSIVE)
+# INYECCIÓN DE INTERFAZ DE ALTO IMPACTO (CSS REAL RESPONSIVE)
 # ==========================================
 st.markdown("""
     <style>
@@ -49,39 +49,38 @@ st.markdown("""
         font-weight: 300;
     }
 
-    /* CONTENEDOR DE TARJETAS (Ahora adaptables) */
+    /* CONTENEDOR DE TARJETAS ORIGINAL (Flexbox elástico seguro) */
     .card-container {
         display: flex;
-        flex-wrap: wrap; /* Permite que bajen en el celu */
+        flex-wrap: wrap !important;
         gap: 25px;
         justify-content: center;
         margin-top: 20px;
         width: 100%;
     }
 
-    /* TARJETAS ESTILO GLASSMORPHISM (Conservan tu estética, pero con ancho máximo fluido) */
-    .pilar-card, .componente-card {
+    /* TUS CLASES DE TARJETAS ORIGINALES (Fijamos la base y evitamos desborde) */
+    .glass-card, .tech-card, .metric-card, .pilar-card, .componente-card {
         background: rgba(255, 255, 255, 0.03) !important;
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
         border-radius: 16px !important;
-        padding: 25px;
-        /* En PC mantienen los 320px aproximados, en celu se adaptan */
+        padding: 25px !important;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+        
+        /* Esto hace que en PC mantengan su tamaño original */
         flex: 1 1 300px;
         max-width: 320px;
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-        transition: transform 0.3s ease, border-color 0.3s ease;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        box-sizing: border-box !important;
         
-        /* PARCHE DE TEXTO: Evita que las palabras largas deformen la tarjeta */
-        word-wrap: break-word;
-        overflow-wrap: break-word;
+        /* Evita que los textos largos ensanchen la tarjeta hacia los costados */
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
     }
 
-    .pilar-card:hover, .componente-card:hover {
+    .glass-card:hover, .tech-card:hover, .metric-card:hover {
         transform: translateY(-5px);
         border-color: #00E676 !important;
         box-shadow: 0 12px 40px 0 rgba(0, 230, 118, 0.15);
@@ -112,52 +111,35 @@ st.markdown("""
         -webkit-overflow-scrolling: touch;
     }
 
-    /* AJUSTES DE EMERGENCIA PARA PANTALLAS CHICAS (CELULARES) */
-    @media (max-width: 768px) {
-        .main-title {
-            font-size: 2.2rem !important; /* Achica el título en celu para que no desborde */
-        }
-        .pilar-card, .componente-card {
-            flex: 1 1 100% !important; /* Fuerza a ocupar todo el ancho del celu */
-            max-width: 100% !important;
-        }
-    }
     /* ==========================================
-       PARCHE RESPONSIVE MÓVIL DE EMERGENCIA
+       PARCHE EXCLUSIVO PARA CELULARES (PANTALLAS CHICAS)
        ========================================== */
-    
-    /* Hace que los textos largos se quiebren y no ensanchen la caja */
-    .glass-card, .tech-card, .metric-card {
-        word-wrap: break-word !important;
-        overflow-wrap: break-word !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Cuando se abre en un celular (pantallas menores a 768px) */
     @media (max-width: 768px) {
-        /* Forzamos a las tarjetas a que dejen de tener ancho fijo en píxeles y usen el 100% */
-        .glass-card, .tech-card, .metric-card {
-            width: 100% !important;
-            min-width: 100% !important;
-            max-width: 100% !important;
-            padding: 15px !important; /* Achicamos un toque el margen interno */
-            margin-left: 0 !important;
-            margin-right: 0 !important;
+        /* Reducimos títulos para que entren en la pantalla del celular */
+        .main-title {
+            font-size: 2.1rem !important;
         }
-
-        /* Si usás flexbox o filas en HTML, esto las obliga a apilarse verticalmente */
-        div[style*="display: flex"], div[style*="display:flex"] {
-            flex-direction: column !important;
-            align-items: center !important;
-            width: 100% !important;
-        }
-        
-        /* Evita que los títulos gigantes deformen el diseño en teléfonos */
-        h1, .main-title {
+        h1 {
             font-size: 2rem !important;
         }
         h2 {
-            font-size: 1.5rem !important;
+            font-size: 1.4rem !important;
+        }
+        
+        /* Forzamos a que CADA tarjeta ocupe el ancho completo de la pantalla del celular */
+        .glass-card, .tech-card, .metric-card, .pilar-card, .componente-card {
+            width: 100% !important;
+            min-width: 100% !important;
+            max-width: 100% !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            padding: 18px !important;
+        }
+        
+        /* Parche específico para las filas de tarjetas que hiciste con HTML */
+        .card-container {
+            flex-direction: column !important;
+            align-items: center !important;
         }
     }
     </style>
