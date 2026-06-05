@@ -145,10 +145,11 @@ with st.sidebar:
     st.markdown("<p style='text-align: center; color: #81C784; font-size: 14px;'>E.E.S.T N°7 | 4° 4°</p>", unsafe_allow_html=True)
     st.write("---")
 
+# === REEMPLAZAR EL BLOQUE OPTION_MENU POR ESTE ===
     selected = option_menu(
         menu_title=None,
-        options=["Inicio", "Objetivo Eco", "Fundamentos Eco"],  # Agregamos la Página 3
-        icons=["house-door-fill", "target", "diagram-3-fill"],   # Ícono de red/diagrama para fundamentos
+        options=["Inicio", "Objetivo Eco", "Fundamentos Eco", "Cronología Eco"],  # Agregamos la Página 4
+        icons=["house-door-fill", "target", "diagram-3-fill", "clock-history"],   # Ícono de reloj histórico
         menu_icon="cast",
         default_index=0,
         styles={
@@ -606,5 +607,172 @@ elif selected == "Fundamentos Eco":
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • Arquitectura Metodológica del Ecosistema • E.E.S.T N°7
+        </div>
+    """, unsafe_allow_html=True)
+# ==========================================
+# PÁGINA 4 — CRONOLOGÍA ECO
+# ==========================================
+elif selected == "Cronología Eco":
+    
+    st.markdown('<div class="main-title">CRONOLOGÍA ECO</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Evolución Histórica, Hitos de Ingeniería y Línea Temporal del Ecosistema</div>', unsafe_allow_html=True)
+    
+    # SECCIÓN 1: INTRODUCCIÓN
+    st.markdown('<div class="section-header">⏳ ¿Por qué existe una cronología del proyecto?</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="glass-card" style="font-size: 17px; line-height: 1.6; border-left: 5px solid #00E676;">
+        Escribir la historia de <strong>Proyecto Eco</strong> es fundamental para validar su <strong>continuidad</strong> y mejora constante. El ecosistema actual no surgió de un día para el otro; es el resultado de un proceso orgánico de <strong>evolución</strong>, aprendizaje institucional y resiliencia técnica, donde los errores de fases previas se transformaron en la ingeniería del presente.
+        </div>
+    """, unsafe_allow_html=True)
+
+    # SECCIÓN 2: COMPARATIVA DE EVOLUCIÓN (Tabla Premium de Transformación estructural)
+    st.markdown('<div class="section-header">📊 1. Matriz de Transformación Institucional</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="glass-card" style="padding: 10px 20px 20px 20px;">
+        <table class="custom-table">
+            <thead>
+                <tr>
+                    <th style="width: 20%;">Variable Operativa</th>
+                    <th style="width: 40%; background: rgba(239, 83, 80, 0.2); color: #FFCDD2;">Fase Origen: EcoPapel (2025)</th>
+                    <th style="width: 40%; background: rgba(76, 175, 80, 0.2); color: #C8E6C9;">Fase Actual: Proyecto Eco (2026)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Secciones Activas</strong></td>
+                    <td>1 Sola división (Producción artesanal de papel).</td>
+                    <td><span style="color:#00E676; font-weight:bold;">4 Divisiones</span> (EcoPapel, EcoLab, EcoTech, EcoIndustria).</td>
+                </tr>
+                <tr>
+                    <td><strong>Estructura Técnica</strong></td>
+                    <td>Actividades guiadas sueltas sin estandarizar.</td>
+                    <td><span style="color:#00E676; font-weight:bold;">24 Fichas Técnicas</span> normalizadas de ingeniería.</td>
+                </tr>
+                <tr>
+                    <td><strong>Gestión del Alumnado</strong></td>
+                    <td>Participación voluntaria informal y dispersa.</td>
+                    <td><span style="color:#00E676; font-weight:bold;">Sistema de Reconocidos</span> con auditoría y puntaje semanal.</td>
+                </tr>
+                <tr>
+                    <td><strong>Infraestructura Digital</strong></td>
+                    <td>Inexistente (Registros en formato papel/físico).</td>
+                    <td><span style="color:#00E676; font-weight:bold;">Ecosistema Digital</span> (EcoWeb, Modelado IA, Servidores de consulta).</td>
+                </tr>
+                <tr>
+                    <td><strong>Alcance Científico</strong></td>
+                    <td>Reciclaje básico y concientización interna.</td>
+                    <td>Desarrollo de hardware IoT, pirólisis química y economía circular activa.</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # SECCIÓN 3 y SECCIÓN 4: ORIGEN VS TRANSFORMACIÓN (Columnas paralelas)
+    col_orig, col_trans = st.columns(2)
+    
+    with col_orig:
+        st.markdown('<div class="section-header">🌱 2. El Origen: EcoPapel 2025</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card" style="height: 330px;">
+                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:12px;">El chispazo inicial del proyecto:</p>
+                <div class="info-item"><strong>Año de Nacimiento:</strong> Marz-Nov 2025.</div>
+                <div class="info-item"><strong>Contexto y Problema:</strong> Se detectó un desperdicio masivo de hojas, carpetas y cartones en los cestos de la escuela técnica, sin ningún tratamiento de reciclado.</div>
+                <div class="info-item"><strong>Objetivo Inicial:</strong> Recuperar esa celulosa escolar para fabricar hojas artesanales e incorporarles semillas nativas (Papel Seed).</div>
+                <div class="info-item"><strong>Características:</strong> Un grupo reducido de alumnos experimentando con licuadoras caseras y bastidores de madera rústicos.</div>
+            </div>
+        """, unsafe_allow_html=True)
+        
+    with col_trans:
+        st.markdown('<div class="section-header">🔄 3. La Gran Ruptura y Evolución</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card" style="height: 330px;">
+                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:12px;">¿Por qué dejamos de ser solo "EcoPapel"?</p>
+                <div class="info-item"><span style="color:#FFD54F; font-weight:bold;">⚠️ El Quiebre:</span> Al cerrar el ciclo lectivo 2025, se vio que si los alumnos clave se egresaban, las técnicas se perdían y las licuadoras quedaban arrumbadas.</div>
+                <div class="info-item"><span style="color:#00E676; font-weight:bold;">🧠 Mutación Sistémica:</span> Nace la necesidad imperiosa de crear los <strong>7 Pilares Eco</strong> (Continuo, Replicable, Medible...) para que el proyecto trascienda a las personas.</div>
+                <div class="info-item"><span style="color:#00E676; font-weight:bold;">🏢 Expansión de Fronteras:</span> Al querer optimizar el papel, se requirió química (EcoLab), automatización (EcoTech) y moldes mecánicos complejos (EcoIndustria). El residuo se volvió engranaje.</div>
+            </div>
+        """, unsafe_allow_html=True)
+
+    # SECCIÓN 5: LÍNEA TEMPORAL SECUENCIAL CRONOLÓGICA
+    st.markdown('<div class="section-header">📅 4. Línea de Tiempo Histórica Oficial</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="glass-card">
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #81C784;">
+                    <span style="color:#81C784; font-weight:bold;">Marzo 2025 • Fundación de EcoPapel 🧪</span><br>
+                    <span style="font-size:14px; color:#E0E6ED;">Primeros ensayos de reciclado de celulosa en contraturno. <strong>Importancia:</strong> Estableció la viabilidad del upcycling escolar.</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #A5D6A7;">
+                    <span style="color:#A5D6A7; font-weight:bold;">Noviembre 2025 • Primera Muestra Técnica 📑</span><br>
+                    <span style="font-size:14px; color:#E0E6ED;">Presentación del "Manual del Reciclador" físico. <strong>Importancia:</strong> Se detectó el peligro de perder el conocimiento si no se digitalizaba el avance.</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #4CAF50;">
+                    <span style="color:#4CAF50; font-weight:bold;">Marzo 2026 • Redacción de los 7 Pilares ⚖️</span><br>
+                    <span style="font-size:14px; color:#E0E6ED;">Se decreta la matriz conceptual obligatoria. Nace formalmente el concepto de "Proyecto Eco". <strong>Importancia:</strong> Blindaje metodológico transgeneracional.</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #00E676;">
+                    <span style="color:#00E676; font-weight:bold;">Mayo 2026 • Despliegue de la Arquitectura Digital y EcoWeb 🌐</span><br>
+                    <span style="font-size:14px; color:#E0E6ED;">Desarrollo de las interfaces en Streamlit, codificación de las 24 fichas de ingeniería y lanzamiento de los primeros prompts de EcoIA. <strong>Importancia:</strong> Democratización total del acceso técnico.</span>
+                </div>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # SECCIÓN 6: HITOS CRÍTICOS (Los 3 momentos clave de quiebre técnico)
+    st.markdown('<div class="section-header">🏆 5. Hitos de Mayor Impacto Tecnológico</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 25px;">
+            <div style="background: rgba(0, 230, 118, 0.03); border: 1px solid rgba(0, 230, 118, 0.2); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                <span style="font-size: 24px;">🚀</span> <h4 style="margin: 10px 0 5px 0; color:#B9F6CA;">Paso de Taller a Sistema</h4>
+                <p style="font-size:14px; margin:0; color:#E0E6ED;">La creación de las 4 divisiones paralelas interconectadas mediante el <em>Flujo Eco</em>, rompiendo la linealidad del reciclaje tradicional.</p>
+            </div>
+            <div style="background: rgba(0, 230, 118, 0.03); border: 1px solid rgba(0, 230, 118, 0.2); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                <span style="font-size: 24px;">📋</span> <h4 style="margin: 10px 0 5px 0; color:#B9F6CA;">Estandarización de 24 Fichas</h4>
+                <p style="font-size:14px; margin:0; color:#E0E6ED;">La conversión de simples ideas en protocolos científicos rígidos de ingeniería, asegurando el pilar <strong>Replicable</strong> de la solución.</p>
+            </div>
+            <div style="background: rgba(0, 230, 118, 0.03); border: 1px solid rgba(0, 230, 118, 0.2); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                <span style="font-size: 24px;">💎</span> <h4 style="margin: 10px 0 5px 0; color:#B9F6CA;">El Algoritmo de Control</h4>
+                <p style="font-size:14px; margin:0; color:#E0E6ED;">La implementación de software interactivo (EcoWeb) y simulación analítica de datos como centro neurálgico del Proyecto.</p>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # SECCIÓN 7 & SECCIÓN 8: SITUACIÓN ACTUAL VS PROYECCIÓN FUTURA
+    col_act, col_fut = st.columns(2)
+    
+    with col_act:
+        st.markdown('<div class="section-header">📍 6. Estado y Situación Actual</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card" style="height: 310px; border-left: 4px solid #00E676;">
+                <p style="margin-top:0; color:#B9F6CA; font-weight:600; margin-bottom:15px;">Métricas consolidadas en tiempo real (2026):</p>
+                <ul class="custom-list">
+                    <li><strong>4 Secciones Técnicas</strong> operando en sincronía en las aulas-taller.</li>
+                    <li><strong>7 Pilares Rectores</strong> auditando el 100% de los desarrollos.</li>
+                    <li><strong>24 Fichas Estructurales</strong> completadas y subidas a la nube de EcoWeb.</li>
+                    <li><strong>Herramientas Activas:</strong> Interfaz Streamlit, Base documental en la nube, Módulo de prompts EcoIA.</li>
+                    <li><strong>Equipo Estable:</strong> Alumnos de 4° 4° encuadrados en el esquema riguroso de Reconocidos.</li>
+                </ul>
+            </div>
+        """, unsafe_allow_html=True)
+        
+    with col_fut:
+        st.markdown('<div class="section-header">🔮 7. Visión de Crecimiento y Proyecciones</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card" style="height: 310px; border-left: 4px solid #64FFDA;">
+                <p style="margin-top:0; color:#64FFDA; font-weight:600; margin-bottom:15px;">Hacia dónde se proyecta el engranaje sistémico:</p>
+                <ul class="custom-list">
+                    <li><strong>Nuevas Fichas:</strong> Indexar hasta 40 protocolos técnicos abarcando biodigestores complejos.</li>
+                    <li><strong>Replicación Institucional:</strong> Exportar los manuales empaquetados para implementarlos en otras escuelas técnicas del distrito.</li>
+                    <li><strong>Expansión Digital:</strong> Evolucionar la plataforma hacia una aplicación móvil de monitoreo IoT nativa.</li>
+                    <li><strong>EcoCommunity:</strong> Lanzar de forma oficial la división de extensión e impacto en barrios y comedores de la zona.</li>
+                </ul>
+            </div>
+        """, unsafe_allow_html=True)
+
+    # Footer institucional
+    st.markdown("""
+        <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
+            Proyecto Eco 2026 • Registro Histórico y Memoria Técnica Evolutiva • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
