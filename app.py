@@ -148,8 +148,8 @@ with st.sidebar:
 # === REEMPLAZAR EL BLOQUE OPTION_MENU POR ESTE ===
     selected = option_menu(
         menu_title=None,
-        options=["Inicio", "Objetivo Eco", "Fundamentos Eco", "Cronología Eco"],  # Agregamos la Página 4
-        icons=["house-door-fill", "target", "diagram-3-fill", "clock-history"],   # Ícono de reloj histórico
+        options=["Inicio", "Objetivo Eco", "Fundamentos Eco", "Cronología Eco", "Fichas Técnicas"],  # Mantenemos el orden
+        icons=["house-door-fill", "target", "diagram-3-fill", "clock-history", "file-earmark-text-fill"], # Ícono de documento técnico
         menu_icon="cast",
         default_index=0,
         styles={
@@ -159,6 +159,7 @@ with st.sidebar:
             "nav-link-selected": {"background-color": "rgba(46, 125, 50, 0.5)", "border": "1px solid #00E676", "color": "white", "font-weight": "600"},
         }
     )
+    
     st.write("---")
     st.caption("Feria Tecnológica 2026")
 
@@ -774,5 +775,197 @@ elif selected == "Cronología Eco":
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • Registro Histórico y Memoria Técnica Evolutiva • E.E.S.T N°7
+        </div>
+    """, unsafe_allow_html=True)
+    
+# ==========================================
+# PÁGINA 6 — FICHAS TÉCNICAS
+# ==========================================
+elif selected == "Fichas Técnicas":
+    
+    st.markdown('<div class="main-title">FICHAS TÉCNICAS</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Biblioteca de Conocimiento Estandarizado y Protocolos de Ingeniería Sustentable</div>', unsafe_allow_html=True)
+    
+    # Diccionario Oficial de Fichas del Proyecto
+    FICHAS = {
+        "1": {"titulo": "Papel Seed", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1S5sREmBrapKftJM5z8iZjtj46rLXer0t/view?usp=sharing", "desc": "Papel artesanal biodegradable con semillas incorporadas."},
+        "2": {"titulo": "FibroPapel", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1JV_LZ_25r-gyqP27gndXCKweqzovfaiN/view?usp=sharing", "desc": "Papel compuesto reforzado con fibras textiles de algodón."},
+        "3": {"titulo": "Manual del Reciclador", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1icRZmLchhPNXkbqHRKe3rsGF2yQdsXHq/view?usp=sharing", "desc": "Documento técnico educativo 100% sustentable."},
+        "4": {"titulo": "Marca-Páginas", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1LVUYPIBTA6mY61HVtQn7f15ud1sw-3Rv/view?usp=sharing", "desc": "Souvenir funcional de cartón recuperado."},
+        "5": {"titulo": "Eco-Carrier", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1q2m3efrr3WPZtJ_a__8YZ6m42nK-3y31/view?usp=sharing", "desc": "Bolsas estructurales que reemplazan el plástico de un solo uso."},
+        "6": {"titulo": "Colorantes Naturales", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1EGy35MOOpkKR3-ksINjzhkurokfqwdWz/view?usp=sharing", "desc": "Extracción de pigmentos puros de residuos vegetales y cáscaras."},
+        "7": {"titulo": "EcoIA", "division": "EcoTech", "drive_url": "https://drive.google.com/file/d/1H0seDIImClVjA5UrHELyucapO9DzXrHH/view?usp=sharing", "desc": "Asistente inteligente de documentación técnica y auditoría sustentable."},
+        "8": {"titulo": "Organizadores Ecomodulares", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1sJP_u9-UgqRWkXk3f3PsvUVzLCa93Uow/view?usp=sharing", "desc": "Sistemas de ordenamiento de escritorio mediante latas y tubos."},
+        "9": {"titulo": "Eco-Estelar", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/15qlgSz3v6YOLmHTWVmubTMknKM0WVUNS/view?usp=sharing", "desc": "Lámparas decorativas perforadas mediante técnica avanzada de congelado."},
+        "10": {"titulo": "EcoChallenge", "division": "Transversal", "drive_url": "https://drive.google.com/file/d/1n6C2rPadtw662DZfogxJagQrbVvhem90/view?usp=sharing", "desc": "Sistema transversal de desafíos interactivos aplicable a todas las áreas."},
+        "11": {"titulo": "Eco-Hidro", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1q5ImtWBOhHfztDthNQs1yPdmIiK3zZYJ/view?usp=sharing", "desc": "Módulo de riego autónomo por capilaridad optimizado en botellas PET."},
+        "12": {"titulo": "EcoTrash", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1XdaHhW7Z5nzfBHBr3dj7I-N0HNQuLp8k/view?usp=sharing", "desc": "Escoba técnica de alta resistencia construida con cerdas de PET alineadas."},
+        "13": {"titulo": "EcoWallet", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1xWXIx2TAa1QJU2izv0KwqhtEiZSo4GvW/view?usp=sharing", "desc": "Billetera impermeable mediante upcycling estructurado de Tetra Pak."},
+        "14": {"titulo": "Carbon Ink", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1njzGFWQbRuRo-_ucORzZMYceuOE6uoOt/view?usp=sharing", "desc": "Tinta negra premium obtenida por pirólisis controlada de papel sucio."},
+        "15": {"titulo": "Nendo Dango", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1NO2FaJdNvlYZA9X8PKMSUAZ8gXJ4PzG8/view?usp=sharing", "desc": "Bolas de arcilla, sustrato y semillas para reforestación masiva guiada."},
+        "16": {"titulo": "EcoWear", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1tDOsmBio3hPoLzTVGfHzaauTz-wmhEtf/view?usp=sharing", "desc": "Cuentas estructurales y elementos decorativos de papel enrollado."},
+        "17": {"titulo": "Eco-Voz", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1xh5hOjk_HXqaMcFr431Od3z15norhe1q/view?usp=sharing", "desc": "Amplificador acústico pasivo diseñado en cartón corrugado."},
+        "18": {"titulo": "Cañón Vortex", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1h8tS94N0edR9Tw7GU94dummpULnt32zi/view?usp=sharing", "desc": "Generador físico de anillos de aire para demostración de dinámica de fluidos."},
+        "19": {"titulo": "Eco-Dollars", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1xQSQpyuVH-YSgtjWZYahVeterC99rX70/view?usp=sharing", "desc": "Sistema monetario de economía circular impreso sobre papel reciclado propio."},
+        "20": {"titulo": "EcoVolt", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1OmhWYiMxZvxMxHFRO7slATfgt_Brwhui/view?usp=sharing", "desc": "Generación teórica de energía limpia aprovechando el gradiente salino (agua dulce y salada)."},
+        "21": {"titulo": "EcoCristales", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1jQwwWbwoUoq3xlcBYY5aVB1WoOieLQ30/view?usp=sharing", "desc": "Cristalización de alumbre orientada al estudio de la geometría química."},
+        "22": {"titulo": "Biogás", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1m4l9L2Y5sXrWz2KlmgfjfDii76ZwBtS6/view?usp=sharing", "desc": "Investigación avanzada sobre digestión anaeróbica y captura de metano."},
+        "23": {"titulo": "EcoMod", "division": "EcoTech", "drive_url": "https://drive.google.com/file/d/13qfQNtrsH1iAjTEAck-LrFfluuHgZZGf/view?usp=sharing", "desc": "Transforma mecánicas de juego en procesos interactivos de reciclaje, producción sustentable y economía circular (EcoDollars) para un aprendizaje activo en Minecraft."},
+        "24": {"titulo": "TerrarIA", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1P3r5UlcdPS4KWDcuYPN45qJWmD_KTBDu/view?usp=sharing", "desc": "Ecosistema cerrado automatizado y monitoreado por matrices de sensores."},
+    }
+
+    # SECCIÓN 1 & SECCIÓN 2: DEFINICIÓN Y APORTES OPERATIVOS
+    col_def, col_por = st.columns(2)
+    
+    with col_def:
+        st.markdown('<div class="section-header">📄 1. ¿Qué es una Ficha Técnica Eco?</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card" style="height: 330px;">
+                <p style="margin-top:0; color:#00E676; font-weight:600; margin-bottom:15px;">Definición y Estandarización de Ingeniería:</p>
+                Es un <strong>documento normalizado estricto</strong> que registra de manera exacta los datos, fórmulas, flujos y materiales requeridos para replicar y optimizar una actividad o recurso del sistema.
+                <br><br>
+                <span style="color:#FFD54F; font-weight:bold;">⚠️ Ruptura de conceptos tradicionales:</span>
+                <ul style="margin-top:5px; padding-left:20px; font-size:14px; color:#E0E6ED;">
+                    <li><strong>No es un apunte:</strong> No contiene anotaciones informales o fragmentadas.</li>
+                    <li><strong>No es un informe:</strong> No narra un suceso pasado; es una guía de ejecución viva.</li>
+                    <li><strong>No es una presentación:</strong> No resume ideas superficiales para exposición visual.</li>
+                </ul>
+            </div>
+        """, unsafe_allow_html=True)
+        
+    with col_por:
+        st.markdown('<div class="section-header">🛡️ 2. ¿Por qué usamos Fichas Técnicas?</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card" style="height: 330px;">
+                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:15px;">Problemas de la educación tradicional que soluciona:</p>
+                <div class="info-item"><span style="color:#64FFDA;">✦</span> <strong>Mitiga la fuga de cerebros:</strong> Evita la pérdida del conocimiento acumulado cuando los alumnos de último año egresan.</div>
+                <div class="info-item"><span style="color:#64FFDA;">✦</span> <strong>Destruye personalismos:</strong> El proyecto ya no depende de un alumno o docente líder específico; la ficha empodera a cualquiera.</div>
+                <div class="info-item"><span style="color:#64FFDA;">✦</span> <strong>Garantiza Continuidad:</strong> Permite retomar un desarrollo exactamente en el mismo punto técnico donde se dejó el ciclo anterior.</div>
+            </div>
+        """, unsafe_allow_html=True)
+
+    # SECCIÓN 3: ESTRUCTURA OFICIAL (Desplegables de anatomía de una ficha)
+    st.markdown('<div class="section-header">📐 3. Anatomía Estructural de los Documentos</div>', unsafe_allow_html=True)
+    st.markdown('<p style="color:#A5D6A7; margin-bottom:12px;">Cada una de las 24 fichas del sistema se redacta bajo la misma matriz de campos obligatorios:</p>', unsafe_allow_html=True)
+    
+    with st.expander("🔍 Ver Campos Estructurales Obligatorios"):
+        st.markdown("""
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; font-size: 14px;">
+                <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:6px;"><strong>1. Concepto:</strong> El marco científico y teórico base que sustenta la actividad.</div>
+                <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:6px;"><strong>2. Objetivo:</strong> Qué resultado medible y tangible busca alcanzar el prototipo.</div>
+                <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:6px;"><strong>3. Materiales:</strong> Listado exacto, pesado y cubicado de insumos requeridos.</div>
+                <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:6px;"><strong>4. Procedimiento:</strong> Algoritmo paso a paso detallado para la manufactura o ensayo.</div>
+                <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:6px;"><strong>5. Actividad del Equipo:</strong> Rol y asignación de tareas específicas en el laboratorio.</div>
+                <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:6px;"><strong>6. Criterios de Calidad:</strong> Tolerancias y puntos de control para validar el producto.</div>
+                <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:6px;"><strong>7. Impacto Ambiental:</strong> Análisis de mitigación de huella de carbono o residuo.</div>
+                <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:6px;"><strong>8. Datos Técnicos:</strong> Gráficas, constantes físicas o métricas obtenidas experimentalmente.</div>
+                <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:6px;"><strong>9. Costo y Viabilidad:</strong> Presupuesto financiero desglosado de producción.</div>
+                <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:6px;"><strong>10. Proyección Futura:</strong> Próximas líneas de optimización o automatización planeadas.</div>
+                <div style="background:rgba(255,255,255,0.02); padding:10px; border-radius:6px;"><strong>11. Marco Ampliado:</strong> Enlaces a papers científicos o referencias externas.</div>
+            </div>
+        """, unsafe_allow_html=True)
+
+    # SECCIÓN 5 & SECCIÓN 6: RELACIÓN PILARES Y CICLO DE VIDA (Columnas paralelas)
+    col_pil, col_cicl = st.columns([4, 6])
+    
+    with col_pil:
+        st.markdown('<div class="section-header">⚖️ 4. Vinculación con los Pilares</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card" style="height: 340px;">
+                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:12px;">Cómo validan los 7 Pilares:</p>
+                <div style="font-size:13.5px; line-height:1.5;">
+                    • <strong>Replicable:</strong> Permiten reproducir el conocimiento en cualquier lugar.<br>
+                    • <strong>Continuo:</strong> Transmiten la experiencia intacta entre generaciones.<br>
+                    • <strong>Medible:</strong> Fijan y asientan datos duros y resultados auditables.<br>
+                    • <strong>Experimental:</strong> Son la bitácora viva donde se asientan las mejoras de los fallos.
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+        
+    with col_cicl:
+        st.markdown('<div class="section-header">🔄 5. Ciclo de Vida de una Ficha</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card" style="height: 340px; display:flex; flex-direction:column; justify-content:center;">
+                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:15px; text-align:center;">Flujo Evolutivo del Documento:</p>
+                <div style="display:flex; justify-content:space-between; align-items:center; text-align:center; font-size:12.5px;">
+                    <div style="background:rgba(255,255,255,0.03); padding:8px; border-radius:6px; width:15%;"><strong>Idea</strong><br><span style="color:#64FFDA;">Captura</span></div>
+                    <div style="color:#00E676;">➔</div>
+                    <div style="background:rgba(255,255,255,0.03); padding:8px; border-radius:6px; width:16%;"><strong>Desarrollo</strong><br><span style="color:#00E676;">Laboratorio</span></div>
+                    <div style="color:#00E676;">➔</div>
+                    <div style="background:rgba(255,255,255,0.03); padding:8px; border-radius:6px; width:15%;"><strong>Prueba</strong><br><span style="color:#B9F6CA;">Ensayo</span></div>
+                    <div style="color:#00E676;">➔</div>
+                    <div style="background:rgba(255,255,255,0.03); padding:8px; border-radius:6px; width:18%;"><strong>Documentación</strong><br><span style="color:#69F0AE;">Ficha</span></div>
+                    <div style="color:#00E676;">➔</div>
+                    <div style="background:rgba(255,255,255,0.03); padding:8px; border-radius:6px; width:15%;"><strong>Mejora</strong><br><span style="color:#A5D6A7;">Optimización</span></div>
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+
+    # SECCIÓN 4 & SECCIÓN 7: BIBLIOTECA DE CONOCIMIENTO (La base interactiva con tus links)
+    st.markdown('<div class="section-header">📚 6. Biblioteca Interactiva: Base Documental del Ecosistema</div>', unsafe_allow_html=True)
+    st.markdown('<p style="color:#A5D6A7; margin-bottom:15px;">Filtra y accede directamente a los documentos de ingeniería alojados de forma segura en Google Drive:</p>', unsafe_allow_html=True)
+    
+    # Buscador por texto
+    busqueda = st.text_input("🔍 Buscar ficha por nombre o palabra clave...", "").lower()
+    
+    # Pestañas de filtrado por divisiones oficiales
+    tab_todas, tab_papel, tab_lab, tab_tech, tab_ind, tab_trans = st.tabs([
+        "Todas las Fichas", "EcoPapel", "EcoLab", "EcoTech", "EcoIndustria", "Transversales"
+    ])
+    
+    # Función para renderizar las tarjetas de fichas de manera hiper-limpia
+    def renderizar_fichas(division_filtro=None):
+        contador = 0
+        for num, data in FICHAS.items():
+            # Filtro por división
+            if division_filtro and data["division"] != division_filtro:
+                continue
+            # Filtro por transversalidad
+            if division_filtro == "Transversal" and data["division"] != "Transversal":
+                continue
+            # Filtro por barra de búsqueda
+            if busqueda and (busqueda not in data["titulo"].lower() and busqueda not in data["desc"].lower()):
+                continue
+                
+            contador += 1
+            # Renderizado premium estilo glass
+            st.markdown(f"""
+                <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(165, 214, 167, 0.15); border-radius: 12px; padding: 18px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <span style="background: rgba(0, 230, 118, 0.15); color: #00E676; padding: 3px 8px; border-radius: 5px; font-size: 12px; font-weight: bold; text-transform: uppercase;">Ficha {num} • {data['division']}</span>
+                        <h4 style="margin: 8px 0 4px 0; color: #FFFFFF; font-size:18px;">{data['titulo']}</h4>
+                        <p style="margin: 0; color: #B0BEC5; font-size: 14px;">{data['desc']}</p>
+                    </div>
+                    <div>
+                        <a href="{data['drive_url']}" target="_blank" style="text-decoration: none;">
+                            <button style="background: rgba(46, 125, 50, 0.6); color: white; border: 1px solid #00E676; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s;">
+                                Open Drive ↗
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            """, unsafe_allow_html=True)
+            
+        if contador == 0:
+            st.warning("No se encontraron fichas técnicas que coincidan con la búsqueda.")
+
+    # Ejecución de la lógica en cada pestaña correspondiente
+    with tab_todas:
+        renderizar_fichas()
+    with tab_papel:
+        renderizar_fichas("EcoPapel")
+    with tab_lab:
+        renderizar_fichas("EcoLab")
+    with tab_tech:
+        renderizar_fichas("EcoTech")
+    with tab_ind:
+        renderizar_fichas("EcoIndustria")
+    with tab_trans:
+        renderizar_fichas("Transversal")
+
+    # Footer institucional
+    st.markdown("""
+        <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
+            Proyecto Eco 2026 • Repositorio Abierto de Propiedad Intelectual Comunitario • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
