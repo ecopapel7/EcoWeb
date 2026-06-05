@@ -144,11 +144,11 @@ with st.sidebar:
     st.markdown("<h3 style='text-align: center; color: #B9F6CA; margin-bottom: 0;'>Ecosistema Eco 2026</h3>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center; color: #81C784; font-size: 14px;'>E.E.S.T N°7 | 4° 4°</p>", unsafe_allow_html=True)
     st.write("---")
-    
+
     selected = option_menu(
         menu_title=None,
-        options=["Inicio", "Objetivo Eco"],  # Agregamos la nueva página aquí
-        icons=["house-door-fill", "target"], # Ícono de tiro al blanco para Objetivo Eco
+        options=["Inicio", "Objetivo Eco", "Fundamentos Eco"],  # Agregamos la Página 3
+        icons=["house-door-fill", "target", "diagram-3-fill"],   # Ícono de red/diagrama para fundamentos
         menu_icon="cast",
         default_index=0,
         styles={
@@ -416,5 +416,195 @@ elif selected == "Objetivo Eco":
     st.markdown("""
         <div style="text-align: center; margin-top: 50px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • Escuela de Educación Secundaria Técnica N°7 • República Argentina
+        </div>
+    """, unsafe_allow_html=True)
+# ==========================================
+# PÁGINA 3 — FUNDAMENTOS ECO
+# ==========================================
+elif selected == "Fundamentos Eco":
+    
+    st.markdown('<div class="main-title">FUNDAMENTOS ECO</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Estructura Metodológica, Matrices de Flujo y Marcos Conceptuales del Sistema</div>', unsafe_allow_html=True)
+    
+    # SECCIÓN 1: INTRODUCCIÓN A LOS FUNDAMENTOS
+    st.markdown('<div class="section-header">🧠 ¿Cómo funciona Proyecto Eco?</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="glass-card" style="font-size: 17px; line-height: 1.6; border-left: 5px solid #00E676;">
+        El éxito y la trascendencia de <strong>Proyecto Eco</strong> no radican únicamente en la ejecución de actividades aisladas o en el armado de fichas técnicas. El núcleo operativo se sostiene sobre una <strong>infraestructura de fundamentos organizativos interconectados</strong>. Estos pilares, flujos de procesos y conceptos científicos garantizan que el proyecto se mantenga activo, perfectamente estructurado y listo para ser replicado en cualquier institución educativa.
+        </div>
+    """, unsafe_allow_html=True)
+
+    # SECCIÓN 2: LOS 7 PILARES (Desplegable interactivo premium para feria)
+    st.markdown('<div class="section-header">🏛️ 1. Los 7 Pilares: ¿Qué características debe cumplir el proyecto?</div>', unsafe_allow_html=True)
+    st.markdown('<p style="color:#A5D6A7; margin-bottom:15px;">Haz clic en cada pilar para auditar sus definiciones, funciones y aplicaciones prácticas en el mundo real:</p>', unsafe_allow_html=True)
+    
+    pilares_data = {
+        "♻️ Replicable": {
+            "def": "Capacidad de ser adaptado e implementado en otras instituciones educativas sin depender de infraestructura compleja.",
+            "fun": "Estandariza los procesos para que cualquier escuela técnica o secundaria pueda adoptar el modelo rápidamente.",
+            "ej": "Fichas técnicas en formato abierto y manuales paso a paso de libre acceso en EcoWeb."
+        },
+        "🌿 Sustentable": {
+            "def": "Desarrollo que equilibra el impacto ambiental, social y el uso racional de recursos disponibles.",
+            "fun": "Garantiza que cada dispositivo o recurso creado reduzca de forma real la huella ecológica institucional.",
+            "ej": "Construcción del Módulo Eco-Hidro utilizando exclusivamente botellas PET recuperadas y descarte escolar."
+        },
+        "🔄 Circular": {
+            "def": "Modelo de diseño enfocado en la eliminación de residuos mediante el upcycling y el aprovechamiento continuo.",
+            "fun": "Cierra los ciclos de vida de los materiales de descarte, convirtiendo la salida de un proceso en la entrada de otro.",
+            "ej": "Producción de Carbon Ink (tinta premium) procesando el descarte y sobrantes inservibles de EcoPapel."
+        },
+        "⏳ Continuo": {
+            "def": "Garantía de preservación y avance del proyecto a través del tiempo, mitigando el recambio generacional.",
+            "fun": "Evita la pérdida de conocimiento crítico cuando las camadas de estudiantes egresan de la institución.",
+            "ej": "La centralización histórica de planos, códigos y bitácoras experimentales dentro de esta plataforma."
+        },
+        "🧪 Experimental": {
+            "def": "Metodología basada en el ensayo, el error documentado, el análisis empírico y la optimización constante.",
+            "fun": "Fomenta el pensamiento científico y técnico, permitiendo aprender de los fallos de los prototipos.",
+            "ej": "Pruebas de congelado y perforación en el desarrollo de luminarias Eco-Estelar hasta dar con el espesor óptimo."
+        },
+        "📊 Medible": {
+            "def": "Capacidad de cuantificar y auditar los resultados, el rendimiento y el impacto ambiental directo.",
+            "fun": "Aporta rigor matemático y científico a las iniciativas mediante indicadores claros y tangibles.",
+            "ej": "Cálculo del volumen de agua optimizado por capilaridad o pesaje de kg de celulosa recuperada mensualmente."
+        },
+        "🤝 Interdisciplinario": {
+            "def": "Integración y convergencia de múltiples áreas del conocimiento (química, electrónica, informática, diseño).",
+            "fun": "Rompe el aislamiento de las materias escolares tradicionales, unificando saberes en pos de un desarrollo común.",
+            "ej": "El desarrollo de TerrarIA, donde interactúan programación de sensores, química del suelo y diseño estructural."
+        }
+    }
+
+    for name, info in pilares_data.items():
+        with st.expander(name):
+            st.markdown(f"""
+                <div style="padding: 10px; line-height: 1.6;">
+                    <p style="color:#B9F6CA; margin-bottom:5px;"><strong>Definition:</strong> {info['def']}</p>
+                    <p style="color:#E0E6ED; margin-bottom:5px;"><strong>Función en el Sistema:</strong> {info['fun']}</p>
+                    <p style="color:#81C784; margin-bottom:0;"><strong>⚡ Aplicación Práctica:</strong> {info['ej']}</p>
+                </div>
+            """, unsafe_allow_html=True)
+
+    # SECCIÓN 3: FLUJO ECO (Línea de proceso secuencial visualmente impactante)
+    st.markdown('<div class="section-header">🔄 2. El Flujo Eco: ¿Cómo circulan las ideas y actividades?</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="glass-card">
+            <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:20px;">Ciclo de Vida del Desarrollo Sustentable (Línea de Proceso):</p>
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div style="background: rgba(255,255,255,0.02); padding: 12px 18px; border-radius: 8px; border-left: 4px solid #64FFDA;">
+                    <span style="color:#64FFDA; font-weight:bold; font-size:16px;">Fase 1: Identificación y Captura 🎯</span><br>
+                    <span style="font-size:14.5px; color:#E0E6ED;">Se detecta un residuo institucional o una necesidad energética/ambiental. <strong>Función:</strong> Filtrar problemas reales bajo la óptica de los pilares ecológicos.</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.02); padding: 12px 18px; border-radius: 8px; border-left: 4px solid #00E676;">
+                    <span style="color:#00E676; font-weight:bold; font-size:16px;">Fase 2: Investigación y Laboratorio Experimental 🧪</span><br>
+                    <span style="font-size:14.5px; color:#E0E6ED;">Los estudiantes realizan ensayos químicos, físicos o lógicos de los materiales. <strong>Función:</strong> Validar la viabilidad técnica de la idea mediante prototipado rápido.</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.02); padding: 12px 18px; border-radius: 8px; border-left: 4px solid #B9F6CA;">
+                    <span style="color:#B9F6CA; font-weight:bold; font-size:16px;">Fase 3: Estandarización y Ficha Técnica 📋</span><br>
+                    <span style="font-size:14.5px; color:#E0E6ED;">Se redactan de forma rigurosa los pasos, herramientas y medidas de seguridad. <strong>Función:</strong> Traducir el experimento exitoso en un documento técnico auditable y replicable.</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.02); padding: 12px 18px; border-radius: 8px; border-left: 4px solid #69F0AE;">
+                    <span style="color:#69F0AE; font-weight:bold; font-size:16px;">Fase 4: Integración al Flujo Circular 🔄</span><br>
+                    <span style="font-size:14.5px; color:#E0E6ED;">El subproyecto resultante se vincula con el resto de las secciones. <strong>Función:</strong> Asegurar que los subproductos (como la moneda EcoDollars o las tintas) nutran el engranaje de otras divisiones.</span>
+                </div>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # SECCIÓN 4 & SECCIÓN 5: CONCEPTOS Y RELACIÓN DE FUNDAMENTOS
+    col_con, col_rel = st.columns([6, 4])
+    
+    with col_con:
+        st.markdown('<div class="section-header">🧪 3. Conceptos Eco: Marcos de Conocimiento</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card" style="height: 380px; overflow-y: auto;">
+                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:15px;">Conocimientos científicos aplicados por el sistema:</p>
+                <div class="info-item">
+                    <span class="info-bullet">📘</span><span class="info-tag">Upcycling (Reciclaje Avanzado):</span> Transformación de residuos en productos de mayor valor técnico o estético. <em>Área: Ecología / Diseño.</em>
+                </div>
+                <div class="info-item">
+                    <span class="info-bullet">📘</span><span class="info-tag">Pirólisis Controlada:</span> Degradación térmica de materiales orgánicos en ausencia de oxígeno. <em>Área: Química Aplicada.</em>
+                </div>
+                <div class="info-item">
+                    <span class="info-bullet">📘</span><span class="info-tag">Gradiente Salino:</span> Aprovechamiento de la diferencia de concentración de sal para generar energía teórica. <em>Área: Energías Limpias.</em>
+                </div>
+                <div class="info-item">
+                    <span class="info-bullet">📘</span><span class="info-tag">Automatización Ecosistémica:</span> Uso de matrices de sensores de hardware para controlar variables biológicas. <em>Área: Tecnología / IoT.</em>
+                </div>
+                <div class="info-item">
+                    <span class="info-bullet">📘</span><span class="info-tag">Economía de Circulación Abierta:</span> Sistemas monetarios propios impresos sobre recursos internos. <em>Área: Educación Ambiental / Economía Circular.</em>
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+        
+    with col_rel:
+        st.markdown('<div class="section-header">🔗 4. Interacción del Sistema</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card" style="height: 380px; display: flex; flex-direction: column; justify-content: center;">
+                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:15px; text-align:center;">¿Cómo trabajan juntos los fundamentos?</p>
+                <div style="background: rgba(0, 230, 118, 0.05); border: 1px dashed rgba(0, 230, 118, 0.3); padding: 15px; border-radius: 10px; text-align: center; margin-bottom: 12px;">
+                    <span style="color:#B9F6CA; font-weight:bold; font-size:16px;">1. LOS PILARES</span><br>
+                    <span style="font-size:13.5px; color:#E0E6ED;">Establecen las <strong>reglas y características</strong> obligatorias del sistema.</span>
+                </div>
+                <div style="background: rgba(100, 255, 218, 0.05); border: 1px dashed rgba(100, 255, 218, 0.3); padding: 15px; border-radius: 10px; text-align: center; margin-bottom: 12px;">
+                    <span style="color:#64FFDA; font-weight:bold; font-size:16px;">2. EL FLUJO ECO</span><br>
+                    <span style="font-size:13.5px; color:#E0E6ED;">Organiza el <strong>funcionamiento y ciclo de vida</strong> cronológico de las ideas.</span>
+                </div>
+                <div style="background: rgba(129, 199, 132, 0.05); border: 1px dashed rgba(129, 199, 132, 0.3); padding: 15px; border-radius: 10px; text-align: center;">
+                    <span style="color:#81C784; font-weight:bold; font-size:16px;">3. LOS CONCEPTOS</span><br>
+                    <span style="font-size:13.5px; color:#E0E6ED;">Aportan los <strong>conocimientos científicos y técnicos</strong> base utilizados.</span>
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+
+    # SECCIÓN 6: APLICACIÓN EN LAS SECCIONES TÉCNICAS
+    st.markdown('<div class="section-header">🏢 5. Aplicación Práctica en las Secciones Técnicas del Ecosistema</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="glass-card" style="padding: 10px 20px 20px 20px;">
+        <p style="color: #A5D6A7; margin-bottom: 15px;">Cómo se materializan transversalmente los fundamentos dentro de cada rama operativa de Proyecto Eco:</p>
+        <table class="custom-table">
+            <thead>
+                <tr>
+                    <th style="width: 20%;">Sección Técnica</th>
+                    <th style="width: 30%;">¿Qué hace?</th>
+                    <th style="width: 25%;">Aplicación de Pilares y Flujo</th>
+                    <th style="width: 25%;">Conceptos Clave Aplicados</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong style="color:#B9F6CA;">EcoPapel</strong></td>
+                    <td>Procesamiento y manufactura de papel artesanal reciclado y elementos derivados de la celulosa recuperada.</td>
+                    <td>Sustentable e Interdisciplinario. Estandariza su producción mediante fichas de secado y granulometría.</td>
+                    <td>Fibras vegetales, Celulosa recuperada, Biodegradabilidad, Inclusión de semillas nativas.</td>
+                </tr>
+                <tr>
+                    <td><strong style="color:#B9F6CA;">EcoLab</strong></td>
+                    <td>Área de experimentación química avanzada, obtención de insumos biológicos y análisis de energías alternativas.</td>
+                    <td>Experimental y Medible. Valida empíricamente la viabilidad científica antes de redactar manuales.</td>
+                    <td>Pirólisis, Extracción de pigmentos, Digestión anaeróbica, Gradiente salino, Cristalización.</td>
+                </tr>
+                <tr>
+                    <td><strong style="color:#B9F6CA;">EcoTech</strong></td>
+                    <td>División de desarrollo informático, algoritmia de Inteligencia Artificial, simulación virtual y hardware de monitoreo.</td>
+                    <td>Replicable y Continuo. Digitaliza el conocimiento del proyecto y crea interfaces interactivas accesibles.</td>
+                    <td>Modelado LLM (EcoIA), Internet de las Cosas (IoT), Matrices de sensores, Simulación interactiva (Minecraft).</td>
+                </tr>
+                <tr>
+                    <td><strong style="color:#B9F6CA;">EcoIndustria</strong></td>
+                    <td>Sección orientada al diseño y fabricación de dispositivos mecánicos, mobiliario modular y soluciones físicas a base de PET/Cartón.</td>
+                    <td>Circular y Sustentable. Transforma descartes estructurales duros en herramientas ergonómicas operativas.</td>
+                    <td>Upcycling estructural, Dinámica de fluidos, Amplificación acústica pasiva, Termofusión controlada.</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # Footer institucional 
+    st.markdown("""
+        <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
+            Proyecto Eco 2026 • Arquitectura Metodológica del Ecosistema • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
