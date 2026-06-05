@@ -146,24 +146,34 @@ with st.sidebar:
     st.write("---")
 
 # === REEMPLAZAR EL BLOQUE OPTION_MENU POR ESTE ===
+# === REEMPLAZAR EL BLOQUE OPTION_MENU POR ESTE (12 PÁGINAS OFICIALES) ===
     selected = option_menu(
         menu_title=None,
         options=[
-            "Inicio", "Objetivo Eco", "Fundamentos Eco", "Cronología Eco", 
-            "Fichas Técnicas", "Explorador Eco", "Impacto Eco", 
-            "Sistema Reconocidos", "Replicar Eco", "Galería Eco", "Preguntas Frecuentes"
-        ], # Agregadas Páginas 11 y 12
+            "Inicio",               # Página 1
+            "Objetivo Eco",         # Página 2
+            "Fundamentos Eco",      # Página 3
+            "Cronología Eco",       # Página 4
+            "Mapa Eco",             # Página 5 <- ¡REINTEGRADO AQUÍ!
+            "Fichas Técnicas",      # Página 6
+            "Explorador Eco",       # Página 7
+            "Impacto Eco",          # Página 8
+            "Sistema Reconocidos",  # Página 9
+            "Replicar Eco",         # Página 10
+            "Galería Eco",          # Página 11
+            "Preguntas Frecuentes"  # Página 12
+        ], 
         icons=[
             "house-door-fill", "target", "diagram-3-fill", "clock-history", 
-            "file-earmark-text-fill", "search-heart-fill", "activity", 
+            "map-fill", "file-earmark-text-fill", "search-heart-fill", "activity", 
             "award-fill", "share-fill", "images", "patch-question-fill"
-        ], # Íconos correspondientes para Galería y FAQs
+        ], 
         menu_icon="cast",
         default_index=0,
         styles={
             "container": {"padding": "0!important", "background-color": "transparent"},
-            "icon": {"color": "#00E676", "font-size": "18px"}, 
-            "nav-link": {"font-size": "15px", "color": "#E0E6ED", "text-align": "left", "margin":"3px 0px", "--hover-color": "rgba(0, 230, 118, 0.1)"},
+            "icon": {"color": "#00E676", "font-size": "17px"}, 
+            "nav-link": {"font-size": "14px", "color": "#E0E6ED", "text-align": "left", "margin":"3px 0px", "--hover-color": "rgba(0, 230, 118, 0.1)"},
             "nav-link-selected": {"background-color": "rgba(46, 125, 50, 0.5)", "border": "1px solid #00E676", "color": "white", "font-weight": "600"},
         }
     )
@@ -777,6 +787,36 @@ elif selected == "Cronología Eco":
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • Registro Histórico y Memoria Técnica Evolutiva • E.E.S.T N°7
+        </div>
+    """, unsafe_allow_html=True)
+# ==========================================
+# PÁGINA 5 — MAPA ECO (REINTEGRADA)
+# ==========================================
+elif selected == "Mapa Eco":
+    st.markdown('<div class="main-title">MAPA ECO</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Mapeo de Celdas Operativas, Infraestructura Física e Integración de Laboratorios</div>', unsafe_allow_html=True)
+    
+    st.markdown("""
+        <div class="glass-card" style="border-left: 5px solid #00E676; margin-bottom: 25px;">
+            <p style="margin-top:0; color:#00E676; font-weight:600; font-size:16px;">🗺️ Distribución de la Infraestructura en la E.E.S.T N°7</p>
+            Esta sección despliega la distribución espacial y logística del proyecto dentro de los talleres comunes y las áreas de contraturno de la institución, permitiendo auditar visualmente cómo interactúan las celdas entre sí de forma física.
+        </div>
+    """, unsafe_allow_html=True)
+    
+    # Contenedor interactivo/boceto para maquetar el mapa físico o el iframe
+    st.markdown("""
+        <div class="glass-card" style="text-align: center; padding: 50px; border: 1px dashed rgba(100, 255, 218, 0.3); background: rgba(100, 255, 218, 0.01);">
+            <p style="font-size: 26px; color: #64FFDA; margin-bottom: 12px;">📐 Matriz del Plano General del Taller</p>
+            <p style="color: #90A4AE; font-size: 14.5px; max-width:600px; margin: 0 auto; line-height:1.5;">
+                Espacio reservado para renderizar el diagrama de distribución de celdas industriales (EcoPapel, EcoLab, EcoTech, EcoIndustria). Podés incrustar aquí un gráfico SVG interactivo, un mapa físico o imágenes de banco.
+            </p>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    # Footer institucional de la página
+    st.markdown("""
+        <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
+            Proyecto Eco 2026 • Planta de Distribución y Flujos de Material • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
     
