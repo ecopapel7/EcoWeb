@@ -14,128 +14,109 @@ st.set_page_config(
 # ==========================================
 # INYECCIÓN DE INTERFAZ DE ALTO IMPACTO (CSS BLINDADO)
 # ==========================================
-st.markdown("""
-    <style>
-    /* Fondo con degradado fluido: verde selva profundo y azul medianoche técnico */
-    .stApp {
-        background: linear-gradient(135deg, #0b2310 0%, #081018 50%, #05080c 100%) !important;
-        color: #E0E6ED !important;
+    styles = """
+<style>
+/* --- FONDO GLOBAL ULTRA-PRO --- */
+.stApp {
+    background: linear-gradient(135deg, #0b2310 0%, #081018 50%, #05080c 100%) !important;
+    color: #E0E6ED !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* --- CONTENEDORES FLUIDOS --- */
+.main-container {
+    padding: 2% 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- CONTENEDOR DE TARJETAS (FLEXBOX ELÁSTICO) --- */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Clave: si no entran, bajan solas */
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* --- TARJETAS ESTILO GLASSMORPHISM OPTIMIZADAS --- */
+.pilar-card, .componente-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 25px;
+    /* En vez de width fijo, usamos base elástica y max-width */
+    flex: 1 1 300px; 
+    max-width: 340px; 
+    box-sizing: border-box;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    word-wrap: break-word; /* Evita que el texto desborde */
+    overflow-wrap: break-word;
+}
+
+.pilar-card:hover, .componente-card:hover {
+    transform: translateY(-5px);
+    border-color: #00ff88;
+    box-shadow: 0 12px 40px 0 rgba(0, 255, 136, 0.15);
+}
+
+/* --- ICONOS Y TEXTOS --- */
+.pilar-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.pilar-title, .componente-title {
+    color: #00ff88 !important;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.pilar-desc, .componente-desc {
+    color: #a0aec0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* --- CONTENEDOR DE TABLAS FLUIDAS (Para que no rompan el celu) --- */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+/* --- PARCHE ADICIONAL PARA COMPONENTE MENÚ Y AJUSTES MÓVILES --- */
+@media (max-width: 768px) {
+    .pilar-card, .componente-card {
+        flex: 1 1 100%; /* En celulares cada tarjeta toma el 100% del ancho */
+        max-width: 100%;
+        padding: 20px;
     }
     
-    /* Estilo del menú lateral blur */
-    [data-testid="stSidebar"] {
-        background-color: rgba(11, 25, 16, 0.9) !important;
-        backdrop-filter: blur(10px);
-        border-right: 1px solid rgba(46, 125, 50, 0.3);
+    .pilar-title, .componente-title {
+        font-size: 1.25rem;
     }
-
-    /* Títulos Principales en Degradado */
-    .main-title {
-        font-family: 'Helvetica Neue', Arial, sans-serif;
-        font-size: 46px !important;
-        font-weight: 800;
-        letter-spacing: 1px;
-        background: linear-gradient(90deg, #A5D6A7, #4CAF50, #00E676);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 0px;
-        text-shadow: 0px 4px 20px rgba(76, 175, 80, 0.2);
+    
+    h1 {
+        font-size: 2rem !important;
     }
-    .subtitle {
-        font-size: 18px !important;
-        font-weight: 300;
-        color: #81C784 !important;
-        margin-bottom: 30px;
-        opacity: 0.9;
+    
+    h2 {
+        font-size: 1.6rem !important;
     }
-
-    /* Encabezados de Sección */
-    .section-header {
-        font-size: 26px !important;
-        font-weight: 600;
-        color: #B9F6CA !important;
-        margin-top: 25px;
-        margin-bottom: 15px;
-    }
-
-    /* Tarjetas con efecto Glassmorphism */
-    .glass-card {
-        background: rgba(255, 255, 255, 0.03) !important;
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(165, 214, 167, 0.15);
-        border-radius: 16px;
-        padding: 24px;
-        margin-bottom: 25px;
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-        transition: all 0.3s ease-in-out;
-    }
-    .glass-card:hover {
-        border: 1px solid rgba(0, 230, 118, 0.4);
-        box-shadow: 0 8px 32px 0 rgba(0, 230, 118, 0.15);
-        transform: translateY(-3px);
-    }
-
-    /* Contenedores para evitar saltos y códigos visibles */
-    .info-item {
-        margin-bottom: 16px;
-        line-height: 1.5;
-        font-size: 15.5px;
-    }
-    .info-bullet {
-        color: #00E676;
-        font-weight: bold;
-        margin-right: 8px;
-    }
-    .info-tag {
-        color: #B9F6CA;
-        font-weight: 700;
-        margin-right: 6px;
-    }
-
-    /* TABLA PREMIUM ESTILO CYBER-GREEN */
-    .custom-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 15px;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
-    .custom-table th {
-        background: rgba(46, 125, 50, 0.6) !important;
-        color: #FFFFFF !important;
-        text-align: left;
-        padding: 14px 18px;
-        font-size: 16px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        border-bottom: 2px solid #2E7D32;
-    }
-    .custom-table td {
-        padding: 14px 18px;
-        font-size: 15px;
-        color: #E0E6ED;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        background: rgba(255, 255, 255, 0.02);
-    }
-    .custom-table tr:hover td {
-        background: rgba(0, 230, 118, 0.08) !important;
-        color: #FFFFFF;
-    }
-    .pilar-tag {
-        background: rgba(0, 230, 118, 0.15);
-        color: #00E676;
-        padding: 4px 10px;
-        border-radius: 6px;
-        font-weight: bold;
-        font-size: 14px;
-        border: 1px solid rgba(0, 230, 118, 0.3);
-    }
-    </style>
-""", unsafe_allow_html=True)
-
+}
+</style>
+"""
 # ==========================================
 # MENÚ LATERAL (SIDEBAR MODULAR)
 # ==========================================
