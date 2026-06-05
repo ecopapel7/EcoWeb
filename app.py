@@ -1910,13 +1910,13 @@ elif selected == "Preguntas Frecuentes":
     """, unsafe_allow_html=True)
     
 # ==========================================
-# PÁGINA 13 — ECOIA (ASISTENTE INTELIGENTE)
+# PÁGINA 13 — ECOIA (NÚCLEO INTEGRADO - CORREGIDO)
 # ==========================================
 elif selected == "EcoIA":
     st.markdown('<div class="main-title">ECOIA: NÚCLEO COGNITIVO</div>', unsafe_allow_html=True)
     st.markdown('<div class="subtitle">Modelado Lingüístico de Contraturno entrenado en Protocolos y Fichas Técnicas de Proyecto Eco</div>', unsafe_allow_html=True)
 
-    # Tarjeta de Contexto e Ingeniería de Prompts
+    # Tarjeta de Contexto de Ingeniería de Prompts
     st.markdown("""
         <div class="glass-card" style="border-left: 5px solid #64FFDA; margin-bottom: 25px;">
             <strong style="color:#64FFDA; font-size:16px;">🤖 Consultoría Algorítmica en Tiempo Real</strong><br>
@@ -1924,19 +1924,7 @@ elif selected == "EcoIA":
         </div>
     """, unsafe_allow_html=True)
 
-    # Inicialización del cliente de Groq heredando tu lógica original del archivo "EcoWeb Código 1.0.txt"
-    try:
-        # Se obtiene la API Key guardada en las variables de entorno del servidor o local
-        api_key_groq = os.getenv("GROQ_API_KEY")
-        if not api_key_groq:
-            # Alternativa adaptada por si se configuran los st.secrets de Streamlit Cloud
-            api_key_groq = st.secrets.get("GROQ_API_KEY", "")
-        
-        client = Groq(api_key_groq=api_key_groq) if 'Groq' in globals() else None
-    except Exception:
-        client = None
-
-    # Inicializar el historial de conversación en la sesión de Streamlit para que no se borre al escribir
+    # Inicializar el historial de conversación en la sesión de Streamlit para persistencia visual
     if "messages_ecoia" not in st.session_state:
         st.session_state.messages_ecoia = []
 
@@ -1959,11 +1947,21 @@ elif selected == "EcoIA":
 
     with col_input:
         # Caja de texto interactiva estilizada de Streamlit
-        user_query = st.text_input("📝 Ingresá tu consulta técnica para EcoIA:", placeholder="Escribí acá tu pregunta para el sistema...")
+        user_query = st.text_input("📝 Ingresá tu consulta técnica para EcoIA:", placeholder="Escribí acá tu pregunta para el sistema...", key="ecoia_input_text")
         
         btn_enviar = st.button("🚀 Procesar Inferencia", use_container_width=True)
 
         if btn_enviar and user_query:
+            # INTERCEPCIÓN DINÁMICA DE CREDENCIALES (Garantiza lectura en Streamlit Cloud / Local)
+            api_key_groq = ""
+            
+            # Intentar leer primero de st.secrets (Prioridad en servidores de Streamlit Cloud)
+            if "GROQ_API_KEY" in st.secrets:
+                api_key_groq = st.secrets["GROQ_API_KEY"]
+            # Si no está en secrets, intentar leer de variables de entorno locales (os.getenv)
+            elif os.getenv("GROQ_API_KEY"):
+                api_key_groq = os.getenv("GROQ_API_KEY")
+
             # System Prompt estricto para encuadrar las respuestas en la doctrina oficial de Eco
             system_prompt = (
                 "Actuás como EcoIA, la inteligencia artificial oficial y núcleo analítico de Proyecto Eco de la escuela E.E.S.T N°7, curso 4° 4°. "
@@ -1973,13 +1971,17 @@ elif selected == "EcoIA":
                 "Sé claro, estructurado y usá tecnicismos adecuados al nivel industrial."
             )
 
-            # Insertar la consulta del usuario al historial visual
+            # Insertar la consulta del usuario al historial visual antes del proceso
             st.session_state.messages_ecoia.append({"role": "user", "content": user_query})
 
-            if client:
+            # Si encontramos la credencial válida por cualquiera de las dos vías
+            if api_key_groq != "":
                 with st.spinner("🧠 Computando tensores de lenguaje y analizando base de conocimiento de Proyecto Eco..."):
                     try:
-                        # Llamada a la API de inferencia de Groq utilizando el modelo de alta velocidad Llama3
+                        # Instanciación dinámica del cliente Groq en caliente
+                        client = Groq(api_key=api_key_groq)
+                        
+                        # Llamada a la API de inferencia utilizando el modelo Llama3 heredado
                         completion = client.chat.completions.create(
                             model="llama3-8b-8192",
                             messages=[
@@ -1991,22 +1993,22 @@ elif selected == "EcoIA":
                         )
                         respuesta_ia = completion.choices[0].message.content
                         
-                        # Limpieza y normalización de saltos de línea con Regex (Heredado de tu código 1.0)
+                        # Limpieza y normalización de saltos de línea múltiples con Regex
                         respuesta_ia = re.sub(r'\n{3,}', '\n\n', respuesta_ia)
                         
-                        # Guardar en el historial de sesión
+                        # Registrar respuesta exitosa en la sesión
                         st.session_state.messages_ecoia.append({"role": "assistant", "content": respuesta_ia})
                     except Exception as e:
                         st.error(f"Error de conexión con la infraestructura de Groq: {str(e)}")
             else:
-                # Fallback didáctico simulado con respuestas enriquecidas por si no hay conexión o falta la API Key
+                # Fallback didáctico únicamente si fallan ambos métodos de credenciales
                 with st.spinner("⚙️ Ejecutando matriz cognitiva local..."):
                     import time
-                    time.sleep(1.2)
+                    time.sleep(1.0)
                     respuesta_fallback = (
-                        f"🤖 **[Respuesta de EcoIA - Nodo Autónomo E.E.S.T N°7]:** Recibí tu consulta sobre '{user_query}'. "
-                        "Para responder con máxima rigurosidad técnica en la feria de ciencias, recordá configurar la variable de entorno `GROQ_API_KEY` en tu panel de control de Streamlit. "
-                        "Bajo los parámetros del pilar **Medible**, te confirmo que esta celda procesa el flujo lógico asociando las fichas operativas correspondientes."
+                        f"🤖 **[EcoIA - Modo Autónomo offline]:** Recibí tu consulta sobre '{user_query}'. "
+                        "No se detectaron las credenciales activas del servidor en `st.secrets`. "
+                        "Verificá que el nombre clave en tu panel de Streamlit sea exactamente `GROQ_API_KEY` (respetando mayúsculas y minúsculas)."
                     )
                     st.session_state.messages_ecoia.append({"role": "assistant", "content": respuesta_fallback})
 
@@ -2014,7 +2016,7 @@ elif selected == "EcoIA":
     if st.session_state.messages_ecoia:
         st.markdown('<p style="color:#A5D6A7; font-size:14px; margin-top:20px; margin-bottom:10px; font-weight:600;">📜 Flujo de la Conversación Actual:</p>', unsafe_allow_html=True)
         
-        # Iterar el historial de atrás hacia adelante para ver lo último arriba, o lineal
+        # Iterar el historial de forma inversa para mantener las interacciones recientes al tope visual
         for msg in reversed(st.session_state.messages_ecoia):
             if msg["role"] == "user":
                 st.markdown(f"""
