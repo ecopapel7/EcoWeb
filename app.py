@@ -12,7 +12,7 @@ st.set_page_config(
 )
 
 # ==========================================
-# INYECCIÓN DE INTERFAZ DE ALTO IMPACTO (CSS CORREGIDO)
+# INYECCIÓN DE INTERFAZ DE ALTO IMPACTO (CSS BLINDADO)
 # ==========================================
 st.markdown("""
     <style>
@@ -76,7 +76,7 @@ st.markdown("""
         transform: translateY(-3px);
     }
 
-    /* CONTENEDOR FLUIDO COHESIVO (Solución al desorden de la lista) */
+    /* Contenedores para evitar saltos y códigos visibles */
     .info-item {
         margin-bottom: 16px;
         line-height: 1.5;
@@ -86,7 +86,6 @@ st.markdown("""
         color: #00E676;
         font-weight: bold;
         margin-right: 8px;
-        display: inline-block;
     }
     .info-tag {
         color: #B9F6CA;
@@ -120,7 +119,6 @@ st.markdown("""
         color: #E0E6ED;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         background: rgba(255, 255, 255, 0.02);
-        transition: background 0.2s ease;
     }
     .custom-table tr:hover td {
         background: rgba(0, 230, 118, 0.08) !important;
@@ -147,7 +145,6 @@ with st.sidebar:
     st.markdown("<p style='text-align: center; color: #81C784; font-size: 14px;'>E.E.S.T N°7 | 4° 4°</p>", unsafe_allow_html=True)
     st.write("---")
     
-    # Menú dinámico: quitamos las páginas viejas, listo para la reconstrucción
     selected = option_menu(
         menu_title=None,
         options=["Inicio"],
@@ -165,11 +162,10 @@ with st.sidebar:
     st.caption("Feria Tecnológica 2026")
 
 # ==========================================
-# PÁGINA 1 — INICIO (RECONSTRUCCIÓN COMPLETADA)
+# PÁGINA 1 — INICIO
 # ==========================================
 if selected == "Inicio":
     
-    # Encabezado de la Plataforma Principal
     st.markdown('<div class="main-title">PROYECTO ECO 2026</div>', unsafe_allow_html=True)
     st.markdown('<div class="subtitle">Infraestructura Educativa Continua y Sistema Integral de Innovación Sustentable</div>', unsafe_allow_html=True)
     
@@ -186,16 +182,14 @@ if selected == "Inicio":
         """, unsafe_allow_html=True
     )
     
-    # Contenedores organizados en Columnas en paralelo (Corregido sin bugs de espaciado)
+    # Columnas centrales solucionadas sin fugas de string
     col1, col2 = st.columns(2)
     
     with col1:
         st.markdown('<div class="section-header">⚠️ ¿Por qué fue creada?</div>', unsafe_allow_html=True)
-        st.markdown(
-            """
+        st.markdown("""
             <div class="glass-card">
                 <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:18px;">Necesitábamos resolver un problema:</p>
-                
                 <div class="info-item">
                     <span class="info-bullet">✦</span><span class="info-tag">Gran cantidad de información dispersa:</span> Centraliza datos fragmentados de investigaciones anteriores.
                 </div>
@@ -212,16 +206,13 @@ if selected == "Inicio":
                     <span class="info-bullet">✦</span><span class="info-tag">Necesidad de mostrar resultados:</span> Crea una ventana pública y auditable de mitigación ambiental real.
                 </div>
             </div>
-            """, unsafe_allow_html=True
-        )
+        """, unsafe_allow_html=True)
         
     with col2:
         st.markdown('<div class="section-header">⚙️ Funciones de EcoWeb</div>', unsafe_allow_html=True)
-        st.markdown(
-            """
+        st.markdown("""
             <div class="glass-card">
                 <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:18px;">Para qué sirve nuestra plataforma digital:</p>
-                
                 <div class="info-item">
                     <span class="info-bullet">✦</span><span class="info-tag">Organizar información:</span> Sistematiza el árbol de subproyectos e iniciativas del equipo.
                 </div>
@@ -241,13 +232,11 @@ if selected == "Inicio":
                     <span class="info-bullet">✦</span><span class="info-tag">Favorecer la replicabilidad:</span> Agiliza la transferencia metodológica del ecosistema escolar.
                 </div>
             </div>
-            """, unsafe_allow_html=True
-        )
+        """, unsafe_allow_html=True)
         
     # 4. Relación con los pilares (Cuadro final de cierre)
     st.markdown('<div class="section-header">📊 Relación con los Pilares</div>', unsafe_allow_html=True)
-    st.markdown(
-        """
+    st.markdown("""
         <div class="glass-card" style="padding: 10px 20px 20px 20px;">
         <table class="custom-table">
             <thead>
@@ -288,14 +277,11 @@ if selected == "Inicio":
             </tbody>
         </table>
         </div>
-        """, unsafe_allow_html=True
-    )
+    """, unsafe_allow_html=True)
 
     # Footer institucional 
-    st.markdown(
-        """
+    st.markdown("""
         <div style="text-align: center; margin-top: 50px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • Escuela de Educación Secundaria Técnica N°7 • República Argentina
         </div>
-        """, unsafe_allow_html=True
-    )
+    """, unsafe_allow_html=True)
