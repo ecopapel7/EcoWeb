@@ -1910,7 +1910,7 @@ elif selected == "Preguntas Frecuentes":
     """, unsafe_allow_html=True)
     
 # ==========================================
-# PÁGINA 13 — ECOIA (NÚCLEO MIGRADO CON IDENTIFICADOR CORREGIDO)
+# PÁGINA 13 — ECOIA (SOLUCIÓN DEFINITIVA DE IMPORTACIONES)
 # ==========================================
 elif selected == "EcoIA":
     st.markdown('<div class="main-title">ECOIA: NÚCLEO COGNITIVO</div>', unsafe_allow_html=True)
@@ -1977,13 +1977,13 @@ elif selected == "EcoIA":
             if api_key_groq != "":
                 with st.spinner("🧠 Computando tensores de lenguaje y analizando base de conocimiento de Proyecto Eco..."):
                     try:
-                        # Inyección segura de la librería instalada
+                        # INYECCIÓN EXPLÍCITA DE LIBRERÍAS REQUERIDAS EN CALIENTE
                         from groq import Groq
+                        import re  # <-- ¡Importación forzada para destruir el NameError!
                         
                         client = Groq(api_key=api_key_groq)
                         
-                        # ID DE MODELO CORREGIDO PARA EVITAR EL 404 (Sintaxis exacta aceptada por la API de Groq)
-                        # Probamos con el modelo Llama 3.1 8b oficial en su string de producción de Groq
+                        # Llamada estable utilizando el identificador vigente de Meta en Groq Cloud
                         completion = client.chat.completions.create(
                             model="llama-3.1-8b-instant",  
                             messages=[
@@ -1995,7 +1995,7 @@ elif selected == "EcoIA":
                         )
                         respuesta_ia = completion.choices[0].message.content
                         
-                        # Limpieza y normalización de saltos de línea múltiples con Regex
+                        # Limpieza y normalización de saltos de línea múltiples con Regex seguro
                         respuesta_ia = re.sub(r'\n{3,}', '\n\n', respuesta_ia)
                         
                         # Registrar respuesta exitosa en la sesión
