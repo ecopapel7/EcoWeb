@@ -148,8 +148,8 @@ with st.sidebar:
 # === REEMPLAZAR EL BLOQUE OPTION_MENU POR ESTE ===
     selected = option_menu(
         menu_title=None,
-        options=["Inicio", "Objetivo Eco", "Fundamentos Eco", "Cronología Eco", "Fichas Técnicas"],  # Mantenemos el orden
-        icons=["house-door-fill", "target", "diagram-3-fill", "clock-history", "file-earmark-text-fill"], # Ícono de documento técnico
+        options=["Inicio", "Objetivo Eco", "Fundamentos Eco", "Cronología Eco", "Fichas Técnicas", "Explorador Eco"],  # Agregamos la Página 7
+        icons=["house-door-fill", "target", "diagram-3-fill", "clock-history", "file-earmark-text-fill", "search-heart-fill"], # Ícono de lupa/explorador
         menu_icon="cast",
         default_index=0,
         styles={
@@ -967,5 +967,176 @@ elif selected == "Fichas Técnicas":
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • Repositorio Abierto de Propiedad Intelectual Comunitario • E.E.S.T N°7
+        </div>
+    """, unsafe_allow_html=True)
+# ==========================================
+# PÁGINA 7 — FILTRO Y EXPLORADOR DE FICHAS
+# ==========================================
+elif selected == "Explorador Eco":
+    import random
+
+    st.markdown('<div class="main-title">EXPLORADOR ECO</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Motor de Búsqueda Avanzado, Métricas de Conocimiento y Rutas de Aprendizaje Guiadas</div>', unsafe_allow_html=True)
+
+    # DICCIONARIO OPTIMIZADO CON METADATOS TÉCNICOS PARA FILTRADO AVANZADO
+    FICHAS_AVANZADAS = {
+        "1": {"titulo": "Papel Seed", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1S5sREmBrapKftJM5z8iZjtj46rLXer0t/view?usp=sharing", "desc": "Papel artesanal biodegradable con semillas incorporadas.", "dificultad": "Inicial", "concepto": "Sustentabilidad", "estado": "Producción Estable", "siguiente": "2"},
+        "2": {"titulo": "FibroPapel", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1JV_LZ_25r-gyqP27gndXCKweqzovfaiN/view?usp=sharing", "desc": "Papel compuesto reforzado con fibras textiles de algodón.", "dificultad": "Básico", "concepto": "Reciclaje", "estado": "Producción Estable", "siguiente": "5"},
+        "3": {"titulo": "Manual del Reciclador", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1icRZmLchhPNXkbqHRKe3rsGF2yQdsXHq/view?usp=sharing", "desc": "Documento técnico educativo 100% sustentable.", "dificultad": "Inicial", "concepto": "Sustentabilidad", "estado": "Completado", "siguiente": "10"},
+        "4": {"titulo": "Marca-Páginas", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1LVUYPIBTA6mY61HVtQn7f15ud1sw-3Rv/view?usp=sharing", "desc": "Souvenir funcional de cartón recuperado.", "dificultad": "Inicial", "concepto": "Reciclaje", "estado": "Producción Estable", "siguiente": "3"},
+        "5": {"titulo": "Eco-Carrier", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1q2m3efrr3WPZtJ_a__8YZ6m42nK-3y31/view?usp=sharing", "desc": "Bolsas estructurales que reemplazan el plástico de un solo uso.", "dificultad": "Básico", "concepto": "Sustentabilidad", "estado": "Optimización", "siguiente": "13"},
+        "6": {"titulo": "Colorantes Naturales", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1EGy35MOOpkKR3-ksINjzhkurokfqwdWz/view?usp=sharing", "desc": "Extracción de pigmentos puros de residuos vegetales.", "dificultad": "Intermedio", "concepto": "Química", "estado": "Ensayos Clínicos", "siguiente": "14"},
+        "7": {"titulo": "EcoIA", "division": "EcoTech", "drive_url": "https://drive.google.com/file/d/1H0seDIImClVjA5UrHELyucapO9DzXrHH/view?usp=sharing", "desc": "Asistente inteligente de documentación técnica y auditoría.", "dificultad": "Avanzado", "concepto": "Tecnología", "estado": "Fase Beta", "siguiente": "23"},
+        "8": {"titulo": "Organizadores Ecomodulares", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1sJP_u9-UgqRWkXk3f3PsvUVzLCa93Uow/view?usp=sharing", "desc": "Sistemas de ordenamiento mediante latas y tubos.", "dificultad": "Inicial", "concepto": "Reciclaje", "estado": "Producción Estable", "siguiente": "9"},
+        "9": {"titulo": "Eco-Estelar", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/15qlgSz3v6YOLmHTWVmubTMknKM0WVUNS/view?usp=sharing", "desc": "Lámparas decorativas perforadas mediante técnica avanzada de congelado.", "dificultad": "Intermedio", "concepto": "Tecnología", "estado": "Optimización", "siguiente": "17"},
+        "10": {"titulo": "EcoChallenge", "division": "Transversal", "drive_url": "https://drive.google.com/file/d/1n6C2rPadtw662DZfogxJagQrbVvhem90/view?usp=sharing", "desc": "Sistema transversal de desafíos interactivos inter-áreas.", "dificultad": "Básico", "concepto": "Sustentabilidad", "estado": "Completado", "siguiente": "19"},
+        "11": {"titulo": "Eco-Hidro", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1q5ImtWBOhHfztDthNQs1yPdmIiK3zZYJ/view?usp=sharing", "desc": "Módulo de riego autónomo por capilaridad optimizado en botellas PET.", "dificultad": "Básico", "concepto": "Tecnología", "estado": "Producción Estable", "siguiente": "24"},
+        "12": {"titulo": "EcoTrash", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1XdaHhW7Z5nzfBHBr3dj7I-N0HNQuLp8k/view?usp=sharing", "desc": "Escoba técnica de alta resistencia construida con cerdas de PET.", "dificultad": "Básico", "concepto": "Reciclaje", "estado": "Producción Estable", "siguiente": "8"},
+        "13": {"titulo": "EcoWallet", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1xWXIx2TAa1QJU2izv0KwqhtEiZSo4GvW/view?usp=sharing", "desc": "Billetera impermeable mediante upcycling estructurado de Tetra Pak.", "dificultad": "Inicial", "concepto": "Reciclaje", "estado": "Producción Estable", "siguiente": "4"},
+        "14": {"titulo": "Carbon Ink", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1njzGFWQbRuRo-_ucORzZMYceuOE6uoOt/view?usp=sharing", "desc": "Tinta negra premium obtenida por pirólisis controlada.", "dificultad": "Avanzado", "concepto": "Química", "estado": "Ensayos Clínicos", "siguiente": "21"},
+        "15": {"titulo": "Nendo Dango", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1NO2FaJdNvlYZA9X8PKMSUAZ8gXJ4PzG8/view?usp=sharing", "desc": "Bolas de arcilla, sustrato y semillas para reforestación guiada.", "dificultad": "Inicial", "concepto": "Sustentabilidad", "estado": "Producción Estable", "siguiente": "1"},
+        "16": {"titulo": "EcoWear", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1tDOsmBio3hPoLzTVGfHzaauTz-wmhEtf/view?usp=sharing", "desc": "Cuentas estructurales y elementos decorativos de papel enrollado.", "dificultad": "Inicial", "concepto": "Reciclaje", "estado": "Producción Estable", "siguiente": "13"},
+        "17": {"titulo": "Eco-Voz", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1xh5hOjk_HXqaMcFr431Od3z15norhe1q/view?usp=sharing", "desc": "Amplificador acústico pasivo diseñado en cartón corrugado.", "dificultad": "Básico", "concepto": "Tecnología", "estado": "Producción Estable", "siguiente": "18"},
+        "18": {"titulo": "Cañón Vortex", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1h8tS94N0edR9Tw7GU94dummpULnt32zi/view?usp=sharing", "desc": "Generador físico de anillos de aire para dinámica de fluidos.", "dificultad": "Intermedio", "concepto": "Tecnología", "estado": "Optimización", "siguiente": "7"},
+        "19": {"titulo": "Eco-Dollars", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1xQSQpyuVH-YSgtjWZYahVeterC99rX70/view?usp=sharing", "desc": "Sistema monetario de economía circular impreso sobre papel reciclado.", "dificultad": "Intermedio", "concepto": "Sustentabilidad", "estado": "Completado", "siguiente": "23"},
+        "20": {"titulo": "EcoVolt", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1OmhWYiMxZvxMxHFRO7slATfgt_Brwhui/view?usp=sharing", "desc": "Generación teórica de energía limpia aprovechando el gradiente salino.", "dificultad": "Avanzado", "concepto": "Energía", "estado": "Investigación", "siguiente": "22"},
+        "21": {"titulo": "EcoCristales", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1jQwwWbwoUoq3xlcBYY5aVB1WoOieLQ30/view?usp=sharing", "desc": "Cristalización de alumbre orientada al estudio de la geometría química.", "dificultad": "Intermedio", "concepto": "Química", "estado": "Ensayos Clínicos", "siguiente": "20"},
+        "22": {"titulo": "Biogás", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1m4l9L2Y5sXrWz2KlmgfjfDii76ZwBtS6/view?usp=sharing", "desc": "Investigación avanzada sobre digestión anaeróbica y captura de metano.", "dificultad": "Avanzado", "concepto": "Energía", "estado": "Investigación", "siguiente": "24"},
+        "23": {"titulo": "EcoMod", "division": "EcoTech", "drive_url": "https://drive.google.com/file/d/13qfQNtrsH1iAjTEAck-LrFfluuHgZZGf/view?usp=sharing", "desc": "Módulo interactivo de reciclaje y economía circular en entornos virtuales.", "dificultad": "Intermedio", "concepto": "Tecnología", "estado": "Fase Beta", "siguiente": "7"},
+        "24": {"titulo": "TerrarIA", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1P3r5UlcdPS4KWDcuYPN45qJWmD_KTBDu/view?usp=sharing", "desc": "Ecosistema cerrado automatizado y monitoreado por sensores.", "dificultad": "Avanzado", "concepto": "Tecnología", "estado": "Optimización", "siguiente": "11"},
+    }
+
+    # SECCIÓN 1: INTRODUCCIÓN
+    st.markdown('<div class="section-header">🔍 ¿Para qué sirve el Explorador Eco?</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="glass-card" style="font-size: 16px; border-left: 5px solid #00E676;">
+        Debido a que el volumen documental de <strong>Proyecto Eco</strong> cuenta con múltiples vertientes de ingeniería, esta central inteligente permite realizar consultas analíticas cruzadas. El usuario puede mapear y filtrar el conocimiento según la división responsable, la complejidad de ejecución o el eje conceptual científico, garantizando que la información justa llegue al operador adecuado.
+        </div>
+    """, unsafe_allow_html=True)
+
+    # SECCIÓN 2: ESTADÍSTICAS GENERALES (Cálculos automáticos en base al diccionario)
+    st.markdown('<div class="section-header">📈 1. Auditoría Automatizada de la Biblioteca</div>', unsafe_allow_html=True)
+    
+    # Procesamiento de variables en background
+    tot_fichas = len(FICHAS_AVANZADAS)
+    secciones = set(f["division"] for f in FICHAS_AVANZADAS.values())
+    conceptos = set(f["concepto"] for f in FICHAS_AVANZADAS.values())
+    niveles = set(f["dificultad"] for f in FICHAS_AVANZADAS.values())
+    
+    col_m1, col_m2, col_m3, col_m4 = st.columns(4)
+    with col_m1:
+        st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:28px; font-weight:bold; color:#00E676;">{tot_fichas}</span><br><span style="font-size:13px; color:#B0BEC5;">Fichas Totales</span></div>', unsafe_allow_html=True)
+    with col_m2:
+        st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:28px; font-weight:bold; color:#64FFDA;">{len(secciones)}</span><br><span style="font-size:13px; color:#B0BEC5;">Secciones Eco</span></div>', unsafe_allow_html=True)
+    with col_m3:
+        st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:28px; font-weight:bold; color:#FFD54F;">{len(conceptos)}</span><br><span style="font-size:13px; color:#B0BEC5;">Ejes Científicos</span></div>', unsafe_allow_html=True)
+    with col_m4:
+        st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:28px; font-weight:bold; color:#A5D6A7;">{len(niveles)}</span><br><span style="font-size:13px; color:#B0BEC5;">Niveles Complejidad</span></div>', unsafe_allow_html=True)
+
+    # SECCIÓN 3, 4 & 5: PANEL DE FILTROS CRUZADOS EN COLUMNAS (Interactivos)
+    st.markdown('<div class="section-header">🎛️ 2. Panel de Segmentación de Conocimiento</div>', unsafe_allow_html=True)
+    
+    col_f1, col_f2, col_f3 = st.columns(3)
+    
+    with col_f1:
+        filtro_sec = st.selectbox("📂 Filtrar por División Responsable:", ["Todas"] + sorted(list(secciones)))
+    with col_f2:
+        filtro_dif = st.selectbox("⚡ Filtrar por Nivel de Dificultad:", ["Todas", "Inicial", "Básico", "Intermedio", "Avanzado"])
+    with col_f3:
+        filtro_con = st.selectbox("🔬 Filtrar por Concepto / Eje Base:", ["Todas"] + sorted(list(conceptos)))
+
+    # SECCIÓN 6: RENDERIZADO DE FILTRADO EN MATRIZ DE TARJETAS PREMIUN
+    st.markdown('<div class="section-header">📋 3. Fichas Técnicas Encontradas</div>', unsafe_allow_html=True)
+    
+    tarjetas_renderizadas = 0
+    
+    # Grid de ejecución lógica
+    for k, f in FICHAS_AVANZADAS.items():
+        # Lógica cruzada de discriminación de filtros
+        if filtro_sec != "Todas" and f["division"] != filtro_sec:
+            continue
+        if filtro_dif != "Todas" and f["dificultad"] != filtro_dif:
+            continue
+        if filtro_con != "Todas" and f["concepto"] != filtro_con:
+            continue
+            
+        tarjetas_renderizadas += 1
+        
+        # Color del badge por dificultad
+        color_dif = "#81C784" if f["dificultad"] == "Inicial" else "#4CAF50" if f["dificultad"] == "Básico" else "#FFD54F" if f["dificultad"] == "Intermedio" else "#EF5350"
+        
+        # Tarjeta HTML Premium
+        st.markdown(f"""
+            <div class="glass-card" style="margin-bottom: 15px; border-left: 5px solid {color_dif};">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;">
+                    <div>
+                        <span style="font-size: 12px; font-weight: bold; text-transform: uppercase; color: #64FFDA; letter-spacing: 0.5px;">[{f['division']}]</span>
+                        <h3 style="margin: 3px 0; color: #FFFFFF; font-size: 19px;">Ficha N°{k}: {f['titulo']}</h3>
+                    </div>
+                    <div style="text-align: right;">
+                        <span style="background: rgba(255,255,255,0.05); color: {color_dif}; border: 1px solid {color_dif}; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: bold;">{f['dificultad']}</span>
+                        <br><span style="font-size: 11px; color: #90A4AE; display:block; margin-top:4px;">{f['estado']}</span>
+                    </div>
+                </div>
+                <p style="margin: 0 0 12px 0; color: #CFD8DC; font-size: 14.5px; line-height:1.4;">{f['desc']}</p>
+                <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.15); padding: 8px 12px; border-radius: 6px;">
+                    <span style="font-size: 13px; color: #A5D6A7;">🧬 Concepto Clave: <strong>{f['concepto']}</strong></span>
+                    <a href="{f['drive_url']}" target="_blank" style="text-decoration: none; font-weight: bold; color: #00E676; font-size: 13px;">Ver Manual Técnico Completo ↗</a>
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+
+    if tarjetas_renderizadas == 0:
+        st.info("Ninguna ficha técnica cumple simultáneamente con los tres criterios seleccionados en el panel.")
+
+    # SECCIÓN 7: RUTA DE APRENDIZAJE SUGERIDA (Lógica de grafos y secuencias lineales recomendadas)
+    st.markdown('<div class="section-header">🛤️ 4. Rutas de Aprendizaje Sugeridas</div>', unsafe_allow_html=True)
+    st.markdown('<p style="color:#A5D6A7; font-size:14px; margin-bottom:12px;">Sistemas encadenados por correlatividad de ingeniería:</p>', unsafe_allow_html=True)
+    
+    st.markdown("""
+        <div class="glass-card" style="padding: 15px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
+                <div style="background: rgba(0,0,0,0.15); padding: 12px; border-radius: 8px; border-left: 3px solid #64FFDA;">
+                    <span style="color:#64FFDA; font-weight:bold; font-size:14px;">🌱 Línea Celulosa Sostenible</span><br>
+                    <span style="font-size:13px; color:#E0E6ED;">Comenzar con <strong>Ficha 3 (Manual)</strong> ➔ Continuar con <strong>Ficha 1 (Papel Seed)</strong> ➔ Escalar a <strong>Ficha 2 (FibroPapel)</strong>.</span>
+                </div>
+                <div style="background: rgba(0,0,0,0.15); padding: 12px; border-radius: 8px; border-left: 3px solid #FFD54F;">
+                    <span style="color:#FFD54F; font-weight:bold; font-size:14px;">🧪 Línea Química Aplicada</span><br>
+                    <span style="font-size:13px; color:#E0E6ED;">Iniciar en <strong>Ficha 6 (Colorantes)</strong> ➔ Avanzar a <strong>Ficha 14 (Carbon Ink)</strong> ➔ Consolidar en <strong>Ficha 21 (EcoCristales)</strong>.</span>
+                </div>
+                <div style="background: rgba(0,0,0,0.15); padding: 12px; border-radius: 8px; border-left: 3px solid #EF5350;">
+                    <span style="color:#EF5350; font-weight:bold; font-size:14px;">💻 Ecosistema IoT y Automatización</span><br>
+                    <span style="font-size:13px; color:#E0E6ED;">Comprender <strong>Ficha 7 (EcoIA)</strong> ➔ Integrar con <strong>Ficha 23 (EcoMod Minecraft)</strong> ➔ Desplegar en <strong>Ficha 24 (TerrarIA)</strong>.</span>
+                </div>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # SECCIÓN 8: EXPLORACIÓN ALEATORIA (Botón dinámico interactivo con Session State)
+    st.markdown('<div class="section-header">🎲 5. Descubrimiento de Conocimiento Aleatorio</div>', unsafe_allow_html=True)
+    
+    # Inicialización del Session State de Streamlit para retener la ficha al azar entre clicks de renderizado
+    if "ficha_azar" not in st.session_state:
+        st.session_state.ficha_azar = "1"
+        
+    col_b1, col_b2 = st.columns([3, 7])
+    
+    with col_b1:
+        if st.button("🎰 Lanzar Ficha Aleatoria", use_container_width=True):
+            st.session_state.ficha_azar = random.choice(list(FICHAS_AVANZADAS.keys()))
+            
+    with col_b2:
+        fa = FICHAS_AVANZADAS[st.session_state.ficha_azar]
+        st.markdown(f"""
+            <div style="background: rgba(100, 255, 218, 0.04); border: 1px dashed #64FFDA; padding: 15px; border-radius: 10px;">
+                <span style="color:#64FFDA; font-weight:bold; font-size:13px;">✨ FICHA RECOMENDADA POR EL ALGORITMO ECO:</span><br>
+                <strong style="color:white; font-size:15px;">Ficha N°{st.session_state.ficha_azar}: {fa['titulo']}</strong> ({fa['division']}) — <span style="font-size:13px; color:#CFD8DC;">{fa['desc']}</span>
+            </div>
+        """, unsafe_allow_html=True)
+
+    # Footer institucional
+    st.markdown("""
+        <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
+            Proyecto Eco 2026 • Motor de Consultas Inteligente • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
