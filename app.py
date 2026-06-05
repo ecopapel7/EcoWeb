@@ -1491,7 +1491,7 @@ elif selected == "Sistema Reconocidos":
                             <strong style="font-size:17px; color:white;">⭐ {r['nombre']}</strong>
                             <span style="background:#00E676; color:black; font-weight:bold; padding:2px 8px; border-radius:4px; font-size:11px; text-transform:uppercase;">{r['division']}</span>
                         </div>
-                        <p style="margin:8px 0 0 0; color:#CFD8DC; font-size:14px; line-height:1.4;"><strong>Motivo del Reconocimiento:</strong> {r['motivo']}</p>
+                        <p style="margin:8px 0 0 0; color:#CFD8DC; font-size:14px; line-height:1.4;"><strong>Rol:</strong> {r['motivo']}</p>
                         <span style="font-size:11px; color:#90A4AE; display:block; margin-top:6px;">📆 Registro: {r['periodo']} • E.E.S.T N°7</span>
                     </div>
                 """, unsafe_allow_html=True)
