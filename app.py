@@ -157,7 +157,7 @@ with st.sidebar:
             "Explorador Eco",       # Página 7
             "Impacto Eco",          # Página 8
             "Sistema Reconocidos",  # Página 9
-            "Replicar Eco",         # Página 10
+            "¿Cómo Replicar Eco?",         # Página 10
             "Galería Eco",          # Página 11
             "Preguntas Frecuentes", # Página 12
             "EcoIA"                 # Página 13 <- ¡EL COLOFÓN TECNOLÓGICO!
