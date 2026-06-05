@@ -1551,7 +1551,7 @@ elif selected == "Sistema Reconocidos":
 # ==========================================
 # PÁGINA 10 — ¿CÓMO REPLICAR ECO?
 # ==========================================
-elif selected == "Replicar Eco":
+elif selected == "¿Cómo Replicar Eco?":
     
     st.markdown('<div class="main-title">¿CÓMO REPLICAR ECO?</div>', unsafe_allow_html=True)
     st.markdown('<div class="subtitle">Guía de Despliegue, Adaptación Institucional y Transferencia de Conocimiento Abierto</div>', unsafe_allow_html=True)
