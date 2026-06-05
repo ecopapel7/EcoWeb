@@ -12,24 +12,22 @@ st.set_page_config(
 )
 
 # ==========================================
-# INYECCIÓN DE INTERFAZ DE ALTO IMPACTO (CSS REAL RESPONSIVE)
+# INYECCIÓN DE INTERFAZ DE ALTO IMPACTO (FUEGO CONTRA CELULARES)
 # ==========================================
 st.markdown("""
     <style>
-    /* Fondo con degradado fluido original */
+    /* 1. ESTILOS BASE ORIGINALES (Para PC e Interfaz General) */
     .stApp {
         background: linear-gradient(135deg, #0b2310 0%, #081018 50%, #05080c 100%) !important;
         color: #E0E6ED !important;
     }
     
-    /* Estilo del menú lateral blur original */
     [data-testid="stSidebar"] {
         background-color: rgba(11, 25, 16, 0.9) !important;
         backdrop-filter: blur(10px);
         border-right: 1px solid rgba(46, 125, 50, 0.3);
     }
 
-    /* Títulos Principales en Degradado */
     .main-title {
         font-family: 'Helvetica Neue', Arial, sans-serif;
         font-size: 3.5rem !important;
@@ -49,38 +47,34 @@ st.markdown("""
         font-weight: 300;
     }
 
-    /* CONTENEDOR DE TARJETAS ORIGINAL (Flexbox elástico seguro) */
+    /* Contenedor nativo de tus tarjetas en PC */
     .card-container {
         display: flex;
-        flex-wrap: wrap !important;
+        flex-wrap: wrap;
         gap: 25px;
         justify-content: center;
         margin-top: 20px;
         width: 100%;
     }
 
-    /* TUS CLASES DE TARJETAS ORIGINALES (Fijamos la base y evitamos desborde) */
+    /* Tus tarjetas con el ancho exacto que querías para la Compus */
     .glass-card, .tech-card, .metric-card, .pilar-card, .componente-card {
         background: rgba(255, 255, 255, 0.03) !important;
-        backdrop-filter: blur(12px) !important;
-        -webkit-backdrop-filter: blur(12px) !important;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
         border-radius: 16px !important;
-        padding: 25px !important;
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
+        padding: 25px;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         transition: transform 0.3s ease, border-color 0.3s ease;
         
-        /* Esto hace que en PC mantengan su tamaño original */
-        flex: 1 1 300px;
-        max-width: 320px;
-        box-sizing: border-box !important;
-        
-        /* Evita que los textos largos ensanchen la tarjeta hacia los costados */
-        word-wrap: break-word !important;
-        overflow-wrap: break-word !important;
+        /* Ancho ideal para PC */
+        width: 320px !important; 
+        min-width: 320px;
+        box-sizing: border-box;
     }
 
-    .glass-card:hover, .tech-card:hover, .metric-card:hover {
+    .glass-card:hover, .tech-card:hover, .metric-card:hover, .pilar-card:hover, .componente-card:hover {
         transform: translateY(-5px);
         border-color: #00E676 !important;
         box-shadow: 0 12px 40px 0 rgba(0, 230, 118, 0.15);
@@ -104,53 +98,50 @@ st.markdown("""
         line-height: 1.6;
     }
 
-    /* CONTENEDOR PARA PROTEGER LAS TABLAS EN CELULAR */
     .table-responsive {
         width: 100%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }
 
-    /* ==========================================
-       PARCHE EXCLUSIVO PARA CELULARES (PANTALLAS CHICAS)
-       ========================================== */
-    @media (max-width: 768px) {
-        /* Reducimos títulos para que entren en la pantalla del celular */
+
+    /* =======================================================
+       2. REGLAS EXCLUSIVAS PARA PANTALLAS CHICAS (CELULARES)
+       Solo se activan si la pantalla mide menos de 768px de ancho
+       ======================================================= */
+    @media screen and (max-width: 768px) {
+        /* Achicamos fuentes para que entren en celulares */
         .main-title {
-            font-size: 2.1rem !important;
-        }
-        h1 {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             font-size: 2rem !important;
-        }
-        h2 {
-            font-size: 1.4rem !important;
+            text-align: center;
         }
         
-        /* Forzamos a que CADA tarjeta ocupe el ancho completo de la pantalla del celular */
+        /* En el celu anulamos los 320px fijos y hacemos que fluyan al 100% */
         .glass-card, .tech-card, .metric-card, .pilar-card, .componente-card {
             width: 100% !important;
             min-width: 100% !important;
             max-width: 100% !important;
-            margin-left: 0 !important;
-            margin-right: 0 !important;
+            display: block !important;
+            margin-bottom: 15px !important;
             padding: 18px !important;
+            
+            /* Esto rompe cadenas largas que ensanchen el celu hacia el costado */
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
         }
-        
-        /* Parche específico para las filas de tarjetas que hiciste con HTML */
+
+        /* Fuerza a los bloques HTML contenedores a ponerse uno abajo del otro en el celu */
         .card-container {
+            display: flex !important;
             flex-direction: column !important;
             align-items: center !important;
+            gap: 15px !important;
         }
     }
     </style>
 """, unsafe_allow_html=True)
 
-# ==========================================
-# MENÚ LATERAL (SIDEBAR MODULAR)
-# ==========================================
-# ==========================================
-# MENÚ DE NAVEGACIÓN (A partir de acá sigue tu código igual)
-# ==========================================
 # ==========================================
 # MENÚ LATERAL (SIDEBAR MODULAR)
 # ==========================================
