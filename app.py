@@ -148,8 +148,8 @@ with st.sidebar:
 # === REEMPLAZAR EL BLOQUE OPTION_MENU POR ESTE ===
     selected = option_menu(
         menu_title=None,
-        options=["Inicio", "Objetivo Eco", "Fundamentos Eco", "Cronología Eco", "Fichas Técnicas", "Explorador Eco", "Impacto Eco", "Sistema Reconocidos"], # Agregamos la Página 9
-        icons=["house-door-fill", "target", "diagram-3-fill", "clock-history", "file-earmark-text-fill", "search-heart-fill", "activity", "award-fill"], # Ícono de medalla/reconocimiento
+        options=["Inicio", "Objetivo Eco", "Fundamentos Eco", "Cronología Eco", "Fichas Técnicas", "Explorador Eco", "Impacto Eco", "Sistema Reconocidos", "¿Cómo Replicar Eco?"], # Agregamos la Página 10
+        icons=["house-door-fill", "target", "diagram-3-fill", "clock-history", "file-earmark-text-fill", "search-heart-fill", "activity", "award-fill", "share-fill"], # Ícono de compartir/replicar
         menu_icon="cast",
         default_index=0,
         styles={
@@ -1545,5 +1545,195 @@ elif selected == "Sistema Reconocidos":
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • Registro del Capital Humano y Convivencia Técnica • E.E.S.T N°7
+        </div>
+    """, unsafe_allow_html=True)
+# ==========================================
+# PÁGINA 10 — ¿CÓMO REPLICAR ECO?
+# ==========================================
+elif selected == "¿Cómo Replicar Eco?":
+    
+    st.markdown('<div class="main-title">¿CÓMO REPLICAR ECO?</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Guía Práctica de Transferencia Metodológica, Adaptación Local y Escalabilidad Institucional</div>', unsafe_allow_html=True)
+
+    # SECCIÓN 1 & SECCIÓN 2: FILOSOFÍA DE REPLICACIÓN Y REQUISITOS INICIALES
+    col_rep, col_req = st.columns(2)
+    
+    with col_rep:
+        st.markdown('<div class="section-header">🌐 1. Filosofía de Replicabilidad Eco</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card" style="height: 310px; border-left: 4px solid #64FFDA;">
+                <p style="margin-top:0; color:#64FFDA; font-weight:600; margin-bottom:12px;">Código Abierto para la Transformación Social:</p>
+                Proyecto Eco nació con la firme convicción de que el conocimiento no debe ser exclusivo. La replicabilidad es nuestro pilar fundamental porque entendemos que las crisis ambientales se resuelven colectivamente. 
+                <br><br>
+                El sistema está diseñado para que cualquier institución, club o grupo social pueda adoptarlo de forma <strong>parcial o completa</strong>, modificando sus celdas operativas según sus propias realidades y problemáticas del entorno.
+            </div>
+        """, unsafe_allow_html=True)
+        
+    with col_req:
+        st.markdown('<div class="section-header">🧱 2. Requisitos Mínimos Iniciales</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card" style="height: 310px;">
+                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:12px;">Lo que de verdad necesitás para arrancar (Sin barreras económicas):</p>
+                <div class="info-item">👥 <strong>Capital Humano:</strong> Un grupo mínimo de participantes predispuestos a experimentar.</div>
+                <div class="info-item">🤝 <strong>Cultura Colaborativa:</strong> Interés real por romper el aislamiento de las materias tradicionales.</div>
+                <div class="info-item">🏫 <strong>Espacio Físico Mínimo:</strong> Un banco de trabajo, aula o patio para la gestión de materiales.</div>
+                <div class="info-item">✍️ <strong>Sistema de Registro:</strong> Una libreta, cuaderno o drive para que la memoria técnica no se pierda.</div>
+            </div>
+        """, unsafe_allow_html=True)
+
+    # SECCIÓN 10: RUTA DE IMPLEMENTACIÓN RECOMENDADA (Línea de progreso interactiva)
+    st.markdown('<div class="section-header">🗺️ 3. Ruta Crítica de Implementación Recomendada</div>', unsafe_allow_html=True)
+    st.markdown('<p style="color:#CFD8DC; font-size:14px; margin-bottom:15px;">Seleccioná la fase actual de tu institución para medir el nivel de maduración bajo la metodología Eco:</p>', unsafe_allow_html=True)
+    
+    fases_ruta = [
+        "Fase 1: Conformación de Equipo y Lectura de Pilares",
+        "Fase 2: Delimitación de Secciones Operativas",
+        "Fase 3: Desarrollo de las Primeras Fichas Técnicas de Banco",
+        "Fase 4: Despliegue del Sistema de Reconocidos Conductuales",
+        "Fase 5: Auditoría, Cómputo de Resultados y Compartir Conocimiento"
+    ]
+    fase_sel = st.select_slider("Progreso de la Replicación:", options=fases_ruta)
+    
+    # Renderizado dinámico de barra de progreso según slider
+    porcentaje_progreso = (fases_ruta.index(fase_sel) + 1) * 20
+    st.progress(porcentaje_progreso / 100)
+    
+    # SECCIÓN 3: FORMACIÓN DEL EQUIPO
+    st.markdown('<div class="section-header">👥 4. Gobierno del Proyecto: Estructura del Equipo Humano</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="glass-card">
+        <p style="margin-top:0; color:#A5D6A7; font-weight:600; margin-bottom:12px;">La cantidad de integrantes puede variar; lo crítico es el respeto a los roles industriales:</p>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:15px; font-size:14px;">
+            <div style="background:rgba(255,255,255,0.02); padding:12px; border-radius:8px; border-top:3px solid #00E676;">
+                <strong style="color:white; display:block; margin-bottom:5px;">⭐ Líderes de Celda</strong>
+                Responsables de la seguridad del banco de trabajo, el control de inventario y el asiento diario en la bitácora técnica.
+            </div>
+            <div style="background:rgba(255,255,255,0.02); padding:12px; border-radius:8px; border-top:3px solid #64FFDA;">
+                <strong style="color:white; display:block; margin-bottom:5px;">🛠️ Operadores Técnicos</strong>
+                Alumnos o colaboradores enfocados en la ejecución secuencial de los pasos descritos en las fichas activas.
+            </div>
+            <div style="background:rgba(255,255,255,0.02); padding:12px; border-radius:8px; border-top:3px solid #FFD54F;">
+                <strong style="color:white; display:block; margin-bottom:5px;">📢 Nexos Comunales</strong>
+                Encargados de articular la logística de entrada de residuos limpios y la salida de los productos terminados.
+            </div>
+        </div>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # SECCIÓN 4: APLICACIÓN DE LOS PILARES (Interactivo)
+    st.markdown('<div class="section-header">📐 5. Los Pilares Como ADN de Identidad</div>', unsafe_allow_html=True)
+    st.markdown('<p style="color:#CFD8DC; font-size:14px; margin-bottom:12px;">Los pilares constituyen la identidad innegociable de Eco y orientan todas las decisiones:</p>', unsafe_allow_html=True)
+    
+    PILARES_INFO = {
+        "Continuo": "Asegura la regularidad de procesos. Ejemplo: Diseñar un cronograma de guardias en el taller para que los ensayos químicos no se detengan los fines de semana.",
+        "Medible": "Todo residuo y producto debe computarse. Ejemplo: Pesar en gramos exactos la celulosa húmeda recuperada antes de pasarla al rodillo de prensado.",
+        "Interdisciplinario": "Unión de ciencias. Ejemplo: Que los alumnos de informática programen el stock de materiales que recolectan los estudiantes de química.",
+        "Replicable": "Pensar en el código abierto. Ejemplo: Redactar las bitácoras usando un vocabulario genérico y plano, evitando regionalismos institucionales.",
+        "Innovador": "Optimización constante de herramientas. Ejemplo: Reemplazar el batido manual de celulosa por un acople mecánico reciclado de un motor en desuso.",
+        "Organizado": "Estructura de celdas claras. Ejemplo: Delimitar físicamente las zonas de " + '"sucio"' + " (acopio) de las zonas de " + '"limpio"' + " (laboratorio).",
+        "Documentado": "El conocimiento queda, las personas pasan. Ejemplo: Subir cada fallo y cada éxito del laboratorio a un repositorio digital común."
+    }
+    
+    pilar_sel = st.selectbox("Seleccioná un Pilar para ver su aplicación práctica en el aula:", list(PILARES_INFO.keys()))
+    st.markdown(f"""
+        <div style="background: rgba(0, 230, 118, 0.04); border: 1px dashed #00E676; padding: 15px; border-radius: 8px; font-size: 14px; margin-bottom: 25px;">
+            <strong>Principio Operativo:</strong> {PILARES_INFO[pilar_sel]}
+        </div>
+    """, unsafe_allow_html=True)
+
+    # SECCIÓN 5: ORGANIZACIÓN POR SECCIONES OFICIALES
+    st.markdown('<div class="section-header">🏢 6. Distribución de Cargas por Secciones Oficiales</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="glass-card">
+        <table class="custom-table" style="font-size:13.5px;">
+            <thead>
+                <tr>
+                    <th style="width: 20%;">Sección Oficial</th>
+                    <th style="width: 35%;">Objetivo y Función Adaptable</th>
+                    <th style="width: 45%;">Actividades Mínimas Recomendadas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong style="color:#00E676;">EcoPapel</strong></td>
+                    <td>Recuperación de fibras de celulosa institucional y descarte de archivos de preceptoría.</td>
+                    <td>Molienda, tamizado, fabricación de papel seed germinable y prensado físico.</td>
+                </tr>
+                <tr>
+                    <td><strong style="color:#64FFDA;">EcoLab</strong></td>
+                    <td>Validación físico-química de transformaciones energéticas y control de tolerancias.</td>
+                    <td>Ensayos de pirólisis para Carbon Ink, medición de pH en compost y control de densidades.</td>
+                </tr>
+                <tr>
+                    <td><strong style="color:#FFD54F;">EcoTech</strong></td>
+                    <td>Digitalización de la infraestructura conceptual del conocimiento y software de gestión.</td>
+                    <td>Despliegue de scripts web locales, simulaciones y modelado de entornos lógicos.</td>
+                </tr>
+                <tr>
+                    <td><strong style="color:#A5D6A7;">EcoCommunity</strong></td>
+                    <td>Extensión y transferencia directa de las tecnologías hacia la comunidad vecinal.</td>
+                    <td>Talleres abiertos de reciclado de TetraPak y vinculación logística con comedores.</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # SECCIÓN 6 & SECCIÓN 7: FICHAS TÉCNICAS Y RECONOCIDOS EN REPLICACIÓN
+    col_fic, col_rec = st.columns(2)
+    
+    with col_fic:
+        st.markdown('<div class="section-header">📋 7. Fichas Técnicas: Preservar el Saber</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card" style="height: 310px;">
+                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:12px;">El modelo estandarizado contra el personalismo docente:</p>
+                Las fichas técnicas son los planos del proyecto. Permiten que si un alumno o profesor se retira, el conocimiento se quede fijado en el banco de trabajo.
+                <br><br>
+                <strong>Estructura base recomendada:</strong>
+                <ul style="margin-top:5px; padding-left:18px; font-size:13px; color:#CFD8DC; line-height:1.4;">
+                    <li><strong>ID/Número:</strong> Trazabilidad secuencial clara.</li>
+                    <li><strong>Eje Conceptual:</strong> Qué ley científica respalda el ensayo.</li>
+                    <li><strong>Paso a Paso:</strong> Algoritmo secuencial de acciones físicas.</li>
+                    <li><strong>Control de Fallos:</strong> Qué hacer si la mezcla se rompe.</li>
+                </ul>
+            </div>
+        """, unsafe_allow_html=True)
+        
+    with col_rec:
+        st.markdown('<div class="section-header">🥇 8. Gestión del Estímulo No Competitivo</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card" style="height: 310px;">
+                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:12px;">Cómo aplicar el Sistema de Reconocidos externamente:</p>
+                Para replicar este motor humano en otra institución, la regla de oro es eliminar las notas numéricas tradicionales. 
+                <br><br>
+                Se debe implementar un registro semanal enfocado en visibilizar el esfuerzo continuado. No se busca premiar al "mejor del curso", sino reconocer de manera transparente a los bancos que cumplieron con las normas de seguridad, mantuvieron el orden y apoyaron activamente a los otros equipos en contraturno.
+            </div>
+        """, unsafe_allow_html=True)
+
+    # SECCIÓN 8: USO DE HERRAMIENTAS DE APOYO
+    st.markdown('<div class="section-header">🛠️ 9. Suite Tecnológica de Apoyo: Caja de Herramientas</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="glass-card">
+        <p style="margin-top:0; color:#A5D6A7; font-weight:600; margin-bottom:10px;">Los recursos desarrollados por Eco que aceleran la implantación en otros centros:</p>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:12px; font-size:13.5px; line-height:1.4;">
+            <div style="background:rgba(0,0,0,0.2); padding:10px; border-radius:6px;">💻 <strong>Plataforma EcoWeb:</strong> Sirve como ejemplo espejo para estructurar los indicadores institucionales ante inspectores.</div>
+            <div style="background:rgba(0,0,0,0.2); padding:10px; border-radius:6px;">🤖 <strong>Módulo EcoIA:</strong> Permite acelerar la redacción formal de nuevas fichas mediante prompts estructurados.</div>
+            <div style="background:rgba(0,0,0,0.2); padding:10px; border-radius:6px;">📖 <strong>El Manual Eco:</strong> Cuerpo normativo que dicta el flujo de los residuos y las tolerancias de laboratorio.</div>
+        </div>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # SECCIÓN 9: ADAPTACIÓN LOCAL
+    st.markdown('<div class="section-header">🎨 10. Adaptación Local: El Enfoque Situacional</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="glass-card" style="border-left: 5px solid #64FFDA; background: rgba(100, 255, 218, 0.02);">
+        <strong>¡Atención Replicadores!</strong> Replicar Proyecto Eco <strong>no significa fotocopiar</strong> lo que hizo la E.E.S.T N°7. Cada comunidad posee realidades distintas. Si tu escuela está en una zona agrícola, la división <em>EcoPapel</em> podría transmutar hacia la recuperación de chala de maíz; si no contás con computadoras avanzadas, la división <em>EcoTech</em> puede operar con pizarras físicas y fichas de papel en archivadores metálicos. Mientras se respeten a rajatabla los <strong>7 pilares dogmáticos</strong>, ¡el proyecto sigue siendo 100% Eco!
+        </div>
+    """, unsafe_allow_html=True)
+
+    # Footer institucional
+    st.markdown("""
+        <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
+            Proyecto Eco 2026 • Framework Abierto de Replicabilidad e Ingeniería Pedagógica • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
