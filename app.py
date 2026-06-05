@@ -147,8 +147,8 @@ with st.sidebar:
     
     selected = option_menu(
         menu_title=None,
-        options=["Inicio"],
-        icons=["house-door-fill"],
+        options=["Inicio", "Objetivo Eco"],  # Agregamos la nueva página aquí
+        icons=["house-door-fill", "target"], # Ícono de tiro al blanco para Objetivo Eco
         menu_icon="cast",
         default_index=0,
         styles={
@@ -279,6 +279,139 @@ if selected == "Inicio":
         </div>
     """, unsafe_allow_html=True)
 
+# ==========================================
+# PÁGINA 2 — OBJETIVO ECO
+# ==========================================
+elif selected == "Objetivo Eco":
+    
+    st.markdown('<div class="main-title">OBJETIVO ECO</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Análisis Crítico del Problema Ambiental Escolar y Nuestra Solución Sistémica</div>', unsafe_allow_html=True)
+    
+    # SECCIÓN 5: OBJETIVO GENERAL (Ubicado estratégicamente arriba como introducción)
+    st.markdown('<div class="section-header">🎯 Objetivo General: ¿Qué intenta conseguir Proyecto Eco?</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="glass-card" style="font-size: 18px; line-height: 1.6; border-left: 5px solid #00E676;">
+        El propósito definitivo de <strong>Proyecto Eco</strong> es estructurar un sistema integral y replicable que mitigue el impacto ambiental institucional mediante la creación de tecnologías sustentables, beneficiando directamente a la comunidad educativa y sentando las bases operativas para que el conocimiento técnico no se pierda entre ciclos lectivos.
+        </div>
+    """, unsafe_allow_html=True)
+
+    # Columnas para Sección 1 y Sección 2 (Problema vs Consecuencias)
+    col_prob, col_cons = st.columns(2)
+    
+    with col_prob:
+        st.markdown('<div class="section-header">❌ 1. Problema Identificado</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card">
+                <p style="margin-top:0; color:#FF5252; font-weight:600; margin-bottom:18px;">¿Qué problema observó Proyecto Eco?</p>
+                <div class="info-item">
+                    <span class="info-bullet" style="color:#FF5252;">✦</span><span class="info-tag">Dependencia personalista:</span> Proyectos ecológicos escolares que caen bajo la responsabilidad de muy pocas personas.
+                </div>
+                <div class="info-item">
+                    <span class="info-bullet" style="color:#FF5252;">✦</span><span class="info-tag">Fuga de conocimiento:</span> Pérdida masiva de los saberes prácticos avanzados al finalizar cada ciclo lectivo.
+                </div>
+                <div class="info-item">
+                    <span class="info-bullet" style="color:#FF5252;">✦</span><span class="info-tag">Ausencia de documentación:</span> Falta extrema de registros organizados, planos o memorias técnicas descriptivas.
+                </div>
+                <div class="info-item">
+                    <span class="info-bullet" style="color:#FF5252;">✦</span><span class="info-tag">Brecha intergeneracional:</span> Alta dificultad para transmitir experiencias de forma fluida entre diferentes camadas de alumnos.
+                </div>
+                <div class="info-item">
+                    <span class="info-bullet" style="color:#FF5252;">✦</span><span class="info-tag">Fragilidad operativa:</span> Escasa o nula continuidad a largo plazo de las iniciativas ambientales escolares.
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+        
+    with col_cons:
+        st.markdown('<div class="section-header">📉 2. Consecuencias del Problema</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card">
+                <p style="margin-top:0; color:#FF8A80; font-weight:600; margin-bottom:18px;">¿Por qué es crítico e importante resolverlo?</p>
+                <div class="info-item">
+                    <span class="info-bullet" style="color:#FF8A80;">✦</span><span class="info-tag">Reinicio constante:</span> Las dinámicas ambientales sufren un bucle donde cada año se arranca desde cero.
+                </div>
+                <div class="info-item">
+                    <span class="info-bullet" style="color:#FF8A80;">✦</span><span class="info-tag">Desperdicio de recursos:</span> Pérdida material de prototipos y desvanecimiento de la documentación previa.
+                </div>
+                <div class="info-item">
+                    <span class="info-bullet" style="color:#FF8A80;">✦</span><span class="info-tag">Desmotivación del alumnado:</span> Disminución progresiva de la participación activa por falta de rumbo claro.
+                </div>
+                <div class="info-item">
+                    <span class="info-bullet" style="color:#FF8A80;">✦</span><span class="info-tag">Impacto diluido:</span> Reducción severa del verdadero impacto ecológico y comunitario proyectado.
+                </div>
+                <div class="info-item">
+                    <span class="info-bullet" style="color:#FF8A80;">✦</span><span class="info-tag">Cuellos de botella:</span> El sistema colapsa si un docente o alumno líder específico abandona la institución.
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+
+    # SECCIÓN 3: SOLUCIÓN PROPUESTA
+    st.markdown('<div class="section-header">🛠️ 3. Solución Propuesta: El Sistema Eco</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="glass-card">
+            <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:18px;">¿Cómo intenta resolver el problema Proyecto Eco mediante una infraestructura sistémica?</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
+                <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 10px; border-left: 3px solid #00E676;">
+                    <span style="color:#00E676; font-weight:bold;">🏢 Organización por Secciones:</span> Divisiones técnicas de trabajo especializado (EcoPapel, EcoLab, EcoTech, EcoIndustria) para atomizar tareas.
+                </div>
+                <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 10px; border-left: 3px solid #00E676;">
+                    <span style="color:#00E676; font-weight:bold;">🏆 Sistema de Reconocidos:</span> Un esquema de incentivo basado en mérito y auditoría semanal para mantener activa la participación constante.
+                </div>
+                <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 10px; border-left: 3px solid #00E676;">
+                    <span style="color:#00E676; font-weight:bold;">📋 Fichas Técnicas:</span> Protocolos de ingeniería estandarizados y manuales de desarrollo rápido para asegurar la transferencia científica.
+                </div>
+                <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 10px; border-left: 3px solid #00E676;">
+                    <span style="color:#00E676; font-weight:bold;">🔄 Flujo Eco:</span> Dinámica metodológica de retroalimentación donde un subproyecto nutre directamente la producción del siguiente.
+                </div>
+                <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 10px; border-left: 3px solid #00E676;">
+                    <span style="color:#00E676; font-weight:bold;">⭐ Pilares Eco:</span> Los 7 vectores conceptuales irrenunciables que rigen y validan cada línea de investigación y desarrollo.
+                </div>
+                <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 10px; border-left: 3px solid #00E676;">
+                    <span style="color:#00E676; font-weight:bold;">🌐 Herramientas Digitales:</span> El uso de software interactivo y de EcoWeb como el repositorio unificado de libre acceso.
+                </div>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # SECCIÓN 4 & SECCIÓN 6: PRINCIPIOS Y VISIÓN FUTURA
+    col_pila, col_vis = st.columns([4, 6])
+    
+    with col_pila:
+        st.markdown('<div class="section-header">⚖️ 4. Principios de la Solución</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card" style="height: 290px;">
+                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:15px;">¿Sobre qué pilares inquebrantables se construye?</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                    <span class="pilar-tag">♻️ Replicable</span>
+                    <span class="pilar-tag">🌿 Sustentable</span>
+                    <span class="pilar-tag">🔄 Circular</span>
+                    <span class="pilar-tag">⏳ Continuo</span>
+                    <span class="pilar-tag">🧪 Experimental</span>
+                    <span class="pilar-tag">📊 Medible</span>
+                    <span class="pilar-tag">🤝 Interdisciplinario</span>
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+        
+    with col_vis:
+        st.markdown('<div class="section-header">🚀 6. Visión Futura</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card" style="height: 290px;">
+                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:15px;">¿Hacia dónde está creciendo el sistema?</p>
+                <div class="info-item"><span class="info-bullet">🚀</span><strong>Masificación participativa:</strong> Escalar la cantidad de alumnos e investigadores activos en los laboratorios.</div>
+                <div class="info-item"><span class="info-bullet">📚</span><strong>Expansión técnica:</strong> Generar e indexar un número cada vez mayor de fichas técnicas normalizadas.</div>
+                <div class="info-item"><span class="info-bullet">⚡</span><strong>Desarrollo de proyectos:</strong> Diseñar nuevos dispositivos ecológicos complejos interconectados.</div>
+                <div class="info-item"><span class="info-bullet">🏫</span><strong>Exportación del modelo:</strong> Lograr la replicación efectiva del ecosistema Eco en otras escuelas de la región.</div>
+                <div class="info-item"><span class="info-bullet">🤖</span><strong>Evolución digital:</strong> Potenciar las capacidades de EcoWeb mediante integraciones de IA avanzada.</div>
+            </div>
+        """, unsafe_allow_html=True)
+
+    # Cierre de la página
+    st.markdown("""
+        <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
+            Proyecto Eco 2026 • Filosofía de Infraestructura Continua • E.E.S.T N°7
+        </div>
+    """, unsafe_allow_html=True)
+    
     # Footer institucional 
     st.markdown("""
         <div style="text-align: center; margin-top: 50px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
