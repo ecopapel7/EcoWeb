@@ -1910,7 +1910,7 @@ elif selected == "Preguntas Frecuentes":
     """, unsafe_allow_html=True)
     
 # ==========================================
-# PÁGINA 13 — ECOIA (NÚCLEO INTEGRADO - CORREGIDO)
+# PÁGINA 13 — ECOIA (NÚCLEO INTEGRADO - IMPORTACIÓN INYECTADA)
 # ==========================================
 elif selected == "EcoIA":
     st.markdown('<div class="main-title">ECOIA: NÚCLEO COGNITIVO</div>', unsafe_allow_html=True)
@@ -1952,13 +1952,12 @@ elif selected == "EcoIA":
         btn_enviar = st.button("🚀 Procesar Inferencia", use_container_width=True)
 
         if btn_enviar and user_query:
-            # INTERCEPCIÓN DINÁMICA DE CREDENCIALES (Garantiza lectura en Streamlit Cloud / Local)
+            # INTERCEPCIÓN DINÁMICA DE CREDENCIALES (Garantiza lectura en Streamlit Cloud)
             api_key_groq = ""
             
-            # Intentar leer primero de st.secrets (Prioridad en servidores de Streamlit Cloud)
+            # Buscar en los secrets configurados en la plataforma
             if "GROQ_API_KEY" in st.secrets:
                 api_key_groq = st.secrets["GROQ_API_KEY"]
-            # Si no está en secrets, intentar leer de variables de entorno locales (os.getenv)
             elif os.getenv("GROQ_API_KEY"):
                 api_key_groq = os.getenv("GROQ_API_KEY")
 
@@ -1974,14 +1973,17 @@ elif selected == "EcoIA":
             # Insertar la consulta del usuario al historial visual antes del proceso
             st.session_state.messages_ecoia.append({"role": "user", "content": user_query})
 
-            # Si encontramos la credencial válida por cualquiera de las dos vías
+            # Si encontramos la credencial válida procedemos con la inyección segura
             if api_key_groq != "":
                 with st.spinner("🧠 Computando tensores de lenguaje y analizando base de conocimiento de Proyecto Eco..."):
                     try:
-                        # Instanciación dinámica del cliente Groq en caliente
+                        # INYECTAMOS LA IMPORTACIÓN EXPLÍCITA EN CALIENTE PARA EVITAR EL NAMEERROR
+                        from groq import Groq
+                        
+                        # Instanciación nativa estándar utilizando el parámetro exacto api_key
                         client = Groq(api_key=api_key_groq)
                         
-                        # Llamada a la API de inferencia utilizando el modelo Llama3 heredado
+                        # Llamada a la API de inferencia utilizando el modelo Llama3
                         completion = client.chat.completions.create(
                             model="llama3-8b-8192",
                             messages=[
@@ -2007,8 +2009,8 @@ elif selected == "EcoIA":
                     time.sleep(1.0)
                     respuesta_fallback = (
                         f"🤖 **[EcoIA - Modo Autónomo offline]:** Recibí tu consulta sobre '{user_query}'. "
-                        "No se detectaron las credenciales activas del servidor en `st.secrets`. "
-                        "Verificá que el nombre clave en tu panel de Streamlit sea exactamente `GROQ_API_KEY` (respetando mayúsculas y minúsculas)."
+                        "No se detectaron las credenciales activas en `st.secrets`. "
+                        "Verificá que el nombre en el panel de control de Streamlit coincida con `GROQ_API_KEY`."
                     )
                     st.session_state.messages_ecoia.append({"role": "assistant", "content": respuesta_fallback})
 
@@ -2033,7 +2035,7 @@ elif selected == "EcoIA":
                     </div>
                 """, unsafe_allow_html=True)
 
-    # Footer institucional de la celda de Inteligencia Artificial
+    # Footer de página
     st.markdown("""
         <div style="text-align: center; margin-top: 50px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • Suite EcoIA Operativa v2.0 • Procesamiento de Lenguaje Natural en Escuelas Técnicas • E.E.S.T N°7
