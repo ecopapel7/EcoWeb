@@ -1386,13 +1386,15 @@ elif selected == "Sistema Reconocidos":
 
     # DATASET DE CONTROL DE RECONOCIDOS (Base de datos para analítica en tiempo real)
     RECONOCIDOS_DB = [
-        {"nombre": "Benitez, Thiago", "division": "EcoTech", "periodo": "Mayo 2026", "motivo": "Liderazgo en la codificación de la arquitectura digital EcoWeb y persistencia de datos.", "tipo": "Actual"},
-        {"nombre": "Gómez, Milagros", "division": "EcoPapel", "periodo": "Mayo 2026", "motivo": "Optimización del tamizado y control de calidad en la producción de FibroPapel.", "tipo": "Actual"},
-        {"nombre": "Rodriguez, Lucas", "division": "EcoLab", "periodo": "Mayo 2026", "motivo": "Precisión matemática en el confinamiento térmico de pirólisis para Carbon Ink.", "tipo": "Actual"},
-        {"nombre": "Martínez, Sofía", "division": "EcoIndustria", "periodo": "Abril 2026", "motivo": "Diseño y matricería del amplificador acústico pasivo Eco-Voz.", "tipo": "Histórico", "anio": 2026},
-        {"nombre": "Álvarez, Bruno", "division": "EcoTech", "periodo": "Abril 2026", "motivo": "Desarrollo del módulo interactivo EcoMod para entornos virtuales de Minecraft.", "tipo": "Histórico", "anio": 2026},
-        {"nombre": "Sánchez, Lautaro", "division": "EcoLab", "periodo": "Noviembre 2025", "motivo": "Co-redacción técnica del Manual del Reciclador original en la primera fase.", "tipo": "Histórico", "anio": 2025},
-        {"nombre": "Fernández, Zoe", "division": "EcoPapel", "periodo": "Octubre 2025", "motivo": "Coordinación de los primeros ensayos exitosos de Papel Seed con semillas nativas.", "tipo": "Histórico", "anio": 2025},
+        {"nombre": "Jonathan Orellana", "division": "EcoIndustria", "periodo": "Abril 2025", "motivo": "Lider de EcoIndustria", "tipo": "Actual"},
+        {"nombre": "Facundo Orellana", "division": "EcoPapel, EcoLab y EcoIndustria", "periodo": "Mayo 2026", "motivo": "Participante de EcoPapel, EcoLab y EcoIndustria", "tipo": "Actual"},
+        {"nombre": "Titirico Franco", "division": "EcoPapel", "periodo": "Abril 2025", "motivo": "Lider de EcoPapel", "tipo": "Actual"},
+        {"nombre": "Tobias Ponce Castaño", "division": "EcoLab", "periodo": "Abril 2025", "motivo": "Lider de EcoLab.", "tipo": "Actual"},
+        {"nombre": "Octavio Vidal", "division": "EcoPapel", "periodo": "Mayo 2026", "motivo": "Participante de EcoPapel.", "tipo": "Actual"},
+        {"nombre": "Taina Pral", "division": "EcoLab", "periodo": "Mayo 2026", "motivo": "Participante de EcoLab.", "tipo": "Actual"},
+        {"nombre": "Romina Colque", "division": "EcoLab", "periodo": "Mayo 2026", "motivo": "Participante de EcoLab.", "tipo": "Actual"},
+        {"nombre": "Julian Tejerina", "division": "EcoTech", "periodo": "Abril 2025", "motivo": "Participante de EcoTech.", "tipo": "Actual"},
+        {"nombre": "Brandon Regueyra", "division": "2025", "periodo": "Abril 2025", "motivo": "Participante de EcoPapel 2025", "tipo": "Histórico", "anio": 2025},
     ]
 
     # SECCIÓN 1 & SECCIÓN 2: FILOSOFÍA DEL SISTEMA Y PROBLEMÁTICA
