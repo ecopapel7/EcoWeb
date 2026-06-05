@@ -5,16 +5,16 @@ from streamlit_option_menu import option_menu
 # CONFIGURACIÓN DE LA PÁGINA
 # ==========================================
 st.set_page_config(
-    page_title="EcoWeb 1.0 - Proyecto Eco",
+    page_title="EcoWeb 2.0 - Proyecto Eco",
     page_icon="🌱",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
 # ==========================================
-# INYECCIÓN DE INTERFAZ DE ALTO IMPACTO (CSS BLINDADO)
+# INYECCIÓN DE INTERFAZ DE ALTO IMPACTO (CSS BLINDADO RESPONSIVE)
 # ==========================================
-    styles = """
+styles = """
 <style>
 /* --- FONDO GLOBAL ULTRA-PRO --- */
 .stApp {
@@ -33,7 +33,7 @@ st.set_page_config(
 /* --- CONTENEDOR DE TARJETAS (FLEXBOX ELÁSTICO) --- */
 .card-container {
     display: flex;
-    flex-wrap: wrap; /* Clave: si no entran, bajan solas */
+    flex-wrap: wrap; /* Si no entran en la pantalla del celu, bajan solas */
     gap: 20px;
     justify-content: center;
     margin-top: 20px;
@@ -48,8 +48,7 @@ st.set_page_config(
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 25px;
-    /* En vez de width fijo, usamos base elástica y max-width */
-    flex: 1 1 300px; 
+    flex: 1 1 300px; /* Base elástica para que se adapte al ancho */
     max-width: 340px; 
     box-sizing: border-box;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
@@ -57,7 +56,7 @@ st.set_page_config(
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    word-wrap: break-word; /* Evita que el texto desborde */
+    word-wrap: break-word; /* Evita que el texto se salga del cuadro */
     overflow-wrap: break-word;
 }
 
@@ -86,7 +85,7 @@ st.set_page_config(
     line-height: 1.6;
 }
 
-/* --- CONTENEDOR DE TABLAS FLUIDAS (Para que no rompan el celu) --- */
+/* --- CONTENEDOR DE TABLAS FLUIDAS (Para las fichas técnicas) --- */
 .table-responsive {
     width: 100%;
     overflow-x: auto;
@@ -95,10 +94,10 @@ st.set_page_config(
     border-radius: 8px;
 }
 
-/* --- PARCHE ADICIONAL PARA COMPONENTE MENÚ Y AJUSTES MÓVILES --- */
+/* --- AJUSTES EXCLUSIVOS PARA PANTALLAS DE CELULARES --- */
 @media (max-width: 768px) {
     .pilar-card, .componente-card {
-        flex: 1 1 100%; /* En celulares cada tarjeta toma el 100% del ancho */
+        flex: 1 1 100%; /* En celu, cada tarjeta ocupa todo el ancho disponible */
         max-width: 100%;
         padding: 20px;
     }
@@ -108,15 +107,21 @@ st.set_page_config(
     }
     
     h1 {
-        font-size: 2rem !important;
+        font-size: 1.9rem !important;
     }
     
     h2 {
-        font-size: 1.6rem !important;
+        font-size: 1.5rem !important;
     }
 }
 </style>
 """
+
+st.markdown(styles, unsafe_allow_html=True)
+
+# ==========================================
+# MENÚ DE NAVEGACIÓN (A partir de acá sigue tu código igual)
+# ==========================================
 # ==========================================
 # MENÚ LATERAL (SIDEBAR MODULAR)
 # ==========================================
