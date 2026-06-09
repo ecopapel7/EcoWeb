@@ -211,8 +211,8 @@ if selected == "Inicio":
     col1, col2 = st.columns(2)
 
     with col1:
-    st.markdown('<div class="section-header">⚠️ ¿Por qué fue creada?</div>', unsafe_allow_html=True)
-    st.markdown("""
+        st.markdown('<div class="section-header">⚠️ ¿Por qué fue creada?</div>', unsafe_allow_html=True)
+        st.markdown("""
         <div class="glass-card">
             <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:18px;">
             Necesitábamos resolver varios desafíos del proyecto:
