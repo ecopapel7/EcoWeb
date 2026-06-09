@@ -185,7 +185,7 @@ with st.sidebar:
     
     st.write("---")
     st.caption("Feria Tecnológica 2026")
-```python
+    
 # ==========================================
 # PÁGINA 1 — INICIO
 # ==========================================
@@ -346,7 +346,6 @@ if selected == "Inicio":
         </table>
         </div>
     """, unsafe_allow_html=True)
-```
 
 # ==========================================
 # PÁGINA 2 — OBJETIVO ECO
