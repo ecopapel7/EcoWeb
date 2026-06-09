@@ -185,125 +185,194 @@ with st.sidebar:
     
     st.write("---")
     st.caption("Feria Tecnológica 2026")
-
 # ==========================================
 # PÁGINA 1 — INICIO
 # ==========================================
 if selected == "Inicio":
-    
+
     st.markdown('<div class="main-title">PROYECTO ECO 2026</div>', unsafe_allow_html=True)
     st.markdown('<div class="subtitle">Infraestructura Educativa Continua y Sistema Integral de Innovación Sustentable</div>', unsafe_allow_html=True)
-    
-    # 1. ¿Qué es EcoWeb?
+
+    # ¿Qué es EcoWeb?
     st.markdown('<div class="section-header">🧬 ¿Qué es EcoWeb?</div>', unsafe_allow_html=True)
+
     st.markdown(
         """
-        <div class="glass-card" style="font-size: 18px; line-height: 1.6; border-left: 5px solid #00E676;">
-        <strong>EcoWeb</strong> es la plataforma digital oficial de <strong>Proyecto Eco</strong>. 
-        Fue desarrollada para centralizar información, documentación, fichas técnicas, recursos educativos y 
-        herramientas relacionadas con el proyecto, permitiendo que los conocimientos generados puedan conservarse, 
-        consultarse y replicarse con mayor facilidad.
+        <div class="glass-card" style="font-size:18px; line-height:1.6; border-left:5px solid #00E676;">
+        <strong>EcoWeb</strong> es la plataforma digital oficial de <strong>Proyecto Eco</strong>.
+        Fue desarrollada para centralizar información, documentación, fichas técnicas,
+        recursos educativos y materiales relacionados con el proyecto.
+
+        Su objetivo es conservar el conocimiento generado por los estudiantes,
+        facilitar el acceso a la información y permitir que las iniciativas puedan
+        consultarse, compartirse y replicarse con mayor facilidad.
         </div>
-        """, unsafe_allow_html=True
+        """,
+        unsafe_allow_html=True
     )
-    
-    # Columnas centrales solucionadas sin fugas de string
+
     col1, col2 = st.columns(2)
-    
+
+    # --------------------------------------
+    # ¿Por qué fue creada?
+    # --------------------------------------
     with col1:
+
         st.markdown('<div class="section-header">⚠️ ¿Por qué fue creada?</div>', unsafe_allow_html=True)
+
         st.markdown("""
-            <div class="glass-card">
-                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:18px;">Necesitábamos resolver un problema:</p>
-                <div class="info-item">
-                    <span class="info-bullet">✦</span><span class="info-tag">Gran cantidad de información dispersa:</span> Centraliza datos fragmentados de investigaciones anteriores.
-                </div>
-                <div class="info-item">
-                    <span class="info-bullet">✦</span><span class="info-tag">Crecimiento del proyecto:</span> Soporta de forma escalable la evolución continua del ecosistema.
-                </div>
-                <div class="info-item">
-                    <span class="info-bullet">✦</span><span class="info-tag">Necesidad de conservar conocimientos:</span> Evita la pérdida del capital intelectual al egresar los estudiantes.
-                </div>
-                <div class="info-item">
-                    <span class="info-bullet">✦</span><span class="info-tag">Necesidad de facilitar la replicabilidad:</span> Prepara manuales listos para exportar el modelo a otras escuelas.
-                </div>
-                <div class="info-item">
-                    <span class="info-bullet">✦</span><span class="info-tag">Necesidad de mostrar resultados:</span> Crea una ventana pública y auditable de mitigación ambiental real.
-                </div>
+        <div class="glass-card">
+
+            <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:18px;">
+            EcoWeb nació para resolver varios desafíos del proyecto:
+            </p>
+
+            <div class="info-item">
+                <span class="info-bullet">✦</span>
+                <span class="info-tag">Información dispersa:</span>
+                Reúne en un solo lugar datos, documentos y materiales desarrollados por distintos equipos.
             </div>
+
+            <div class="info-item">
+                <span class="info-bullet">✦</span>
+                <span class="info-tag">Crecimiento del proyecto:</span>
+                Permite organizar una cantidad cada vez mayor de iniciativas y contenidos.
+            </div>
+
+            <div class="info-item">
+                <span class="info-bullet">✦</span>
+                <span class="info-tag">Conservación del conocimiento:</span>
+                Evita que la experiencia acumulada se pierda cuando los estudiantes egresan.
+            </div>
+
+            <div class="info-item">
+                <span class="info-bullet">✦</span>
+                <span class="info-tag">Replicabilidad:</span>
+                Facilita que otras personas o instituciones puedan conocer y aplicar el modelo de trabajo.
+            </div>
+
+            <div class="info-item">
+                <span class="info-bullet">✦</span>
+                <span class="info-tag">Transparencia:</span>
+                Permite mostrar públicamente avances, actividades y resultados del proyecto.
+            </div>
+
+        </div>
         """, unsafe_allow_html=True)
-        
+
+    # --------------------------------------
+    # Funciones de EcoWeb
+    # --------------------------------------
     with col2:
+
         st.markdown('<div class="section-header">⚙️ Funciones de EcoWeb</div>', unsafe_allow_html=True)
+
         st.markdown("""
-            <div class="glass-card">
-                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:18px;">Para qué sirve nuestra plataforma digital:</p>
-                <div class="info-item">
-                    <span class="info-bullet">✦</span><span class="info-tag">Organizar información:</span> Sistematiza el árbol de subproyectos e iniciativas del equipo.
-                </div>
-                <div class="info-item">
-                    <span class="info-bullet">✦</span><span class="info-tag">Almacenar fichas técnicas:</span> Ofrece descarga y lectura inmediata de los protocolos de ingeniería.
-                </div>
-                <div class="info-item">
-                    <span class="info-bullet">✦</span><span class="info-tag">Difundir iniciativas ecológicas:</span> Comunica las campañas aplicadas y las bitácoras experimentales.
-                </div>
-                <div class="info-item">
-                    <span class="info-bullet">✦</span><span class="info-tag">Facilitar la consulta de contenidos:</span> Optimiza la búsqueda de material educativo de base científica.
-                </div>
-                <div class="info-item">
-                    <span class="info-bullet">✦</span><span class="info-tag">Mostrar resultados e impacto:</span> Muestra de forma transparente las métricas logradas por los dispositivos.
-                </div>
-                <div class="info-item">
-                    <span class="info-bullet">✦</span><span class="info-tag">Favorecer la replicabilidad:</span> Agiliza la transferencia metodológica del ecosistema escolar.
-                </div>
+        <div class="glass-card">
+
+            <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:18px;">
+            Principales funciones de la plataforma:
+            </p>
+
+            <div class="info-item">
+                <span class="info-bullet">✦</span>
+                <span class="info-tag">Organizar información:</span>
+                Reúne y estructura la documentación generada por Proyecto Eco.
             </div>
+
+            <div class="info-item">
+                <span class="info-bullet">✦</span>
+                <span class="info-tag">Almacenar fichas técnicas:</span>
+                Permite acceder a documentos, procedimientos y materiales desarrollados por el equipo.
+            </div>
+
+            <div class="info-item">
+                <span class="info-bullet">✦</span>
+                <span class="info-tag">Difundir iniciativas:</span>
+                Presenta campañas, actividades y experiencias realizadas dentro del proyecto.
+            </div>
+
+            <div class="info-item">
+                <span class="info-bullet">✦</span>
+                <span class="info-tag">Facilitar consultas:</span>
+                Hace más simple encontrar información y recursos educativos.
+            </div>
+
+            <div class="info-item">
+                <span class="info-bullet">✦</span>
+                <span class="info-tag">Mostrar resultados:</span>
+                Permite visualizar avances y logros obtenidos por las distintas iniciativas.
+            </div>
+
+            <div class="info-item">
+                <span class="info-bullet">✦</span>
+                <span class="info-tag">Favorecer la replicabilidad:</span>
+                Facilita que otras escuelas o grupos puedan utilizar la información disponible como referencia.
+            </div>
+
+        </div>
         """, unsafe_allow_html=True)
-        
-    # 4. Relación con los pilares (Cuadro final de cierre)
+
+    # --------------------------------------
+    # Relación con los pilares
+    # --------------------------------------
     st.markdown('<div class="section-header">📊 Relación con los Pilares</div>', unsafe_allow_html=True)
+
     st.markdown("""
-        <div class="glass-card" style="padding: 10px 20px 20px 20px;">
+    <div class="glass-card" style="padding:10px 20px 20px 20px;">
+
         <table class="custom-table">
+
             <thead>
                 <tr>
-                    <th style="width: 25%;">Pilar</th>
-                    <th style="width: 75%;">Relación con EcoWeb</th>
+                    <th style="width:25%;">Pilar</th>
+                    <th style="width:75%;">Relación con EcoWeb</th>
                 </tr>
             </thead>
+
             <tbody>
+
                 <tr>
                     <td><span class="pilar-tag">Replicable</span></td>
-                    <td>Permite acceder a documentación y fichas técnicas desde cualquier lugar.</td>
+                    <td>Permite acceder a documentación, recursos y fichas técnicas desde cualquier lugar.</td>
                 </tr>
+
                 <tr>
                     <td><span class="pilar-tag">Continuo</span></td>
-                    <td>Conserva la información y el conocimiento técnico entre generaciones de estudiantes.</td>
+                    <td>Conserva información y conocimientos para futuras generaciones de estudiantes.</td>
                 </tr>
+
                 <tr>
                     <td><span class="pilar-tag">Medible</span></td>
-                    <td>Permite registrar de manera pública y transparente los avances y resultados.</td>
+                    <td>Facilita el registro y la visualización de avances, actividades y resultados.</td>
                 </tr>
+
                 <tr>
                     <td><span class="pilar-tag">Interdisciplinario</span></td>
-                    <td>Integra y unifica todas las secciones, áreas y divisiones tecnológicas.</td>
+                    <td>Integra contenidos provenientes de distintas áreas y equipos de trabajo.</td>
                 </tr>
+
                 <tr>
                     <td><span class="pilar-tag">Experimental</span></td>
-                    <td>Difunde los experimentos, pruebas, fallos y optimizaciones de las fichas.</td>
+                    <td>Permite documentar pruebas, experiencias, mejoras y aprendizajes obtenidos.</td>
                 </tr>
+
                 <tr>
                     <td><span class="pilar-tag">Circular</span></td>
-                    <td>Facilita el intercambio abierto de conocimientos bajo una filosofía Open Source.</td>
+                    <td>Favorece la reutilización y el intercambio de conocimientos dentro de la comunidad.</td>
                 </tr>
+
                 <tr>
                     <td><span class="pilar-tag">Sustentable</span></td>
-                    <td>Reduce la necesidad de copias impresas y digitaliza la infraestructura de auditoría.</td>
+                    <td>Reduce el uso de papel y digitaliza gran parte de la documentación del proyecto.</td>
                 </tr>
-            </tbody>
-        </table>
-        </div>
-    """, unsafe_allow_html=True)
 
+            </tbody>
+
+        </table>
+
+    </div>
+    """, unsafe_allow_html=True)
 # ==========================================
 # PÁGINA 2 — OBJETIVO ECO
 # ==========================================
