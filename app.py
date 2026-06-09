@@ -246,10 +246,10 @@ if selected == "Inicio":
         </div>
     """, unsafe_allow_html=True)
 
-with col2:
-    st.markdown('<div class="section-header">⚙️ Funciones de EcoWeb</div>', unsafe_allow_html=True)
-    st.markdown("""
-        <div class="glass-card">
+    with col2:
+        st.markdown('<div class="section-header">⚙️ Funciones de EcoWeb</div>', unsafe_allow_html=True)
+        st.markdown("""
+            <div class="glass-card">
             <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:18px;">
             Principales funciones de la plataforma:
             </p>
