@@ -185,7 +185,32 @@ with st.sidebar:
     
     st.write("---")
     st.caption("Feria Tecnológica 2026")
-with col1:
+# ==========================================
+# PÁGINA 1 — INICIO
+# ==========================================
+if selected == "Inicio":
+
+    st.markdown('<div class="main-title">PROYECTO ECO 2026</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Infraestructura Educativa Continua y Sistema Integral de Innovación Sustentable</div>', unsafe_allow_html=True)
+
+    # 1. ¿Qué es EcoWeb?
+    st.markdown('<div class="section-header">🧬 ¿Qué es EcoWeb?</div>', unsafe_allow_html=True)
+    st.markdown(
+        """
+        <div class="glass-card" style="font-size: 18px; line-height: 1.6; border-left: 5px solid #00E676;">
+        <strong>EcoWeb</strong> es la plataforma digital oficial de <strong>Proyecto Eco</strong>.
+        Fue desarrollada para centralizar información, documentación, fichas técnicas, recursos educativos y
+        registros de las actividades realizadas dentro del proyecto. Su objetivo es conservar el conocimiento
+        generado por los estudiantes, facilitar la consulta de información y permitir que el modelo pueda
+        replicarse con mayor facilidad en otros contextos educativos.
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    col1, col2 = st.columns(2)
+
+    with col1:
     st.markdown('<div class="section-header">⚠️ ¿Por qué fue creada?</div>', unsafe_allow_html=True)
     st.markdown("""
         <div class="glass-card">
