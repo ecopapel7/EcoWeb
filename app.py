@@ -192,7 +192,7 @@ with st.sidebar:
 if selected == "Inicio":
 
     st.markdown('<div class="main-title">PROYECTO ECO 2026</div>', unsafe_allow_html=True)
-    st.markdown('<div class="subtitle">La EcoWeb</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Plataforma de innovación educativa basada en sustentabilidad, ciencia y trabajo colaborativo.</div>', unsafe_allow_html=True)
 
     # 1. ¿Qué es EcoWeb?
     st.markdown('<div class="section-header">🧬 ¿Qué es EcoWeb?</div>', unsafe_allow_html=True)
