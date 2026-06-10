@@ -208,90 +208,58 @@ if selected == "Inicio":
         unsafe_allow_html=True
     )
 
-    # Columnas centrales
-    col1, col2 = st.columns(2)
+```python
+# Columnas centrales
+col1, col2 = st.columns(2)
 
-    with col1:
-        st.markdown('<div class="section-header">⚠️ ¿Por qué fue creada?</div>', unsafe_allow_html=True)
-        st.markdown("""
-            <div class="glass-card">
-                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:18px;">Necesitábamos resolver varios desafíos:</p>
+with col1:
+    st.markdown('<div class="section-header">⚠️ ¿Por qué fue creada?</div>', unsafe_allow_html=True)
 
-                <div class="info-item">
-                    <span class="info-bullet">✦</span>
-                    <span class="info-tag">Información dispersa:</span>
-                    Reunir en un solo lugar datos, investigaciones y documentos del proyecto.
-                </div>
+    st.markdown("""
+    <div class="glass-card">
 
-                <div class="info-item">
-                    <span class="info-bullet">✦</span>
-                    <span class="info-tag">Crecimiento del proyecto:</span>
-                    Organizar cada nueva iniciativa a medida que Proyecto Eco continúa expandiéndose.
-                </div>
+    <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:18px;">
+    Necesitábamos resolver varios desafíos:
+    </p>
 
-                <div class="info-item">
-                    <span class="info-bullet">✦</span>
-                    <span class="info-tag">Conservación del conocimiento:</span>
-                    Evitar que la experiencia y los aprendizajes se pierdan cuando los estudiantes egresan.
-                </div>
+    <p><b style="color:#B9F6CA;">✦ Información dispersa:</b> Reunir en un solo lugar datos, investigaciones y documentos del proyecto.</p>
 
-                <div class="info-item">
-                    <span class="info-bullet">✦</span>
-                    <span class="info-tag">Replicabilidad:</span>
-                    Facilitar que otras escuelas puedan comprender y aplicar el modelo desarrollado.
-                </div>
+    <p><b style="color:#B9F6CA;">✦ Crecimiento del proyecto:</b> Organizar cada nueva iniciativa a medida que Proyecto Eco continúa expandiéndose.</p>
 
-                <div class="info-item">
-                    <span class="info-bullet">✦</span>
-                    <span class="info-tag">Visualización de resultados:</span>
-                    Mostrar de forma clara los avances, actividades y logros alcanzados por el proyecto.
-                </div>
-            </div>
-        """, unsafe_allow_html=True)
+    <p><b style="color:#B9F6CA;">✦ Conservación del conocimiento:</b> Evitar que la experiencia y los aprendizajes se pierdan cuando los estudiantes egresan.</p>
 
-    with col2:
-        st.markdown('<div class="section-header">⚙️ Funciones de EcoWeb</div>', unsafe_allow_html=True)
-        st.markdown("""
-            <div class="glass-card">
-                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:18px;">¿Para qué sirve nuestra plataforma digital?</p>
+    <p><b style="color:#B9F6CA;">✦ Replicabilidad:</b> Facilitar que otras escuelas puedan comprender y aplicar el modelo desarrollado.</p>
 
-                <div class="info-item">
-                    <span class="info-bullet">✦</span>
-                    <span class="info-tag">Organizar información:</span>
-                    Reúne proyectos, investigaciones y documentación en un único espacio.
-                </div>
+    <p><b style="color:#B9F6CA;">✦ Visualización de resultados:</b> Mostrar de forma clara los avances, actividades y logros alcanzados por el proyecto.</p>
 
-                <div class="info-item">
-                    <span class="info-bullet">✦</span>
-                    <span class="info-tag">Almacenar documentación:</span>
-                    Permite acceder a fichas técnicas, documentos y procedimientos desarrollados por el equipo.
-                </div>
+    </div>
+    """, unsafe_allow_html=True)
 
-                <div class="info-item">
-                    <span class="info-bullet">✦</span>
-                    <span class="info-tag">Difundir iniciativas:</span>
-                    Presenta actividades, campañas y experiencias realizadas dentro de Proyecto Eco.
-                </div>
+with col2:
+    st.markdown('<div class="section-header">⚙️ Funciones de EcoWeb</div>', unsafe_allow_html=True)
 
-                <div class="info-item">
-                    <span class="info-bullet">✦</span>
-                    <span class="info-tag">Facilitar consultas:</span>
-                    Permite encontrar rápidamente recursos educativos e información relevante.
-                </div>
+    st.markdown("""
+    <div class="glass-card">
 
-                <div class="info-item">
-                    <span class="info-bullet">✦</span>
-                    <span class="info-tag">Mostrar avances:</span>
-                    Expone de manera transparente los resultados y progresos del proyecto.
-                </div>
+    <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:18px;">
+    ¿Para qué sirve nuestra plataforma digital?
+    </p>
 
-                <div class="info-item">
-                    <span class="info-bullet">✦</span>
-                    <span class="info-tag">Favorecer la replicabilidad:</span>
-                    Facilita que otras instituciones puedan conocer y adaptar la metodología de trabajo.
-                </div>
-            </div>
-        """, unsafe_allow_html=True)
+    <p><b style="color:#B9F6CA;">✦ Organizar información:</b> Reúne proyectos, investigaciones y documentación en un único espacio.</p>
+
+    <p><b style="color:#B9F6CA;">✦ Almacenar documentación:</b> Permite acceder a fichas técnicas, documentos y procedimientos desarrollados por el equipo.</p>
+
+    <p><b style="color:#B9F6CA;">✦ Difundir iniciativas:</b> Presenta actividades, campañas y experiencias realizadas dentro de Proyecto Eco.</p>
+
+    <p><b style="color:#B9F6CA;">✦ Facilitar consultas:</b> Permite encontrar rápidamente recursos educativos e información relevante.</p>
+
+    <p><b style="color:#B9F6CA;">✦ Mostrar avances:</b> Expone de manera transparente los resultados y progresos del proyecto.</p>
+
+    <p><b style="color:#B9F6CA;">✦ Favorecer la replicabilidad:</b> Facilita que otras instituciones puedan conocer y adaptar la metodología de trabajo.</p>
+
+    </div>
+    """, unsafe_allow_html=True)
+```
 
     # Relación con los pilares
     st.markdown('<div class="section-header">📊 Relación con los Pilares</div>', unsafe_allow_html=True)
