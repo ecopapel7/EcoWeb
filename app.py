@@ -5,7 +5,7 @@ from streamlit_option_menu import option_menu
 # CONFIGURACIÓN DE LA PÁGINA
 # ==========================================
 st.set_page_config(
-    page_title="EcoWeb 1.0 - Proyecto Eco",
+    page_title="EcoWeb - Proyecto Eco",
     page_icon="🌱",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -192,7 +192,7 @@ with st.sidebar:
 if selected == "Inicio":
 
     st.markdown('<div class="main-title">PROYECTO ECO 2026</div>', unsafe_allow_html=True)
-    st.markdown('<div class="subtitle">Infraestructura Educativa Continua y Sistema Integral de Innovación Sustentable</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">La EcoWeb</div>', unsafe_allow_html=True)
 
     # 1. ¿Qué es EcoWeb?
     st.markdown('<div class="section-header">🧬 ¿Qué es EcoWeb?</div>', unsafe_allow_html=True)
