@@ -208,14 +208,13 @@ if selected == "Inicio":
         unsafe_allow_html=True
     )
 
-```python
 # Columnas centrales
-col1, col2 = st.columns(2)
+    col1, col2 = st.columns(2)
 
-with col1:
-    st.markdown('<div class="section-header">⚠️ ¿Por qué fue creada?</div>', unsafe_allow_html=True)
+    with col1:
+        st.markdown('<div class="section-header">⚠️ ¿Por qué fue creada?</div>', unsafe_allow_html=True)
 
-    st.markdown("""
+        st.markdown("""
     <div class="glass-card">
 
     <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:18px;">
@@ -235,10 +234,10 @@ with col1:
     </div>
     """, unsafe_allow_html=True)
 
-with col2:
-    st.markdown('<div class="section-header">⚙️ Funciones de EcoWeb</div>', unsafe_allow_html=True)
+    with col2:
+        st.markdown('<div class="section-header">⚙️ Funciones de EcoWeb</div>', unsafe_allow_html=True)
 
-    st.markdown("""
+        st.markdown("""
     <div class="glass-card">
 
     <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:18px;">
@@ -259,7 +258,6 @@ with col2:
 
     </div>
     """, unsafe_allow_html=True)
-```
 
     # Relación con los pilares
     st.markdown('<div class="section-header">📊 Relación con los Pilares</div>', unsafe_allow_html=True)
