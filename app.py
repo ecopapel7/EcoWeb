@@ -433,8 +433,8 @@ elif selected == "Fundamentos Eco":
     col_con, col_rel = st.columns([6, 4])
     
     with col_con:
-    st.markdown('<div class="section-header">🧪 3. Conceptos Eco: Marcos de Conocimiento</div>', unsafe_allow_html=True)
-    st.markdown("""<div class="glass-card" style="height: 420px; overflow-y: auto;">
+        st.markdown('<div class="section-header">🧪 3. Conceptos Eco: Marcos de Conocimiento</div>', unsafe_allow_html=True)
+        st.markdown("""<div class="glass-card" style="height: 420px; overflow-y: auto;">
 <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:15px;">Filosofía y principios operativos reales del sistema:</p>
 <div class="info-item">
 <span class="info-bullet">🧠</span><span class="info-tag">Democratización del "Know-How":</span> El Manual Eco funciona como una franquicia social para que cualquier escuela pase de generar residuos a ser una planta de biotransformación.
