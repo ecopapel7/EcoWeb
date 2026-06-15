@@ -398,8 +398,8 @@ elif selected == "Fundamentos Eco":
             """, unsafe_allow_html=True)
 
     # SECCIÓN 3: FLUJO ECO (Línea de proceso secuencial visualmente impactante)
-st.markdown('<div class="section-header">🔄 2. El Flujo Eco: ¿Cómo circulan las ideas y actividades?</div>', unsafe_allow_html=True)
-st.markdown("""<div class="glass-card">
+    st.markdown('<div class="section-header">🔄 2. El Flujo Eco: ¿Cómo circulan las ideas y actividades?</div>', unsafe_allow_html=True)
+    st.markdown("""<div class="glass-card">
 <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:20px;">Ciclo de Vida del Desarrollo Sustentable (Línea de Proceso):</p>
 <div style="display: flex; flex-direction: column; gap: 12px;">
 <div style="background: rgba(255,255,255,0.02); padding: 12px 18px; border-radius: 8px; border-left: 4px solid #64FFDA;">
