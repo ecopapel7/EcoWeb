@@ -259,59 +259,6 @@ if selected == "Inicio":
     </div>
     """, unsafe_allow_html=True)
 
-    # Relación con los pilares
-    st.markdown('<div class="section-header">📊 Relación con los Pilares</div>', unsafe_allow_html=True)
-
-    st.markdown("""
-<div class="glass-card" style="padding: 10px 20px 20px 20px;">
-
-<table class="custom-table">
-
-<tr>
-<th>Pilar</th>
-<th>Relación con EcoWeb</th>
-</tr>
-
-<tr>
-<td><span class="pilar-tag">Replicable</span></td>
-<td>Permite acceder a documentación, materiales y experiencias para facilitar la reproducción del proyecto.</td>
-</tr>
-
-<tr>
-<td><span class="pilar-tag">Continuo</span></td>
-<td>Conserva el conocimiento generado para futuras generaciones de estudiantes.</td>
-</tr>
-
-<tr>
-<td><span class="pilar-tag">Medible</span></td>
-<td>Facilita el registro y la visualización de avances y resultados.</td>
-</tr>
-
-<tr>
-<td><span class="pilar-tag">Interdisciplinario</span></td>
-<td>Integra información de las distintas áreas y proyectos de Proyecto Eco.</td>
-</tr>
-
-<tr>
-<td><span class="pilar-tag">Experimental</span></td>
-<td>Permite documentar pruebas, experiencias y aprendizajes obtenidos.</td>
-</tr>
-
-<tr>
-<td><span class="pilar-tag">Circular</span></td>
-<td>Favorece la reutilización y el intercambio de conocimientos.</td>
-</tr>
-
-<tr>
-<td><span class="pilar-tag">Sustentable</span></td>
-<td>Reduce el uso de papel mediante la digitalización de documentación y registros.</td>
-</tr>
-
-</table>
-
-</div>
-""", unsafe_allow_html=True)
-
 # ==========================================
 # PÁGINA 2 — OBJETIVO ECO
 # ==========================================
