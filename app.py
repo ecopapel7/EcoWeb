@@ -270,199 +270,78 @@ elif selected == "Objetivo Eco":
     # OBJETIVO GENERAL
     st.markdown('<div class="section-header">🎯 Objetivo General: ¿Qué intenta conseguir Proyecto Eco?</div>', unsafe_allow_html=True)
 
-    st.markdown("""
-        <div class="glass-card" style="font-size: 18px; line-height: 1.6; border-left: 5px solid #00E676; max-width: 100%;">
-        El propósito de <strong>Proyecto Eco</strong> es construir un sistema educativo continuo, sustentable y replicable que permita desarrollar soluciones ambientales, conservar conocimientos técnicos y generar un impacto positivo dentro de la comunidad educativa.
-        </div>
-    """, unsafe_allow_html=True)
+    st.markdown("""<div class="glass-card" style="font-size: 18px; line-height: 1.6; border-left: 5px solid #00E676; max-width: 100%;">El propósito de <strong>Proyecto Eco</strong> es construir un sistema educativo continuo, sustentable y replicable que permita desarrollar soluciones ambientales, conservar conocimientos técnicos y generar un impacto positivo dentro de la comunidad educativa.</div>""", unsafe_allow_html=True)
 
     # PROBLEMA Y CONSECUENCIAS
     col_prob, col_cons = st.columns(2)
 
     with col_prob:
         st.markdown('<div class="section-header">❌ 1. Problema Identificado</div>', unsafe_allow_html=True)
-
-        st.markdown("""
-            <div class="glass-card" style="max-width: 100%; min-height: 380px;">
-
-                <p style="margin-top:0; color:#FF5252; font-weight:600; margin-bottom:18px;">
-                ¿Qué problema observó Proyecto Eco?
-                </p>
-
-                <div class="info-item">
-                    <span class="info-bullet" style="color:#FF5252;">✦</span>
-                    <span class="info-tag">Dependencia de pocas personas:</span>
-                    Muchos proyectos escolares quedan sostenidos por un número reducido de alumnos o docentes.
-                </div>
-
-                <div class="info-item">
-                    <span class="info-bullet" style="color:#FF5252;">✦</span>
-                    <span class="info-tag">Pérdida de conocimientos:</span>
-                    Gran parte de la experiencia adquirida desaparece cuando termina cada ciclo lectivo.
-                </div>
-
-                <div class="info-item">
-                    <span class="info-bullet" style="color:#FF5252;">✦</span>
-                    <span class="info-tag">Falta de documentación:</span>
-                    Muchas iniciativas carecen de registros organizados, procedimientos o materiales de consulta.
-                </div>
-
-                <div class="info-item">
-                    <span class="info-bullet" style="color:#FF5252;">✦</span>
-                    <span class="info-tag">Dificultad para transmitir experiencias:</span>
-                    Los nuevos integrantes suelen comenzar sin acceso a los aprendizajes de años anteriores.
-                </div>
-
-                <div class="info-item">
-                    <span class="info-bullet" style="color:#FF5252;">✦</span>
-                    <span class="info-tag">Escasa continuidad:</span>
-                    Muchas iniciativas pierden impulso o desaparecen con el paso del tiempo.
-                </div>
-
-            </div>
-        """, unsafe_allow_html=True)
+        st.markdown("""<div class="glass-card" style="max-width: 100%; min-height: 380px;">
+<p style="margin-top:0; color:#FF5252; font-weight:600; margin-bottom:18px;">¿Qué problema observó Proyecto Eco?</p>
+<div class="info-item"><span class="info-bullet" style="color:#FF5252;">✦</span><span class="info-tag">Dependencia de pocas personas:</span> Muchos proyectos escolares quedan sostenidos por un número reducido de alumnos o docentes.</div>
+<div class="info-item"><span class="info-bullet" style="color:#FF5252;">✦</span><span class="info-tag">Pérdida de conocimientos:</span> Gran parte de la experiencia adquirida desaparece cuando termina cada ciclo lectivo.</div>
+<div class="info-item"><span class="info-bullet" style="color:#FF5252;">✦</span><span class="info-tag">Falta de documentación:</span> Muchas iniciativas carecen de registros organizados, procedimientos o materiales de consulta.</div>
+<div class="info-item"><span class="info-bullet" style="color:#FF5252;">✦</span><span class="info-tag">Dificultad para transmitir experiencias:</span> Los nuevos integrantes suelen comenzar sin acceso a los aprendizajes de años anteriores.</div>
+<div class="info-item"><span class="info-bullet" style="color:#FF5252;">✦</span><span class="info-tag">Escasa continuidad:</span> Muchas iniciativas pierden impulso o desaparecen con el paso del tiempo.</div>
+</div>""", unsafe_allow_html=True)
 
     with col_cons:
         st.markdown('<div class="section-header">📉 2. Consecuencias del Problema</div>', unsafe_allow_html=True)
-
-        st.markdown("""
-            <div class="glass-card" style="max-width: 100%; min-height: 380px;">
-
-                <p style="margin-top:0; color:#FF8A80; font-weight:600; margin-bottom:18px;">
-                ¿Por qué es importante resolverlo?
-                </p>
-
-                <div class="info-item">
-                    <span class="info-bullet" style="color:#FF8A80;">✦</span>
-                    <span class="info-tag">Reinicio constante:</span>
-                    Cada año muchos proyectos deben comenzar nuevamente porque gran parte de la experiencia previa se pierde.
-                </div>
-
-                <div class="info-item">
-                    <span class="info-bullet" style="color:#FF8A80;">✦</span>
-                    <span class="info-tag">Desperdicio de recursos:</span>
-                    Se pierden materiales, tiempo y trabajo acumulado durante años anteriores.
-                </div>
-
-                <div class="info-item">
-                    <span class="info-bullet" style="color:#FF8A80;">✦</span>
-                    <span class="info-tag">Menor participación:</span>
-                    La falta de organización puede desmotivar a quienes desean sumarse al proyecto.
-                </div>
-
-                <div class="info-item">
-                    <span class="info-bullet" style="color:#FF8A80;">✦</span>
-                    <span class="info-tag">Menor impacto:</span>
-                    Las iniciativas ambientales logran resultados más limitados de los que podrían alcanzar.
-                </div>
-
-                <div class="info-item">
-                    <span class="info-bullet" style="color:#FF8A80;">✦</span>
-                    <span class="info-tag">Dependencia crítica:</span>
-                    El funcionamiento del proyecto puede verse afectado si una persona clave abandona la institución.
-                </div>
-
-            </div>
-        """, unsafe_allow_html=True)
+        st.markdown("""<div class="glass-card" style="max-width: 100%; min-height: 380px;">
+<p style="margin-top:0; color:#FF8A80; font-weight:600; margin-bottom:18px;">¿Por qué es importante resolverlo?</p>
+<div class="info-item"><span class="info-bullet" style="color:#FF8A80;">✦</span><span class="info-tag">Reinicio constante:</span> Cada año muchos proyectos deben comenzar nuevamente porque gran parte de la experiencia previa se pierde.</div>
+<div class="info-item"><span class="info-bullet" style="color:#FF8A80;">✦</span><span class="info-tag">Desperdicio de recursos:</span> Se pierden materiales, tiempo y trabajo acumulado durante años anteriores.</div>
+<div class="info-item"><span class="info-bullet" style="color:#FF8A80;">✦</span><span class="info-tag">Menor participación:</span> La falta de organización puede desmotivar a quienes desean sumarse al proyecto.</div>
+<div class="info-item"><span class="info-bullet" style="color:#FF8A80;">✦</span><span class="info-tag">Menor impacto:</span> Las iniciativas ambientales logran resultados más limitados de los que podrían alcanzar.</div>
+<div class="info-item"><span class="info-bullet" style="color:#FF8A80;">✦</span><span class="info-tag">Dependencia crítica:</span> El funcionamiento del proyecto puede verse afectado si una persona clave abandona la institución.</div>
+</div>""", unsafe_allow_html=True)
 
     # SOLUCIÓN
     st.markdown('<div class="section-header">🛠️ 3. Solución Propuesta: El Sistema Eco</div>', unsafe_allow_html=True)
-
-    st.markdown("""
-        <div class="glass-card" style="max-width: 100%;">
-
-            <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:18px;">
-            ¿Cómo intenta resolver el problema Proyecto Eco?
-            </p>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px;">
-
-                <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 10px; border-left: 3px solid #00E676;">
-                    <span style="color:#00E676; font-weight:bold;">🏢 Organización por Secciones:</span>
-                    Distribuye las tareas entre diferentes áreas especializadas para mejorar la coordinación y el trabajo en equipo.
-                </div>
-
-                <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 10px; border-left: 3px solid #00E676;">
-                    <span style="color:#00E676; font-weight:bold;">🏆 Sistema de Reconocidos:</span>
-                    Busca incentivar la participación, el compromiso y la constancia de los integrantes.
-                </div>
-
-                <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 10px; border-left: 3px solid #00E676;">
-                    <span style="color:#00E676; font-weight:bold;">📋 Fichas Técnicas:</span>
-                    Registran materiales, procedimientos, resultados y aprendizajes obtenidos durante cada proyecto.
-                </div>
-
-                <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 10px; border-left: 3px solid #00E676;">
-                    <span style="color:#00E676; font-weight:bold;">🔄 Flujo Eco:</span>
-                    Promueve que los conocimientos y recursos generados por un proyecto puedan ser aprovechados por otros.
-                </div>
-
-                <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 10px; border-left: 3px solid #00E676;">
-                    <span style="color:#00E676; font-weight:bold;">⭐ Pilares Eco:</span>
-                    Los 7 pilares que orientan y definen el funcionamiento de Proyecto Eco.
-                </div>
-
-                <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 10px; border-left: 3px solid #00E676;">
-                    <span style="color:#00E676; font-weight:bold;">🌐 Herramientas Digitales:</span>
-                    EcoWeb y otros recursos tecnológicos ayudan a organizar, conservar y compartir información.
-                </div>
-
-            </div>
-
-        </div>
-    """, unsafe_allow_html=True)
+    st.markdown("""<div class="glass-card" style="max-width: 100%;">
+<p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:18px;">¿Cómo intenta resolver el problema Proyecto Eco?</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px;">
+<div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 10px; border-left: 3px solid #00E676;"><span style="color:#00E676; font-weight:bold;">🏢 Organización por Secciones:</span> Distribuye las tareas entre diferentes áreas especializadas para mejorar la coordinación y el trabajo en equipo.</div>
+<div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 10px; border-left: 3px solid #00E676;"><span style="color:#00E676; font-weight:bold;">🏆 Sistema de Reconocidos:</span> Busca incentivar la participación, el compromiso y la constancia de los integrantes.</div>
+<div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 10px; border-left: 3px solid #00E676;"><span style="color:#00E676; font-weight:bold;">📋 Fichas Técnicas:</span> Registran materiales, procedimientos, resultados y aprendizajes obtenidos durante cada proyecto.</div>
+<div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 10px; border-left: 3px solid #00E676;"><span style="color:#00E676; font-weight:bold;">🔄 Flujo Eco:</span> Promueve que los conocimientos y recursos generados por un proyecto puedan ser aprovechados por otros.</div>
+<div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 10px; border-left: 3px solid #00E676;"><span style="color:#00E676; font-weight:bold;">⭐ Pilares Eco:</span> Los 7 pilares que orientan y definen el funcionamiento de Proyecto Eco.</div>
+<div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 10px; border-left: 3px solid #00E676;"><span style="color:#00E676; font-weight:bold;">🌐 Herramientas Digitales:</span> EcoWeb y otros recursos tecnológicos ayudan a organizar, conservar y compartir información.</div>
+</div>
+</div>""", unsafe_allow_html=True)
 
     # PRINCIPIOS Y VISIÓN FUTURA
     col_pila, col_vis = st.columns([4, 6])
 
     with col_pila:
         st.markdown('<div class="section-header">⚖️ 4. Principios de la Solución</div>', unsafe_allow_html=True)
-
-        st.markdown("""
-            <div class="glass-card" style="max-width: 100%; min-height: 320px;">
-                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:15px;">
-                ¿Sobre qué pilares se construye Proyecto Eco?
-                </p>
-
-                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                    <span class="pilar-tag">♻️ Replicable</span>
-                    <span class="pilar-tag">🌿 Sustentable</span>
-                    <span class="pilar-tag">🔄 Circular</span>
-                    <span class="pilar-tag">⏳ Continuo</span>
-                    <span class="pilar-tag">🧪 Experimental</span>
-                    <span class="pilar-tag">📊 Medible</span>
-                    <span class="pilar-tag">🤝 Interdisciplinario</span>
-                </div>
-            </div>
-        """, unsafe_allow_html=True)
+        st.markdown("""<div class="glass-card" style="max-width: 100%; min-height: 320px;">
+<p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:15px;">¿Sobre qué pilares se construye Proyecto Eco?</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<span class="pilar-tag">♻️ Replicable</span>
+<span class="pilar-tag">🌿 Sustentable</span>
+<span class="pilar-tag">🔄 Circular</span>
+<span class="pilar-tag">⏳ Continuo</span>
+<span class="pilar-tag">🧪 Experimental</span>
+<span class="pilar-tag">📊 Medible</span>
+<span class="pilar-tag">🤝 Interdisciplinario</span>
+</div>
+</div>""", unsafe_allow_html=True)
 
     with col_vis:
         st.markdown('<div class="section-header">🚀 5. Visión Futura</div>', unsafe_allow_html=True)
+        st.markdown("""<div class="glass-card" style="max-width: 100%; min-height: 320px;">
+<p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:15px;">¿Hacia dónde busca crecer Proyecto Eco?</p>
+<div class="info-item"><span class="info-bullet">🚀</span><strong>Mayor participación:</strong> Incorporar cada vez más estudiantes a las distintas áreas del proyecto.</div>
+<div class="info-item"><span class="info-bullet">📚</span><strong>Más documentación:</strong> Ampliar continuamente la cantidad de fichas técnicas y materiales disponibles.</div>
+<div class="info-item"><span class="info-bullet">⚡</span><strong>Nuevos proyectos:</strong> Diseñar y desarrollar nuevas iniciativas tecnológicas y ambientales.</div>
+<div class="info-item"><span class="info-bullet">🏫</span><strong>Replicación:</strong> Facilitar que otras escuelas puedan adaptar el modelo Eco a sus propias necesidades.</div>
+<div class="info-item"><span class="info-bullet">🤖</span><strong>Evolución digital:</strong> Incorporar herramientas de inteligencia artificial que ayuden a organizar y aprovechar mejor el conocimiento generado.</div>
+</div>""", unsafe_allow_html=True)
 
-        st.markdown("""
-            <div class="glass-card" style="max-width: 100%; min-height: 320px;">
-                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:15px;">
-                ¿Hacia dónde busca crecer Proyecto Eco?
-                </p>
-
-                <div class="info-item"><span class="info-bullet">🚀</span><strong>Mayor participación:</strong> Incorporar cada vez más estudiantes a las distintas áreas del proyecto.</div>
-
-                <div class="info-item"><span class="info-bullet">📚</span><strong>Más documentación:</strong> Ampliar continuamente la cantidad de fichas técnicas y materiales disponibles.</div>
-
-                <div class="info-item"><span class="info-bullet">⚡</span><strong>Nuevos proyectos:</strong> Diseñar y desarrollar nuevas iniciativas tecnológicas y ambientales.</div>
-
-                <div class="info-item"><span class="info-bullet">🏫</span><strong>Replicación:</strong> Facilitar que otras escuelas puedan adaptar el modelo Eco a sus propias necesidades.</div>
-
-                <div class="info-item"><span class="info-bullet">🤖</span><strong>Evolución digital:</strong> Incorporar herramientas de inteligencia artificial que ayuden a organizar y aprovechar mejor el conocimiento generado.</div>
-
-            </div>
-        """, unsafe_allow_html=True)
-
-    st.markdown("""
-        <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
-            Proyecto Eco 2026 • Filosofía de Infraestructura Continua • E.E.S.T N°7
-        </div>
-    """, unsafe_allow_html=True)
+    st.markdown("""<div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">Proyecto Eco 2026 • Filosofía de Infraestructura Continua • E.E.S.T N°7</div>""", unsafe_allow_html=True)
+    
 # ==========================================
 # PÁGINA 3 — FUNDAMENTOS ECO
 # ==========================================
