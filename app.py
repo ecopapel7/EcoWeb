@@ -433,28 +433,49 @@ elif selected == "Fundamentos Eco":
     col_con, col_rel = st.columns([6, 4])
     
     with col_con:
-        st.markdown('<div class="section-header">🧪 3. Conceptos Eco: Marcos de Conocimiento</div>', unsafe_allow_html=True)
-        st.markdown("""
-            <div class="glass-card" style="height: 380px; overflow-y: auto;">
-                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:15px;">Conocimientos científicos aplicados por el sistema:</p>
-                <div class="info-item">
-                    <span class="info-bullet">📘</span><span class="info-tag">Upcycling (Reciclaje Avanzado):</span> Transformación de residuos en productos de mayor valor técnico o estético. <em>Área: Ecología / Diseño.</em>
-                </div>
-                <div class="info-item">
-                    <span class="info-bullet">📘</span><span class="info-tag">Pirólisis Controlada:</span> Degradación térmica de materiales orgánicos en ausencia de oxígeno. <em>Área: Química Aplicada.</em>
-                </div>
-                <div class="info-item">
-                    <span class="info-bullet">📘</span><span class="info-tag">Gradiente Salino:</span> Aprovechamiento de la diferencia de concentración de sal para generar energía teórica. <em>Área: Energías Limpias.</em>
-                </div>
-                <div class="info-item">
-                    <span class="info-bullet">📘</span><span class="info-tag">Automatización Ecosistémica:</span> Uso de matrices de sensores de hardware para controlar variables biológicas. <em>Área: Tecnología / IoT.</em>
-                </div>
-                <div class="info-item">
-                    <span class="info-bullet">📘</span><span class="info-tag">Economía de Circulación Abierta:</span> Sistemas monetarios propios impresos sobre recursos internos. <em>Área: Educación Ambiental / Economía Circular.</em>
-                </div>
-            </div>
-        """, unsafe_allow_html=True)
-        
+    st.markdown('<div class="section-header">🧪 3. Conceptos Eco: Marcos de Conocimiento</div>', unsafe_allow_html=True)
+    st.markdown("""<div class="glass-card" style="height: 420px; overflow-y: auto;">
+<p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:15px;">Filosofía y principios operativos reales del sistema:</p>
+<div class="info-item">
+<span class="info-bullet">🧠</span><span class="info-tag">Democratización del "Know-How":</span> El Manual Eco funciona como una franquicia social para que cualquier escuela pase de generar residuos a ser una planta de biotransformación.
+</div>
+<div class="info-item">
+<span class="info-bullet">🧠</span><span class="info-tag">Sistema de Código Abierto:</span> Innovación abierta con propiedad intelectual colectiva; cualquier institución con residuos básicos puede implementar el modelo.
+</div>
+<div class="info-item">
+<span class="info-bullet">🧠</span><span class="info-tag">Gamificación del Impacto:</span> Los EcoDollars transforman la ética ambiental en experiencia tangible: pasamos del "debería reciclar" al "me conviene reciclar".
+</div>
+<div class="info-item">
+<span class="info-bullet">🧠</span><span class="info-tag">Materia Prima como Activo:</span> El residuo no es un gasto, es un activo cuyo valor se define por su utilidad final y el esfuerzo técnico que requiere su transformación.
+</div>
+<div class="info-item">
+<span class="info-bullet">🧠</span><span class="info-tag">Protocolo de Error y Ajuste:</span> Las Fichas Eco son el resultado de un ciclo iterativo de ingeniería. No fabricamos productos improvisados; validamos prototipos.
+</div>
+<div class="info-item">
+<span class="info-bullet">🧠</span><span class="info-tag">La Cascada de Valor:</span> Aplicación de simbiótica industrial, donde el residuo o subproducto de una sección es el combustible crítico de la división siguiente.
+</div>
+<div class="info-item">
+<span class="info-bullet">🧠</span><span class="info-tag">De Espectador a Protagonista:</span> El alumno deja de ser un operario manual para convertirse en un tomador de decisiones estratégicas, con soberanía técnica y liderazgo.
+</div>
+<div class="info-item">
+<span class="info-bullet">🧠</span><span class="info-tag">El Problema de la "Buena Voluntad":</span> Sustituye la conciencia ambiental volátil por un mecanismo de participación constante forzado por el beneficio y la norma.
+</div>
+<div class="info-item">
+<span class="info-bullet">🧠</span><span class="info-tag">Combate al "Efecto Evento":</span> Evita la dilución del activismo escolar de corto plazo integrando los proyectos de forma orgánica en la currícula y la economía del colegio.
+</div>
+<div class="info-item">
+<span class="info-bullet">🧠</span><span class="info-tag">Transformación del Estudiante:</span> Formación de un egresado con perfil técnico-humanista, capaz de comprender sistemas complejos y dominar competencias del siglo XXI.
+</div>
+<div class="info-item">
+<span class="info-bullet">🧠</span><span class="info-tag">Ética de la Verdad (Anti-Greenwashing):</span> Transparencia y trazabilidad absoluta de los procesos mediante métricas reales. No trabajamos para la foto; transformamos con datos.
+</div>
+<div class="info-item">
+<span class="info-bullet">🧠</span><span class="info-tag">Capital Humano como Activo:</span> Multidisciplinariedad estratégica donde cada alumno actúa como un especialista asignado al proceso que mejor se alinea con sus habilidades.
+</div>
+<div class="info-item">
+<span class="info-bullet">🧠</span><span class="info-tag">Eficiencia Operativa:</span> Medición del costo real incluyendo recursos invisibles (como agua y energía) para garantizar que el balance ambiental sea verdaderamente sustentable.
+</div>
+</div>""", unsafe_allow_html=True)
     with col_rel:
         st.markdown('<div class="section-header">🔗 4. Interacción del Sistema</div>', unsafe_allow_html=True)
         st.markdown("""
