@@ -271,7 +271,7 @@ elif selected == "Objetivo Eco":
     st.markdown('<div class="section-header">🎯 Objetivo General: ¿Qué intenta conseguir Proyecto Eco?</div>', unsafe_allow_html=True)
 
     st.markdown("""
-        <div class="glass-card" style="font-size: 18px; line-height: 1.6; border-left: 5px solid #00E676;">
+        <div class="glass-card" style="font-size: 18px; line-height: 1.6; border-left: 5px solid #00E676; max-width: 100%;">
         El propósito de <strong>Proyecto Eco</strong> es construir un sistema educativo continuo, sustentable y replicable que permita desarrollar soluciones ambientales, conservar conocimientos técnicos y generar un impacto positivo dentro de la comunidad educativa.
         </div>
     """, unsafe_allow_html=True)
@@ -283,7 +283,7 @@ elif selected == "Objetivo Eco":
         st.markdown('<div class="section-header">❌ 1. Problema Identificado</div>', unsafe_allow_html=True)
 
         st.markdown("""
-            <div class="glass-card">
+            <div class="glass-card" style="max-width: 100%; min-height: 380px;">
 
                 <p style="margin-top:0; color:#FF5252; font-weight:600; margin-bottom:18px;">
                 ¿Qué problema observó Proyecto Eco?
@@ -326,7 +326,7 @@ elif selected == "Objetivo Eco":
         st.markdown('<div class="section-header">📉 2. Consecuencias del Problema</div>', unsafe_allow_html=True)
 
         st.markdown("""
-            <div class="glass-card">
+            <div class="glass-card" style="max-width: 100%; min-height: 380px;">
 
                 <p style="margin-top:0; color:#FF8A80; font-weight:600; margin-bottom:18px;">
                 ¿Por qué es importante resolverlo?
@@ -369,13 +369,13 @@ elif selected == "Objetivo Eco":
     st.markdown('<div class="section-header">🛠️ 3. Solución Propuesta: El Sistema Eco</div>', unsafe_allow_html=True)
 
     st.markdown("""
-        <div class="glass-card">
+        <div class="glass-card" style="max-width: 100%;">
 
             <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:18px;">
             ¿Cómo intenta resolver el problema Proyecto Eco?
             </p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px;">
 
                 <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 10px; border-left: 3px solid #00E676;">
                     <span style="color:#00E676; font-weight:bold;">🏢 Organización por Secciones:</span>
@@ -419,7 +419,7 @@ elif selected == "Objetivo Eco":
         st.markdown('<div class="section-header">⚖️ 4. Principios de la Solución</div>', unsafe_allow_html=True)
 
         st.markdown("""
-            <div class="glass-card" style="height: 290px;">
+            <div class="glass-card" style="max-width: 100%; min-height: 320px;">
                 <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:15px;">
                 ¿Sobre qué pilares se construye Proyecto Eco?
                 </p>
@@ -440,7 +440,7 @@ elif selected == "Objetivo Eco":
         st.markdown('<div class="section-header">🚀 5. Visión Futura</div>', unsafe_allow_html=True)
 
         st.markdown("""
-            <div class="glass-card" style="height: 290px;">
+            <div class="glass-card" style="max-width: 100%; min-height: 320px;">
                 <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:15px;">
                 ¿Hacia dónde busca crecer Proyecto Eco?
                 </p>
@@ -463,7 +463,6 @@ elif selected == "Objetivo Eco":
             Proyecto Eco 2026 • Filosofía de Infraestructura Continua • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
-
 # ==========================================
 # PÁGINA 3 — FUNDAMENTOS ECO
 # ==========================================
