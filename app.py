@@ -329,19 +329,6 @@ elif selected == "Objetivo Eco":
 </div>
 </div>""", unsafe_allow_html=True)
 
-    with col_vis:
-        st.markdown('<div class="section-header">🚀 5. Visión Futura</div>', unsafe_allow_html=True)
-        st.markdown("""<div class="glass-card" style="max-width: 100%; min-height: 320px;">
-<p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:15px;">¿Hacia dónde busca crecer Proyecto Eco?</p>
-<div class="info-item"><span class="info-bullet">🚀</span><strong>Mayor participación:</strong> Incorporar cada vez más estudiantes a las distintas áreas del proyecto.</div>
-<div class="info-item"><span class="info-bullet">📚</span><strong>Más documentación:</strong> Ampliar continuamente la cantidad de fichas técnicas y materiales disponibles.</div>
-<div class="info-item"><span class="info-bullet">⚡</span><strong>Nuevos proyectos:</strong> Diseñar y desarrollar nuevas iniciativas tecnológicas y ambientales.</div>
-<div class="info-item"><span class="info-bullet">🏫</span><strong>Replicación:</strong> Facilitar que otras escuelas puedan adaptar el modelo Eco a sus propias necesidades.</div>
-<div class="info-item"><span class="info-bullet">🤖</span><strong>Evolución digital:</strong> Incorporar herramientas de inteligencia artificial que ayuden a organizar y aprovechar mejor el conocimiento generado.</div>
-</div>""", unsafe_allow_html=True)
-
-    st.markdown("""<div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">Proyecto Eco 2026 • Filosofía de Infraestructura Continua • E.E.S.T N°7</div>""", unsafe_allow_html=True)
-    
 # ==========================================
 # PÁGINA 3 — FUNDAMENTOS ECO
 # ==========================================
