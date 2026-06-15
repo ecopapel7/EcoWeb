@@ -341,49 +341,49 @@ elif selected == "Fundamentos Eco":
     st.markdown('<div class="section-header">🧠 ¿Cómo funciona Proyecto Eco?</div>', unsafe_allow_html=True)
     st.markdown("""
         <div class="glass-card" style="font-size: 17px; line-height: 1.6; border-left: 5px solid #00E676;">
-        El éxito y la trascendencia de <strong>Proyecto Eco</strong> no radican únicamente en la ejecución de actividades aisladas o en el armado de fichas técnicas. El núcleo operativo se sostiene sobre una <strong>infraestructura de fundamentos organizativos interconectados</strong>. Estos pilares, flujos de procesos y conceptos científicos garantizan que el proyecto se mantenga activo, perfectamente estructurado y listo para ser replicado en cualquier institución educativa.
+        Para crear una base del proyecto, no debe de manejarse como un proyecto aislado. Debe de mantener una serie de fundamentos para poder mantenerse en pie. El Proyecto Eco se sostiene por una infraestructura de conocimientos y conceptos que garantizan un proyecto activo, estructurado y replicable para cualquier institución.
         </div>
     """, unsafe_allow_html=True)
 
     # SECCIÓN 2: LOS 7 PILARES (Desplegable interactivo premium para feria)
-    st.markdown('<div class="section-header">🏛️ 1. Los 7 Pilares: ¿Qué características debe cumplir el proyecto?</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">🏛️ 1. Los 7 Pilares: ¿Qué características definen Eco?</div>', unsafe_allow_html=True)
     st.markdown('<p style="color:#A5D6A7; margin-bottom:15px;">Haz clic en cada pilar para auditar sus definiciones, funciones y aplicaciones prácticas en el mundo real:</p>', unsafe_allow_html=True)
     
     pilares_data = {
         "♻️ Replicable": {
-            "def": "Capacidad de ser adaptado e implementado en otras instituciones educativas sin depender de infraestructura compleja.",
-            "fun": "Estandariza los procesos para que cualquier escuela técnica o secundaria pueda adoptar el modelo rápidamente.",
+            "def": "Capacidad de que cualquier institución pueda replicar Eco y crear su proyecto estable.",
+            "fun": "Estandariza los procesos para que cualquier institución pueda adoptar el modelo rápidamente.",
             "ej": "Fichas técnicas en formato abierto y manuales paso a paso de libre acceso en EcoWeb."
         },
         "🌿 Sustentable": {
-            "def": "Desarrollo que equilibra el impacto ambiental, social y el uso racional de recursos disponibles.",
-            "fun": "Garantiza que cada dispositivo o recurso creado reduzca de forma real la huella ecológica institucional.",
-            "ej": "Construcción del Módulo Eco-Hidro utilizando exclusivamente botellas PET recuperadas y descarte escolar."
+            "def": "Capacidad del proyecto de mantener un equilibrio ambiental.",
+            "fun": "Garantiza que cada dispositivo o recurso creado reduzca de forma real la contaminación.",
+            "ej": "Elaboración de fichas como Nendo Dango para crear una sustentabilidad."
         },
         "🔄 Circular": {
-            "def": "Modelo de diseño enfocado en la eliminación de residuos mediante el upcycling y el aprovechamiento continuo.",
+            "def": "El proyecto debe estar enfocado en la eliminación de residuos mediante el upcycling y el aprovechamiento continuo.",
             "fun": "Cierra los ciclos de vida de los materiales de descarte, convirtiendo la salida de un proceso en la entrada de otro.",
-            "ej": "Producción de Carbon Ink (tinta premium) procesando el descarte y sobrantes inservibles de EcoPapel."
+            "ej": "Producción de Carbon Ink procesando el descarte y sobrantes inservibles de EcoPapel."
         },
         "⏳ Continuo": {
             "def": "Garantía de preservación y avance del proyecto a través del tiempo, mitigando el recambio generacional.",
             "fun": "Evita la pérdida de conocimiento crítico cuando las camadas de estudiantes egresan de la institución.",
-            "ej": "La centralización histórica de planos, códigos y bitácoras experimentales dentro de esta plataforma."
+            "ej": "Creación del pilar Replicable, Sistema de Líderes y Sistema de Reconocidos."
         },
         "🧪 Experimental": {
             "def": "Metodología basada en el ensayo, el error documentado, el análisis empírico y la optimización constante.",
             "fun": "Fomenta el pensamiento científico y técnico, permitiendo aprender de los fallos de los prototipos.",
-            "ej": "Pruebas de congelado y perforación en el desarrollo de luminarias Eco-Estelar hasta dar con el espesor óptimo."
+            "ej": "Pruebas constantes y solución de problemas en la gran mayoría de fichas hasta llegar a la conclusión más eficiente."
         },
         "📊 Medible": {
-            "def": "Capacidad de cuantificar y auditar los resultados, el rendimiento y el impacto ambiental directo.",
-            "fun": "Aporta rigor matemático y científico a las iniciativas mediante indicadores claros y tangibles.",
-            "ej": "Cálculo del volumen de agua optimizado por capilaridad o pesaje de kg de celulosa recuperada mensualmente."
+            "def": "Capacidad de medir y valorar los resultados, el rendimiento y el impacto ambiental.",
+            "fun": "Aporta rigor matemático y científico a las fichas y proyectos mediante indicadores claros y tangibles.",
+            "ej": "-"
         },
         "🤝 Interdisciplinario": {
-            "def": "Integración y convergencia de múltiples áreas del conocimiento (química, electrónica, informática, diseño).",
-            "fun": "Rompe el aislamiento de las materias escolares tradicionales, unificando saberes en pos de un desarrollo común.",
-            "ej": "El desarrollo de TerrarIA, donde interactúan programación de sensores, química del suelo y diseño estructural."
+            "def": "Integración y convergencia de múltiples secciones del conocimiento.",
+            "fun": "Rompe el aislamiento de las materias escolares tradicionales. Además de incluir a aquellas personas que no quieran reciclar papel o trabajar en redes sociales.",
+            "ej": "EcoTech trabaja en Tecnologia, EcoLab en Quimica, etc."
         }
     }
 
@@ -391,37 +391,43 @@ elif selected == "Fundamentos Eco":
         with st.expander(name):
             st.markdown(f"""
                 <div style="padding: 10px; line-height: 1.6;">
-                    <p style="color:#B9F6CA; margin-bottom:5px;"><strong>Definition:</strong> {info['def']}</p>
-                    <p style="color:#E0E6ED; margin-bottom:5px;"><strong>Función en el Sistema:</strong> {info['fun']}</p>
-                    <p style="color:#81C784; margin-bottom:0;"><strong>⚡ Aplicación Práctica:</strong> {info['ej']}</p>
+                    <p style="color:#B9F6CA; margin-bottom:5px;"><strong>Definición:</strong> {info['def']}</p>
+                    <p style="color:#E0E6ED; margin-bottom:5px;"><strong>Función:</strong> {info['fun']}</p>
+                    <p style="color:#81C784; margin-bottom:0;"><strong>Ejemplo en nuestro sistema:</strong> {info['ej']}</p>
                 </div>
             """, unsafe_allow_html=True)
 
     # SECCIÓN 3: FLUJO ECO (Línea de proceso secuencial visualmente impactante)
-    st.markdown('<div class="section-header">🔄 2. El Flujo Eco: ¿Cómo circulan las ideas y actividades?</div>', unsafe_allow_html=True)
-    st.markdown("""
-        <div class="glass-card">
-            <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:20px;">Ciclo de Vida del Desarrollo Sustentable (Línea de Proceso):</p>
-            <div style="display: flex; flex-direction: column; gap: 12px;">
-                <div style="background: rgba(255,255,255,0.02); padding: 12px 18px; border-radius: 8px; border-left: 4px solid #64FFDA;">
-                    <span style="color:#64FFDA; font-weight:bold; font-size:16px;">Fase 1: Identificación y Captura 🎯</span><br>
-                    <span style="font-size:14.5px; color:#E0E6ED;">Se detecta un residuo institucional o una necesidad energética/ambiental. <strong>Función:</strong> Filtrar problemas reales bajo la óptica de los pilares ecológicos.</span>
-                </div>
-                <div style="background: rgba(255,255,255,0.02); padding: 12px 18px; border-radius: 8px; border-left: 4px solid #00E676;">
-                    <span style="color:#00E676; font-weight:bold; font-size:16px;">Fase 2: Investigación y Laboratorio Experimental 🧪</span><br>
-                    <span style="font-size:14.5px; color:#E0E6ED;">Los estudiantes realizan ensayos químicos, físicos o lógicos de los materiales. <strong>Función:</strong> Validar la viabilidad técnica de la idea mediante prototipado rápido.</span>
-                </div>
-                <div style="background: rgba(255,255,255,0.02); padding: 12px 18px; border-radius: 8px; border-left: 4px solid #B9F6CA;">
-                    <span style="color:#B9F6CA; font-weight:bold; font-size:16px;">Fase 3: Estandarización y Ficha Técnica 📋</span><br>
-                    <span style="font-size:14.5px; color:#E0E6ED;">Se redactan de forma rigurosa los pasos, herramientas y medidas de seguridad. <strong>Función:</strong> Traducir el experimento exitoso en un documento técnico auditable y replicable.</span>
-                </div>
-                <div style="background: rgba(255,255,255,0.02); padding: 12px 18px; border-radius: 8px; border-left: 4px solid #69F0AE;">
-                    <span style="color:#69F0AE; font-weight:bold; font-size:16px;">Fase 4: Integración al Flujo Circular 🔄</span><br>
-                    <span style="font-size:14.5px; color:#E0E6ED;">El subproyecto resultante se vincula con el resto de las secciones. <strong>Función:</strong> Asegurar que los subproductos (como la moneda EcoDollars o las tintas) nutran el engranaje de otras divisiones.</span>
-                </div>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
+st.markdown('<div class="section-header">🔄 2. El Flujo Eco: ¿Cómo circulan las ideas y actividades?</div>', unsafe_allow_html=True)
+st.markdown("""<div class="glass-card">
+<p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:20px;">Ciclo de Vida del Desarrollo Sustentable (Línea de Proceso):</p>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<div style="background: rgba(255,255,255,0.02); padding: 12px 18px; border-radius: 8px; border-left: 4px solid #64FFDA;">
+<span style="color:#64FFDA; font-weight:bold; font-size:16px;">1. Residuo 📦</span><br>
+<span style="font-size:14.5px; color:#E0E6ED;">El punto de partida del sistema son los materiales descartados, que se clasifican según su tipo para facilitar su tratamiento: Papel y cartón, Botellas PET, Latas y Residuos orgánicos.</span>
+</div>
+<div style="background: rgba(255,255,255,0.02); padding: 12px 18px; border-radius: 8px; border-left: 4px solid #00E676;">
+<span style="color:#00E676; font-weight:bold; font-size:16px;">2. Transformación 🧪</span><br>
+<span style="font-size:14.5px; color:#E0E6ED;">Los residuos son sometidos a distintos procesos según sus características, permitiendo su reutilización: Procesos físicos (corte, compactación, ensamblado), químicos (reacciones, tratamiento de materiales), biológicos (compostaje, descomposición) y tecnológicos (uso de dispositivos o sistemas diseñados).</span>
+</div>
+<div style="background: rgba(255,255,255,0.02); padding: 12px 18px; border-radius: 8px; border-left: 4px solid #B9F6CA;">
+<span style="color:#B9F6CA; font-weight:bold; font-size:16px;">3. Producto 🛠️</span><br>
+<span style="font-size:14.5px; color:#E0E6ED;">A partir de la transformación se obtienen nuevos elementos con valor funcional, educativo o experimental: Objetos funcionales, experimentos científicos, materiales reciclados y sistemas tecnológicos.</span>
+</div>
+<div style="background: rgba(255,255,255,0.02); padding: 12px 18px; border-radius: 8px; border-left: 4px solid #69F0AE;">
+<span style="color:#69F0AE; font-weight:bold; font-size:16px;">4. Intercambio 🔄</span><br>
+<span style="font-size:14.5px; color:#E0E6ED;">Los productos generados se integran en una dinámica de intercambio mediante el uso de la moneda interna del sistema, denominada <strong>EcoDollars</strong>, que incentiva la participación y el compromiso.</span>
+</div>
+<div style="background: rgba(255,255,255,0.02); padding: 12px 18px; border-radius: 8px; border-left: 4px solid #A5D6A7;">
+<span style="color:#A5D6A7; font-weight:bold; font-size:16px;">5. Medición 📊</span><br>
+<span style="font-size:14.5px; color:#E0E6ED;">Se registran datos clave para evaluar el impacto del sistema: Cantidad de residuos recuperados, productos generados y nivel de participación del público.</span>
+</div>
+<div style="background: rgba(255,255,255,0.02); padding: 12px 18px; border-radius: 8px; border-left: 4px solid #81C784;">
+<span style="color:#81C784; font-weight:bold; font-size:16px;">6. Reinversión 🚀</span><br>
+<span style="font-size:14.5px; color:#E0E6ED;">Los resultados obtenidos permiten mejorar y expandir el sistema: Optimización de procesos, desarrollo de nuevas fichas y ampliación del alcance del proyecto.</span>
+</div>
+</div>
+</div>""", unsafe_allow_html=True)
 
     # SECCIÓN 4 & SECCIÓN 5: CONCEPTOS Y RELACIÓN DE FUNDAMENTOS
     col_con, col_rel = st.columns([6, 4])
