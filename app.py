@@ -514,7 +514,7 @@ elif selected == "Cronología Eco":
     st.markdown('<div class="section-header">⏳ ¿Por qué existe una cronología del proyecto?</div>', unsafe_allow_html=True)
     st.markdown("""
         <div class="glass-card" style="font-size: 17px; line-height: 1.6; border-left: 5px solid #00E676;">
-        Escribir la historia de <strong>Proyecto Eco</strong> es fundamental para validar su <strong>continuidad</strong> y mejora constante. El ecosistema actual no surgió de un día para el otro; es el resultado de un proceso orgánico de <strong>evolución</strong>, aprendizaje institucional y resiliencia técnica, donde los errores de fases previas se transformaron en la ingeniería del presente.
+        Escribir la historia de <strong>Proyecto Eco</strong> es fundamental para validar su <strong>continuidad</strong> y mejora constante. El ecosistema actual no surgió de un día para el otro; es el resultado de un proceso de <strong>evolución</strong>, donde los errores previos se transformaron en una solución con el sistema del presente.
         </div>
     """, unsafe_allow_html=True)
 
@@ -526,8 +526,8 @@ elif selected == "Cronología Eco":
             <thead>
                 <tr>
                     <th style="width: 20%;">Variable Operativa</th>
-                    <th style="width: 40%; background: rgba(239, 83, 80, 0.2); color: #FFCDD2;">Fase Origen: EcoPapel (2025)</th>
-                    <th style="width: 40%; background: rgba(76, 175, 80, 0.2); color: #C8E6C9;">Fase Actual: Proyecto Eco (2026)</th>
+                    <th style="width: 40%; background: rgba(239, 83, 80, 0.2); color: #FFCDD2;">Fase Origen (2025): EcoPapel 2025</th>
+                    <th style="width: 40%; background: rgba(76, 175, 80, 0.2); color: #C8E6C9;">Fase Actual (2026): Proyecto Eco</th>
                 </tr>
             </thead>
             <tbody>
@@ -539,22 +539,22 @@ elif selected == "Cronología Eco":
                 <tr>
                     <td><strong>Estructura Técnica</strong></td>
                     <td>Actividades guiadas sueltas sin estandarizar.</td>
-                    <td><span style="color:#00E676; font-weight:bold;">24 Fichas Técnicas</span> normalizadas de ingeniería.</td>
+                    <td><span style="color:#00E676; font-weight:bold;">24 Fichas Técnicas</span> normalizadas con estructura.</td>
                 </tr>
                 <tr>
-                    <td><strong>Gestión del Alumnado</strong></td>
+                    <td><strong>Gestión del equipo</strong></td>
                     <td>Participación voluntaria informal y dispersa.</td>
                     <td><span style="color:#00E676; font-weight:bold;">Sistema de Reconocidos</span> con auditoría y puntaje semanal.</td>
                 </tr>
                 <tr>
                     <td><strong>Infraestructura Digital</strong></td>
-                    <td>Inexistente (Registros en formato papel/físico).</td>
+                    <td>Poca (Registros en formato papel/físico y Redes sociales).</td>
                     <td><span style="color:#00E676; font-weight:bold;">Ecosistema Digital</span> (EcoWeb, Modelado IA, Servidores de consulta).</td>
                 </tr>
                 <tr>
-                    <td><strong>Alcance Científico</strong></td>
-                    <td>Reciclaje básico y concientización interna.</td>
-                    <td>Desarrollo de hardware IoT, pirólisis química y economía circular activa.</td>
+                    <td><strong>Impacto</strong></td>
+                    <td>Bajo (Reciclaje de papel común).</td>
+                    <td>Alto (Replicabilidad, Continuidad, etc.)</td>
                 </tr>
             </tbody>
         </table>
