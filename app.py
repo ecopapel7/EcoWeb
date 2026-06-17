@@ -519,13 +519,13 @@ elif selected == "Cronología Eco":
     """, unsafe_allow_html=True)
 
     # SECCIÓN 2: COMPARATIVA DE EVOLUCIÓN (Tabla Premium de Transformación estructural)
-    st.markdown('<div class="section-header">📊 1. Matriz de Transformación Institucional</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">📊 1. Cambios de EcoPapel 2025 a Eco</div>', unsafe_allow_html=True)
     st.markdown("""
         <div class="glass-card" style="padding: 10px 20px 20px 20px;">
         <table class="custom-table">
             <thead>
                 <tr>
-                    <th style="width: 20%;">Variable Operativa</th>
+                    <th style="width: 20%;">Aréa</th>
                     <th style="width: 40%; background: rgba(239, 83, 80, 0.2); color: #FFCDD2;">Fase Origen (2025): EcoPapel 2025</th>
                     <th style="width: 40%; background: rgba(76, 175, 80, 0.2); color: #C8E6C9;">Fase Actual (2026): Proyecto Eco</th>
                 </tr>
@@ -568,37 +568,49 @@ elif selected == "Cronología Eco":
         st.markdown('<div class="section-header">🌱 2. El Origen: EcoPapel 2025</div>', unsafe_allow_html=True)
         st.markdown("""
             <div class="glass-card" style="height: 330px;">
-                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:12px;">El chispazo inicial del proyecto:</p>
-                <div class="info-item"><strong>Año de Nacimiento:</strong> Marz-Nov 2025.</div>
-                <div class="info-item"><strong>Contexto y Problema:</strong> Se detectó un desperdicio masivo de hojas, carpetas y cartones en los cestos de la escuela técnica, sin ningún tratamiento de reciclado.</div>
-                <div class="info-item"><strong>Objetivo Inicial:</strong> Recuperar esa celulosa escolar para fabricar hojas artesanales e incorporarles semillas nativas (Papel Seed).</div>
-                <div class="info-item"><strong>Características:</strong> Un grupo reducido de alumnos experimentando con licuadoras caseras y bastidores de madera rústicos.</div>
+                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:12px;">¿Que era EcoPapel 2025?:</p>
+                <div class="info-item"><strong>Tiempo activo:</strong> Abril - Noviembre 2025.</div>
+                <div class="info-item"><strong>Contexto y Problema:</strong> Se detectó un desperdicio masivo de hojas, carpetas y cartones en los cestos de la escuela técnica, sin ningún tratamiento de reciclado. Además, la conciencia del reciclaje era teórica más no práctica.</div>
+                <div class="info-item"><strong>Objetivo Inicial:</strong> Recuperar esa celulosa escolar para fabricar hojas artesanales y concientizar con la práctica.</div>
+                <div class="info-item"><strong>Características:</strong> Un grupo pequeño de alumnos experimentando con licuadoras caseras y bastidores de madera rústicos.</div>
             </div>
         """, unsafe_allow_html=True)
         
     with col_trans:
-        st.markdown('<div class="section-header">🔄 3. La Gran Ruptura y Evolución</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-header">🔄 3. La Evolución a Eco</div>', unsafe_allow_html=True)
         st.markdown("""
             <div class="glass-card" style="height: 330px;">
                 <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:12px;">¿Por qué dejamos de ser solo "EcoPapel"?</p>
-                <div class="info-item"><span style="color:#FFD54F; font-weight:bold;">⚠️ El Quiebre:</span> Al cerrar el ciclo lectivo 2025, se vio que si los alumnos clave se egresaban, las técnicas se perdían y las licuadoras quedaban arrumbadas.</div>
-                <div class="info-item"><span style="color:#00E676; font-weight:bold;">🧠 Mutación Sistémica:</span> Nace la necesidad imperiosa de crear los <strong>7 Pilares Eco</strong> (Continuo, Replicable, Medible...) para que el proyecto trascienda a las personas.</div>
-                <div class="info-item"><span style="color:#00E676; font-weight:bold;">🏢 Expansión de Fronteras:</span> Al querer optimizar el papel, se requirió química (EcoLab), automatización (EcoTech) y moldes mecánicos complejos (EcoIndustria). El residuo se volvió engranaje.</div>
+                <div class="info-item"><span style="color:#FFD54F; font-weight:bold;">El Quiebre:</span> Al cerrar el ciclo lectivo 2025, se vio que si los alumnos clave se egresaban, las técnicas y conocimiento se perdían.</div>
+                <div class="info-item"><span style="color:#00E676; font-weight:bold;">Mutación Sistémica:</span> Nace la necesidad imperiosa de crear los <strong>7 Pilares Eco</strong> (Continuo, Replicable, Medible...) que establezcan las reglas para que el proyecto trascienda a las personas.</div>
+                <div class="info-item"><span style="color:#00E676; font-weight:bold;">Expansión de Fronteras:</span> Al crecer, decidimos expandirnos por otras aréas com la química, tecnología, etc. El residuo se volvió engranaje.</div>
             </div>
         """, unsafe_allow_html=True)
 
     # SECCIÓN 5: LÍNEA TEMPORAL SECUENCIAL CRONOLÓGICA
-    st.markdown('<div class="section-header">📅 4. Línea de Tiempo Histórica Oficial</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">📅 4. Línea de Tiempo Histórica</div>', unsafe_allow_html=True)
     st.markdown("""
         <div class="glass-card">
             <div style="display: flex; flex-direction: column; gap: 15px;">
                 <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #81C784;">
-                    <span style="color:#81C784; font-weight:bold;">Marzo 2025 • Fundación de EcoPapel 🧪</span><br>
-                    <span style="font-size:14px; color:#E0E6ED;">Primeros ensayos de reciclado de celulosa en contraturno. <strong>Importancia:</strong> Estableció la viabilidad del upcycling escolar.</span>
+                    <span style="color:#81C784; font-weight:bold;">1 de Abril del 2025 • Fundación de EcoPapel 🧪</span><br>
+                    <span style="font-size:14px; color:#E0E6ED;">Organización del grupo y compra de materiales. <strong>Importancia:</strong> La primera organización del equipo EcoPapel 2025.</span>
                 </div>
                 <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #A5D6A7;">
-                    <span style="color:#A5D6A7; font-weight:bold;">Noviembre 2025 • Primera Muestra Técnica 📑</span><br>
-                    <span style="font-size:14px; color:#E0E6ED;">Presentación del "Manual del Reciclador" físico. <strong>Importancia:</strong> Se detectó el peligro de perder el conocimiento si no se digitalizaba el avance.</span>
+                    <span style="color:#A5D6A7; font-weight:bold;">4 de Mayo del 2025 • Primer papel reciclado 📑</span><br>
+                    <span style="font-size:14px; color:#E0E6ED;">Primer papel reciclado hecho <strong>Importancia:</strong> El primer papel reciclado del proyecto.</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #A5D6A7;">
+                    <span style="color:#A5D6A7; font-weight:bold;">14 de Agosto del 2025 • Presentación en la CUDI 📑</span><br>
+                    <span style="font-size:14px; color:#E0E6ED;">Primer papel reciclado hecho <strong>Importancia:</strong> El primer papel reciclado del proyecto.</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #A5D6A7;">
+                    <span style="color:#A5D6A7; font-weight:bold;">16 de Agosto del 2025 • Primer video en las redes sociales 📑</span><br>
+                    <span style="font-size:14px; color:#E0E6ED;">Primer papel reciclado hecho <strong>Importancia:</strong> El primer papel reciclado del proyecto.</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #A5D6A7;">
+                    <span style="color:#A5D6A7; font-weight:bold;">24 de Abril del 2025 • Primer papel reciclado 📑</span><br>
+                    <span style="font-size:14px; color:#E0E6ED;">Primer papel reciclado hecho <strong>Importancia:</strong> El primer papel reciclado del proyecto.</span>
                 </div>
                 <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #4CAF50;">
                     <span style="color:#4CAF50; font-weight:bold;">Marzo 2026 • Redacción de los 7 Pilares ⚖️</span><br>
