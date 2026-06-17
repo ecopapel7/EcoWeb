@@ -491,54 +491,10 @@ elif selected == "Fundamentos Eco":
                 </div>
                 <div style="background: rgba(129, 199, 132, 0.05); border: 1px dashed rgba(129, 199, 132, 0.3); padding: 15px; border-radius: 10px; text-align: center;">
                     <span style="color:#81C784; font-weight:bold; font-size:16px;">3. LOS CONCEPTOS</span><br>
-                    <span style="font-size:13.5px; color:#E0E6ED;">Aportan los <strong>conocimientos científicos y técnicos</strong> base utilizados.</span>
+                    <span style="font-size:13.5px; color:#E0E6ED;">Justifica <strong>la existencia</strong> del flujo.</span>
                 </div>
             </div>
         """, unsafe_allow_html=True)
-
-    # SECCIÓN 6: APLICACIÓN EN LAS SECCIONES TÉCNICAS
-    st.markdown('<div class="section-header">🏢 5. Aplicación Práctica en las Secciones Técnicas del Ecosistema</div>', unsafe_allow_html=True)
-    st.markdown("""
-        <div class="glass-card" style="padding: 10px 20px 20px 20px;">
-        <p style="color: #A5D6A7; margin-bottom: 15px;">Cómo se materializan transversalmente los fundamentos dentro de cada rama operativa de Proyecto Eco:</p>
-        <table class="custom-table">
-            <thead>
-                <tr>
-                    <th style="width: 20%;">Sección Técnica</th>
-                    <th style="width: 30%;">¿Qué hace?</th>
-                    <th style="width: 25%;">Aplicación de Pilares y Flujo</th>
-                    <th style="width: 25%;">Conceptos Clave Aplicados</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong style="color:#B9F6CA;">EcoPapel</strong></td>
-                    <td>Procesamiento y manufactura de papel artesanal reciclado y elementos derivados de la celulosa recuperada.</td>
-                    <td>Sustentable e Interdisciplinario. Estandariza su producción mediante fichas de secado y granulometría.</td>
-                    <td>Fibras vegetales, Celulosa recuperada, Biodegradabilidad, Inclusión de semillas nativas.</td>
-                </tr>
-                <tr>
-                    <td><strong style="color:#B9F6CA;">EcoLab</strong></td>
-                    <td>Área de experimentación química avanzada, obtención de insumos biológicos y análisis de energías alternativas.</td>
-                    <td>Experimental y Medible. Valida empíricamente la viabilidad científica antes de redactar manuales.</td>
-                    <td>Pirólisis, Extracción de pigmentos, Digestión anaeróbica, Gradiente salino, Cristalización.</td>
-                </tr>
-                <tr>
-                    <td><strong style="color:#B9F6CA;">EcoTech</strong></td>
-                    <td>División de desarrollo informático, algoritmia de Inteligencia Artificial, simulación virtual y hardware de monitoreo.</td>
-                    <td>Replicable y Continuo. Digitaliza el conocimiento del proyecto y crea interfaces interactivas accesibles.</td>
-                    <td>Modelado LLM (EcoIA), Internet de las Cosas (IoT), Matrices de sensores, Simulación interactiva (Minecraft).</td>
-                </tr>
-                <tr>
-                    <td><strong style="color:#B9F6CA;">EcoIndustria</strong></td>
-                    <td>Sección orientada al diseño y fabricación de dispositivos mecánicos, mobiliario modular y soluciones físicas a base de PET/Cartón.</td>
-                    <td>Circular y Sustentable. Transforma descartes estructurales duros en herramientas ergonómicas operativas.</td>
-                    <td>Upcycling estructural, Dinámica de fluidos, Amplificación acústica pasiva, Termofusión controlada.</td>
-                </tr>
-            </tbody>
-        </table>
-        </div>
-    """, unsafe_allow_html=True)
 
     # Footer institucional 
     st.markdown("""
