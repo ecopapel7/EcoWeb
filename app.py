@@ -549,12 +549,12 @@ elif selected == "Cronología Eco":
                 <tr>
                     <td><strong>Infraestructura Digital</strong></td>
                     <td>Poca (Registros en formato papel/físico y Redes sociales).</td>
-                    <td><span style="color:#00E676; font-weight:bold;">Ecosistema Digital</span> (EcoWeb, Modelado IA, Servidores de consulta).</td>
+                    <td><span style="color:#00E676; font-weight:bold;">Alta</span> (EcoWeb, Modelado IA, Servidores de consulta).</td>
                 </tr>
                 <tr>
                     <td><strong>Impacto</strong></td>
                     <td>Bajo (Reciclaje de papel común).</td>
-                    <td>Alto (Replicabilidad, Continuidad, etc.)</td>
+                    <td><span style="color:#00E676; font-weight:bold;">Alto</span> (Replicabilidad, Continuidad, etc.)</td>
                 </tr>
             </tbody>
         </table>
