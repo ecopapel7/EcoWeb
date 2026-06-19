@@ -588,8 +588,8 @@ elif selected == "Cronología Eco":
         """, unsafe_allow_html=True)
 
     # SECCIÓN 5: LÍNEA TEMPORAL SECUENCIAL CRONOLÓGICA
-st.markdown('<div class="section-header">📅 4. Línea de Tiempo Histórica</div>', unsafe_allow_html=True)
-st.markdown("""
+    st.markdown('<div class="section-header">📅 4. Línea de Tiempo Histórica</div>', unsafe_allow_html=True)
+    st.markdown("""
     <div class="glass-card">
         <div style="display: flex; flex-direction: column; gap: 15px;">
             <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #D4FFB2;">
@@ -636,7 +636,17 @@ st.markdown("""
                 <span style="color:#00FFD2; font-weight:bold;">24 de Abril 2026 • Finalización de la primera ficha</span><br>
                 <span style="font-size:14px; color:#E0E6ED;">Se termina la primera ficha: Ficha N7: EcoIA (EcoTech).</span>
             </div>
-            <div style="background: rgba(255,255,255,
+            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #00F7FF;">
+                <span style="color:#00F7FF; font-weight:bold;">25 de Abril 2026 • Creación del sistema de reconocidos y informe semanal</span><br>
+                <span style="font-size:14px; color:#E0E6ED;">La creación del sistema de reconocidos y el informe semanal para tener al equipo alineado y enfocado.</span>
+            </div>
+            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #00D2FF;">
+                <span style="color:#00D2FF; font-weight:bold;">1 de Junio 2026 • Primer cierre del sistema de reconocidos y informe mensual</span><br>
+                <span style="font-size:14px; color:#E0E6ED;">Primer grupo de reconocidos y cierre de notas.</span>
+            </div>
+        </div>
+    </div>
+""", unsafe_allow_html=True)
 
     # SECCIÓN 6: HITOS CRÍTICOS (Los 3 momentos clave de quiebre técnico)
     st.markdown('<div class="section-header">🏆 5. Hitos de Mayor Impacto Tecnológico</div>', unsafe_allow_html=True)
