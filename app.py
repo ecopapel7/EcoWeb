@@ -649,10 +649,8 @@ elif selected == "Cronología Eco":
 """, unsafe_allow_html=True)
 
     # SECCIÓN 7 & SECCIÓN 8: SITUACIÓN ACTUAL VS PROYECCIÓN FUTURA
-    col_fut = st.columns(1)
-    with col_fut:
-        st.markdown('<div class="section-header">🔮 7. Proyección futura</div>', unsafe_allow_html=True)
-        st.markdown("""
+    st.markdown('<div class="section-header">🔮 7. Proyección futura</div>', unsafe_allow_html=True)
+    st.markdown("""
             <div class="glass-card" style="height: 310px; border-left: 4px solid #64FFDA;">
                 <p style="margin-top:0; color:#64FFDA; font-weight:600; margin-bottom:15px;">Hacia dónde se proyecta Eco:</p>
                 <ul class="custom-list">
