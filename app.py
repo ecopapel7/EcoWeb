@@ -588,65 +588,55 @@ elif selected == "Cronología Eco":
         """, unsafe_allow_html=True)
 
     # SECCIÓN 5: LÍNEA TEMPORAL SECUENCIAL CRONOLÓGICA
-    st.markdown('<div class="section-header">📅 4. Línea de Tiempo Histórica</div>', unsafe_allow_html=True)
-    st.markdown("""
+st.markdown('<div class="section-header">📅 4. Línea de Tiempo Histórica</div>', unsafe_allow_html=True)
+st.markdown("""
     <div class="glass-card">
         <div style="display: flex; flex-direction: column; gap: 15px;">
-            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #C8E6C9;">
-                <span style="color:#C8E6C9; font-weight:bold;">1 de Abril del 2025 • Fundación de EcoPapel 🧪</span><br>
+            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #D4FFB2;">
+                <span style="color:#D4FFB2; font-weight:bold;">1 de Abril del 2025 • Fundación de EcoPapel 🧪</span><br>
                 <span style="font-size:14px; color:#E0E6ED;">Organización del grupo y compra de materiales.</span>
             </div>
-            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #A5D6A7;">
-                <span style="color:#A5D6A7; font-weight:bold;">4 de Mayo del 2025 • Primer papel reciclado 📑</span><br>
+            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #C2FF9E;">
+                <span style="color:#C2FF9E; font-weight:bold;">4 de Mayo del 2025 • Primer papel reciclado 📑</span><br>
                 <span style="font-size:14px; color:#E0E6ED;">Primer papel reciclado hecho.</span>
             </div>
-            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #81C784;">
-                <span style="color:#81C784; font-weight:bold;">14 de Agosto del 2025 • Presentación en la CUDI</span><br>
+            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #B0FF8A;">
+                <span style="color:#B0FF8A; font-weight:bold;">14 de Agosto del 2025 • Presentación en la CUDI</span><br>
                 <span style="font-size:14px; color:#E0E6ED;">Primera presentación del proyecto EcoPapel 2025 en la Universidad CUDI.</span>
             </div>
-            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #66BB6A;">
-                <span style="color:#66BB6A; font-weight:bold;">16 de Agosto del 2025 • Primer video en las redes sociales </span><br>
+            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #9EFF75;">
+                <span style="color:#9EFF75; font-weight:bold;">16 de Agosto del 2025 • Primer video en las redes sociales </span><br>
                 <span style="font-size:14px; color:#E0E6ED;">Creación de las redes sociales y el primer short subido.</span>
             </div>
-            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #4CAF50;">
-                <span style="color:#4CAF50; font-weight:bold;">13 de Octubre del 2025 • Evaluación de Saberes</span><br>
+            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #8BFF61;">
+                <span style="color:#8BFF61; font-weight:bold;">13 de Octubre del 2025 • Evaluación de Saberes</span><br>
                 <span style="font-size:14px; color:#E0E6ED;">Primera evaluación del proyecto EcoPapel 2025.</span>
             </div>
-            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #43A047;">
-                <span style="color:#43A047; font-weight:bold;">13 de Noviembre del 2025 • Presentación en la Técnica 7</span><br>
+            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #79FF4D;">
+                <span style="color:#79FF4D; font-weight:bold;">13 de Noviembre del 2025 • Presentación en la Técnica 7</span><br>
                 <span style="font-size:14px; color:#E0E6ED;">Presentación del proyecto en E.E.S.T. N7</span>
             </div>
-            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #388E3C;">
-                <span style="color:#388E3C; font-weight:bold;">4 de Marzo 2026 • Nacimiento de Eco</span><br>
+            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #66FF38;">
+                <span style="color:#66FF38; font-weight:bold;">4 de Marzo 2026 • Nacimiento de Eco</span><br>
                 <span style="font-size:14px; color:#E0E6ED;">Nace formalmente el concepto y idea de "Proyecto Eco".</span>
             </div>
-            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #2E7D32;">
-                <span style="color:#2E7D32; font-weight:bold;">4 de Marzo 2026 • Redacción de los 7 Pilares ⚖️</span><br>
+            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #4DFF5E;">
+                <span style="color:#4DFF5E; font-weight:bold;">4 de Marzo 2026 • Redacción de los 7 Pilares ⚖️</span><br>
                 <span style="font-size:14px; color:#E0E6ED;">Se decretan los 7 pilares / reglas obligatorias del proyecto.</span>
             </div>
-            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #1B5E20;">
-                <span style="color:#1B5E20; font-weight:bold;">15 de Abril • Creación y redacción de las 24 fichas</span><br>
+            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #33FF85;">
+                <span style="color:#33FF85; font-weight:bold;">15 de Abril • Creación y redacción de las 24 fichas</span><br>
                 <span style="font-size:14px; color:#E0E6ED;">Se termina de redactar las 24 fichas.</span>
             </div>
-            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #00E676;">
-                <span style="color:#00E676; font-weight:bold;">19 de Abril • Creación del Flujo Eco y Conceptos </span><br>
+            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #1AFFAB;">
+                <span style="color:#1AFFAB; font-weight:bold;">19 de Abril • Creación del Flujo Eco y Conceptos </span><br>
                 <span style="font-size:14px; color:#E0E6ED;">Se crean el Flujo Eco y los Conceptos.</span>
             </div>
-            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #00C853;">
-                <span style="color:#00C853; font-weight:bold;">24 de Abril 2026 • Finalización de la primera ficha</span><br>
+            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #00FFD2;">
+                <span style="color:#00FFD2; font-weight:bold;">24 de Abril 2026 • Finalización de la primera ficha</span><br>
                 <span style="font-size:14px; color:#E0E6ED;">Se termina la primera ficha: Ficha N7: EcoIA (EcoTech).</span>
             </div>
-            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #05ffb0;">
-                <span style="color:#05ffb0; font-weight:bold;">25 de Abril 2026 • Creación del sistema de reconocidos y informe semanal</span><br>
-                <span style="font-size:14px; color:#E0E6ED;">La creación del sistema de reconocidos y el informe semanal para tener al equipo alineado y enfocado.</span>
-            </div>
-            <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #00e5ff;">
-                <span style="color:#00e5ff; font-weight:bold;">1 de Junio 2026 • Primer cierre del sistema de reconocidos y informe mensual</span><br>
-                <span style="font-size:14px; color:#E0E6ED;">Primer grupo de reconocidos y cierre de notas.</span>
-            </div>
-        </div>
-    </div>
-""", unsafe_allow_html=True)
+            <div style="background: rgba(255,255,255,
 
     # SECCIÓN 6: HITOS CRÍTICOS (Los 3 momentos clave de quiebre técnico)
     st.markdown('<div class="section-header">🏆 5. Hitos de Mayor Impacto Tecnológico</div>', unsafe_allow_html=True)
