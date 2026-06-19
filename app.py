@@ -648,53 +648,17 @@ elif selected == "Cronología Eco":
     </div>
 """, unsafe_allow_html=True)
 
-    # SECCIÓN 6: HITOS CRÍTICOS (Los 3 momentos clave de quiebre técnico)
-    st.markdown('<div class="section-header">🏆 5. Hitos de Mayor Impacto Tecnológico</div>', unsafe_allow_html=True)
-    st.markdown("""
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 25px;">
-            <div style="background: rgba(0, 230, 118, 0.03); border: 1px solid rgba(0, 230, 118, 0.2); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                <span style="font-size: 24px;">🚀</span> <h4 style="margin: 10px 0 5px 0; color:#B9F6CA;">Paso de Taller a Sistema</h4>
-                <p style="font-size:14px; margin:0; color:#E0E6ED;">La creación de las 4 divisiones paralelas interconectadas mediante el <em>Flujo Eco</em>, rompiendo la linealidad del reciclaje tradicional.</p>
-            </div>
-            <div style="background: rgba(0, 230, 118, 0.03); border: 1px solid rgba(0, 230, 118, 0.2); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                <span style="font-size: 24px;">📋</span> <h4 style="margin: 10px 0 5px 0; color:#B9F6CA;">Estandarización de 24 Fichas</h4>
-                <p style="font-size:14px; margin:0; color:#E0E6ED;">La conversión de simples ideas en protocolos científicos rígidos de ingeniería, asegurando el pilar <strong>Replicable</strong> de la solución.</p>
-            </div>
-            <div style="background: rgba(0, 230, 118, 0.03); border: 1px solid rgba(0, 230, 118, 0.2); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                <span style="font-size: 24px;">💎</span> <h4 style="margin: 10px 0 5px 0; color:#B9F6CA;">El Algoritmo de Control</h4>
-                <p style="font-size:14px; margin:0; color:#E0E6ED;">La implementación de software interactivo (EcoWeb) y simulación analítica de datos como centro neurálgico del Proyecto.</p>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-
     # SECCIÓN 7 & SECCIÓN 8: SITUACIÓN ACTUAL VS PROYECCIÓN FUTURA
-    col_act, col_fut = st.columns(2)
-    
-    with col_act:
-        st.markdown('<div class="section-header">📍 6. Estado y Situación Actual</div>', unsafe_allow_html=True)
-        st.markdown("""
-            <div class="glass-card" style="height: 310px; border-left: 4px solid #00E676;">
-                <p style="margin-top:0; color:#B9F6CA; font-weight:600; margin-bottom:15px;">Métricas consolidadas en tiempo real (2026):</p>
-                <ul class="custom-list">
-                    <li><strong>4 Secciones Técnicas</strong> operando en sincronía en las aulas-taller.</li>
-                    <li><strong>7 Pilares Rectores</strong> auditando el 100% de los desarrollos.</li>
-                    <li><strong>24 Fichas Estructurales</strong> completadas y subidas a la nube de EcoWeb.</li>
-                    <li><strong>Herramientas Activas:</strong> Interfaz Streamlit, Base documental en la nube, Módulo de prompts EcoIA.</li>
-                    <li><strong>Equipo Estable:</strong> Alumnos de 4° 4° encuadrados en el esquema riguroso de Reconocidos.</li>
-                </ul>
-            </div>
-        """, unsafe_allow_html=True)
-        
+    col_fut = st.columns(1)
     with col_fut:
-        st.markdown('<div class="section-header">🔮 7. Visión de Crecimiento y Proyecciones</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-header">🔮 7. Proyección futura</div>', unsafe_allow_html=True)
         st.markdown("""
             <div class="glass-card" style="height: 310px; border-left: 4px solid #64FFDA;">
-                <p style="margin-top:0; color:#64FFDA; font-weight:600; margin-bottom:15px;">Hacia dónde se proyecta el engranaje sistémico:</p>
+                <p style="margin-top:0; color:#64FFDA; font-weight:600; margin-bottom:15px;">Hacia dónde se proyecta Eco:</p>
                 <ul class="custom-list">
-                    <li><strong>Nuevas Fichas:</strong> Indexar hasta 40 protocolos técnicos abarcando biodigestores complejos.</li>
-                    <li><strong>Replicación Institucional:</strong> Exportar los manuales empaquetados para implementarlos en otras escuelas técnicas del distrito.</li>
-                    <li><strong>Expansión Digital:</strong> Evolucionar la plataforma hacia una aplicación móvil de monitoreo IoT nativa.</li>
-                    <li><strong>EcoCommunity:</strong> Lanzar de forma oficial la división de extensión e impacto en barrios y comedores de la zona.</li>
+                    <li><strong>Nuevas Fichas:</strong> Añadir más fichas según necesidad, experiencia y tamaño del equipo.</li>
+                    <li><strong>Replicación Institucional:</strong> Que el proyecto este presente en otras instituciones.</li>
+                    <li><strong>Crecimiento y Evolución:</strong> Evolucionar tanto la parte de Fundamentos y Manualidades.</li>
                 </ul>
             </div>
         """, unsafe_allow_html=True)
