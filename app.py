@@ -589,7 +589,7 @@ elif selected == "Cronología Eco":
 
     # SECCIÓN 5: LÍNEA TEMPORAL SECUENCIAL CRONOLÓGICA
     st.markdown('<div class="section-header">📅 4. Línea de Tiempo Histórica</div>', unsafe_allow_html=True)
-st.markdown("""
+    st.markdown("""
     <div class="glass-card">
         <div style="display: flex; flex-direction: column; gap: 15px;">
             <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #81C784;">
