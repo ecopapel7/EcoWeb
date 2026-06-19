@@ -708,10 +708,8 @@ elif selected == "Fichas Técnicas":
     
     # Diccionario Oficial de Fichas del Proyecto
     FICHAS = {
-        "1": {"titulo": "Papel Seed", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1S5sREmBrapKftJM5z8iZjtj46rLXer0t/view?usp=sharing", "desc": "Papel artesanal biodegradable que contiene semillas en su interior. Cuando se entierra en tierra húmeda, el
-papel se descompone y las semillas germinan, dando flores o hortalizas."},
-        "2": {"titulo": "FibroPapel", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1JV_LZ_25r-gyqP27gndXCKweqzovfaiN/view?usp=sharing", "desc": "Papel reciclado reforzado con fibras textiles (algodón), lo que lo hace más flexible y resistente que el papel
-común. Ideal para tapas, carpetas o empaques más pesados."},
+        "1": {"titulo": "Papel Seed", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1S5sREmBrapKftJM5z8iZjtj46rLXer0t/view?usp=sharing", "desc": "Papel artesanal biodegradable con semillas incorporadas."},
+        "2": {"titulo": "FibroPapel", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1JV_LZ_25r-gyqP27gndXCKweqzovfaiN/view?usp=sharing", "desc": "Papel compuesto reforzado con fibras textiles de algodón."},
         "3": {"titulo": "Manual del Reciclador", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1icRZmLchhPNXkbqHRKe3rsGF2yQdsXHq/view?usp=sharing", "desc": "Libro educativo para replicar el proyecto."},
         "4": {"titulo": "Marca-Páginas", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1LVUYPIBTA6mY61HVtQn7f15ud1sw-3Rv/view?usp=sharing", "desc": "Souvenir funcional de celulosa (papel y cartón) recuperado."},
         "5": {"titulo": "Eco-Carrier", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1q2m3efrr3WPZtJ_a__8YZ6m42nK-3y31/view?usp=sharing", "desc": "Bolsas de papel que reemplazan el plástico."},
@@ -730,8 +728,8 @@ común. Ideal para tapas, carpetas o empaques más pesados."},
         "18": {"titulo": "Cañón Vortex", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1h8tS94N0edR9Tw7GU94dummpULnt32zi/view?usp=sharing", "desc": "Generador físico de anillos de aire para gamificación."},
         "19": {"titulo": "Eco-Dollars", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1xQSQpyuVH-YSgtjWZYahVeterC99rX70/view?usp=sharing", "desc": "Sistema monetario de economía circular impreso sobre papel reciclado propio."},
         "20": {"titulo": "EcoVolt", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1OmhWYiMxZvxMxHFRO7slATfgt_Brwhui/view?usp=sharing", "desc": "Generación teórica de energía limpia aprovechando el gradiente salino (agua dulce y salada)."},
-        "21": {"titulo": "EcoCristales", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1jQwwWbwoUoq3xlcBYY5aVB1WoOieLQ30/view?usp=sharing", "desc": "Cristalización de alumbre orientada al estudio de la geometría química."},
-        "22": {"titulo": "Biogás", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1m4l9L2Y5sXrWz2KlmgfjfDii76ZwBtS6/view?usp=sharing", "desc": "Investigación avanzada sobre digestión anaeróbica y captura de metano."},
+        "21": {"titulo": "EcoCristales", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1jQwwWbwoUoq3xlcBYY5aVB1WoOieLQ30/view?usp=sharing", "desc": "Criación de Cristales con alumbre para collares."},
+        "22": {"titulo": "Biogás", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1m4l9L2Y5sXrWz2KlmgfjfDii76ZwBtS6/view?usp=sharing", "desc": "Investigaciónsobre digestión anaeróbica y captura de metano."},
         "23": {"titulo": "EcoMod", "division": "EcoTech", "drive_url": "https://drive.google.com/file/d/13qfQNtrsH1iAjTEAck-LrFfluuHgZZGf/view?usp=sharing", "desc": "Transforma mecánicas de juego en procesos interactivos de reciclaje, producción sustentable y economía circular (EcoDollars) para un aprendizaje activo en Minecraft."},
         "24": {"titulo": "TerrarIA", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1P3r5UlcdPS4KWDcuYPN45qJWmD_KTBDu/view?usp=sharing", "desc": "Ecosistema cerrado automatizado y monitoreado por matrices de sensores."},
     }
@@ -746,10 +744,10 @@ común. Ideal para tapas, carpetas o empaques más pesados."},
                 <p style="margin-top:0; color:#00E676; font-weight:600; margin-bottom:15px;">Definición y Estandarización de Ingeniería:</p>
                 Es un <strong>documento normalizado estricto</strong> que registra de manera exacta los datos, fórmulas, flujos y materiales requeridos para replicar y optimizar una actividad o recurso del sistema.
                 <br><br>
-                <span style="color:#FFD54F; font-weight:bold;">⚠️ Ruptura de conceptos tradicionales:</span>
+                <span style="color:#FFD54F; font-weight:bold;">¿Que no es?:</span>
                 <ul style="margin-top:5px; padding-left:20px; font-size:14px; color:#E0E6ED;">
                     <li><strong>No es un apunte:</strong> No contiene anotaciones informales o fragmentadas.</li>
-                    <li><strong>No es un informe:</strong> No narra un suceso pasado; es una guía de ejecución viva.</li>
+                    <li><strong>No es un informe:</strong> No narra un suceso pasado; es una guía.</li>
                     <li><strong>No es una presentación:</strong> No resume ideas superficiales para exposición visual.</li>
                 </ul>
             </div>
