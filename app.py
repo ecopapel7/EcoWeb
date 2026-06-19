@@ -612,7 +612,6 @@ elif selected == "Cronología Eco":
                     <span style="color:#A5D6A7; font-weight:bold;">13 de Octubre del 2025 • Evaluación de Saberes</span><br>
                     <span style="font-size:14px; color:#E0E6ED;">Primera evaluación del proyecto EcoPapel 2025.</span>
                 </div>
-                
                 <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #A5D6A7;">
                     <span style="color:#A5D6A7; font-weight:bold;">13 de Noviembre del 2025 • Presentación en la Técnica 7</span><br>
                     <span style="font-size:14px; color:#E0E6ED;">Presentación del proyecto en E.E.S.T. N7</span>
