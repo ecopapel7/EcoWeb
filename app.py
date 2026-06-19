@@ -594,31 +594,57 @@ elif selected == "Cronología Eco":
             <div style="display: flex; flex-direction: column; gap: 15px;">
                 <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #81C784;">
                     <span style="color:#81C784; font-weight:bold;">1 de Abril del 2025 • Fundación de EcoPapel 🧪</span><br>
-                    <span style="font-size:14px; color:#E0E6ED;">Organización del grupo y compra de materiales. <strong>Importancia:</strong> La primera organización del equipo EcoPapel 2025.</span>
+                    <span style="font-size:14px; color:#E0E6ED;">Organización del grupo y compra de materiales.</span>
                 </div>
                 <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #A5D6A7;">
                     <span style="color:#A5D6A7; font-weight:bold;">4 de Mayo del 2025 • Primer papel reciclado 📑</span><br>
-                    <span style="font-size:14px; color:#E0E6ED;">Primer papel reciclado hecho <strong>Importancia:</strong> El primer papel reciclado del proyecto.</span>
+                    <span style="font-size:14px; color:#E0E6ED;">Primer papel reciclado hecho.</span>
                 </div>
                 <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #A5D6A7;">
-                    <span style="color:#A5D6A7; font-weight:bold;">14 de Agosto del 2025 • Presentación en la CUDI 📑</span><br>
-                    <span style="font-size:14px; color:#E0E6ED;">Primer papel reciclado hecho <strong>Importancia:</strong> El primer papel reciclado del proyecto.</span>
+                    <span style="color:#A5D6A7; font-weight:bold;">14 de Agosto del 2025 • Presentación en la CUDI</span><br>
+                    <span style="font-size:14px; color:#E0E6ED;">Primera presentación del proyecto EcoPapel 2025 en la Universidad CUDI.</span>
                 </div>
                 <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #A5D6A7;">
-                    <span style="color:#A5D6A7; font-weight:bold;">16 de Agosto del 2025 • Primer video en las redes sociales 📑</span><br>
-                    <span style="font-size:14px; color:#E0E6ED;">Primer papel reciclado hecho <strong>Importancia:</strong> El primer papel reciclado del proyecto.</span>
+                    <span style="color:#A5D6A7; font-weight:bold;">16 de Agosto del 2025 • Primer video en las redes sociales </span><br>
+                    <span style="font-size:14px; color:#E0E6ED;">Creación de las redes sociales y el primer short subido.</span>
                 </div>
                 <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #A5D6A7;">
-                    <span style="color:#A5D6A7; font-weight:bold;">24 de Abril del 2025 • Primer papel reciclado 📑</span><br>
-                    <span style="font-size:14px; color:#E0E6ED;">Primer papel reciclado hecho <strong>Importancia:</strong> El primer papel reciclado del proyecto.</span>
+                    <span style="color:#A5D6A7; font-weight:bold;">13 de Octubre del 2025 • Evaluación de Saberes</span><br>
+                    <span style="font-size:14px; color:#E0E6ED;">Primera evaluación del proyecto EcoPapel 2025.</span>
+                </div>
+                
+                <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #A5D6A7;">
+                    <span style="color:#A5D6A7; font-weight:bold;">13 de Noviembre del 2025 • Presentación en la Técnica 7</span><br>
+                    <span style="font-size:14px; color:#E0E6ED;">Presentación del proyecto en E.E.S.T. N7</span>
                 </div>
                 <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #4CAF50;">
-                    <span style="color:#4CAF50; font-weight:bold;">Marzo 2026 • Redacción de los 7 Pilares ⚖️</span><br>
-                    <span style="font-size:14px; color:#E0E6ED;">Se decreta la matriz conceptual obligatoria. Nace formalmente el concepto de "Proyecto Eco". <strong>Importancia:</strong> Blindaje metodológico transgeneracional.</span>
+                    <span style="color:#4CAF50; font-weight:bold;">4 de Marzo 2026 • Nacimiento de Eco</span><br>
+                    <span style="font-size:14px; color:#E0E6ED;">Nace formalmente el concepto y idea de "Proyecto Eco".</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #4CAF50;">
+                    <span style="color:#4CAF50; font-weight:bold;">4 de Marzo 2026 • Redacción de los 7 Pilares ⚖️</span><br>
+                    <span style="font-size:14px; color:#E0E6ED;">Se decretan los 7 pilares / reglas obligatorias del proyecto.</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #4CAF50;">
+                    <span style="color:#4CAF50; font-weight:bold;">15 de Abril • Creación y redacción de las 24 fichas</span><br>
+                    <span style="font-size:14px; color:#E0E6ED;">Se termina de redactar las 24 fichas.</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #4CAF50;">
+                    <span style="color:#4CAF50; font-weight:bold;">19 de Abril • Creación del Flujo Eco y Conceptos </span><br>
+                    <span style="font-size:14px; color:#E0E6ED;">Se crean el Flujo Eco y los Conceptos.</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #4CAF50;">
+                    <span style="color:#4CAF50; font-weight:bold;">24 de Abril 2026 • Finalización de la primera ficha</span><br>
+                    <span style="font-size:14px; color:#E0E6ED;">Se termina la primera ficha: Ficha N7: EcoIA (EcoTech).</span>
                 </div>
                 <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #00E676;">
-                    <span style="color:#00E676; font-weight:bold;">Mayo 2026 • Despliegue de la Arquitectura Digital y EcoWeb 🌐</span><br>
-                    <span style="font-size:14px; color:#E0E6ED;">Desarrollo de las interfaces en Streamlit, codificación de las 24 fichas de ingeniería y lanzamiento de los primeros prompts de EcoIA. <strong>Importancia:</strong> Democratización total del acceso técnico.</span>
+                    <span style="color:#00E676; font-weight:bold;">25 de Abril 2026 • Creación del sistema de reconocidos y informe semanal</span><br>
+                    <span style="font-size:14px; color:#E0E6ED;">La creación del sistema de reconcidos y el informe semanal para tener al equipo alineado y enfocado.</span>
+                </div>
+                </div>
+                <div style="background: rgba(255,255,255,0.01); padding: 14px; border-radius: 8px; border-left: 4px solid #00E676;">
+                    <span style="color:#00E676; font-weight:bold;">1 de Junio 2026 • Primer cierre del sistema de reconocidos y informe mensual</span><br>
+                    <span style="font-size:14px; color:#E0E6ED;">Primer grupo de reconocidos y cierre de notas.</span>
                 </div>
             </div>
         </div>
