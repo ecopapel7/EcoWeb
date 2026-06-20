@@ -758,15 +758,15 @@ elif selected == "Fichas Técnicas":
         st.markdown("""
             <div class="glass-card" style="height: 330px;">
                 <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:15px;">Problemas de la educación tradicional que soluciona:</p>
-                <div class="info-item"><span style="color:#64FFDA;">✦</span> <strong>Mitiga la fuga de cerebros:</strong> Evita la pérdida del conocimiento acumulado cuando los alumnos de último año egresan.</div>
-                <div class="info-item"><span style="color:#64FFDA;">✦</span> <strong>Destruye personalismos:</strong> El proyecto ya no depende de un alumno o docente líder específico; la ficha empodera a cualquiera.</div>
-                <div class="info-item"><span style="color:#64FFDA;">✦</span> <strong>Garantiza Continuidad:</strong> Permite retomar un desarrollo exactamente en el mismo punto técnico donde se dejó el ciclo anterior.</div>
+                <div class="info-item"><span style="color:#64FFDA;">✦</span> <strong>Evitar la perdida de conocimiento:</strong> Evita la pérdida del conocimiento acumulado cuando los alumnos de último año egresan. El conocimiento queda grabado en documentos, no en personas.</div>
+                <div class="info-item"><span style="color:#64FFDA;">✦</span> <strong>Evitar la dependencia:</strong> El proyecto ya no depende de un alumno o docente líder específico; la ficha empodera a cualquiera.</div>
+                <div class="info-item"><span style="color:#64FFDA;">✦</span> <strong>Garantiza Continuidad:</strong> Permite retomar un desarrollo exactamente en el mismo punto donde se dejó el ciclo anterior.</div>
             </div>
         """, unsafe_allow_html=True)
 
     # SECCIÓN 3: ESTRUCTURA OFICIAL (Desplegables de anatomía de una ficha)
-    st.markdown('<div class="section-header">📐 3. Anatomía Estructural de los Documentos</div>', unsafe_allow_html=True)
-    st.markdown('<p style="color:#A5D6A7; margin-bottom:12px;">Cada una de las 24 fichas del sistema se redacta bajo la misma matriz de campos obligatorios:</p>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">📐 3. Estructura de las Fichas</div>', unsafe_allow_html=True)
+    st.markdown('<p style="color:#A5D6A7; margin-bottom:12px;">Cada una de las 24 fichas del sistema se redacta bajo la misma estructura (con excepciones):</p>', unsafe_allow_html=True)
     
     with st.expander("🔍 Ver Campos Estructurales Obligatorios"):
         st.markdown("""
@@ -803,23 +803,51 @@ elif selected == "Fichas Técnicas":
         """, unsafe_allow_html=True)
         
     with col_cicl:
-        st.markdown('<div class="section-header">🔄 5. Ciclo de Vida de una Ficha</div>', unsafe_allow_html=True)
-        st.markdown("""
-            <div class="glass-card" style="height: 340px; display:flex; flex-direction:column; justify-content:center;">
-                <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:15px; text-align:center;">Flujo Evolutivo del Documento:</p>
-                <div style="display:flex; justify-content:space-between; align-items:center; text-align:center; font-size:12.5px;">
-                    <div style="background:rgba(255,255,255,0.03); padding:8px; border-radius:6px; width:15%;"><strong>Idea</strong><br><span style="color:#64FFDA;">Captura</span></div>
-                    <div style="color:#00E676;">➔</div>
-                    <div style="background:rgba(255,255,255,0.03); padding:8px; border-radius:6px; width:16%;"><strong>Desarrollo</strong><br><span style="color:#00E676;">Laboratorio</span></div>
-                    <div style="color:#00E676;">➔</div>
-                    <div style="background:rgba(255,255,255,0.03); padding:8px; border-radius:6px; width:15%;"><strong>Prueba</strong><br><span style="color:#B9F6CA;">Ensayo</span></div>
-                    <div style="color:#00E676;">➔</div>
-                    <div style="background:rgba(255,255,255,0.03); padding:8px; border-radius:6px; width:18%;"><strong>Documentación</strong><br><span style="color:#69F0AE;">Ficha</span></div>
-                    <div style="color:#00E676;">➔</div>
-                    <div style="background:rgba(255,255,255,0.03); padding:8px; border-radius:6px; width:15%;"><strong>Mejora</strong><br><span style="color:#A5D6A7;">Optimización</span></div>
+    st.markdown('<div class="section-header">🔄 5. Ciclo de Generación de Conocimiento</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="glass-card" style="height: 340px; display:flex; flex-direction:column; justify-content:center;">
+            <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:15px; text-align:center;">
+                Proceso de creación y evolución de una ficha:
+            </p>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; text-align:center; font-size:12.5px;">
+
+                <div style="background:rgba(255,255,255,0.03); padding:8px; border-radius:6px; width:15%;">
+                    <strong>💡 Idea</strong><br>
+                    <span style="color:#64FFDA;">Pregunta o propuesta</span>
                 </div>
+
+                <div style="color:#00E676;">➔</div>
+
+                <div style="background:rgba(255,255,255,0.03); padding:8px; border-radius:6px; width:16%;">
+                    <strong>🔍 Investigación</strong><br>
+                    <span style="color:#00E676;">Análisis y búsqueda</span>
+                </div>
+
+                <div style="color:#00E676;">➔</div>
+
+                <div style="background:rgba(255,255,255,0.03); padding:8px; border-radius:6px; width:15%;">
+                    <strong>🛠️ Desarrollo</strong><br>
+                    <span style="color:#B9F6CA;">Diseño o experimentación</span>
+                </div>
+
+                <div style="color:#00E676;">➔</div>
+
+                <div style="background:rgba(255,255,255,0.03); padding:8px; border-radius:6px; width:18%;">
+                    <strong>📚 Ficha</strong><br>
+                    <span style="color:#69F0AE;">Documentación oficial</span>
+                </div>
+
+                <div style="color:#00E676;">➔</div>
+
+                <div style="background:rgba(255,255,255,0.03); padding:8px; border-radius:6px; width:15%;">
+                    <strong>🌱 Evolución</strong><br>
+                    <span style="color:#A5D6A7;">Mejoras y ampliaciones</span>
+                </div>
+
             </div>
-        """, unsafe_allow_html=True)
+        </div>
+    """, unsafe_allow_html=True)
 
     # SECCIÓN 4 & SECCIÓN 7: BIBLIOTECA DE CONOCIMIENTO (La base interactiva con tus links)
     st.markdown('<div class="section-header">📚 6. Biblioteca Interactiva: Base Documental del Ecosistema</div>', unsafe_allow_html=True)
