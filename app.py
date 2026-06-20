@@ -803,8 +803,8 @@ elif selected == "Fichas Técnicas":
         """, unsafe_allow_html=True)
         
     with col_cicl:
-    st.markdown('<div class="section-header">🔄 5. Ciclo de Generación de Conocimiento</div>', unsafe_allow_html=True)
-    st.markdown("""
+        st.markdown('<div class="section-header">🔄 5. Ciclo de Generación de Conocimiento</div>', unsafe_allow_html=True)
+        st.markdown("""
         <div class="glass-card" style="height: 340px; display:flex; flex-direction:column; justify-content:center;">
             <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:15px; text-align:center;">
                 Proceso de creación y evolución de una ficha:
