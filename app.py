@@ -1016,7 +1016,7 @@ elif selected == "Explorador Eco":
                 </div>
                 <p style="margin: 0 0 12px 0; color: #CFD8DC; font-size: 14.5px; line-height:1.4;">{f['desc']}</p>
                 <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.15); padding: 8px 12px; border-radius: 6px;">
-                    <span style="font-size: 13px; color: #A5D6A7;">🧬 Concepto Clave: <strong>{f['concepto']}</strong></span>
+                    <span style="font-size: 13px; color: #A5D6A7;">🧬 Concepto Clave: <strong>{f['pilar']}</strong></span>
                     <a href="{f['drive_url']}" target="_blank" style="text-decoration: none; font-weight: bold; color: #00E676; font-size: 13px;">Ver Manual Técnico Completo ↗</a>
                 </div>
             </div>
