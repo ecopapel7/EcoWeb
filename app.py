@@ -838,8 +838,8 @@ elif selected == "Fichas Técnicas":
         </div>
     """, unsafe_allow_html=True)
     # SECCIÓN 4 & SECCIÓN 7: BIBLIOTECA DE CONOCIMIENTO (La base interactiva con tus links)
-    st.markdown('<div class="section-header">📚 6. Biblioteca Interactiva: Base Documental del Ecosistema</div>', unsafe_allow_html=True)
-    st.markdown('<p style="color:#A5D6A7; margin-bottom:15px;">Filtra y accede directamente a los documentos de ingeniería alojados de forma segura en Google Drive:</p>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">📚 6. Lista de Fichas</div>', unsafe_allow_html=True)
+    st.markdown('<p style="color:#A5D6A7; margin-bottom:15px;">Filtra y accede directamente a las fichas 2026 de forma segura en Google Drive:</p>', unsafe_allow_html=True)
     
     # Buscador por texto
     busqueda = st.text_input("🔍 Buscar ficha por nombre o palabra clave...", "").lower()
@@ -916,30 +916,30 @@ elif selected == "Explorador Eco":
 
     # DICCIONARIO OPTIMIZADO CON METADATOS TÉCNICOS PARA FILTRADO AVANZADO
     FICHAS_AVANZADAS = {
-        "1": {"titulo": "Papel Seed", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1S5sREmBrapKftJM5z8iZjtj46rLXer0t/view?usp=sharing", "desc": "Papel artesanal biodegradable con semillas incorporadas.", "dificultad": "Inicial", "concepto": "Sustentabilidad", "estado": "Producción Estable", "siguiente": "2"},
-        "2": {"titulo": "FibroPapel", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1JV_LZ_25r-gyqP27gndXCKweqzovfaiN/view?usp=sharing", "desc": "Papel compuesto reforzado con fibras textiles de algodón.", "dificultad": "Básico", "concepto": "Reciclaje", "estado": "Producción Estable", "siguiente": "5"},
-        "3": {"titulo": "Manual del Reciclador", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1icRZmLchhPNXkbqHRKe3rsGF2yQdsXHq/view?usp=sharing", "desc": "Documento técnico educativo 100% sustentable.", "dificultad": "Inicial", "concepto": "Sustentabilidad", "estado": "Completado", "siguiente": "10"},
-        "4": {"titulo": "Marca-Páginas", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1LVUYPIBTA6mY61HVtQn7f15ud1sw-3Rv/view?usp=sharing", "desc": "Souvenir funcional de cartón recuperado.", "dificultad": "Inicial", "concepto": "Reciclaje", "estado": "Producción Estable", "siguiente": "3"},
-        "5": {"titulo": "Eco-Carrier", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1q2m3efrr3WPZtJ_a__8YZ6m42nK-3y31/view?usp=sharing", "desc": "Bolsas estructurales que reemplazan el plástico de un solo uso.", "dificultad": "Básico", "concepto": "Sustentabilidad", "estado": "Optimización", "siguiente": "13"},
-        "6": {"titulo": "Colorantes Naturales", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1EGy35MOOpkKR3-ksINjzhkurokfqwdWz/view?usp=sharing", "desc": "Extracción de pigmentos puros de residuos vegetales.", "dificultad": "Intermedio", "concepto": "Química", "estado": "Ensayos Clínicos", "siguiente": "14"},
-        "7": {"titulo": "EcoIA", "division": "EcoTech", "drive_url": "https://drive.google.com/file/d/1H0seDIImClVjA5UrHELyucapO9DzXrHH/view?usp=sharing", "desc": "Asistente inteligente de documentación técnica y auditoría.", "dificultad": "Avanzado", "concepto": "Tecnología", "estado": "Fase Beta", "siguiente": "23"},
-        "8": {"titulo": "Organizadores Ecomodulares", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1sJP_u9-UgqRWkXk3f3PsvUVzLCa93Uow/view?usp=sharing", "desc": "Sistemas de ordenamiento mediante latas y tubos.", "dificultad": "Inicial", "concepto": "Reciclaje", "estado": "Producción Estable", "siguiente": "9"},
-        "9": {"titulo": "Eco-Estelar", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/15qlgSz3v6YOLmHTWVmubTMknKM0WVUNS/view?usp=sharing", "desc": "Lámparas decorativas perforadas mediante técnica avanzada de congelado.", "dificultad": "Intermedio", "concepto": "Tecnología", "estado": "Optimización", "siguiente": "17"},
-        "10": {"titulo": "EcoChallenge", "division": "Transversal", "drive_url": "https://drive.google.com/file/d/1n6C2rPadtw662DZfogxJagQrbVvhem90/view?usp=sharing", "desc": "Sistema transversal de desafíos interactivos inter-áreas.", "dificultad": "Básico", "concepto": "Sustentabilidad", "estado": "Completado", "siguiente": "19"},
-        "11": {"titulo": "Eco-Hidro", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1q5ImtWBOhHfztDthNQs1yPdmIiK3zZYJ/view?usp=sharing", "desc": "Módulo de riego autónomo por capilaridad optimizado en botellas PET.", "dificultad": "Básico", "concepto": "Tecnología", "estado": "Producción Estable", "siguiente": "24"},
-        "12": {"titulo": "EcoTrash", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1XdaHhW7Z5nzfBHBr3dj7I-N0HNQuLp8k/view?usp=sharing", "desc": "Escoba técnica de alta resistencia construida con cerdas de PET.", "dificultad": "Básico", "concepto": "Reciclaje", "estado": "Producción Estable", "siguiente": "8"},
-        "13": {"titulo": "EcoWallet", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1xWXIx2TAa1QJU2izv0KwqhtEiZSo4GvW/view?usp=sharing", "desc": "Billetera impermeable mediante upcycling estructurado de Tetra Pak.", "dificultad": "Inicial", "concepto": "Reciclaje", "estado": "Producción Estable", "siguiente": "4"},
-        "14": {"titulo": "Carbon Ink", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1njzGFWQbRuRo-_ucORzZMYceuOE6uoOt/view?usp=sharing", "desc": "Tinta negra premium obtenida por pirólisis controlada.", "dificultad": "Avanzado", "concepto": "Química", "estado": "Ensayos Clínicos", "siguiente": "21"},
-        "15": {"titulo": "Nendo Dango", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1NO2FaJdNvlYZA9X8PKMSUAZ8gXJ4PzG8/view?usp=sharing", "desc": "Bolas de arcilla, sustrato y semillas para reforestación guiada.", "dificultad": "Inicial", "concepto": "Sustentabilidad", "estado": "Producción Estable", "siguiente": "1"},
-        "16": {"titulo": "EcoWear", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1tDOsmBio3hPoLzTVGfHzaauTz-wmhEtf/view?usp=sharing", "desc": "Cuentas estructurales y elementos decorativos de papel enrollado.", "dificultad": "Inicial", "concepto": "Reciclaje", "estado": "Producción Estable", "siguiente": "13"},
-        "17": {"titulo": "Eco-Voz", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1xh5hOjk_HXqaMcFr431Od3z15norhe1q/view?usp=sharing", "desc": "Amplificador acústico pasivo diseñado en cartón corrugado.", "dificultad": "Básico", "concepto": "Tecnología", "estado": "Producción Estable", "siguiente": "18"},
-        "18": {"titulo": "Cañón Vortex", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1h8tS94N0edR9Tw7GU94dummpULnt32zi/view?usp=sharing", "desc": "Generador físico de anillos de aire para dinámica de fluidos.", "dificultad": "Intermedio", "concepto": "Tecnología", "estado": "Optimización", "siguiente": "7"},
-        "19": {"titulo": "Eco-Dollars", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1xQSQpyuVH-YSgtjWZYahVeterC99rX70/view?usp=sharing", "desc": "Sistema monetario de economía circular impreso sobre papel reciclado.", "dificultad": "Intermedio", "concepto": "Sustentabilidad", "estado": "Completado", "siguiente": "23"},
-        "20": {"titulo": "EcoVolt", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1OmhWYiMxZvxMxHFRO7slATfgt_Brwhui/view?usp=sharing", "desc": "Generación teórica de energía limpia aprovechando el gradiente salino.", "dificultad": "Avanzado", "concepto": "Energía", "estado": "Investigación", "siguiente": "22"},
-        "21": {"titulo": "EcoCristales", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1jQwwWbwoUoq3xlcBYY5aVB1WoOieLQ30/view?usp=sharing", "desc": "Cristalización de alumbre orientada al estudio de la geometría química.", "dificultad": "Intermedio", "concepto": "Química", "estado": "Ensayos Clínicos", "siguiente": "20"},
-        "22": {"titulo": "Biogás", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1m4l9L2Y5sXrWz2KlmgfjfDii76ZwBtS6/view?usp=sharing", "desc": "Investigación avanzada sobre digestión anaeróbica y captura de metano.", "dificultad": "Avanzado", "concepto": "Energía", "estado": "Investigación", "siguiente": "24"},
-        "23": {"titulo": "EcoMod", "division": "EcoTech", "drive_url": "https://drive.google.com/file/d/13qfQNtrsH1iAjTEAck-LrFfluuHgZZGf/view?usp=sharing", "desc": "Módulo interactivo de reciclaje y economía circular en entornos virtuales.", "dificultad": "Intermedio", "concepto": "Tecnología", "estado": "Fase Beta", "siguiente": "7"},
-        "24": {"titulo": "TerrarIA", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1P3r5UlcdPS4KWDcuYPN45qJWmD_KTBDu/view?usp=sharing", "desc": "Ecosistema cerrado automatizado y monitoreado por sensores.", "dificultad": "Avanzado", "concepto": "Tecnología", "estado": "Optimización", "siguiente": "11"},
+        "1": {"titulo": "Papel Seed", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1S5sREmBrapKftJM5z8iZjtj46rLXer0t/view?usp=sharing", "desc": "Papel artesanal biodegradable con semillas incorporadas.", "dificultad": "I", "pilar": "Sustentable", "estado": "En desarrollo", "siguiente": "2"},
+        "2": {"titulo": "FibroPapel", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1JV_LZ_25r-gyqP27gndXCKweqzovfaiN/view?usp=sharing", "desc": "Papel compuesto reforzado con fibras textiles de algodón.", "dificultad": "II", "pilar": "Circular", "estado": "En planeación", "siguiente": "5"},
+        "3": {"titulo": "Manual del Reciclador", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1icRZmLchhPNXkbqHRKe3rsGF2yQdsXHq/view?usp=sharing", "desc": "Documento técnico educativo 100% sustentable.", "dificultad": "I", "pilar": "Replicable", "estado": "En desarrollo", "siguiente": "10"},
+        "4": {"titulo": "Marca-Páginas", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1LVUYPIBTA6mY61HVtQn7f15ud1sw-3Rv/view?usp=sharing", "desc": "Souvenir funcional de cartón recuperado.", "dificultad": "I", "pilar": "Circular", "estado": "En planeación", "siguiente": "3"},
+        "5": {"titulo": "Eco-Carrier", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1q2m3efrr3WPZtJ_a__8YZ6m42nK-3y31/view?usp=sharing", "desc": "Bolsas estructurales que reemplazan el plástico de un solo uso.", "dificultad": "II", "pilar": "Circular", "estado": "En planeación", "siguiente": "13"},
+        "6": {"titulo": "Colorantes Naturales", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1EGy35MOOpkKR3-ksINjzhkurokfqwdWz/view?usp=sharing", "desc": "Extracción de pigmentos puros de residuos vegetales.", "dificultad": "III", "pilar": "Experimental", "estado": "Terminado", "siguiente": "14"},
+        "7": {"titulo": "EcoIA", "division": "EcoTech", "drive_url": "https://drive.google.com/file/d/1H0seDIImClVjA5UrHELyucapO9DzXrHH/view?usp=sharing", "desc": "Asistente inteligente de documentación técnica y auditoría.", "dificultad": "IV", "pilar": "Replicable", "estado": "Terminado", "siguiente": "23"},
+            "8": {"titulo": "Organizadores Ecomodulares", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1sJP_u9-UgqRWkXk3f3PsvUVzLCa93Uow/view?usp=sharing", "desc": "Sistemas de ordenamiento mediante latas y tubos.", "dificultad": "I", "pilar": "Circular", "estado": "En planeación", "siguiente": "9"},
+        "9": {"titulo": "Eco-Estelar", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/15qlgSz3v6YOLmHTWVmubTMknKM0WVUNS/view?usp=sharing", "desc": "Lámparas decorativas perforadas mediante técnica avanzada de congelado.", "dificultad": "III", "pilar": "Circular", "estado": "En desarrollo", "siguiente": "17"},
+        "10": {"titulo": "EcoChallenge", "division": "Transversal", "drive_url": "https://drive.google.com/file/d/1n6C2rPadtw662DZfogxJagQrbVvhem90/view?usp=sharing", "desc": "Sistema transversal de desafíos interactivos inter-áreas.", "dificultad": "II", "pilar": "Circular", "estado": "En planeación", "siguiente": "19"},
+        "11": {"titulo": "Eco-Hidro", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1q5ImtWBOhHfztDthNQs1yPdmIiK3zZYJ/view?usp=sharing", "desc": "Módulo de riego autónomo por capilaridad optimizado en botellas PET.", "dificultad": "II", "pilar": "Circular", "estado": "Terminado", "siguiente": "24"},
+        "12": {"titulo": "EcoTrash", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1XdaHhW7Z5nzfBHBr3dj7I-N0HNQuLp8k/view?usp=sharing", "desc": "Escoba técnica de alta resistencia construida con cerdas de PET.", "dificultad": "II", "pilar": "Circular", "estado": "En planeación", "siguiente": "8"},
+        "13": {"titulo": "EcoWallet", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1xWXIx2TAa1QJU2izv0KwqhtEiZSo4GvW/view?usp=sharing", "desc": "Billetera impermeable mediante upcycling estructurado de Tetra Pak.", "dificultad": "I", "pilar": "Cirular", "estado": "En planeación", "siguiente": "4"},
+        "14": {"titulo": "Carbon Ink", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1njzGFWQbRuRo-_ucORzZMYceuOE6uoOt/view?usp=sharing", "desc": "Tinta negra premium obtenida por pirólisis controlada.", "dificultad": "IV", "pilar": "Circular", "estado": "Terminado", "siguiente": "21"},
+        "15": {"titulo": "Nendo Dango", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1NO2FaJdNvlYZA9X8PKMSUAZ8gXJ4PzG8/view?usp=sharing", "desc": "Bolas de arcilla, sustrato y semillas para reforestación guiada.", "dificultad": "I", "pilar": "Sustentable", "estado": "En planeación", "siguiente": "1"},
+        "16": {"titulo": "EcoWear", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1tDOsmBio3hPoLzTVGfHzaauTz-wmhEtf/view?usp=sharing", "desc": "Cuentas estructurales y elementos decorativos de papel enrollado.", "dificultad": "I", "pilar": "Circular", "estado": "En planeación", "siguiente": "13"},
+        "17": {"titulo": "Eco-Voz", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1xh5hOjk_HXqaMcFr431Od3z15norhe1q/view?usp=sharing", "desc": "Amplificador acústico pasivo diseñado en cartón corrugado.", "dificultad": "II", "pilar": "Circular", "estado": "En planeación", "siguiente": "18"},
+        "18": {"titulo": "Cañón Vortex", "division": "EcoIndustria", "drive_url": "https://drive.google.com/file/d/1h8tS94N0edR9Tw7GU94dummpULnt32zi/view?usp=sharing", "desc": "Generador físico de anillos de aire para dinámica de fluidos.", "dificultad": "III", "pilar": "Experimental", "estado": "En planeación", "siguiente": "7"},
+        "19": {"titulo": "Eco-Dollars", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1xQSQpyuVH-YSgtjWZYahVeterC99rX70/view?usp=sharing", "desc": "Sistema monetario de economía circular impreso sobre papel reciclado.", "dificultad": "III", "pilar": "Medible", "estado": "En desarrollo", "siguiente": "23"},
+        "20": {"titulo": "EcoVolt", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1OmhWYiMxZvxMxHFRO7slATfgt_Brwhui/view?usp=sharing", "desc": "Generación teórica de energía limpia aprovechando el gradiente salino.", "dificultad": "III", "pilar": "Experimental", "estado": "En planeación", "siguiente": "22"},
+        "21": {"titulo": "EcoCristales", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1jQwwWbwoUoq3xlcBYY5aVB1WoOieLQ30/view?usp=sharing", "desc": "Cristalización de alumbre orientada al estudio de la geometría química.", "dificultad": "IV", "pilar": "Experimental", "estado": "En planeación", "siguiente": "20"},
+        "22": {"titulo": "Biogás", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1m4l9L2Y5sXrWz2KlmgfjfDii76ZwBtS6/view?usp=sharing", "desc": "Investigación avanzada sobre digestión anaeróbica y captura de metano.", "dificultad": "III", "pilar": "Experimental", "estado": "En planeación", "siguiente": "24"},
+        "23": {"titulo": "EcoMod", "division": "EcoTech", "drive_url": "https://drive.google.com/file/d/13qfQNtrsH1iAjTEAck-LrFfluuHgZZGf/view?usp=sharing", "desc": "Módulo interactivo de reciclaje y economía circular en entornos virtuales.", "dificultad": "III", "pilar": "Continuo", "estado": "En desarrollo", "siguiente": "7"},
+        "24": {"titulo": "TerrarIA", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1P3r5UlcdPS4KWDcuYPN45qJWmD_KTBDu/view?usp=sharing", "desc": "Ecosistema cerrado automatizado y monitoreado por sensores.", "dificultad": "IV", "pilar": "Continuo", "estado": "En planeación", "siguiente": "11"},
     }
 
     # SECCIÓN 1: INTRODUCCIÓN
@@ -956,7 +956,7 @@ elif selected == "Explorador Eco":
     # Procesamiento de variables en background
     tot_fichas = len(FICHAS_AVANZADAS)
     secciones = set(f["division"] for f in FICHAS_AVANZADAS.values())
-    conceptos = set(f["concepto"] for f in FICHAS_AVANZADAS.values())
+    conceptos = set(f["pilar"] for f in FICHAS_AVANZADAS.values())
     niveles = set(f["dificultad"] for f in FICHAS_AVANZADAS.values())
     
     col_m1, col_m2, col_m3, col_m4 = st.columns(4)
@@ -977,9 +977,9 @@ elif selected == "Explorador Eco":
     with col_f1:
         filtro_sec = st.selectbox("📂 Filtrar por División Responsable:", ["Todas"] + sorted(list(secciones)))
     with col_f2:
-        filtro_dif = st.selectbox("⚡ Filtrar por Nivel de Dificultad:", ["Todas", "Inicial", "Básico", "Intermedio", "Avanzado"])
+        filtro_dif = st.selectbox("⚡ Filtrar por Nivel de Dificultad:", ["Todas", "I", "II", "III", "IV"])
     with col_f3:
-        filtro_con = st.selectbox("🔬 Filtrar por Concepto / Eje Base:", ["Todas"] + sorted(list(conceptos)))
+        filtro_con = st.selectbox("🔬 Filtrar por Pilar:", ["Todas"] + sorted(list(conceptos)))
 
     # SECCIÓN 6: RENDERIZADO DE FILTRADO EN MATRIZ DE TARJETAS PREMIUN
     st.markdown('<div class="section-header">📋 3. Fichas Técnicas Encontradas</div>', unsafe_allow_html=True)
@@ -993,13 +993,13 @@ elif selected == "Explorador Eco":
             continue
         if filtro_dif != "Todas" and f["dificultad"] != filtro_dif:
             continue
-        if filtro_con != "Todas" and f["concepto"] != filtro_con:
+        if filtro_con != "Todas" and f["pilar"] != filtro_con:
             continue
             
         tarjetas_renderizadas += 1
         
         # Color del badge por dificultad
-        color_dif = "#81C784" if f["dificultad"] == "Inicial" else "#4CAF50" if f["dificultad"] == "Básico" else "#FFD54F" if f["dificultad"] == "Intermedio" else "#EF5350"
+        color_dif = "#81C784" if f["dificultad"] == "I" else "#4CAF50" if f["dificultad"] == "II" else "#FFD54F" if f["dificultad"] == "III" else "#EF5350"
         
         # Tarjeta HTML Premium
         st.markdown(f"""
