@@ -807,48 +807,36 @@ elif selected == "Fichas Técnicas":
         st.markdown("""
         <div class="glass-card" style="height: 340px; display:flex; flex-direction:column; justify-content:center;">
             <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:15px; text-align:center;">
-                Proceso de creación y evolución de una ficha:
+                Flujo Evolutivo de una Ficha:
             </p>
-
             <div style="display:flex; justify-content:space-between; align-items:center; text-align:center; font-size:12.5px;">
-
                 <div style="background:rgba(255,255,255,0.03); padding:8px; border-radius:6px; width:15%;">
-                    <strong>💡 Idea</strong><br>
-                    <span style="color:#64FFDA;">Pregunta o propuesta</span>
+                    <strong>Idea</strong><br>
+                    <span style="color:#64FFDA;">Pregunta inicial</span>
                 </div>
-
                 <div style="color:#00E676;">➔</div>
-
                 <div style="background:rgba(255,255,255,0.03); padding:8px; border-radius:6px; width:16%;">
-                    <strong>🔍 Investigación</strong><br>
-                    <span style="color:#00E676;">Análisis y búsqueda</span>
+                    <strong>Investigación</strong><br>
+                    <span style="color:#00E676;">Búsqueda y análisis</span>
                 </div>
-
                 <div style="color:#00E676;">➔</div>
-
                 <div style="background:rgba(255,255,255,0.03); padding:8px; border-radius:6px; width:15%;">
-                    <strong>🛠️ Desarrollo</strong><br>
-                    <span style="color:#B9F6CA;">Diseño o experimentación</span>
+                    <strong>Desarrollo</strong><br>
+                    <span style="color:#B9F6CA;">Diseño / prueba</span>
                 </div>
-
                 <div style="color:#00E676;">➔</div>
-
                 <div style="background:rgba(255,255,255,0.03); padding:8px; border-radius:6px; width:18%;">
-                    <strong>📚 Ficha</strong><br>
-                    <span style="color:#69F0AE;">Documentación oficial</span>
+                    <strong>Documentación</strong><br>
+                    <span style="color:#69F0AE;">Ficha oficial</span>
                 </div>
-
                 <div style="color:#00E676;">➔</div>
-
                 <div style="background:rgba(255,255,255,0.03); padding:8px; border-radius:6px; width:15%;">
-                    <strong>🌱 Evolución</strong><br>
-                    <span style="color:#A5D6A7;">Mejoras y ampliaciones</span>
+                    <strong>Evolución</strong><br>
+                    <span style="color:#A5D6A7;">Mejoras y versiones</span>
                 </div>
-
             </div>
         </div>
     """, unsafe_allow_html=True)
-
     # SECCIÓN 4 & SECCIÓN 7: BIBLIOTECA DE CONOCIMIENTO (La base interactiva con tus links)
     st.markdown('<div class="section-header">📚 6. Biblioteca Interactiva: Base Documental del Ecosistema</div>', unsafe_allow_html=True)
     st.markdown('<p style="color:#A5D6A7; margin-bottom:15px;">Filtra y accede directamente a los documentos de ingeniería alojados de forma segura en Google Drive:</p>', unsafe_allow_html=True)
