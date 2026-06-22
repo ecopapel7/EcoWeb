@@ -929,7 +929,7 @@ elif selected == "Explorador Eco":
         "10": {"titulo": "EcoChallenge", "division": "Transversal 2026", "año": "2026", "drive_url": "https://drive.google.com/file/d/1n6C2rPadtw662DZfogxJagQrbVvhem90/view?usp=sharing", "desc": "Sistema transversal de desafíos interactivos inter-áreas.", "dificultad": "II", "pilar": "Circular", "estado": "En planeación", "siguiente": "19"},
         "11": {"titulo": "Eco-Hidro", "division": "EcoIndustria 2026", "año": "2026", "drive_url": "https://drive.google.com/file/d/1q5ImtWBOhHfztDthNQs1yPdmIiK3zZYJ/view?usp=sharing", "desc": "Módulo de riego autónomo por capilaridad optimizado en botellas PET.", "dificultad": "II", "pilar": "Circular", "estado": "Terminado", "siguiente": "24"},
         "12": {"titulo": "EcoTrash", "division": "EcoIndustria 2026", "año": "2026", "drive_url": "https://drive.google.com/file/d/1XdaHhW7Z5nzfBHBr3dj7I-N0HNQuLp8k/view?usp=sharing", "desc": "Escoba técnica de alta resistencia construida con cerdas de PET.", "dificultad": "II", "pilar": "Circular", "estado": "En planeación", "siguiente": "8"},
-        "13": {"titulo": "EcoWallet", "division": "EcoIndustria 2025", "año": "2026", "drive_url": "https://drive.google.com/file/d/1xWXIx2TAa1QJU2izv0KwqhtEiZSo4GvW/view?usp=sharing", "desc": "Billetera impermeable mediante upcycling estructurado de Tetra Pak.", "dificultad": "I", "pilar": "Circular", "estado": "En planeación", "siguiente": "4"},
+        "13": {"titulo": "EcoWallet", "division": "EcoIndustria 2026", "año": "2026", "drive_url": "https://drive.google.com/file/d/1xWXIx2TAa1QJU2izv0KwqhtEiZSo4GvW/view?usp=sharing", "desc": "Billetera impermeable mediante upcycling estructurado de Tetra Pak.", "dificultad": "I", "pilar": "Circular", "estado": "En planeación", "siguiente": "4"},
         "14": {"titulo": "Carbon Ink", "division": "EcoLab 2026", "año": "2026", "drive_url": "https://drive.google.com/file/d/1njzGFWQbRuRo-_ucORzZMYceuOE6uoOt/view?usp=sharing", "desc": "Tinta negra premium obtenida por pirólisis controlada.", "dificultad": "IV", "pilar": "Circular", "estado": "Terminado", "siguiente": "21"},
         "15": {"titulo": "Nendo Dango", "division": "EcoLab 2026", "año": "2026", "drive_url": "https://drive.google.com/file/d/1NO2FaJdNvlYZA9X8PKMSUAZ8gXJ4PzG8/view?usp=sharing", "desc": "Bolas de arcilla, sustrato y semillas para reforestación guiada.", "dificultad": "I", "pilar": "Sustentable", "estado": "En planeación", "siguiente": "1"},
         "16": {"titulo": "EcoWear", "division": "EcoPapel 2026", "año": "2026", "drive_url": "https://drive.google.com/file/d/1tDOsmBio3hPoLzTVGfHzaauTz-wmhEtf/view?usp=sharing", "desc": "Cuentas estructurales y elementos decorativos de papel enrollado.", "dificultad": "I", "pilar": "Circular", "estado": "En planeación", "siguiente": "13"},
@@ -943,15 +943,14 @@ elif selected == "Explorador Eco":
         "24": {"titulo": "TerrarIA", "division": "EcoLab 2026", "año": "2026", "drive_url": "https://drive.google.com/file/d/1P3r5UlcdPS4KWDcuYPN45qJWmD_KTBDu/view?usp=sharing", "desc": "Ecosistema cerrado automatizado y monitoreado por sensores.", "dificultad": "IV", "pilar": "Continuo", "estado": "En planeación", "siguiente": "11"},
         
         # --- FICHAS BASE PROYECTO ECOPAPEL 2025 ---
-        "B1": {"titulo": "Ficha Base Papel Reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "#", "desc": "Papel artesanal reciclado de residuos escolares. Base fundamental del proyecto.", "dificultad": "I", "pilar": "Sustentable", "estado": "Retomado en 2026", "siguiente": "1"},
-        "B2": {"titulo": "Ficha Base Cartón Reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "#", "desc": "Placas u hojas de alta rigidez para soportes y bases estructurales.", "dificultad": "I", "pilar": "Sustentable", "estado": "Retomado en 2026", "siguiente": "4"},
-        "B3": {"titulo": "Ficha Base Colorantes Reciclados", "division": "EcoPapel 2025", "año": "2025", "drive_url": "#", "desc": "Extracción de pigmentos mediante solventes (alcohol). Etapa experimental.", "dificultad": "II", "pilar": "Experimental", "estado": "Reemplazado por Ficha 6", "siguiente": "6"},
-        "B4": {"titulo": "Ficha Base Cuaderno de papel reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "#", "desc": "Producto funcional con hojas recicladas y tapas de cartón recuperado.", "dificultad": "II", "pilar": "Circular", "estado": "Retomado en 2026", "siguiente": "3"},
-        "B5": {"titulo": "Ficha Base Libretita de papel reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "#", "desc": "Libreta portátil de pequeño formato (19x9 cm) con figuras decorativas.", "dificultad": "I", "pilar": "Circular", "estado": "Retomado en 2026", "siguiente": "B4"},
-        "B6": {"titulo": "Ficha Base Origamis de Papel", "division": "EcoPapel 2025", "año": "2025", "drive_url": "#", "desc": "Figuras artísticas mediante plegado de precisión (Pavo real, Escorpión, Loro).", "dificultad": "II", "pilar": "Sustentable", "estado": "Retomado en 2026", "siguiente": "16"},
-        "B7": {"titulo": "Ficha Base Tecnijuego Reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "#", "desc": "Juego de mesa educativo para repaso de contenidos técnicos.", "dificultad": "I", "pilar": "Circular", "estado": "Terminado", "siguiente": "10"},
-        "B8": {"titulo": "Ficha Base EcoRush", "division": "EcoTech 2025", "año": "2025", "drive_url": "#", "desc": "Videojuego educativo en HTML de clasificación rápida de residuos.", "dificultad": "II", "pilar": "Experimental", "estado": "Fase inicial (A mejorar)", "siguiente": "23"},
-    }
+        "B1": {"titulo": "Ficha Base Papel Reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "#", "desc": "Papel artesanal reciclado de residuos escolares. Base fundamental del proyecto.", "dificultad": "III", "pilar": "Circular", "estado": "Terminado", "siguiente": "1"},
+        "B2": {"titulo": "Ficha Base Cartón Reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "#", "desc": "Placas u hojas de alta rigidez para soportes y bases estructurales.", "dificultad": "III", "pilar": "Circular", "estado": "Terminado", "siguiente": "4"},
+        "B3": {"titulo": "Ficha Base Colorantes Reciclados", "division": "EcoPapel 2025", "año": "2025", "drive_url": "#", "desc": "Extracción de pigmentos mediante solventes (alcohol). Etapa experimental.", "dificultad": "II", "pilar": "Experimental", "estado": "Terminado", "siguiente": "6"},
+        "B4": {"titulo": "Ficha Base Cuaderno de papel reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "#", "desc": "Producto funcional con hojas recicladas y tapas de cartón recuperado.", "dificultad": "II", "pilar": "Circular", "estado": "Terminado", "siguiente": "3"},
+        "B5": {"titulo": "Ficha Base Libretita de papel reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "#", "desc": "Libreta portátil de pequeño formato (19x9 cm) con figuras decorativas.", "dificultad": "I", "pilar": "Circular", "estado": "Terminado", "siguiente": "B4"},
+        "B6": {"titulo": "Ficha Base Origamis de Papel", "division": "EcoPapel 2025", "año": "2025", "drive_url": "#", "desc": "Figuras artísticas mediante plegado de precisión (Pavo real, Escorpión, Loro).", "dificultad": "I", "pilar": "Circular", "estado": "Terminado" "siguiente": "16"},
+        "B7": {"titulo": "Ficha Base Tecnijuego Reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "#", "desc": "Juego de mesa educativo para repaso de contenidos técnicos.", "dificultad": "III", "pilar": "Circular", "estado": "Terminado", "siguiente": "10"},
+        }
 
     # SECCIÓN 1: INTRODUCCIÓN
     st.markdown('<div class="section-header">🔍 ¿Para qué sirve el Explorador Eco?</div>', unsafe_allow_html=True)
@@ -962,7 +961,12 @@ elif selected == "Explorador Eco":
     """, unsafe_allow_html=True)
 
     # SECCIÓN 2: ESTADÍSTICAS GENERALES (Cálculos automáticos en base al diccionario)
-    st.markdown('<div class="section-header">📈 1. Auditoría Automatizada de la Biblioteca</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">📈 1. Datos del Explorador Eco</div>', unsafe_allow_html=True)
+
+    fichas_manuales     = 31  
+    secciones_manuales  = 5   
+    ejes_manuales       = 6   
+    niveles_manuales    = 4   
     
     # Procesamiento de variables en background
     tot_fichas = len(FICHAS_AVANZADAS)
@@ -972,14 +976,14 @@ elif selected == "Explorador Eco":
     
     col_m1, col_m2, col_m3, col_m4 = st.columns(4)
     with col_m1:
-        st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:28px; font-weight:bold; color:#00E676;">{tot_fichas}</span><br><span style="font-size:13px; color:#B0BEC5;">Fichas Totales</span></div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:28px; font-weight:bold; color:#00E676;">{fichas_manuales}</span><br><span style="font-size:13px; color:#B0BEC5;">Fichas Totales</span></div>', unsafe_allow_html=True)
     with col_m2:
-        st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:28px; font-weight:bold; color:#64FFDA;">{len(secciones)}</span><br><span style="font-size:13px; color:#B0BEC5;">Secciones Históricas</span></div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:28px; font-weight:bold; color:#64FFDA;">{secciones_manuales}</span><br><span style="font-size:13px; color:#B0BEC5;">Secciones totales por año</span></div>', unsafe_allow_html=True)
     with col_m3:
-        st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:28px; font-weight:bold; color:#FFD54F;">{len(conceptos)}</span><br><span style="font-size:13px; color:#B0BEC5;">Ejes Científicos</span></div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:28px; font-weight:bold; color:#FFD54F;">{ejes_manuales}</span><br><span style="font-size:13px; color:#B0BEC5;">Pilares en Fichas</span></div>', unsafe_allow_html=True)
     with col_m4:
-        st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:28px; font-weight:bold; color:#A5D6A7;">{len(niveles)}</span><br><span style="font-size:13px; color:#B0BEC5;">Niveles Complejidad</span></div>', unsafe_allow_html=True)
-
+        st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:28px; font-weight:bold; color:#A5D6A7;">{niveles_manuales}</span><br><span style="font-size:13px; color:#B0BEC5;">Niveles Complejidad</span></div>', unsafe_allow_html=True)
+    
     # SECCIÓN 3, 4 & 5: PANEL DE FILTROS CRUZADOS EN COLUMNAS (Añadido Filtro de Año)
     st.markdown('<div class="section-header">🎛️ 2. Panel de Segmentación de Conocimiento</div>', unsafe_allow_html=True)
     
