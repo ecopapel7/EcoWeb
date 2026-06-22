@@ -669,7 +669,7 @@ elif selected == "Cronología Eco":
 # ==========================================
 # PÁGINA 5 — MAPA ECO (REINTEGRADA)
 # ==========================================
-elif selected == "Mapa Eco":
+elif selected == "EcoGalaxy.":
     st.markdown('<div class="main-title">MAPA ECO</div>', unsafe_allow_html=True)
     st.markdown('<div class="subtitle">Mapeo de Celdas Operativas, Infraestructura Física e Integración de Laboratorios</div>', unsafe_allow_html=True)
     
