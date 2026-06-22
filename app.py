@@ -158,7 +158,7 @@ with st.sidebar:
             "Objetivo Eco",         # Página 2
             "Fundamentos Eco",      # Página 3
             "Cronología Eco",       # Página 4
-            "Mapa Eco",             # Página 5
+            "EcoGalaxy",             # Página 5
             "Fichas Técnicas",      # Página 6
             "Explorador Eco",       # Página 7
             "Sistema Reconocidos",  # Página 9
@@ -168,8 +168,8 @@ with st.sidebar:
             "EcoIA"                 # Página 13 <- ¡EL COLOFÓN TECNOLÓGICO!
         ], 
         icons=[
-            "house-door-fill", "target", "diagram-3-fill", "clock-history", 
-            "galaxy", "file-earmark-text-fill", "search-heart-fill", 
+            "house-door-fill", "bullseye", "diagram-3-fill", "clock-history", 
+            "stars", "file-earmark-text-fill", "search-heart-fill", 
             "award-fill", "share-fill", "images", "patch-question-fill", "cpu-fill"
         ], # cpu-fill le da el aspecto de núcleo de Inteligencia Artificial
         menu_icon="cast",
