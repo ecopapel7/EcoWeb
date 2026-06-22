@@ -169,7 +169,7 @@ with st.sidebar:
         ], 
         icons=[
             "house-door-fill", "target", "diagram-3-fill", "clock-history", 
-            "map-fill", "file-earmark-text-fill", "search-heart-fill", 
+            "galaxy", "file-earmark-text-fill", "search-heart-fill", 
             "award-fill", "share-fill", "images", "patch-question-fill", "cpu-fill"
         ], # cpu-fill le da el aspecto de núcleo de Inteligencia Artificial
         menu_icon="cast",
