@@ -1129,8 +1129,8 @@ elif selected == "Sistema Reconocidos":
     st.markdown('<div class="section-header">⚙️ 3. Protocolo de Funcionamiento y Criterios de Evaluación</div>', unsafe_allow_html=True)
     st.markdown('<p style="color:#A5D6A7; font-size:14px; margin-bottom:12px;">Mapeo claro y auditable del proceso de ponderación semanal:</p>', unsafe_allow_html=True)
     
-    with col_crit:
-        st.markdown("""
+    
+    st.markdown("""
             <div class="glass-card" style="height: 330px;">
                 <p style="margin-top:0; color:#A5D6A7; font-weight:600; margin-bottom:12px;">Criterios Técnicos Evaluados:</p>
                 <span style="font-size:13px; color:#CFD8DC;">Solo se consideran variables documentadas:</span>
