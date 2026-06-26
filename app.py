@@ -1103,12 +1103,12 @@ elif selected == "Sistema Reconocidos":
         st.markdown("""
             <div class="glass-card" style="height: 330px;">
                 <p style="margin-top:0; color:#00E676; font-weight:600; margin-bottom:12px;">Principios fundamentales de convivencia técnica:</p>
-                El Sistema de Reconocidos <strong>no es un concurso</strong>, una competencia meritocrática ni un esquema de exclusión jerárquica. Su diseño persigue un fin puramente humano y profesional: <strong>hacer visible el trabajo silencioso y constante</strong>.
+                El Sistema de Reconocidos <strong>no es un concurso</strong>, una competencia ni un esquema de exclusión. Su diseño tiene un fin puramente profesional: <strong>hacer visible el trabajo constante</strong>.
                 <br><br>
                 <span style="color:#64FFDA; font-weight:bold;">Declaración de principios:</span>
                 <ul style="margin-top:5px; padding-left:18px; font-size:13.5px; color:#E0E6ED; line-height:1.4;">
                     <li>No determina quién vale más o menos en los laboratorios.</li>
-                    <li>No otorga privilegios de autoridad técnica arbitraria.</li>
+                    <li>No otorga privilegios de autoridad técnica.</li>
                     <li>Premia la regularidad, el orden de banco y la persistencia conductual.</li>
                 </ul>
             </div>
@@ -1120,7 +1120,7 @@ elif selected == "Sistema Reconocidos":
             <div class="glass-card" style="height: 330px;">
                 <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:12px;">Desafíos escolares crónicos que este algoritmo mitiga:</p>
                 <div class="info-item"><strong>Falta de Participación Sostenida:</strong> Evita que los alumnos arranquen con alta energía y abandonen el contraturno a mitad de año.</div>
-                <div class="info-item"><strong>Invisibilidad de Contribuciones:</strong> Soluciona el clásico problema donde el trabajo técnico minucioso queda opacado por perfiles puramente expositores.</div>
+                <div class="info-item"><strong>Invisibilidad de Contribuciones:</strong> Soluciona el clásico problema donde el trabajo minucioso queda opacado por perfiles puramente expositores.</div>
                 <div class="info-item"><strong>Desmotivación por Falta de Seguimiento:</strong> Rompe la apatía escolar al registrar formalmente cada hito, validando el tiempo invertido por el operador.</div>
             </div>
         """, unsafe_allow_html=True)
@@ -1129,20 +1129,7 @@ elif selected == "Sistema Reconocidos":
     st.markdown('<div class="section-header">⚙️ 3. Protocolo de Funcionamiento y Criterios de Evaluación</div>', unsafe_allow_html=True)
     st.markdown('<p style="color:#A5D6A7; font-size:14px; margin-bottom:12px;">Mapeo claro y auditable del proceso de ponderación semanal:</p>', unsafe_allow_html=True)
     
-    col_func, col_crit = st.columns([6, 4])
-    
-    with col_func:
-        st.markdown("""
-            <div class="glass-card" style="height: 330px; display:flex; flex-direction:column; justify-content:center;">
-                <p style="margin-top:0; color:#A5D6A7; font-weight:600; margin-bottom:15px;">Las 4 Etapas del Registro Operativo:</p>
-                <div style="font-size:13.5px; line-height:1.6; color:#E0E6ED;">
-                    <strong>1. Bitácora de Asiento:</strong> Cada jefe de celda anota diariamente las tareas cumplidas en su sección.<br>
-                    <strong>2. Evaluación Periódica:</strong> Reunión semanal inter-áreas para analizar la constancia y el mantenimiento del orden.<br>
-                    <strong>3. Consolidación de Datos:</strong> Se cruzan las métricas conductuales con los objetivos de las fichas técnicas asignadas.<br>
-                    <strong>4. Publicación en EcoWeb:</strong> Se formaliza el reconocimiento en la cartelera digital para conocimiento de toda la institución.
-                </div>
-            </div>
-        """, unsafe_allow_html=True)
+    col_crit = st.columns([6, 4])
         
     with col_crit:
         st.markdown("""
@@ -1150,10 +1137,10 @@ elif selected == "Sistema Reconocidos":
                 <p style="margin-top:0; color:#A5D6A7; font-weight:600; margin-bottom:12px;">Criterios Técnicos Evaluados:</p>
                 <span style="font-size:13px; color:#CFD8DC;">Solo se consideran variables documentadas:</span>
                 <div style="margin-top:8px; display:flex; flex-direction:column; gap:8px; font-size:13px;">
-                    <div style="background:rgba(0,230,118,0.05); padding:6px; border-radius:4px; border-left:3px solid #00E676;">🤝 <strong>Colaboración Transversal</strong></div>
-                    <div style="background:rgba(0,230,118,0.05); padding:6px; border-radius:4px; border-left:3px solid #00E676;">⏱️ <strong>Compromiso y Puntualidad</strong></div>
-                    <div style="background:rgba(0,230,118,0.05); padding:6px; border-radius:4px; border-left:3px solid #00E676;">🧹 <strong>Responsabilidad y Seguridad</strong></div>
-                    <div style="background:rgba(0,230,118,0.05); padding:6px; border-radius:4px; border-left:3px solid #00E676;">🔧 <strong>Cumplimiento Absoluto de Fichas</strong></div>
+                    <div style="background:rgba(0,230,118,0.05); padding:6px; border-radius:4px; border-left:3px solid #00E676;">🤝 <strong>Colaboración Activa</strong></div>
+                    <div style="background:rgba(0,230,118,0.05); padding:6px; border-radius:4px; border-left:3px solid #00E676;">⏱️ <strong>Responsabilidad</strong></div>
+                    <div style="background:rgba(0,230,118,0.05); padding:6px; border-radius:4px; border-left:3px solid #00E676;">🧹 <strong>Calidad de trabajos</strong></div>
+                    <div style="background:rgba(0,230,118,0.05); padding:6px; border-radius:4px; border-left:3px solid #00E676;">🔧 <strong>Cumplimiento de Fichas y Secciónes</strong></div>
                 </div>
             </div>
         """, unsafe_allow_html=True)
