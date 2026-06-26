@@ -1135,10 +1135,10 @@ elif selected == "Sistema Reconocidos":
                 <p style="margin-top:0; color:#A5D6A7; font-weight:600; margin-bottom:12px;">Criterios Técnicos Evaluados:</p>
                 <span style="font-size:13px; color:#CFD8DC;">Solo se consideran variables documentadas:</span>
                 <div style="margin-top:8px; display:flex; flex-direction:column; gap:8px; font-size:13px;">
-                    <div style="background:rgba(0,230,118,0.05); padding:6px; border-radius:4px; border-left:3px solid #00E676;">🤝 <strong>Colaboración Activa</strong></div>
+                    <div style="background:rgba(0,230,118,0.05); padding:6px; border-radius:4px; border-left:3px solid #00E676;">🤝 <strong>Participación y presencia</strong></div>
                     <div style="background:rgba(0,230,118,0.05); padding:6px; border-radius:4px; border-left:3px solid #00E676;">⏱️ <strong>Responsabilidad</strong></div>
                     <div style="background:rgba(0,230,118,0.05); padding:6px; border-radius:4px; border-left:3px solid #00E676;">🧹 <strong>Calidad de trabajos</strong></div>
-                    <div style="background:rgba(0,230,118,0.05); padding:6px; border-radius:4px; border-left:3px solid #00E676;">🔧 <strong>Cumplimiento de Fichas y Secciónes</strong></div>
+                    <div style="background:rgba(0,230,118,0.05); padding:6px; border-radius:4px; border-left:3px solid #00E676;">🔧 <strong>Cumplimiento de Fichas y Secciones</strong></div>
                 </div>
             </div>
         """, unsafe_allow_html=True)
