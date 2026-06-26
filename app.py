@@ -1129,8 +1129,6 @@ elif selected == "Sistema Reconocidos":
     st.markdown('<div class="section-header">⚙️ 3. Protocolo de Funcionamiento y Criterios de Evaluación</div>', unsafe_allow_html=True)
     st.markdown('<p style="color:#A5D6A7; font-size:14px; margin-bottom:12px;">Mapeo claro y auditable del proceso de ponderación semanal:</p>', unsafe_allow_html=True)
     
-    col_crit = st.columns([6, 4])
-        
     with col_crit:
         st.markdown("""
             <div class="glass-card" style="height: 330px;">
