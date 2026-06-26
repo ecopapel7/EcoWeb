@@ -1099,7 +1099,7 @@ elif selected == "Sistema Reconocidos":
     col_fil, col_prob = st.columns(2)
     
     with col_fil:
-        st.markdown('<div class="section-header">🛡️ 1. Filosofía del Sistema: Rompiendo Mitos</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-header">🛡️ 1. ¿Que es el Sistema de Reconocidos?</div>', unsafe_allow_html=True)
         st.markdown("""
             <div class="glass-card" style="height: 330px;">
                 <p style="margin-top:0; color:#00E676; font-weight:600; margin-bottom:12px;">Principios fundamentales de convivencia técnica:</p>
@@ -1115,7 +1115,7 @@ elif selected == "Sistema Reconocidos":
         """, unsafe_allow_html=True)
         
     with col_prob:
-        st.markdown('<div class="section-header">⚠️ 2. La Necesidad: ¿Qué problemas resuelve?</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-header">⚠️ 2. ¿Qué problemas resuelve?</div>', unsafe_allow_html=True)
         st.markdown("""
             <div class="glass-card" style="height: 330px;">
                 <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:12px;">Desafíos escolares crónicos que este algoritmo mitiga:</p>
@@ -1126,9 +1126,7 @@ elif selected == "Sistema Reconocidos":
         """, unsafe_allow_html=True)
 
     # SECCIÓN 3 & SECCIÓN 4: FUNCIONAMIENTO GENERAL Y CRITERIOS OFICIALES
-    st.markdown('<div class="section-header">⚙️ 3. Protocolo de Funcionamiento y Criterios de Evaluación</div>', unsafe_allow_html=True)
-    st.markdown('<p style="color:#A5D6A7; font-size:14px; margin-bottom:12px;">Mapeo claro y auditable del proceso de ponderación semanal:</p>', unsafe_allow_html=True)
-    
+    st.markdown('<div class="section-header">⚙️ 3. ¿Que mide el sistema de reconocidos?</div>', unsafe_allow_html=True)
     
     st.markdown("""
             <div class="glass-card" style="height: 330px;">
@@ -1143,27 +1141,10 @@ elif selected == "Sistema Reconocidos":
             </div>
         """, unsafe_allow_html=True)
 
-    # SECCIÓN 7: ESTADÍSTICAS DEL SISTEMA (Procesadas dinámicamente)
-    st.markdown('<div class="section-header">📈 4. Analítica de Alcance y Métricas del Sistema</div>', unsafe_allow_html=True)
-    
-    tot_otorgados = len(RECONOCIDOS_DB)
-    unicos_alumnos = len(set(r["nombre"] for r in RECONOCIDOS_DB))
-    por_seccion = {}
-    for r in RECONOCIDOS_DB:
-        por_seccion[r["division"]] = por_seccion.get(r["division"], 0) + 1
-
-    col_s1, col_s2, col_s3 = st.columns(3)
-    with col_s1:
-        st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:28px; font-weight:bold; color:#00E676;">{tot_otorgados}</span><br><span style="font-size:13px; color:#B0BEC5;">Menciones Otorgadas</span></div>', unsafe_allow_html=True)
-    with col_s2:
-        st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:28px; font-weight:bold; color:#64FFDA;">{unicos_alumnos}</span><br><span style="font-size:13px; color:#B0BEC5;">Alumnos Únicos de 4° 4°</span></div>', unsafe_allow_html=True)
-    with col_s3:
-        st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:28px; font-weight:bold; color:#FFD54F;">{len(por_seccion)}</span><br><span style="font-size:13px; color:#B0BEC5;">Divisiones Involucradas</span></div>', unsafe_allow_html=True)
-
     # SECCIÓN 5 & SECCIÓN 6: RECONOCIDOS ACTUALES E HISTORIAL INTERACTIVO
-    st.markdown('<div class="section-header">🥇 5. Cuadro de Honor e Historial de Operadores</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">🥇 4. Lista de Reconocidos</div>', unsafe_allow_html=True)
     
-    tab_act, tab_hist = st.tabs(["⚡ Período Vigente (Mayo 2026)", "📜 Registro Histórico Acumulado"])
+    tab_act, tab_hist = st.tabs(["⚡ Período actual (Mayo 2026)", "📜 Período antiguo"])
     
     with tab_act:
         for r in RECONOCIDOS_DB:
@@ -1196,30 +1177,15 @@ elif selected == "Sistema Reconocidos":
                     </div>
                 """, unsafe_allow_html=True)
 
-    # SECCIÓN 8: RELACIÓN CON LOS PILARES OFICIALES
-    st.markdown('<div class="section-header">⚖️ 6. Blindaje de los Pilares Eco mediante la Gestión</div>', unsafe_allow_html=True)
-    st.markdown("""
-        <div class="glass-card">
-        <p style="margin-top:0; color:#A5D6A7; font-weight:600; margin-bottom:12px;">Cómo impacta el sistema conductual en la matriz dogmática:</p>
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:12px; font-size:13.5px;">
-            <div style="background:rgba(0,0,0,0.15); padding:10px; border-radius:6px;">🧪 <strong>Continuo:</strong> Favorece la permanencia ininterrumpida de los alumnos evitando baches operativos.</div>
-            <div style="background:rgba(0,0,0,0.15); padding:10px; border-radius:6px;">📊 <strong>Medible:</strong> Asienta un registro cuantitativo exacto del compromiso humano de la división.</div>
-            <div style="background:rgba(0,0,0,0.15); padding:10px; border-radius:6px;">🏢 <strong>Interdisciplinar:</strong> Rompe fronteras unificando y valorando aportes de software, metalmecánica o química.</div>
-            <div style="background:rgba(0,0,0,0.15); padding:10px; border-radius:6px;">📋 <strong>Replicable:</strong> Su lógica de control matricial puede exportarse intacta a cualquier otra institución técnica.</div>
-        </div>
-        </div>
-    """, unsafe_allow_html=True)
-
     # SECCIÓN 9: PARTICIPAR Y SER RECONOCIDO (Orientado a nuevos integrantes)
-    st.markdown('<div class="section-header">🚀 7. ¿Sos nuevo? Cómo integrarte al Engranaje Eco</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">🚀 6. ¿Cómo unirse a Eco?</div>', unsafe_allow_html=True)
     st.markdown("""
         <div class="glass-card" style="border-left: 5px solid #64FFDA;">
             <p style="margin-top:0; color:#64FFDA; font-weight:600; margin-bottom:10px;">Guía de embarque para nuevos estudiantes y colaboradores:</p>
             <ol style="margin:0; padding-left:20px; font-size:14px; color:#E0E6ED; display:flex; flex-direction:column; gap:8px;">
-                <li><strong>Elegí tu Celda:</strong> Acercate a cualquiera de las 4 divisiones según tu afinidad (Papel, Laboratorio, Software o Matricería).</li>
-                <li><strong>Estudiá la Ficha:</strong> Solicitá al Jefe de Sección el manual técnico de la actividad asignada y cumplí los pasos de seguridad de banco.</li>
-                <li><strong>Asentá tu Huella:</strong> Tus horas operativas de contraturno y el cuidado de las herramientas se registran de forma automática en la bitácora semanal.</li>
-                <li><strong>Evolucioná el Sistema:</strong> Al proponer mejoras validadas para los protocolos existentes, sumás puntos directos para el próximo ciclo de Reconocidos.</li>
+                <li><strong>Elegí tu división:</strong> Acercate a cualquiera de las 4 divisiones según tu elección (EcoPapel, EcoLab, EcoTech o EcoIndustria).</li>
+                <li><strong>Lee tu ficha:</strong> Solicitá al lider de Sección la ficha y completala.</li>
+                <li><strong>Evolucioná el Sistema:</strong> Al proponer mejoras para las fichas, evolucionas el sistema.</li>
             </ol>
         </div>
     """, unsafe_allow_html=True)
