@@ -1209,30 +1209,28 @@ elif selected == "¿Cómo Replicar Eco?":
     col_rep, col_req = st.columns(2)
     
     with col_rep:
-        st.markdown('<div class="section-header">🌐 1. El Manifiesto de la Replicabilidad</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-header">🌐 1. La Replicabilidad</div>', unsafe_allow_html=True)
         st.markdown("""
             <div class="glass-card" style="height: 290px;">
                 <p style="margin-top:0; color:#00E676; font-weight:600; margin-bottom:12px;">Descentralización del Conocimiento Técnico:</p>
                 Proyecto Eco no fue diseñado para ser un sistema hermético o exclusivo. Su verdadero éxito radica en su capacidad de ser adoptado por otras comunidades. 
                 <br><br>
-                La replicación puede ser <strong>parcial o completa</strong>: cada institución tiene la libertad de modificar, recortar o expandir las celdas de trabajo según su infraestructura. La replicabilidad es un pilar fundamental porque transforma un proyecto escolar en un <strong>estándar educativo de triple impacto</strong>.
+                La replicación puede ser <strong>parcial o completa</strong>: cada institución tiene la libertad de modificar, recortar o expandir las divisiones de según sus condiciones. La replicabilidad es un pilar fundamental porque transforma un proyecto escolar en un <strong>proyecto de muy alto impacto</strong>.
             </div>
         """, unsafe_allow_html=True)
         
     with col_req:
-        st.markdown('<div class="section-header">⚙️ 2. Requisitos Mínimos Operativos</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-header">⚙️ 2. Requisitos Mínimos</div>', unsafe_allow_html=True)
         st.markdown("""
             <div class="glass-card" style="height: 290px;">
                 <p style="margin-top:0; color:#64FFDA; font-weight:600; margin-bottom:12px;">Lo que realmente se necesita para encender el motor:</p>
-                <div class="info-item">👥 <strong>Núcleo Humano:</strong> Un grupo de participantes con voluntad de trabajo colaborativo. No importa la cantidad inicial.</div>
-                <div class="info-item">📐 <strong>Espacio Físico Mínimo:</strong> Un aula, banco de taller o laboratorio básico para la organización de materiales.</div>
-                <div class="info-item">📋 <strong>Sistema de Asiento:</strong> Un entorno (físico o digital) para documentar de forma estricta los procesos y pasos.</div>
-                <span style="font-size:12px; color:#FFD54F; font-weight:600; display:block; margin-top:8px;">⚠️ NOTA AUDITORÍA: No existen barreras económicas de entrada obligatorias; el sistema se financia con sus propios residuos estructurados.</span>
+                <div class="info-item">👥 <strong>Personas / Grupo:</strong> Un grupo de participantes con voluntad de trabajo colaborativo. No importa la cantidad inicial.</div>
+                <div class="info-item">📐 <strong>Espacio Físico Mínimo:</strong> Almenos un aula, hogar o laboratorio pequeño para la organización de materiales.</div>
             </div>
         """, unsafe_allow_html=True)
 
     # SECCIÓN 10: RUTA DE IMPLEMENTACIÓN RECOMENDADA (Línea de progreso visual arriba)
-    st.markdown('<div class="section-header">🗺️ 3. Ruta de Despliegue Recomendada (Paso a Paso)</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">🗺️ 3. Paso a Paso (Recomendado)</div>', unsafe_allow_html=True)
     st.markdown("""
         <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(100,255,218,0.1); padding: 20px; border-radius: 12px; margin-bottom: 25px;">
             <div style="display: flex; justify-content: space-between; position: relative; margin-bottom: 10px;">
@@ -1240,23 +1238,21 @@ elif selected == "¿Cómo Replicar Eco?":
                 <div style="text-align: center; width: 14%; z-index: 2;"><div style="width: 32px; height: 32px; background: #00E676; color: black; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 5px auto;">1</div><span style="font-size: 11px; color:#CFD8DC;">Formar Equipo</span></div>
                 <div style="text-align: center; width: 14%; z-index: 2;"><div style="width: 32px; height: 32px; background: #00E676; color: black; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 5px auto;">2</div><span style="font-size: 11px; color:#CFD8DC;">Adoptar Pilares</span></div>
                 <div style="text-align: center; width: 14%; z-index: 2;"><div style="width: 32px; height: 32px; background: #64FFDA; color: black; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 5px auto;">3</div><span style="font-size: 11px; color:#CFD8DC;">Abrir Secciones</span></div>
-                <div style="text-align: center; width: 14%; z-index: 2;"><div style="width: 32px; height: 32px; background: #64FFDA; color: black; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 5px auto;">4</div><span style="font-size: 11px; color:#CFD8DC;">Bajar Fichas</span></div>
-                <div style="text-align: center; width: 14%; z-index: 2;"><div style="width: 32px; height: 32px; background: #FFD54F; color: black; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 5px auto;">5</div><span style="font-size: 11px; color:#CFD8DC;">Activar Reconocidos</span></div>
-                <div style="text-align: center; width: 14%; z-index: 2;"><div style="width: 32px; height: 32px; background: #FFD54F; color: black; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 5px auto;">6</div><span style="font-size: 11px; color:#CFD8DC;">Auditar Datos</span></div>
-                <div style="text-align: center; width: 14%; z-index: 2;"><div style="width: 32px; height: 32px; background: #B9F6CA; color: black; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 5px auto;">7</div><span style="font-size: 11px; color:#CFD8DC;">Compartir</span></div>
-            </div>
+                <div style="text-align: center; width: 14%; z-index: 2;"><div style="width: 32px; height: 32px; background: #64FFDA; color: black; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 5px auto;">4</div><span style="font-size: 11px; color:#CFD8DC;">Empezar Fichas</span></div>
+                <div style="text-align: center; width: 14%; z-index: 2;"><div style="width: 32px; height: 32px; background: #FFD54F; color: black; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 5px auto;">5</div><span style="font-size: 11px; color:#CFD8DC;">Crear Reconocidos</span></div>
+                <div style="text-align: center; width: 14%; z-index: 2;"><div style="width: 32px; height: 32px; background: #FFD54F; color: black; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 5px auto;">6</div><span style="font-size: 11px; color:#CFD8DC;">Subir Datos</span></div>
         </div>
     """, unsafe_allow_html=True)
 
     # SECCIÓN 3: FORMACIÓN DEL EQUIPO
-    st.markdown('<div class="section-header">👥 4. Gobierno del Equipo Inicial</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">👥 4. Equipo Inicial</div>', unsafe_allow_html=True)
     st.markdown("""
         <div class="glass-card">
-        La escala humana es elástica. Un equipo Eco puede nacer con 3 personas o desplegarse sobre una división técnica completa como <strong>4° 4°</strong>. Lo crucial es evitar estructuras jerárquicas verticales rígidas y adoptar un modelo de <strong>responsabilidad distribuida por afinidad</strong>:
+        Un equipo Eco puede nacer con 3 personas o nacer sobre un curso completo como <strong>4° 4°</strong>. El equipo esta formado en 3 roles:
         <br><br>
-        • <strong>Líderes de Sección (Jefes de Banco):</strong> Responsables del inventario, el orden físico y el cumplimiento de las normas de seguridad.<br>
-        • <strong>Operadores Técnicos:</strong> Ejecutan los pasos de las fichas y asientan las desviaciones experimentales en las bitácoras.<br>
-        • <strong>Comunidad Conectores:</strong> Vinculan los residuos generados en las aulas comunes con el flujo de entrada de los talleres.
+        • <strong>Líderes Generales:</strong> Responsables principales del proyecto, cierre de reconocidos, definen visión, pilares, objetivos y coordinan a los lideres de sección.<br>
+        • <strong>Líderes de Sección:</strong> Dirigen una sección específica. Organizan a los participantes de su sección, trabajan en algunas fichas y supervisan la calidad de las fichas. Capaces de volverse futuros líderes generales<br>
+        • <strong>Participantes:</strong> Desarrollan fichas o campañas. Capaces de volverse futuros lideres de sección.
         </div>
     """, unsafe_allow_html=True)
 
