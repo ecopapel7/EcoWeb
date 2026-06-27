@@ -1400,14 +1400,6 @@ elif selected == "Preguntas Frecuentes":
             </div>
         """, unsafe_allow_html=True)
 
-    # Bloque Informativo Final de Soporte
-    st.markdown("""
-        <div class="glass-card" style="margin-top: 30px; border-left: 4px solid #64FFDA; background: rgba(100, 255, 218, 0.02);">
-            <span style="font-weight: bold; color: #64FFDA;">ℹ️ ¿Tu duda técnica no está listada?</span><br>
-            <span style="font-size: 13.5px; color: #CFD8DC;">Podés consultar de forma interactiva con nuestro asistente entrenado en la celda de control <strong>EcoIA</strong> o revisar el <strong>Manual Metodológico Completo</strong> impreso en los bancos de trabajo de la E.E.S.T N°7.</span>
-        </div>
-    """, unsafe_allow_html=True)
-
     # Footer institucional
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
