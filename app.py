@@ -1223,7 +1223,7 @@ elif selected == "¿Cómo Replicar Eco?":
         st.markdown('<div class="section-header">⚙️ 2. Requisitos Mínimos</div>', unsafe_allow_html=True)
         st.markdown("""
             <div class="glass-card" style="height: 290px;">
-                <p style="margin-top:0; color:#64FFDA; font-weight:600; margin-bottom:12px;">Lo que realmente se necesita para encender el motor:</p>
+                <p style="margin-top:0; color:#64FFDA; font-weight:600; margin-bottom:12px;">Lo que realmente se necesita para empezar:</p>
                 <div class="info-item">👥 <strong>Personas / Grupo:</strong> Un grupo de participantes con voluntad de trabajo colaborativo. No importa la cantidad inicial.</div>
                 <div class="info-item">📐 <strong>Espacio Físico Mínimo:</strong> Almenos un aula, hogar o laboratorio pequeño para la organización de materiales.</div>
             </div>
@@ -1283,7 +1283,7 @@ elif selected == "¿Cómo Replicar Eco?":
     """, unsafe_allow_html=True)
 
     # SECCIÓN 9: ADAPTACIÓN LOCAL
-    st.markdown('<div class="section-header">🌍 10. Principio de Flexibilidad de Contexto</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">🌍 6. No es copiar, es adaptar</div>', unsafe_allow_html=True)
     st.markdown("""
         <div class="glass-card" style="border-left: 5px solid #FFD54F; background: rgba(255, 213, 79, 0.02);">
             <strong style="color:#FFD54F; font-size:15px;">⚠️ Recordatorio:</strong><br>
@@ -1330,31 +1330,30 @@ elif selected == "Preguntas Frecuentes":
     st.markdown('<div class="section-header">🔍 Consultas de Auditoría Metodológica</div>', unsafe_allow_html=True)
 
     # SECCIÓN 2: ¿QUÉ ES PROYECTO ECO?
-    with st.expander("❓ 1. ¿Qué es Proyecto Eco y cuál es su objetivo principal?"):
+    with st.expander("❓ 1. ¿Qué es Proyecto Eco?"):
         st.markdown("""
             <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
-                <strong>Proyecto Eco</strong> es una matriz de gestión sociolaboral y ambiental desarrollada por estudiantes de la <strong>E.E.S.T N°7</strong>. Su objetivo principal es transformar los desechos institucionales (celulosa y plásticos) en subproductos de alto valor utilitario para el colegio mediante un enfoque estrictamente <strong>interdisciplinario</strong> que fusiona programación, ingeniería de materiales y procesos químicos.
-            </div>
+                Proyecto Eco es un sistema ecológico-educativo que busca generar impacto ambiental real mediante proyectos organizados, medibles y replicables. Su objetivo no es crear actividades aisladas, sino construir un modelo que pueda mantenerse, mejorar y expandirse con el tiempo.
         """, unsafe_allow_html=True)
 
     # SECCIÓN 3: ¿QUÉ ES UNA FICHA TÉCNICA?
-    with st.expander("❓ 2. ¿Qué es una Ficha Técnica y para qué sirve?"):
+    with st.expander("❓ 2. ¿Proyecto Eco es solo reciclaje de papel?"):
         st.markdown("""
             <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
-                Una <strong>Ficha Técnica</strong> es el plano de ingeniería del conocimiento dentro de Eco. Es un documento normalizado que detalla los elementos químicos, los Equipos de Protección Personal (EPP) y la guía paso a paso para ejecutar un experimento o manufactura. Su función crítica es blindar la <strong>replicabilidad</strong> y asegurar la continuidad de los laboratorios sin depender de la memoria de un operario o docente.
+                No. Aunque EcoPapel fue una de las primeras secciones, Proyecto Eco abarca múltiples áreas, como ciencia, tecnología, ingeniería y diseño. Actualmente está organizado en cuatro secciones: EcoPapel, EcoLab, EcoTech y EcoIndustria.
             </div>
         """, unsafe_allow_html=True)
 
     # SECCIÓN 4: ¿QUÉ SON LOS PILARES ECO?
-    with st.expander("❓ 3. ¿Qué son los Pilares Eco y cómo orientan el proyecto?"):
+    with st.expander("❓ 3. ¿Qué son las fichas?"):
         st.markdown("""
             <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
-                Los Pilares Eco constituyen el marco constitucional del proyecto. Son 7 principios inviolables: <strong>Replicable, Circular, Continuo, Sustentable, Experimental, Medible e Interdisciplinario</strong>. Cualquier actividad, celda de trabajo o nueva ficha debe responder de forma afirmativa a estos pilares para integrarse oficialmente al sistema.
+                Las fichas son documentos estandarizados que describen un proyecto, producto, experimento o sistema desarrollado dentro de Proyecto Eco. Cada ficha registra el proceso, los materiales, los objetivos y la información necesaria para que cualquier persona pueda comprenderla o replicarla.
             </div>
         """, unsafe_allow_html=True)
 
     # SECCIÓN 5: ¿QUÉ ES EL FLUJO ECO?
-    with st.expander("❓ 4. ¿Qué es el Flujo Eco?"):
+    with st.expander("❓ 4. ¿Qué son los Fundamentos Eco?"):
         st.markdown("""
             <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
                 Es el protocolo logístico estandarizado del proyecto. Define cómo ingresan los residuos de la escuela, cómo se distribuyen entre las diferentes celdas operativas (EcoPapel, EcoLab, EcoTech, EcoIndustria), y la secuencia metodológica bajo la cual un residuo se procesa, se valida químicamente y se asienta en la base documental digital.
@@ -1362,23 +1361,23 @@ elif selected == "Preguntas Frecuentes":
         """, unsafe_allow_html=True)
 
     # SECCIÓN 6: ¿QUÉ ES UN RECONOCIDO?
-    with st.expander("❓ 5. ¿Qué significa ser un Alumno Reconocido?"):
+    with st.expander("❓ 5. ¿Qué diferencia a Proyecto Eco de otros proyectos ambientales?"):
         st.markdown("""
             <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
-                Ser un <strong>Reconocido</strong> significa que la constancia, la responsabilidad de banco y el compromiso del estudiante han sido validados formalmente en la bitácora semanal. Es un sistema cerrado de incentivos sociolaborales diseñado para fomentar la permanencia de contraturno. <strong>No es un concurso</strong> ni persigue dinámicas competitivas; premia el esfuerzo silencioso y regular.
+                Proyecto Eco no se centra únicamente en fabricar productos reciclados. Su propósito es desarrollar un sistema capaz de organizar personas, documentar conocimientos, medir resultados y mejorar continuamente para generar impacto a largo plazo.
             </div>
         """, unsafe_allow_html=True)
 
     # SECCIÓN 7: ¿QUÉ SON LOS ECODOLLARS?
-    with st.expander("❓ 6. ¿Qué son los EcoDollars y cuál es su utilidad real?"):
+    with st.expander("❓ 6. ¿Quién puede participar?"):
         st.markdown("""
             <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
-                El <strong>EcoDollar</strong> es el vector simbólico de nuestra economía circular interna. Representa una unidad de valor acuñada sobre papel reciclado germinable (Papel Seed), utilizada de forma didáctica dentro de la estructura del proyecto para cuantificar el intercambio de recursos recuperados y balancear los aportes de materiales entre las diferentes divisiones técnicas.
+                Proyecto Eco cuenta con una estructura de liderazgo compuesta por Líderes Generales, Líderes de Sección y Participantes. Además, existe un Sistema de Reconocidos que identifica a quienes mantienen una participación activa y constante.
             </div>
         """, unsafe_allow_html=True)
 
     # SECCIÓN 8: ¿CÓMO PARTICIPAR EN PROYECTO ECO?
-    with st.expander("❓ 7. ¿Cómo puede un nuevo estudiante o colaborador participar de Proyecto Eco?"):
+    with st.expander("❓ 7. ¿Cómo se organizan los integrantes?"):
         st.markdown("""
             <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
                 La integración al sistema se realiza de forma orgánica escogiendo una de nuestras secciones operativas según la afinidad técnica del participante. El nuevo colaborador asume la ejecución de fichas técnicas preexistentes en los talleres de contraturno, registra sus actividades colaborativas y sus contribuciones ingresan directamente al circuito del Sistema de Reconocidos.
@@ -1386,18 +1385,17 @@ elif selected == "Preguntas Frecuentes":
         """, unsafe_allow_html=True)
 
     # SECCIÓN 9: ¿PUEDE REPLICARSE ECO?
-    with st.expander("❓ 8. ¿Se puede aplicar e implementar el framework Eco en otras instituciones?"):
+    with st.expander("❓ 8. ¿Quienes son los "Reconocidos""):
         st.markdown("""
             <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
-                <strong>Absolutamente sí.</strong> La replicabilidad es uno de nuestros pilares dogmáticos. El framework está pensado para que cualquier otra escuela técnica, comunidad vecinal o equipo de trabajo pueda descargar nuestras fichas analíticas, adaptar las secciones a su infraestructura local y desplegar el sistema sin barreras económicas iniciales, moldeándolo a su propio contexto.
-            </div>
+                Los Reconocidos son los integrantes que mantienen una participación activa y constante dentro de Proyecto Eco. No representan un premio ni un rango permanente, sino un reconocimiento al compromiso demostrado mediante el trabajo realizado. La condición de Reconocido se determina a través del Informe Semanal, donde se evalúa la participación de cada integrante. Quienes son Reconocidos pueden aparecer en la página web, la carpeta de campo y, según las necesidades del proyecto, ser considerados para asumir roles de liderazgo.
         """, unsafe_allow_html=True)
 
     # SECCIÓN 10: ¿ECO SIGUE CRECIENDO?
-    with st.expander("❓ 9. ¿Es Proyecto Eco una estructura terminada o sigue en evolución?"):
+    with st.expander("❓ 9. ¿Cuál es el objetivo final de Proyecto Eco?"):
         st.markdown("""
             <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
-                Eco es un <strong>sistema vivo y en evolución constante</strong>. No se detiene con los resultados actuales. El proyecto continúa expandiendo de manera continua su base de conocimiento con nuevas fichas de ingeniería, optimizaciones algorítmicas en la suite EcoWeb, nuevas celdas de integración comunitaria y la renovación cíclica de participantes de las nuevas generaciones.
+                Construir un sistema capaz de transformar residuos en valor ambiental, educativo, tecnológico y social mediante procesos medibles, replicables y en constante evolución, permitiendo que cada generación mejore la anterior.
             </div>
         """, unsafe_allow_html=True)
 
