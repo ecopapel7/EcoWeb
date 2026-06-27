@@ -1302,14 +1302,6 @@ elif selected == "¿Cómo Replicar Eco?":
 # ==========================================
 elif selected == "Galería Eco":
     st.markdown('<div class="main-title">GALERÍA Y MAPA ECO</div>', unsafe_allow_html=True)
-    st.markdown('<div class="subtitle">Registro Visual de Infraestructura y Evidencias Fotográficas de Laboratorio</div>', unsafe_allow_html=True)
-    
-    st.markdown("""
-        <div class="glass-card" style="text-align: center; padding: 40px; border: 1px dashed rgba(0, 230, 118, 0.4);">
-            <p style="font-size: 24px; color: #00E676; margin-bottom: 10px;">📸 Contenedor Multimedia Activo</p>
-            <p style="color: #90A4AE; font-size: 15px;">Espacio reservado para el despliegue del mapeo interactivo de celdas y la galería fotográfica de la E.E.S.T N°7.</p>
-        </div>
-    """, unsafe_allow_html=True)
 
 # ==========================================
 # PÁGINA 12 — PREGUNTAS FRECUENTES (FAQ)
