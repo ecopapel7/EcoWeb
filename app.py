@@ -1385,7 +1385,7 @@ elif selected == "Preguntas Frecuentes":
         """, unsafe_allow_html=True)
 
     # SECCIÓN 9: ¿PUEDE REPLICARSE ECO?
-    with st.expander("❓ 8. ¿Quienes son los "Reconocidos""):
+    with st.expander("❓ 8. ¿Quienes son los "Reconocidos"):
         st.markdown("""
             <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
                 Los Reconocidos son los integrantes que mantienen una participación activa y constante dentro de Proyecto Eco. No representan un premio ni un rango permanente, sino un reconocimiento al compromiso demostrado mediante el trabajo realizado. La condición de Reconocido se determina a través del Informe Semanal, donde se evalúa la participación de cada integrante. Quienes son Reconocidos pueden aparecer en la página web, la carpeta de campo y, según las necesidades del proyecto, ser considerados para asumir roles de liderazgo.
