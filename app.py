@@ -1099,7 +1099,7 @@ elif selected == "Sistema Reconocidos":
             </div>
         """, unsafe_allow_html=True)
         
-    with col_prob:L
+    with col_prob:
         st.markdown('<div class="section-header">⚠️ 2. ¿Qué problemas resuelve?</div>', unsafe_allow_html=True)
         st.markdown("""
             <div class="glass-card" style="height: 330px;">
