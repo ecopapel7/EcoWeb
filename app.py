@@ -257,7 +257,12 @@ if selected == "Inicio":
 
     </div>
     """, unsafe_allow_html=True)
-
+        
+    st.markdown("""
+        <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
+            Proyecto Eco 2026 • Inicio de la Ecoweb • E.E.S.T N°7
+        </div>
+    """, unsafe_allow_html=True)
 # ==========================================
 # PÁGINA 2 — OBJETIVO ECO
 # ==========================================
@@ -328,6 +333,11 @@ elif selected == "Objetivo Eco":
 </div>
 </div>""", unsafe_allow_html=True)
 
+    st.markdown("""
+        <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
+            Proyecto Eco 2026 • Objetivo Eco • E.E.S.T N°7
+        </div>
+    """, unsafe_allow_html=True)
 # ==========================================
 # PÁGINA 3 — FUNDAMENTOS ECO
 # ==========================================
@@ -498,7 +508,7 @@ elif selected == "Fundamentos Eco":
     # Footer institucional 
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
-            Proyecto Eco 2026 • Arquitectura Metodológica del Ecosistema • E.E.S.T N°7
+            Proyecto Eco 2026 • Los Fundamentos del Sistema • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
 # ==========================================
@@ -663,7 +673,7 @@ elif selected == "Cronología Eco":
     # Footer institucional
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
-            Proyecto Eco 2026 • Registro Histórico y Memoria Técnica Evolutiva • E.E.S.T N°7
+            Proyecto Eco 2026 • Cronología y Historia del proyecto • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
 # ==========================================
@@ -876,7 +886,7 @@ elif selected == "Fichas Técnicas":
     # Footer institucional
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
-            Proyecto Eco 2026 • Repositorio Abierto de Propiedad Intelectual Comunitario • E.E.S.T N°7
+            Proyecto Eco 2026 • Base de Fichas actuales del Proyecto • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
 # ==========================================
@@ -917,13 +927,13 @@ elif selected == "Explorador Eco":
         "24": {"titulo": "TerrarIA", "division": "EcoLab 2026", "año": "2026", "drive_url": "https://drive.google.com/file/d/1P3r5UlcdPS4KWDcuYPN45qJWmD_KTBDu/view?usp=sharing", "desc": "Ecosistema cerrado automatizado y monitoreado por sensores.", "dificultad": "IV", "pilar": "Continuo", "estado": "En planeación", "siguiente": "11"},
         
         # --- FICHAS BASE PROYECTO ECOPAPEL 2025 ---
-        "B1": {"titulo": "Ficha Base Papel Reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "#", "desc": "Papel artesanal reciclado de residuos escolares. Base fundamental del proyecto.", "dificultad": "III", "pilar": "Circular", "estado": "Terminado", "siguiente": "1"},
-        "B2": {"titulo": "Ficha Base Cartón Reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "#", "desc": "Placas u hojas de alta rigidez para soportes y bases estructurales.", "dificultad": "III", "pilar": "Circular", "estado": "Terminado", "siguiente": "4"},
-        "B3": {"titulo": "Ficha Base Colorantes Reciclados", "division": "EcoPapel 2025", "año": "2025", "drive_url": "#", "desc": "Extracción de pigmentos mediante solventes (alcohol). Etapa experimental.", "dificultad": "II", "pilar": "Experimental", "estado": "Terminado", "siguiente": "6"},
-        "B4": {"titulo": "Ficha Base Cuaderno de papel reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "#", "desc": "Producto funcional con hojas recicladas y tapas de cartón recuperado.", "dificultad": "II", "pilar": "Circular", "estado": "Terminado", "siguiente": "3"},
-        "B5": {"titulo": "Ficha Base Libretita de papel reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "#", "desc": "Libreta portátil de pequeño formato (19x9 cm) con figuras decorativas.", "dificultad": "I", "pilar": "Circular", "estado": "Terminado", "siguiente": "B4"},
-        "B6": {"titulo": "Ficha Base Origamis de Papel", "division": "EcoPapel 2025", "año": "2025", "drive_url": "#", "desc": "Figuras artísticas mediante plegado de precisión (Pavo real, Escorpión, Loro).", "dificultad": "I", "pilar": "Circular", "estado": "Terminado", "siguiente": "16"},
-        "B7": {"titulo": "Ficha Base Tecnijuego Reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "#", "desc": "Juego de mesa educativo para repaso de contenidos técnicos.", "dificultad": "III", "pilar": "Circular", "estado": "Terminado", "siguiente": "10"},
+        "B1": {"titulo": "Ficha Base Papel Reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "https://drive.google.com/file/d/1lWSXyUrUFpEdic2XU7kRsMJUBRZKagpA/view?usp=sharing", "desc": "Papel artesanal reciclado de residuos escolares. Base fundamental del proyecto.", "dificultad": "III", "pilar": "Circular", "estado": "Terminado", "siguiente": "1"},
+        "B2": {"titulo": "Ficha Base Cartón Reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "https://drive.google.com/file/d/1QWi0Wvc_at_Z6-bVoenN-2axELVMU71S/view?usp=sharing", "desc": "Placas u hojas de alta rigidez para soportes y bases estructurales.", "dificultad": "III", "pilar": "Circular", "estado": "Terminado", "siguiente": "4"},
+        "B3": {"titulo": "Ficha Base Colorantes Reciclados", "division": "EcoPapel 2025", "año": "2025", "drive_url": "https://drive.google.com/file/d/1YZJjikaIGIgzMimFyufIGVX7hc-T9BQn/view?usp=sharing", "desc": "Extracción de pigmentos mediante solventes (alcohol). Etapa experimental.", "dificultad": "II", "pilar": "Experimental", "estado": "Terminado", "siguiente": "6"},
+        "B4": {"titulo": "Ficha Base Cuaderno de papel reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "https://drive.google.com/file/d/1oxE5oRyH1fVVuyjibFs5RFaTX0Z-pYR6/view?usp=sharing", "desc": "Producto funcional con hojas recicladas y tapas de cartón recuperado.", "dificultad": "II", "pilar": "Circular", "estado": "Terminado", "siguiente": "3"},
+        "B5": {"titulo": "Ficha Base Libretita de papel reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "https://drive.google.com/file/d/10UYsqI2qO1r_pkmd_uYVvGt3_grI2f-S/view?usp=sharing", "desc": "Libreta portátil de pequeño formato (19x9 cm) con figuras decorativas.", "dificultad": "I", "pilar": "Circular", "estado": "Terminado", "siguiente": "B4"},
+        "B6": {"titulo": "Ficha Base Origamis de Papel", "division": "EcoPapel 2025", "año": "2025", "drive_url": "https://drive.google.com/file/d/1ewH9VqPcmMdiwPa_d2BTiFP8TnrgrOFL/view?usp=sharing", "desc": "Figuras artísticas mediante plegado de precisión (Pavo real, Escorpión, Loro).", "dificultad": "I", "pilar": "Circular", "estado": "Terminado", "siguiente": "16"},
+        "B7": {"titulo": "Ficha Base Tecnijuego Reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "https://drive.google.com/file/d/1KoL4vAPgeqX3XVFVe6aVwRi4pAoRjXcP/view?usp=sharing", "desc": "Juego de mesa educativo para repaso de contenidos técnicos.", "dificultad": "III", "pilar": "Circular", "estado": "Terminado", "siguiente": "10"},
         }
 
     # SECCIÓN 1: INTRODUCCIÓN
@@ -1045,7 +1055,7 @@ elif selected == "Explorador Eco":
     # Footer institucional
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
-            Proyecto Eco 2026 • Motor de Consultas Inteligente • E.E.S.T N°7
+            Proyecto Eco 2026 • Base de Documentos Eco • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
 
@@ -1089,7 +1099,7 @@ elif selected == "Sistema Reconocidos":
             </div>
         """, unsafe_allow_html=True)
         
-    with col_prob:
+    with col_prob:L
         st.markdown('<div class="section-header">⚠️ 2. ¿Qué problemas resuelve?</div>', unsafe_allow_html=True)
         st.markdown("""
             <div class="glass-card" style="height: 330px;">
@@ -1168,7 +1178,7 @@ elif selected == "Sistema Reconocidos":
     # Footer institucional
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
-            Proyecto Eco 2026 • Registro del Capital Humano y Convivencia Técnica • E.E.S.T N°7
+            Proyecto Eco 2026 • Lista de Reconocido • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
     
@@ -1269,7 +1279,7 @@ elif selected == "¿Cómo Replicar Eco?":
     # Footer institucional
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
-            Proyecto Eco 2026 • Manual Abierto de Transferencia y Escalabilidad Institucional • E.E.S.T N°7
+            Proyecto Eco 2026 • ¿Cómo replicar Eco? • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
 # ==========================================
@@ -1370,7 +1380,7 @@ elif selected == "Preguntas Frecuentes":
     # Footer institucional
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
-            Proyecto Eco 2026 • Consultas Frecuentes de la Comunidad y Jurados • E.E.S.T N°7
+            Proyecto Eco 2026 • Preguntas Frecuentes del proyecto • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
     
@@ -2058,6 +2068,6 @@ elif selected == "EcoIA":
     # Footer
     st.markdown("""
         <div style="text-align: center; margin-top: 50px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
-            Proyecto Eco 2026 • Suite EcoIA Operativa v2.0 • Procesamiento de Lenguaje Natural en Escuelas Técnicas • E.E.S.T N°7
+            Proyecto Eco 2026 • EcoIA • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
