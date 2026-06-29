@@ -191,7 +191,7 @@ with st.sidebar:
 if selected == "Inicio":
 
     st.markdown('<div class="main-title">PROYECTO ECO 2026</div>', unsafe_allow_html=True)
-    st.markdown('<div class="subtitle">Plataforma de innovación educativa basada en sustentabilidad, ciencia y trabajo colaborativo.</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Un Proyecto Ecológico que funciona</div>', unsafe_allow_html=True)
 
     # 1. ¿Qué es EcoWeb?
     st.markdown('<div class="section-header">🧬 ¿Qué es EcoWeb?</div>', unsafe_allow_html=True)
@@ -269,10 +269,10 @@ if selected == "Inicio":
 elif selected == "Objetivo Eco":
 
     st.markdown('<div class="main-title">OBJETIVO ECO</div>', unsafe_allow_html=True)
-    st.markdown('<div class="subtitle">El problema que identificó Proyecto Eco y la solución que propone</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">El objetivo que sigue Eco</div>', unsafe_allow_html=True)
 
     # OBJETIVO GENERAL
-    st.markdown('<div class="section-header">🎯 Objetivo General: ¿Qué intenta conseguir Proyecto Eco?</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">🎯 Objetivo General</div>', unsafe_allow_html=True)
 
     st.markdown("""<div class="glass-card" style="font-size: 18px; line-height: 1.6; border-left: 5px solid #00E676; max-width: 100%;">El propósito de <strong>Proyecto Eco</strong> es construir un sistema educativo continuo, sustentable y replicable que permita desarrollar soluciones ambientales, conservar conocimientos técnicos y generar un impacto positivo dentro de la comunidad educativa.</div>""", unsafe_allow_html=True)
 
@@ -344,7 +344,7 @@ elif selected == "Objetivo Eco":
 elif selected == "Fundamentos Eco":
     
     st.markdown('<div class="main-title">FUNDAMENTOS ECO</div>', unsafe_allow_html=True)
-    st.markdown('<div class="subtitle">Estructura Metodológica, Matrices de Flujo y Marcos Conceptuales del Sistema</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">La base que sostiene el proyecto Eco</div>', unsafe_allow_html=True)
     
     # SECCIÓN 1: INTRODUCCIÓN A LOS FUNDAMENTOS
     st.markdown('<div class="section-header">🧠 ¿Cómo funciona Proyecto Eco?</div>', unsafe_allow_html=True)
