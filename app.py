@@ -1942,9 +1942,9 @@ elif selected == "EcoIA":
     # -----------------------------------------------------------------
     st.markdown("""
         <div class="glass-card" style="border-left: 5px solid #64FFDA; margin-bottom: 25px;">
-            <strong style="color:#64FFDA; font-size:16px;">🤖 Auditoría por Segmentación de Contexto</strong><br>
-            Este módulo interactivo detecta automáticamente qué ficha técnica o proyecto ecológico estás consultando. 
-            Extrae de forma quirúrgica el texto correspondiente de la base de datos y alimenta el pipeline de <strong>Groq Cloud</strong> 
+            <strong style="color:#64FFDA; font-size:16px;">🤖 ¿Que es la EcoIA?</strong><br>
+            La EcoIA detecta automáticamente qué ficha técnica estás consultando. 
+            Extrae de forma precisa el texto correspondiente de la base de datos y alimenta el pipeline de <strong>Groq Cloud</strong> 
             únicamente con ese fragmento para garantizar una respuesta exacta y libre de alucinaciones.
         </div>
     """, unsafe_allow_html=True)
@@ -1963,9 +1963,10 @@ elif selected == "EcoIA":
                 Hacé clic o inspirate en estos prompts técnicos para interrogar al núcleo cognitivo:
                 <hr style="border:0; border-top:1px solid rgba(255,255,255,0.08); margin:8px 0;">
                 <ul style="padding-left:15px; margin:0; display:flex; flex-direction:column; gap:8px; color:#B0BEC5;">
-                    <li><i>"Explicame detalladamente la ficha 1"</i></li>
+                    <li><i>"Explicame detalladamente la ficha 1 (o cualquier numero de ficha actual)"</i></li>
                     <li><i>"¿Cómo se hace el papel seed?"</i></li>
                     <li><i>"¿Qué impacto ambiental tiene el fibropapel?"</i></li>
+                    <li><i>"¿Qué pasos hay que seguir para los EcoCristales?"</i></li>
                 </ul>
             </div>
         """, unsafe_allow_html=True)
@@ -2030,7 +2031,8 @@ elif selected == "EcoIA":
                 system_prompt = (
                     "Actuás como EcoIA, la inteligencia artificial oficial de Proyecto Eco de la escuela E.E.S.T N°7. "
                     "Respondé con tono formal, científico y de ingeniería. Como no especificaron una ficha técnica concreta en la pregunta, "
-                    "respondé usando tus conocimientos generales sobre las celdas del colegio (EcoPapel, EcoLab, EcoTech, EcoIndustria) de forma prudente y profesional."
+                    "respondé usando tus conocimientos generales sobre las divisiones del proyecto (EcoPapel, EcoLab, EcoTech, EcoIndustria) de forma prudente y profesional."
+                    "Si quieres, puedes dar 2-3 ejemplos sobre que fichas preguntar (con número o nombre de la ficha): 
                 )
 
             # Enviar a Groq Cloud
