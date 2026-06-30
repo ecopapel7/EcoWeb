@@ -1971,8 +1971,8 @@ elif selected == "EcoIA":
         """, unsafe_allow_html=True)
 
     with col_input:
-        user_query = st.text_input("📝 Ingresá tu consulta técnica para EcoIA:", placeholder="Escribí tu pregunta o el nombre del proyecto...", key="ecoia_input_text")
-        btn_enviar = st.button("🚀 Procesar Inferencia", use_container_width=True)
+        user_query = st.text_input("📝 Ingresá tu consulta sobre fichas para EcoIA:", placeholder="Escribí tu pregunta o el nombre de ficha...", key="ecoia_input_text")
+        btn_enviar = st.button("Enviar a EcoIA", use_container_width=True)
 
         if btn_enviar and user_query:
             # INTERCEPCIÓN DINÁMICA DE CREDENCIALES
@@ -2035,7 +2035,7 @@ elif selected == "EcoIA":
 
             # Enviar a Groq Cloud
             if api_key_groq != "":
-                with st.spinner("🧠 Extrayendo segmento de la batea de datos y ejecutando inferencia..."):
+                with st.spinner("Recibiendo Respuesta de EcoIA..."):
                     try:
                         from groq import Groq
                         client = Groq(api_key=api_key_groq)
@@ -2059,7 +2059,7 @@ elif selected == "EcoIA":
                 with st.spinner("⚙️ Ejecutando matriz cognitiva local..."):
                     import time
                     time.sleep(1.0)
-                    respuesta_fallback = f"🤖 **[EcoIA - Modo Offline]:** Procesé tu consulta sobre la ficha. Activá `GROQ_API_KEY` para conectar con el modelo Llama."
+                    respuesta_fallback = f"🤖 **[EcoIA - Modo Offline]:** Error."
                     st.session_state.messages_ecoia.append({"role": "assistant", "content": respuesta_fallback})
 
     # Renderizado elegante e histórico del Chat
