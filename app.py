@@ -1976,6 +1976,7 @@ elif selected == "EcoIA":
 
         if btn_enviar and user_query:
             # INTERCEPCIÓN DINÁMICA DE CREDENCIALES
+            import os
             api_key_groq = ""
             if "st.secrets" in globals() and "GROQ_API_KEY" in st.secrets:
                 api_key_groq = st.secrets["GROQ_API_KEY"]
