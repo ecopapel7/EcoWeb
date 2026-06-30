@@ -2021,7 +2021,7 @@ elif selected == "EcoIA":
                 system_prompt = (
                     "Actuás como EcoIA, la inteligencia artificial oficial de Proyecto Eco de la escuela E.E.S.T N°7.\n"
                     f"El usuario está consultando específicamente por la FICHA TÉCNICA N°{numero_ficha_encontrada}.\n"
-                    "Tu tarea es responder la duda técnica basándote ÚNICAMENTE en el siguiente fragmento oficial extraído de nuestra base de datos. "
+                    "Tu tarea es responder la duda técnica basándote ÚNICAMENTE en el siguiente fragmento oficial extraído de nuestra base de datos. NO PUEDES hablar sobre otras partes del proyecto que no sean fichas. Secciones, divisiones, sistemas, flujos, etc no tienes permiso de hablar sobre eso. "
                     "No uses conocimientos externos ni inventes objetivos o componentes que no figuren en este texto:\n\n"
                     f"=== TEXTO OFICIAL CONFIGURADO PARA FICHA {numero_ficha_encontrada} ===\n"
                     f"{ficha_detectada_contenido}\n"
