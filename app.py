@@ -1987,34 +1987,32 @@ elif selected == "EcoIA":
             st.session_state.messages_ecoia.append({"role": "user", "content": user_query})
 
             # =================================================================
-            # 🔍 ALGORITMO INTELIGENTE DE DETECCIÓN (NÚMERO O TÍTULO AUTOMÁTICO)
+            # 🔍 ALGORITMO INTELIGENTE REPARADO (EVITA FALSOS POSITIVOS)
             # =================================================================
             import re
             ficha_detectada_contenido = None
             numero_ficha_encontrada = None
             query_minusculas = user_query.lower()
 
-            # Paso 1: Intentar buscar coincidencia por número exacto (Ej: "ficha 1" o escribir "1")
+            # Paso 1: Primero busca coincidencia por el NOMBRE del proyecto en los títulos
             for numero, contenido_completo in TEXTO_COMPLETO_FICHAS.items():
-                patron_exacto = rf"\bficha\s+{numero}\b"
-                if re.search(patron_exacto, query_minusculas) or numero == query_minusculas.strip():
-                    ficha_detectada_contenido = contenido_completo
-                    numero_ficha_encontrada = numero
-                    break
+                match_titulo = re.search(r"FICHA TÉCNICA\s+#\d+:\s*([^\(]+)", contenido_completo)
+                if match_titulo:
+                    titulo_ficha = match_titulo.group(1).strip().lower()
+                    # Si el usuario mencionó la palabra del título directamente (ej: "fibropapel")
+                    if titulo_ficha in query_minusculas:
+                        ficha_detectada_contenido = contenido_completo
+                        numero_ficha_encontrada = numero
+                        break
 
-            # Paso 2: Si no se halló número, buscar por nombre del proyecto de forma dinámica
+            # Paso 2: Si no halló por título, recién ahí busca por formato estricto "ficha X" o número solo
             if not ficha_detectada_contenido:
                 for numero, contenido_completo in TEXTO_COMPLETO_FICHAS.items():
-                    # Extrae lo que esté entre "FICHA TÉCNICA #X:" y el primer paréntesis de sección
-                    match_titulo = re.search(r"FICHA TÉCNICA\s+#\d+:\s*([^\(]+)", contenido_completo)
-                    
-                    if match_titulo:
-                        titulo_ficha = match_titulo.group(1).strip().lower()
-                        # Valida si el usuario nombró el título (Ej: "papel seed") o su palabra principal (Ej: "seed")
-                        if titulo_ficha in query_minusculas or (len(titulo_ficha) > 4 and titulo_ficha[:5] in query_minusculas):
-                            ficha_detectada_contenido = contenido_completo
-                            numero_ficha_encontrada = numero
-                            break
+                    patron_estricto = rf"\bficha\s+{numero}\b"
+                    if re.search(patron_estricto, query_minusculas) or numero == query_minusculas.strip():
+                        ficha_detectada_contenido = contenido_completo
+                        numero_ficha_encontrada = numero
+                        break
             # =================================================================
 
             # Si el algoritmo detectó una ficha en el texto, arma el System Prompt apuntado
@@ -2066,20 +2064,20 @@ elif selected == "EcoIA":
 
     # Renderizado elegante e histórico del Chat
     if st.session_state.messages_ecoia:
-        st.markdown('<p style="color:#A5D6A7; font-size:14px; margin-top:20px; margin-bottom:10px; font-weight:600;">📜 Flujo de la Conversación Actual:</p>', unsafe_allow_html=True)
+        st.markdown('<p style="color:#A5D6A7; font-size:14px; margin-top:20px; margin-bottom:10px; font-weight:600;">Conversación Actual:</p>', unsafe_allow_html=True)
         
         for msg in reversed(st.session_state.messages_ecoia):
             if msg["role"] == "user":
                 st.markdown(f"""
                     <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); padding: 12px 16px; border-radius: 8px; margin-bottom: 10px;">
-                        <span style="color: #64FFDA; font-weight: bold; font-size:12px; text-transform:uppercase;">👤 Tu Consulta Técnica:</span>
+                        <span style="color: #64FFDA; font-weight: bold; font-size:12px; text-transform:uppercase;">👤 Tu Consulta:</span>
                         <p style="margin: 5px 0 0 0; color: #E0E6ED; font-size:14px;">{msg['content']}</p>
                     </div>
                 """, unsafe_allow_html=True)
             else:
                 st.markdown(f"""
                     <div style="background: rgba(0, 230, 118, 0.03); border: 1px solid rgba(0, 230, 118, 0.15); padding: 16px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #00E676;">
-                        <span style="color: #00E676; font-weight: bold; font-size:12px; text-transform:uppercase;">🤖 Núcleo EcoIA responde:</span>
+                        <span style="color: #00E676; font-weight: bold; font-size:12px; text-transform:uppercase;">🤖 EcoIA respondió:</span>
                         <div style="margin: 8px 0 0 0; color: #CFD8DC; font-size:14px; line-height:1.6; white-space: pre-wrap;">{msg['content']}</div>
                     </div>
                 """, unsafe_allow_html=True)
