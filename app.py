@@ -1,9 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-# ==========================================
-# CONFIGURACIÓN DE LA PÁGINA
-# ==========================================
 st.set_page_config(
     page_title="EcoWeb - Proyecto Eco",
     page_icon="🌱",
@@ -11,25 +8,19 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# ==========================================
-# INYECCIÓN DE INTERFAZ DE ALTO IMPACTO (FUEGO CONTRA CELULARES)
-# ==========================================
 st.markdown("""
     <style>
-    /* Fondo con degradado fluido: verde selva profundo y azul medianoche técnico */
     .stApp {
         background: linear-gradient(135deg, #0b2310 0%, #081018 50%, #05080c 100%) !important;
         color: #E0E6ED !important;
     }
     
-    /* Estilo del menú lateral blur */
     [data-testid="stSidebar"] {
         background-color: rgba(11, 25, 16, 0.9) !important;
         backdrop-filter: blur(10px);
         border-right: 1px solid rgba(46, 125, 50, 0.3);
     }
 
-    /* Títulos Principales en Degradado */
     .main-title {
         font-family: 'Helvetica Neue', Arial, sans-serif;
         font-size: 46px !important;
@@ -49,7 +40,6 @@ st.markdown("""
         opacity: 0.9;
     }
 
-    /* Encabezados de Sección */
     .section-header {
         font-size: 26px !important;
         font-weight: 600;
@@ -58,7 +48,6 @@ st.markdown("""
         margin-bottom: 15px;
     }
 
-    /* Tarjetas con efecto Glassmorphism */
     .glass-card {
         width: 100%; 
         max-width: 800px;
@@ -81,7 +70,6 @@ st.markdown("""
         transform: translateY(-3px);
     }
 
-    /* Contenedores para evitar saltos y códigos visibles */
     .info-item {
         margin-bottom: 16px;
         line-height: 1.5;
@@ -98,7 +86,6 @@ st.markdown("""
         margin-right: 6px;
     }
 
-    /* TABLA PREMIUM ESTILO CYBER-GREEN */
     .custom-table {
         width: 100%;
         border-collapse: collapse;
@@ -141,10 +128,6 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-
-# ==========================================
-# MENÚ LATERAL (SIDEBAR MODULAR)
-# ==========================================
 with st.sidebar:
     st.markdown("<div style='text-align: center;'><img src='https://cdn-icons-png.flaticon.com/512/2913/2913520.png' width='80'></div>", unsafe_allow_html=True)
     st.markdown("<h3 style='text-align: center; color: #B9F6CA; margin-bottom: 0;'>Ecosistema Eco 2026</h3>", unsafe_allow_html=True)
@@ -154,24 +137,22 @@ with st.sidebar:
     selected = option_menu(
         menu_title=None,
         options=[
-            "Inicio",               # Página 1
-            "Objetivo Eco",         # Página 2
-            "Fundamentos Eco",      # Página 3
-            "Cronología Eco",       # Página 4
-            "EcoGalaxy",             # Página 5
-            "Fichas Técnicas",      # Página 6
-            "Explorador Eco",       # Página 7
-            "Sistema Reconocidos",  # Página 9
-            "¿Cómo Replicar Eco?",         # Página 10
-            "Galería Eco",          # Página 11
-            "Preguntas Frecuentes", # Página 12
-            "EcoIA"                 # Página 13 <- ¡EL COLOFÓN TECNOLÓGICO!
+            "Inicio",               
+            "Objetivo Eco",         
+            "Fundamentos Eco",      
+            "Cronología Eco",        
+            "Fichas Técnicas",    
+            "Explorador Eco",       
+            "Sistema Reconocidos",  
+            "¿Cómo Replicar Eco?",         
+            "Preguntas Frecuentes", 
+            "EcoIA"                
         ], 
         icons=[
             "house-door-fill", "bullseye", "diagram-3-fill", "clock-history", 
-            "stars", "file-earmark-text-fill", "search-heart-fill", 
-            "award-fill", "share-fill", "images", "patch-question-fill", "cpu-fill"
-        ], # cpu-fill le da el aspecto de núcleo de Inteligencia Artificial
+            "file-earmark-text-fill", "search-heart-fill", 
+            "award-fill", "share-fill", "patch-question-fill", "cpu-fill"
+        ],
         menu_icon="cast",
         default_index=0,
         styles={
@@ -185,15 +166,11 @@ with st.sidebar:
     st.write("---")
     st.caption("Feria Tecnológica 2026")
     
-# ==========================================
-# PÁGINA 1 — INICIO
-# ==========================================
 if selected == "Inicio":
 
     st.markdown('<div class="main-title">PROYECTO ECO 2026</div>', unsafe_allow_html=True)
     st.markdown('<div class="subtitle">Un Proyecto Ecológico que funciona</div>', unsafe_allow_html=True)
 
-    # 1. ¿Qué es EcoWeb?
     st.markdown('<div class="section-header">🧬 ¿Qué es EcoWeb?</div>', unsafe_allow_html=True)
     st.markdown(
         """
@@ -207,7 +184,6 @@ if selected == "Inicio":
         unsafe_allow_html=True
     )
 
-# Columnas centrales
     col1, col2 = st.columns(2)
 
     with col1:
@@ -263,20 +239,15 @@ if selected == "Inicio":
             Proyecto Eco 2026 • Inicio de la Ecoweb • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
-# ==========================================
-# PÁGINA 2 — OBJETIVO ECO
-# ==========================================
 elif selected == "Objetivo Eco":
 
     st.markdown('<div class="main-title">OBJETIVO ECO</div>', unsafe_allow_html=True)
     st.markdown('<div class="subtitle">El objetivo que sigue Eco</div>', unsafe_allow_html=True)
 
-    # OBJETIVO GENERAL
     st.markdown('<div class="section-header">🎯 Objetivo General</div>', unsafe_allow_html=True)
 
     st.markdown("""<div class="glass-card" style="font-size: 18px; line-height: 1.6; border-left: 5px solid #00E676; max-width: 100%;">El propósito de <strong>Proyecto Eco</strong> es construir un sistema educativo continuo, sustentable y replicable que permita desarrollar soluciones ambientales, conservar conocimientos técnicos y generar un impacto positivo dentro de la comunidad educativa.</div>""", unsafe_allow_html=True)
 
-    # PROBLEMA Y CONSECUENCIAS
     col_prob, col_cons = st.columns(2)
 
     with col_prob:
@@ -301,7 +272,6 @@ elif selected == "Objetivo Eco":
 <div class="info-item"><span class="info-bullet" style="color:#FF8A80;">✦</span><span class="info-tag">Dependencia crítica:</span> El funcionamiento del proyecto puede verse afectado si una persona clave abandona la institución.</div>
 </div>""", unsafe_allow_html=True)
 
-    # SOLUCIÓN
     st.markdown('<div class="section-header">🛠️ 3. Solución Propuesta: El Sistema Eco</div>', unsafe_allow_html=True)
     st.markdown("""<div class="glass-card" style="max-width: 100%;">
 <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:18px;">¿Cómo intenta resolver el problema Proyecto Eco?</p>
@@ -315,7 +285,6 @@ elif selected == "Objetivo Eco":
 </div>
 </div>""", unsafe_allow_html=True)
 
-    # PRINCIPIOS Y VISIÓN FUTURA
     col_pila, col_vis = st.columns([4, 6])
 
     with col_pila:
@@ -338,15 +307,12 @@ elif selected == "Objetivo Eco":
             Proyecto Eco 2026 • Objetivo Eco • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
-# ==========================================
-# PÁGINA 3 — FUNDAMENTOS ECO
-# ==========================================
+
 elif selected == "Fundamentos Eco":
     
     st.markdown('<div class="main-title">FUNDAMENTOS ECO</div>', unsafe_allow_html=True)
     st.markdown('<div class="subtitle">La base que sostiene el proyecto Eco</div>', unsafe_allow_html=True)
     
-    # SECCIÓN 1: INTRODUCCIÓN A LOS FUNDAMENTOS
     st.markdown('<div class="section-header">🧠 ¿Cómo funciona Proyecto Eco?</div>', unsafe_allow_html=True)
     st.markdown("""
         <div class="glass-card" style="font-size: 17px; line-height: 1.6; border-left: 5px solid #00E676;">
@@ -354,7 +320,6 @@ elif selected == "Fundamentos Eco":
         </div>
     """, unsafe_allow_html=True)
 
-    # SECCIÓN 2: LOS 7 PILARES (Desplegable interactivo premium para feria)
     st.markdown('<div class="section-header">🏛️ 1. Los 7 Pilares: ¿Qué características definen Eco?</div>', unsafe_allow_html=True)
     st.markdown('<p style="color:#A5D6A7; margin-bottom:15px;">Haz clic en cada pilar para auditar sus definiciones, funciones y aplicaciones prácticas en el mundo real:</p>', unsafe_allow_html=True)
     
@@ -406,7 +371,6 @@ elif selected == "Fundamentos Eco":
                 </div>
             """, unsafe_allow_html=True)
 
-    # SECCIÓN 3: FLUJO ECO (Línea de proceso secuencial visualmente impactante)
     st.markdown('<div class="section-header">🔄 2. El Flujo Eco: ¿Cómo circulan las ideas y actividades?</div>', unsafe_allow_html=True)
     st.markdown("""<div class="glass-card">
 <p style="margin-top:0; color:#81C784; font-weight:600; margin-bottom:20px;">Ciclo de Vida del Desarrollo Sustentable (Línea de Proceso):</p>
@@ -438,7 +402,6 @@ elif selected == "Fundamentos Eco":
 </div>
 </div>""", unsafe_allow_html=True)
 
-    # SECCIÓN 4 & SECCIÓN 5: CONCEPTOS Y RELACIÓN DE FUNDAMENTOS
     col_con, col_rel = st.columns([6, 4])
     
     with col_con:
@@ -505,21 +468,17 @@ elif selected == "Fundamentos Eco":
             </div>
         """, unsafe_allow_html=True)
 
-    # Footer institucional 
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • Los Fundamentos del Sistema • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
-# ==========================================
-# PÁGINA 4 — CRONOLOGÍA ECO
-# ==========================================
+
 elif selected == "Cronología Eco":
     
     st.markdown('<div class="main-title">CRONOLOGÍA ECO</div>', unsafe_allow_html=True)
     st.markdown('<div class="subtitle">La Historia del proyecto</div>', unsafe_allow_html=True)
     
-    # SECCIÓN 1: INTRODUCCIÓN
     st.markdown('<div class="section-header">⏳ ¿Por qué existe una cronología del proyecto?</div>', unsafe_allow_html=True)
     st.markdown("""
         <div class="glass-card" style="font-size: 17px; line-height: 1.6; border-left: 5px solid #00E676;">
@@ -527,7 +486,6 @@ elif selected == "Cronología Eco":
         </div>
     """, unsafe_allow_html=True)
 
-    # SECCIÓN 2: COMPARATIVA DE EVOLUCIÓN (Tabla Premium de Transformación estructural)
     st.markdown('<div class="section-header">📊 1. Cambios de EcoPapel 2025 a Eco</div>', unsafe_allow_html=True)
     st.markdown("""
         <div class="glass-card" style="padding: 10px 20px 20px 20px;">
@@ -570,7 +528,6 @@ elif selected == "Cronología Eco":
         </div>
     """, unsafe_allow_html=True)
 
-    # SECCIÓN 3 y SECCIÓN 4: ORIGEN VS TRANSFORMACIÓN (Columnas paralelas)
     col_orig, col_trans = st.columns(2)
     
     with col_orig:
@@ -596,7 +553,6 @@ elif selected == "Cronología Eco":
             </div>
         """, unsafe_allow_html=True)
 
-    # SECCIÓN 5: LÍNEA TEMPORAL SECUENCIAL CRONOLÓGICA
     st.markdown('<div class="section-header">📅 4. Línea de Tiempo Histórica</div>', unsafe_allow_html=True)
     st.markdown("""
     <div class="glass-card">
@@ -657,7 +613,6 @@ elif selected == "Cronología Eco":
     </div>
 """, unsafe_allow_html=True)
 
-    # SECCIÓN 7 & SECCIÓN 8: SITUACIÓN ACTUAL VS PROYECCIÓN FUTURA
     st.markdown('<div class="section-header">🔮 7. Proyección futura</div>', unsafe_allow_html=True)
     st.markdown("""
             <div class="glass-card" style="height: 175px; border-left: 4px solid #64FFDA;">
@@ -670,27 +625,17 @@ elif selected == "Cronología Eco":
             </div>
         """, unsafe_allow_html=True)
 
-    # Footer institucional
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • Cronología y Historia del proyecto • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
-# ==========================================
-# PÁGINA 5 — MAPA ECO (REINTEGRADA)
-# ==========================================
-elif selected == "EcoGalaxy":
-    st.markdown('<div class="main-title">ECOGALAXY</div>', unsafe_allow_html=True)
-    
-# ==========================================
-# PÁGINA 6 — FICHAS TÉCNICAS
-# ==========================================
+
 elif selected == "Fichas Técnicas":
     
     st.markdown('<div class="main-title">FICHAS TÉCNICAS</div>', unsafe_allow_html=True)
     st.markdown('<div class="subtitle">Biblioteca de Fichas Actuales del proyecto Eco 2026</div>', unsafe_allow_html=True)
-    
-    # Diccionario Oficial de Fichas del Proyecto
+
     FICHAS = {
         "1": {"titulo": "Papel Seed", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1S5sREmBrapKftJM5z8iZjtj46rLXer0t/view?usp=sharing", "desc": "Papel artesanal biodegradable con semillas incorporadas."},
         "2": {"titulo": "FibroPapel", "division": "EcoPapel", "drive_url": "https://drive.google.com/file/d/1JV_LZ_25r-gyqP27gndXCKweqzovfaiN/view?usp=sharing", "desc": "Papel compuesto reforzado con fibras textiles de algodón."},
@@ -718,7 +663,6 @@ elif selected == "Fichas Técnicas":
         "24": {"titulo": "TerrarIA", "division": "EcoLab", "drive_url": "https://drive.google.com/file/d/1P3r5UlcdPS4KWDcuYPN45qJWmD_KTBDu/view?usp=sharing", "desc": "Ecosistema cerrado automatizado y monitoreado por matrices de sensores."},
     }
 
-    # SECCIÓN 1 & SECCIÓN 2: DEFINICIÓN Y APORTES OPERATIVOS
     col_def, col_por = st.columns(2)
     
     with col_def:
@@ -748,7 +692,6 @@ elif selected == "Fichas Técnicas":
             </div>
         """, unsafe_allow_html=True)
 
-    # SECCIÓN 3: ESTRUCTURA OFICIAL (Desplegables de anatomía de una ficha)
     st.markdown('<div class="section-header">📐 3. Estructura de las Fichas</div>', unsafe_allow_html=True)
     st.markdown('<p style="color:#A5D6A7; margin-bottom:12px;">Cada una de las 24 fichas del sistema se redacta bajo la misma estructura (con excepciones):</p>', unsafe_allow_html=True)
     
@@ -769,7 +712,6 @@ elif selected == "Fichas Técnicas":
             </div>
         """, unsafe_allow_html=True)
 
-    # SECCIÓN 5 & SECCIÓN 6: RELACIÓN PILARES Y CICLO DE VIDA (Columnas paralelas)
     col_pil, col_cicl = st.columns([4, 6])
     
     with col_pil:
@@ -821,43 +763,35 @@ elif selected == "Fichas Técnicas":
             </div>
         </div>
     """, unsafe_allow_html=True)
-    # SECCIÓN 4 & SECCIÓN 7: BIBLIOTECA DE CONOCIMIENTO (La base interactiva con tus links)
     st.markdown('<div class="section-header">📚 6. Lista de Fichas</div>', unsafe_allow_html=True)
     st.markdown('<p style="color:#A5D6A7; margin-bottom:15px;">Filtra y accede directamente a las fichas 2026 de forma segura en Google Drive:</p>', unsafe_allow_html=True)
     
-    # Buscador por texto
     busqueda = st.text_input("🔍 Buscar ficha por nombre o palabra clave...", "").lower()
     
-    # Pestañas de filtrado por divisiones oficiales
     tab_todas, tab_papel, tab_lab, tab_tech, tab_ind, tab_trans = st.tabs([
         "Todas las Fichas", "EcoPapel", "EcoLab", "EcoTech", "EcoIndustria", "Transversales"
     ])
     
-    # Función para renderizar las tarjetas de fichas de manera hiper-limpia
     def renderizar_fichas(division_filtro=None):
         contador = 0
         for num, data in FICHAS.items():
-            # Filtro por división
             if division_filtro and data["division"] != division_filtro:
                 continue
-            # Filtro por transversalidad
             if division_filtro == "Transversal" and data["division"] != "Transversal":
                 continue
-            # Filtro por barra de búsqueda
             if busqueda and (busqueda not in data["titulo"].lower() and busqueda not in data["desc"].lower()):
                 continue
-                
+        
             contador += 1
-            # Renderizado premium estilo glass
             st.markdown(f"""
                 <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(165, 214, 167, 0.15); border-radius: 12px; padding: 18px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
                     <div>
-                        <span style="background: rgba(0, 230, 118, 0.15); color: #00E676; padding: 3px 8px; border-radius: 5px; font-size: 12px; font-weight: bold; text-transform: uppercase;">Ficha {num} • {data['division']}</span>
-                        <h4 style="margin: 8px 0 4px 0; color: #FFFFFF; font-size:18px;">{data['titulo']}</h4>
-                        <p style="margin: 0; color: #B0BEC5; font-size: 14px;">{data['desc']}</p>
+                        <span style="background: rgba(0, 230, 118, 0.15); color: #00E676; padding: 3px 8px; border-radius: 5px; font-size: 12px; font-weight: bold; text-transform: uppercase;">Ficha {num} • {data["division"]}</span>
+                        <h4 style="margin: 8px 0 4px 0; color: #FFFFFF; font-size:18px;">{data["titulo"]}</h4>
+                        <p style="margin: 0; color: #B0BEC5; font-size: 14px;">{data["desc"]}</p>
                     </div>
                     <div>
-                        <a href="{data['drive_url']}" target="_blank" style="text-decoration: none;">
+                        <a href="{data["drive_url"]}" target="_blank" style="text-decoration: none;">
                             <button style="background: rgba(46, 125, 50, 0.6); color: white; border: 1px solid #00E676; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s;">
                                 Open Drive ↗
                             </button>
@@ -869,7 +803,6 @@ elif selected == "Fichas Técnicas":
         if contador == 0:
             st.warning("No se encontraron fichas técnicas que coincidan con la búsqueda.")
 
-    # Ejecución de la lógica en cada pestaña correspondiente
     with tab_todas:
         renderizar_fichas()
     with tab_papel:
@@ -883,24 +816,19 @@ elif selected == "Fichas Técnicas":
     with tab_trans:
         renderizar_fichas("Transversal")
 
-    # Footer institucional
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • Base de Fichas actuales del Proyecto • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
-# ==========================================
-# PÁGINA 7 — FILTRO Y EXPLORADOR DE FICHAS
-# ==========================================
+    
 elif selected == "Explorador Eco":
     import random
 
     st.markdown('<div class="main-title">EXPLORADOR ECO</div>', unsafe_allow_html=True)
     st.markdown('<div class="subtitle">Biblioteca general de documentos</div>', unsafe_allow_html=True)
 
-    # DICCIONARIO OPTIMIZADO CON METADATOS TÉCNICOS INTEGRADOS (2025 Y 2026)
     FICHAS_AVANZADAS = {
-        # --- FICHAS PROYECTO ECO 2026 ---
         "1": {"titulo": "Papel Seed", "division": "EcoPapel 2026", "año": "2026", "drive_url": "https://drive.google.com/file/d/1S5sREmBrapKftJM5z8iZjtj46rLXer0t/view?usp=sharing", "desc": "Papel artesanal biodegradable con semillas incorporadas.", "dificultad": "I", "pilar": "Sustentable", "estado": "En desarrollo", "siguiente": "2"},
         "2": {"titulo": "FibroPapel", "division": "EcoPapel 2026", "año": "2026", "drive_url": "https://drive.google.com/file/d/1JV_LZ_25r-gyqP27gndXCKweqzovfaiN/view?usp=sharing", "desc": "Papel compuesto reforzado con fibras textiles de algodón.", "dificultad": "II", "pilar": "Circular", "estado": "En planeación", "siguiente": "5"},
         "3": {"titulo": "Manual del Reciclador", "division": "EcoPapel 2026", "año": "2026", "drive_url": "https://drive.google.com/file/d/1icRZmLchhPNXkbqHRKe3rsGF2yQdsXHq/view?usp=sharing", "desc": "Documento técnico educativo 100% sustentable.", "dificultad": "I", "pilar": "Replicable", "estado": "En desarrollo", "siguiente": "10"},
@@ -925,8 +853,6 @@ elif selected == "Explorador Eco":
         "22": {"titulo": "Biogás", "division": "EcoLab 2026", "año": "2026", "drive_url": "https://drive.google.com/file/d/1m4l9L2Y5sXrWz2KlmgfjfDii76ZwBtS6/view?usp=sharing", "desc": "Investigación avanzada sobre digestión anaeróbica y captura de metano.", "dificultad": "III", "pilar": "Experimental", "estado": "En planeación", "siguiente": "24"},
         "23": {"titulo": "EcoMod", "division": "EcoTech 2026", "año": "2026", "drive_url": "https://drive.google.com/file/d/13qfQNtrsH1iAjTEAck-LrFfluuHgZZGf/view?usp=sharing", "desc": "Módulo interactivo de reciclaje y economía circular en entornos virtuales.", "dificultad": "IV", "pilar": "Continuo", "estado": "En desarrollo", "siguiente": "7"},
         "24": {"titulo": "TerrarIA", "division": "EcoLab 2026", "año": "2026", "drive_url": "https://drive.google.com/file/d/1P3r5UlcdPS4KWDcuYPN45qJWmD_KTBDu/view?usp=sharing", "desc": "Ecosistema cerrado automatizado y monitoreado por sensores.", "dificultad": "IV", "pilar": "Continuo", "estado": "En planeación", "siguiente": "11"},
-        
-        # --- FICHAS BASE PROYECTO ECOPAPEL 2025 ---
         "B1": {"titulo": "Ficha Base Papel Reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "https://drive.google.com/file/d/1lWSXyUrUFpEdic2XU7kRsMJUBRZKagpA/view?usp=sharing", "desc": "Papel artesanal reciclado de residuos escolares. Base fundamental del proyecto.", "dificultad": "III", "pilar": "Circular", "estado": "Terminado", "siguiente": "1"},
         "B2": {"titulo": "Ficha Base Cartón Reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "https://drive.google.com/file/d/1QWi0Wvc_at_Z6-bVoenN-2axELVMU71S/view?usp=sharing", "desc": "Placas u hojas de alta rigidez para soportes y bases estructurales.", "dificultad": "III", "pilar": "Circular", "estado": "Terminado", "siguiente": "4"},
         "B3": {"titulo": "Ficha Base Colorantes Reciclados", "division": "EcoPapel 2025", "año": "2025", "drive_url": "https://drive.google.com/file/d/1YZJjikaIGIgzMimFyufIGVX7hc-T9BQn/view?usp=sharing", "desc": "Extracción de pigmentos mediante solventes (alcohol). Etapa experimental.", "dificultad": "II", "pilar": "Experimental", "estado": "Terminado", "siguiente": "6"},
@@ -936,7 +862,6 @@ elif selected == "Explorador Eco":
         "B7": {"titulo": "Ficha Base Tecnijuego Reciclado", "division": "EcoPapel 2025", "año": "2025", "drive_url": "https://drive.google.com/file/d/1KoL4vAPgeqX3XVFVe6aVwRi4pAoRjXcP/view?usp=sharing", "desc": "Juego de mesa educativo para repaso de contenidos técnicos.", "dificultad": "III", "pilar": "Circular", "estado": "Terminado", "siguiente": "10"},
         }
 
-    # SECCIÓN 1: INTRODUCCIÓN
     st.markdown('<div class="section-header">🔍 ¿Para qué sirve el Explorador Eco?</div>', unsafe_allow_html=True)
     st.markdown("""
         <div class="glass-card" style="font-size: 16px; border-left: 5px solid #00E676;">
@@ -944,7 +869,6 @@ elif selected == "Explorador Eco":
         </div>
     """, unsafe_allow_html=True)
 
-    # SECCIÓN 2: ESTADÍSTICAS GENERALES (Cálculos automáticos en base al diccionario)
     st.markdown('<div class="section-header">📈 1. Datos del Explorador Eco</div>', unsafe_allow_html=True)
 
     fichas_manuales     = 31  
@@ -952,7 +876,6 @@ elif selected == "Explorador Eco":
     ejes_manuales       = 6   
     niveles_manuales    = 4   
     
-    # Procesamiento de variables en background
     tot_fichas = len(FICHAS_AVANZADAS)
     secciones = set(f["division"] for f in FICHAS_AVANZADAS.values())
     conceptos = set(f["pilar"] for f in FICHAS_AVANZADAS.values())
@@ -968,7 +891,6 @@ elif selected == "Explorador Eco":
     with col_m4:
         st.markdown(f'<div class="glass-card" style="text-align:center;"><span style="font-size:28px; font-weight:bold; color:#A5D6A7;">{niveles_manuales}</span><br><span style="font-size:13px; color:#B0BEC5;">Niveles Complejidad</span></div>', unsafe_allow_html=True)
     
-    # SECCIÓN 3, 4 & 5: PANEL DE FILTROS CRUZADOS EN COLUMNAS (Añadido Filtro de Año)
     st.markdown('<div class="section-header">🎛️ 2. Panel de filtros para Fichas</div>', unsafe_allow_html=True)
     
     col_f1, col_f2, col_f3, col_f4 = st.columns(4)
@@ -982,12 +904,10 @@ elif selected == "Explorador Eco":
     with col_f4:
         filtro_con = st.selectbox("🔬 Filtrar por Pilar:", ["Todas"] + sorted(list(conceptos)))
 
-    # SECCIÓN 6: RENDERIZADO DE FILTRADO EN MATRIZ DE TARJETAS PREMIUM
     st.markdown('<div class="section-header">📋 3. Fichas Técnicas Encontradas</div>', unsafe_allow_html=True)
     
     tarjetas_renderizadas = 0
-    
-    # Grid de ejecución lógica
+
     for k, f in FICHAS_AVANZADAS.items():
         # Lógica cruzada de discriminación de filtros (Se añade validación por año)
         if filtro_año != "Todos" and f["año"] != filtro_año:
@@ -1001,12 +921,9 @@ elif selected == "Explorador Eco":
             
         tarjetas_renderizadas += 1
         
-        # Color del badge por dificultad
         color_dif = "#81C784" if f["dificultad"] == "I" else "#4CAF50" if f["dificultad"] == "II" else "#FFD54F" if f["dificultad"] == "III" else "#EF5350"
-        # Color distintivo para el texto del Año de la ficha
         color_año = "#64FFDA" if f["año"] == "2026" else "#FFB74D"
         
-        # Tarjeta HTML Premium
         st.markdown(f"""
             <div class="glass-card" style="margin-bottom: 15px; border-left: 5px solid {color_dif};">
                 <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;">
@@ -1030,10 +947,8 @@ elif selected == "Explorador Eco":
     if tarjetas_renderizadas == 0:
         st.info("Ninguna ficha técnica cumple simultáneamente con los criterios seleccionados en el panel.")
 
-    # SECCIÓN 8: EXPLORACIÓN ALEATORIA (Botón dinámico interactivo con Session State)
     st.markdown('<div class="section-header">🎲 4. Descubrimiento de Fichas Aleatorias</div>', unsafe_allow_html=True)
     
-    # Inicialización del Session State de Streamlit para retener la ficha al azar entre clicks de renderizado
     if "ficha_azar" not in st.session_state:
         st.session_state.ficha_azar = "1"
         
@@ -1052,22 +967,17 @@ elif selected == "Explorador Eco":
             </div>
         """, unsafe_allow_html=True)
 
-    # Footer institucional
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • Base de Documentos Eco • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
 
-# ==========================================
-# PÁGINA 9 — SISTEMA DE RECONOCIDOS
-# ==========================================
 elif selected == "Sistema Reconocidos":
     
     st.markdown('<div class="main-title">SISTEMA DE RECONOCIDOS</div>', unsafe_allow_html=True)
     st.markdown('<div class="subtitle">Sistema que define quién pertenece a Eco</div>', unsafe_allow_html=True)
 
-    # DATASET DE CONTROL DE RECONOCIDOS (Base de datos para analítica en tiempo real)
     RECONOCIDOS_DB = [
         {"nombre": "Jonathan Orellana", "division": "EcoIndustria", "periodo": "Abril 2025", "motivo": "Lider de EcoIndustria", "tipo": "Actual"},
         {"nombre": "Facundo Orellana", "division": "EcoPapel, EcoLab y EcoIndustria", "periodo": "Mayo 2026", "motivo": "Participante de EcoPapel, EcoLab y EcoIndustria", "tipo": "Actual"},
@@ -1080,7 +990,6 @@ elif selected == "Sistema Reconocidos":
         {"nombre": "Brandon Regueyra", "division": "2025", "periodo": "Abril 2025", "motivo": "Participante de EcoPapel 2025", "tipo": "Histórico", "anio": 2025},
     ]
 
-    # SECCIÓN 1 & SECCIÓN 2: FILOSOFÍA DEL SISTEMA Y PROBLEMÁTICA
     col_fil, col_prob = st.columns(2)
     
     with col_fil:
@@ -1110,7 +1019,6 @@ elif selected == "Sistema Reconocidos":
             </div>
         """, unsafe_allow_html=True)
 
-    # SECCIÓN 3 & SECCIÓN 4: FUNCIONAMIENTO GENERAL Y CRITERIOS OFICIALES
     st.markdown('<div class="section-header">⚙️ 3. ¿Que mide el sistema de reconocidos?</div>', unsafe_allow_html=True)
     
     st.markdown("""
@@ -1126,7 +1034,6 @@ elif selected == "Sistema Reconocidos":
             </div>
         """, unsafe_allow_html=True)
 
-    # SECCIÓN 5 & SECCIÓN 6: RECONOCIDOS ACTUALES E HISTORIAL INTERACTIVO
     st.markdown('<div class="section-header">🥇 4. Lista de Reconocidos</div>', unsafe_allow_html=True)
     
     tab_act, tab_hist = st.tabs(["⚡ Período actual (Mayo 2026)", "📜 Período antiguo"])
@@ -1162,7 +1069,6 @@ elif selected == "Sistema Reconocidos":
                     </div>
                 """, unsafe_allow_html=True)
 
-    # SECCIÓN 9: PARTICIPAR Y SER RECONOCIDO (Orientado a nuevos integrantes)
     st.markdown('<div class="section-header">🚀 6. ¿Cómo unirse a Eco?</div>', unsafe_allow_html=True)
     st.markdown("""
         <div class="glass-card" style="border-left: 5px solid #64FFDA;">
@@ -1175,22 +1081,17 @@ elif selected == "Sistema Reconocidos":
         </div>
     """, unsafe_allow_html=True)
 
-    # Footer institucional
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • Lista de Reconocido • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
     
-# ==========================================
-# PÁGINA 10 — ¿CÓMO REPLICAR ECO?
-# ==========================================
 elif selected == "¿Cómo Replicar Eco?":
     
     st.markdown('<div class="main-title">¿CÓMO REPLICAR ECO?</div>', unsafe_allow_html=True)
     st.markdown('<div class="subtitle">Guía de cómo replicar Eco</div>', unsafe_allow_html=True)
 
-    # SECCIÓN 1 & SECCIÓN 2: INTRODUCCIÓN A LA REPLICABILIDAD Y REQUISITOS INICIALES
     col_rep, col_req = st.columns(2)
     
     with col_rep:
@@ -1214,7 +1115,6 @@ elif selected == "¿Cómo Replicar Eco?":
             </div>
         """, unsafe_allow_html=True)
 
-    # SECCIÓN 10: RUTA DE IMPLEMENTACIÓN RECOMENDADA (Línea de progreso visual arriba)
     st.markdown('<div class="section-header">🗺️ 3. Paso a Paso (Recomendado)</div>', unsafe_allow_html=True)
     st.markdown("""
         <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(100,255,218,0.1); padding: 20px; border-radius: 12px; margin-bottom: 25px;">
@@ -1229,7 +1129,6 @@ elif selected == "¿Cómo Replicar Eco?":
         </div>
     """, unsafe_allow_html=True)
 
-    # SECCIÓN 3: FORMACIÓN DEL EQUIPO
     st.markdown('<div class="section-header">👥 4. Equipo Inicial</div>', unsafe_allow_html=True)
     st.markdown("""
         <div class="glass-card">
@@ -1241,7 +1140,6 @@ elif selected == "¿Cómo Replicar Eco?":
         </div>
     """, unsafe_allow_html=True)
 
-    # SECCIÓN 4: APLICACIÓN DE LOS PILARES
     st.markdown('<div class="section-header">📐 5. Los 7 Pilares</div>', unsafe_allow_html=True)
     st.markdown("""
         <div class="glass-card">
@@ -1267,7 +1165,6 @@ elif selected == "¿Cómo Replicar Eco?":
         </div>
     """, unsafe_allow_html=True)
 
-    # SECCIÓN 9: ADAPTACIÓN LOCAL
     st.markdown('<div class="section-header">🌍 6. No es copiar, es adaptar</div>', unsafe_allow_html=True)
     st.markdown("""
         <div class="glass-card" style="border-left: 5px solid #FFD54F; background: rgba(255, 213, 79, 0.02);">
@@ -1276,27 +1173,17 @@ elif selected == "¿Cómo Replicar Eco?":
         </div>
     """, unsafe_allow_html=True)
 
-    # Footer institucional
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • ¿Cómo replicar Eco? • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
-# ==========================================
-# PÁGINA 11 — GALERÍA ECO / MAPA
-# ==========================================
-elif selected == "Galería Eco":
-    st.markdown('<div class="main-title">GALERÍA ECO</div>', unsafe_allow_html=True)
 
-# ==========================================
-# PÁGINA 12 — PREGUNTAS FRECUENTES (FAQ)
-# ==========================================
 elif selected == "Preguntas Frecuentes":
     
     st.markdown('<div class="main-title">PREGUNTAS FRECUENTES</div>', unsafe_allow_html=True)
     st.markdown('<div class="subtitle"> Preguntas sobre el proyecto</div>', unsafe_allow_html=True)
 
-    # SECCIÓN 1: INTRODUCCIÓN
     st.markdown('<div class="section-header">💡 ¿Para qué sirve esta sección?</div>', unsafe_allow_html=True)
     st.markdown("""
         <div class="glass-card" style="margin-bottom: 25px;">
@@ -1306,14 +1193,12 @@ elif selected == "Preguntas Frecuentes":
 
     st.markdown('<div class="section-header">🔍 Consultas de Auditoría Metodológica</div>', unsafe_allow_html=True)
 
-    # SECCIÓN 2: ¿QUÉ ES PROYECTO ECO?
     with st.expander("❓ 1. ¿Qué es Proyecto Eco?"):
         st.markdown("""
             <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
                 Proyecto Eco es un sistema ecológico-educativo que busca generar impacto ambiental real mediante proyectos organizados, medibles y replicables. Su objetivo no es crear actividades aisladas, sino construir un modelo que pueda mantenerse, mejorar y expandirse con el tiempo.
         """, unsafe_allow_html=True)
 
-    # SECCIÓN 3: ¿QUÉ ES UNA FICHA TÉCNICA?
     with st.expander("❓ 2. ¿Proyecto Eco es solo reciclaje de papel?"):
         st.markdown("""
             <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
@@ -1321,7 +1206,6 @@ elif selected == "Preguntas Frecuentes":
             </div>
         """, unsafe_allow_html=True)
 
-    # SECCIÓN 4: ¿QUÉ SON LOS PILARES ECO?
     with st.expander("❓ 3. ¿Qué son las fichas?"):
         st.markdown("""
             <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
@@ -1329,7 +1213,6 @@ elif selected == "Preguntas Frecuentes":
             </div>
         """, unsafe_allow_html=True)
 
-    # SECCIÓN 5: ¿QUÉ ES EL FLUJO ECO?
     with st.expander("❓ 4. ¿Qué son los Fundamentos Eco?"):
         st.markdown("""
             <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
@@ -1337,7 +1220,6 @@ elif selected == "Preguntas Frecuentes":
             </div>
         """, unsafe_allow_html=True)
 
-    # SECCIÓN 6: ¿QUÉ ES UN RECONOCIDO?
     with st.expander("❓ 5. ¿Qué diferencia a Proyecto Eco de otros proyectos ambientales?"):
         st.markdown("""
             <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
@@ -1345,7 +1227,6 @@ elif selected == "Preguntas Frecuentes":
             </div>
         """, unsafe_allow_html=True)
 
-    # SECCIÓN 7: ¿QUÉ SON LOS ECODOLLARS?
     with st.expander("❓ 6. ¿Quién puede participar?"):
         st.markdown("""
             <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
@@ -1353,7 +1234,6 @@ elif selected == "Preguntas Frecuentes":
             </div>
         """, unsafe_allow_html=True)
 
-    # SECCIÓN 8: ¿CÓMO PARTICIPAR EN PROYECTO ECO?
     with st.expander("❓ 7. ¿Cómo se organizan los integrantes?"):
         st.markdown("""
             <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
@@ -1361,7 +1241,6 @@ elif selected == "Preguntas Frecuentes":
             </div>
         """, unsafe_allow_html=True)
 
-    # SECCIÓN 9: ¿PUEDE REPLICARSE ECO?
     with st.expander("❓ 8. ¿Quienes son los Reconocidos"):
         st.markdown("""
             <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
@@ -1369,7 +1248,6 @@ elif selected == "Preguntas Frecuentes":
             </div>
         """, unsafe_allow_html=True)
 
-    # SECCIÓN 10: ¿ECO SIGUE CRECIENDO?
     with st.expander("❓ 9. ¿Cuál es el objetivo final de Proyecto Eco?"):
         st.markdown("""
             <div style="padding: 10px; line-height: 1.6; font-size: 14.5px; color: #E0E6ED;">
@@ -1377,23 +1255,16 @@ elif selected == "Preguntas Frecuentes":
             </div>
         """, unsafe_allow_html=True)
 
-    # Footer institucional
     st.markdown("""
         <div style="text-align: center; margin-top: 40px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • Preguntas Frecuentes del proyecto • E.E.S.T N°7
         </div>
     """, unsafe_allow_html=True)
-    
-# ==========================================
-# PÁGINA 13 — ECOIA (REPARADA SIN NAMEERROR)
-# ==========================================
+
 elif selected == "EcoIA":
     st.markdown('<div class="main-title">ECOIA</div>', unsafe_allow_html=True)
     st.markdown('<div class="subtitle">La IA con conocimiento de todas las fichas del proyecto</div>', unsafe_allow_html=True)
 
-    # -----------------------------------------------------------------
-    # 📜 BASE DE DATOS GLOBAL: EL DICCIONARIO VA ACÁ (FUERA DEL BOTÓN)
-    # -----------------------------------------------------------------
     TEXTO_COMPLETO_FICHAS = {
         "1": """
         FICHA TÉCNICA #1: PAPEL SEED (Sección: EcoPapel)
@@ -1937,9 +1808,7 @@ elif selected == "EcoIA":
         10. MEJORAS Y PROYECCIÓN FUTURA: Integración modular con sensores adicionales de última generación para medir concentración de Dióxido de Carbono (CO₂) e intensidad lumínica (Lux). Implementación de una base de datos web para almacenar el registro histórico digital de la evolución biológica. Versión modular automatizada para recrear múltiples ecosistemas y biomas. Desarrollo como un recurso interactivo y aplicación educativa transversal para las clases de ciencias naturales y tecnología.
         """,
     }
-# -----------------------------------------------------------------
-    # Tarjeta de Contexto de Ingeniería de Prompts
-    # -----------------------------------------------------------------
+    
     st.markdown("""
         <div class="glass-card" style="border-left: 5px solid #64FFDA; margin-bottom: 25px;">
             <strong style="color:#64FFDA; font-size:16px;">🤖 ¿Que es la EcoIA?</strong><br>
@@ -1949,11 +1818,9 @@ elif selected == "EcoIA":
         </div>
     """, unsafe_allow_html=True)
 
-    # Inicializar el historial de conversación en la sesión
     if "messages_ecoia" not in st.session_state:
         st.session_state.messages_ecoia = []
 
-    # Bloque UI del Chat - Entrada y Salida unificada
     col_input, col_info = st.columns([7, 3])
 
     with col_info:
@@ -1976,7 +1843,6 @@ elif selected == "EcoIA":
         btn_enviar = st.button("Enviar a EcoIA", use_container_width=True)
 
         if btn_enviar and user_query:
-            # INTERCEPCIÓN DINÁMICA DE CREDENCIALES
             import os
             api_key_groq = ""
             if "st.secrets" in globals() and "GROQ_API_KEY" in st.secrets:
@@ -1984,18 +1850,13 @@ elif selected == "EcoIA":
             elif os.getenv("GROQ_API_KEY"):
                 api_key_groq = os.getenv("GROQ_API_KEY")
 
-            # Insertar la consulta del usuario al historial visual
             st.session_state.messages_ecoia.append({"role": "user", "content": user_query})
-
-            # =================================================================
-            # 🔍 ALGORITMO INTELIGENTE REPARADO (EVITA FALSOS POSITIVOS)
-            # =================================================================
+            
             import re
             ficha_detectada_contenido = None
             numero_ficha_encontrada = None
             query_minusculas = user_query.lower()
 
-            # Paso 1: Primero busca coincidencia por el NOMBRE del proyecto en los títulos
             for numero, contenido_completo in TEXTO_COMPLETO_FICHAS.items():
                 match_titulo = re.search(r"FICHA TÉCNICA\s+#\d+:\s*([^\(]+)", contenido_completo)
                 if match_titulo:
@@ -2006,7 +1867,6 @@ elif selected == "EcoIA":
                         numero_ficha_encontrada = numero
                         break
 
-            # Paso 2: Si no halló por título, recién ahí busca por formato estricto "ficha X" o número solo
             if not ficha_detectada_contenido:
                 for numero, contenido_completo in TEXTO_COMPLETO_FICHAS.items():
                     patron_estricto = rf"\bficha\s+{numero}\b"
@@ -2014,7 +1874,6 @@ elif selected == "EcoIA":
                         ficha_detectada_contenido = contenido_completo
                         numero_ficha_encontrada = numero
                         break
-            # =================================================================
 
             if ficha_detectada_contenido:
                 system_prompt = (
@@ -2028,7 +1887,6 @@ elif selected == "EcoIA":
                     "====================================================="
                 )
             else:
-                # El bloque "Else" blindado para que no invente sobre sistemas, celdas o convenios internacionales
                 system_prompt = (
                     "Actuás como EcoIA, la inteligencia artificial oficial de Proyecto Eco de la escuela E.E.S.T N°7.\n"
                     "REGLA CRÍTICA Y ABSOLUTA: No tenés acceso a información sobre divisiones, flujos, convenios, secciones o la estructura general del proyecto porque no fueron cargados todavía.\n"
@@ -2039,7 +1897,6 @@ elif selected == "EcoIA":
                     "Si quieres, puedes dar entre 1 a 3 ejemplos sobre que fichas preguntar (con número o nombre de la ficha): Ficha 1: Papel seed (EcoPapel). Ficha 2: FibroPapel (EcoPapel). Ficha 3: Manual Eco (EcoPapel). Ficha 4: Marcapáginas (EcoPapel). Ficha 5: Ecocarrier (EcoPapel). Ficha 6: EcoCroma (EcoLab). Ficha 7: EcoIA (EcoTech). Ficha 8: Organizadores Ecomodulares (EcoIndustria). Ficha 9: EcoEstelar (EcoIndustria). Ficha 10: EcoChallenge (EcoPapel, EcoLab, EcoTech y EcoIndustria). Ficha 11: EcoHidro (EcoIndustria). Ficha 12: EcoTrash (EcoIndustria). Ficha 13: EcoWallet: (EcoIndustria). Ficha 14: Carbon Ink (EcoLab). Ficha 15: Nendo Dango (EcoLab). Ficha 16: EcoWear (EcoPapel y EcoIndustria). Ficha 17: EcoVoz (EcoIndustria). Ficha 18: Cañon Vortex (EcoIndustria). Ficha 19: EcoDollars (EcoPapel). Ficha 20: EcoVolt (EcoLab). Ficha 21: EcoCristales (EcoLab). Ficha 22: EcoGenerador de metano (EcoLab). Ficha 23: EcoMod (EcoTech). Ficha 24: TerrarIA (EcoLab)"
                 )
 
-            # Enviar a Groq Cloud
             if api_key_groq != "":
                 with st.spinner("Recibiendo Respuesta de EcoIA..."):
                     try:
@@ -2068,7 +1925,6 @@ elif selected == "EcoIA":
                     respuesta_fallback = f"🤖 **[EcoIA - Modo Offline]:** Error."
                     st.session_state.messages_ecoia.append({"role": "assistant", "content": respuesta_fallback})
 
-    # Renderizado elegante e histórico del Chat
     if st.session_state.messages_ecoia:
         st.markdown('<p style="color:#A5D6A7; font-size:14px; margin-top:20px; margin-bottom:10px; font-weight:600;">Conversación Actual:</p>', unsafe_allow_html=True)
         
@@ -2088,7 +1944,6 @@ elif selected == "EcoIA":
                     </div>
                 """, unsafe_allow_html=True)
 
-    # Footer
     st.markdown("""
         <div style="text-align: center; margin-top: 50px; padding: 20px; color: #81C784; font-size: 14px; border-top: 1px solid rgba(165,214,167,0.1);">
             Proyecto Eco 2026 • EcoIA • E.E.S.T N°7
