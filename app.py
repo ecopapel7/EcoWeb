@@ -517,7 +517,7 @@ elif selected == "Fundamentos Eco":
 elif selected == "Cronología Eco":
     
     st.markdown('<div class="main-title">CRONOLOGÍA ECO</div>', unsafe_allow_html=True)
-    st.markdown('<div class="subtitle">Evolución Histórica, Hitos de Ingeniería y Línea Temporal del Ecosistema</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">La Historia del proyecto</div>', unsafe_allow_html=True)
     
     # SECCIÓN 1: INTRODUCCIÓN
     st.markdown('<div class="section-header">⏳ ¿Por qué existe una cronología del proyecto?</div>', unsafe_allow_html=True)
@@ -688,7 +688,7 @@ elif selected == "EcoGalaxy":
 elif selected == "Fichas Técnicas":
     
     st.markdown('<div class="main-title">FICHAS TÉCNICAS</div>', unsafe_allow_html=True)
-    st.markdown('<div class="subtitle">Biblioteca de Conocimiento Estandarizado y Protocolos de Ingeniería Sustentable</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Biblioteca de Fichas Actuales del proyecto Eco 2026</div>', unsafe_allow_html=True)
     
     # Diccionario Oficial de Fichas del Proyecto
     FICHAS = {
@@ -896,7 +896,7 @@ elif selected == "Explorador Eco":
     import random
 
     st.markdown('<div class="main-title">EXPLORADOR ECO</div>', unsafe_allow_html=True)
-    st.markdown('<div class="subtitle">Motor de Búsqueda Avanzado, Métricas de Conocimiento y Rutas de Aprendizaje Guiadas</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Biblioteca general de documentos</div>', unsafe_allow_html=True)
 
     # DICCIONARIO OPTIMIZADO CON METADATOS TÉCNICOS INTEGRADOS (2025 Y 2026)
     FICHAS_AVANZADAS = {
@@ -1065,7 +1065,7 @@ elif selected == "Explorador Eco":
 elif selected == "Sistema Reconocidos":
     
     st.markdown('<div class="main-title">SISTEMA DE RECONOCIDOS</div>', unsafe_allow_html=True)
-    st.markdown('<div class="subtitle">Estructura de Incentivo Sociolaboral, Gestión Conductual y Auditoría de Compromiso</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Sistema que define quién pertenece a Eco</div>', unsafe_allow_html=True)
 
     # DATASET DE CONTROL DE RECONOCIDOS (Base de datos para analítica en tiempo real)
     RECONOCIDOS_DB = [
@@ -1188,7 +1188,7 @@ elif selected == "Sistema Reconocidos":
 elif selected == "¿Cómo Replicar Eco?":
     
     st.markdown('<div class="main-title">¿CÓMO REPLICAR ECO?</div>', unsafe_allow_html=True)
-    st.markdown('<div class="subtitle">Guía de Despliegue, Adaptación Institucional y Transferencia de Conocimiento Abierto</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Guía de cómo replicar Eco</div>', unsafe_allow_html=True)
 
     # SECCIÓN 1 & SECCIÓN 2: INTRODUCCIÓN A LA REPLICABILIDAD Y REQUISITOS INICIALES
     col_rep, col_req = st.columns(2)
@@ -1286,7 +1286,7 @@ elif selected == "¿Cómo Replicar Eco?":
 # PÁGINA 11 — GALERÍA ECO / MAPA
 # ==========================================
 elif selected == "Galería Eco":
-    st.markdown('<div class="main-title">GALERÍA Y MAPA ECO</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-title">GALERÍA ECO</div>', unsafe_allow_html=True)
 
 # ==========================================
 # PÁGINA 12 — PREGUNTAS FRECUENTES (FAQ)
@@ -1294,7 +1294,7 @@ elif selected == "Galería Eco":
 elif selected == "Preguntas Frecuentes":
     
     st.markdown('<div class="main-title">PREGUNTAS FRECUENTES</div>', unsafe_allow_html=True)
-    st.markdown('<div class="subtitle">Centro de Consulta Rápida y Respuestas Fundacionales del Ecosistema</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle"> Preguntas sobre el proyecto</div>', unsafe_allow_html=True)
 
     # SECCIÓN 1: INTRODUCCIÓN
     st.markdown('<div class="section-header">💡 ¿Para qué sirve esta sección?</div>', unsafe_allow_html=True)
@@ -1388,8 +1388,8 @@ elif selected == "Preguntas Frecuentes":
 # PÁGINA 13 — ECOIA (REPARADA SIN NAMEERROR)
 # ==========================================
 elif selected == "EcoIA":
-    st.markdown('<div class="main-title">ECOIA: NÚCLEO COGNITIVO</div>', unsafe_allow_html=True)
-    st.markdown('<div class="subtitle">Modelado Lingüístico de Contraturno entrenado en Protocolos y Fichas Técnicas de Proyecto Eco</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-title">ECOIA</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">La IA con conocimiento de todas las fichas del proyecto</div>', unsafe_allow_html=True)
 
     # -----------------------------------------------------------------
     # 📜 BASE DE DATOS GLOBAL: EL DICCIONARIO VA ACÁ (FUERA DEL BOTÓN)
@@ -1937,13 +1937,13 @@ elif selected == "EcoIA":
         10. MEJORAS Y PROYECCIÓN FUTURA: Integración modular con sensores adicionales de última generación para medir concentración de Dióxido de Carbono (CO₂) e intensidad lumínica (Lux). Implementación de una base de datos web para almacenar el registro histórico digital de la evolución biológica. Versión modular automatizada para recrear múltiples ecosistemas y biomas. Desarrollo como un recurso interactivo y aplicación educativa transversal para las clases de ciencias naturales y tecnología.
         """,
     }
-    # -----------------------------------------------------------------
-
+# -----------------------------------------------------------------
     # Tarjeta de Contexto de Ingeniería de Prompts
+    # -----------------------------------------------------------------
     st.markdown("""
         <div class="glass-card" style="border-left: 5px solid #64FFDA; margin-bottom: 25px;">
             <strong style="color:#64FFDA; font-size:16px;">🤖 Auditoría por Segmentación de Contexto</strong><br>
-            Este módulo interactivo detecta automáticamente mediante expresiones regulares qué ficha técnica estás consultando. 
+            Este módulo interactivo detecta automáticamente qué ficha técnica o proyecto ecológico estás consultando. 
             Extrae de forma quirúrgica el texto correspondiente de la base de datos y alimenta el pipeline de <strong>Groq Cloud</strong> 
             únicamente con ese fragmento para garantizar una respuesta exacta y libre de alucinaciones.
         </div>
@@ -1964,20 +1964,20 @@ elif selected == "EcoIA":
                 <hr style="border:0; border-top:1px solid rgba(255,255,255,0.08); margin:8px 0;">
                 <ul style="padding-left:15px; margin:0; display:flex; flex-direction:column; gap:8px; color:#B0BEC5;">
                     <li><i>"Explicame detalladamente la ficha 1"</i></li>
-                    <li><i>"¿Cuál es el procedimiento de la ficha 14?"</i></li>
-                    <li><i>"¿Qué impacto ambiental tiene la ficha 19?"</i></li>
+                    <li><i>"¿Cómo se hace el papel seed?"</i></li>
+                    <li><i>"¿Qué impacto ambiental tiene el fibropapel?"</i></li>
                 </ul>
             </div>
         """, unsafe_allow_html=True)
 
     with col_input:
-        user_query = st.text_input("📝 Ingresá tu consulta técnica para EcoIA:", placeholder="Escribí acá tu pregunta (Ej: explicame la ficha 14)...", key="ecoia_input_text")
+        user_query = st.text_input("📝 Ingresá tu consulta técnica para EcoIA:", placeholder="Escribí tu pregunta o el nombre del proyecto...", key="ecoia_input_text")
         btn_enviar = st.button("🚀 Procesar Inferencia", use_container_width=True)
 
         if btn_enviar and user_query:
             # INTERCEPCIÓN DINÁMICA DE CREDENCIALES
             api_key_groq = ""
-            if "GROQ_API_KEY" in st.secrets:
+            if "st.secrets" in globals() and "GROQ_API_KEY" in st.secrets:
                 api_key_groq = st.secrets["GROQ_API_KEY"]
             elif os.getenv("GROQ_API_KEY"):
                 api_key_groq = os.getenv("GROQ_API_KEY")
@@ -1985,18 +1985,36 @@ elif selected == "EcoIA":
             # Insertar la consulta del usuario al historial visual
             st.session_state.messages_ecoia.append({"role": "user", "content": user_query})
 
-            # Algoritmo de detección por Expresiones Regulares (Misma lógica de tu código 1.0)
+            # =================================================================
+            # 🔍 ALGORITMO INTELIGENTE DE DETECCIÓN (NÚMERO O TÍTULO AUTOMÁTICO)
+            # =================================================================
             import re
             ficha_detectada_contenido = None
             numero_ficha_encontrada = None
             query_minusculas = user_query.lower()
 
+            # Paso 1: Intentar buscar coincidencia por número exacto (Ej: "ficha 1" o escribir "1")
             for numero, contenido_completo in TEXTO_COMPLETO_FICHAS.items():
                 patron_exacto = rf"\bficha\s+{numero}\b"
                 if re.search(patron_exacto, query_minusculas) or numero == query_minusculas.strip():
                     ficha_detectada_contenido = contenido_completo
                     numero_ficha_encontrada = numero
                     break
+
+            # Paso 2: Si no se halló número, buscar por nombre del proyecto de forma dinámica
+            if not ficha_detectada_contenido:
+                for numero, contenido_completo in TEXTO_COMPLETO_FICHAS.items():
+                    # Extrae lo que esté entre "FICHA TÉCNICA #X:" y el primer paréntesis de sección
+                    match_titulo = re.search(r"FICHA TÉCNICA\s+#\d+:\s*([^\(]+)", contenido_completo)
+                    
+                    if match_titulo:
+                        titulo_ficha = match_titulo.group(1).strip().lower()
+                        # Valida si el usuario nombró el título (Ej: "papel seed") o su palabra principal (Ej: "seed")
+                        if titulo_ficha in query_minusculas or (len(titulo_ficha) > 4 and titulo_ficha[:5] in query_minusculas):
+                            ficha_detectada_contenido = contenido_completo
+                            numero_ficha_encontrada = numero
+                            break
+            # =================================================================
 
             # Si el algoritmo detectó una ficha en el texto, arma el System Prompt apuntado
             if ficha_detectada_contenido:
@@ -2045,7 +2063,7 @@ elif selected == "EcoIA":
                     respuesta_fallback = f"🤖 **[EcoIA - Modo Offline]:** Procesé tu consulta sobre la ficha. Activá `GROQ_API_KEY` para conectar con el modelo Llama."
                     st.session_state.messages_ecoia.append({"role": "assistant", "content": respuesta_fallback})
 
-    # Renderizado elegante e histórico del Chat (Acá abajo es donde se rompía porque no encontraba el diccionario)
+    # Renderizado elegante e histórico del Chat
     if st.session_state.messages_ecoia:
         st.markdown('<p style="color:#A5D6A7; font-size:14px; margin-top:20px; margin-bottom:10px; font-weight:600;">📜 Flujo de la Conversación Actual:</p>', unsafe_allow_html=True)
         
